@@ -85,8 +85,10 @@ export default async function RankingsPage({ searchParams }: { searchParams: SP 
           <p className="eyebrow">Federation-aware boards</p>
           <h1>Rankings</h1>
           <p>
-            Portal is our combined view. AIDA and CMAS boards only score results judged under
-            that federation.
+            Portal OVERALL sums personal bests across eight disciplines with AIDA factors
+            (depth ×1, pool dynamic ×0.5, STA ×0.2/s), combining AIDA and CMAS results — same
+            recipe as FR. Separate AIDA-only and CMAS-only boards stay available. Active is a
+            rolling 24-month window; All-time matches FR&apos;s default.
           </p>
         </div>
         <span className="source">
@@ -190,8 +192,10 @@ export default async function RankingsPage({ searchParams }: { searchParams: SP 
         </table>
       </div>
       <p className="caption" style={{ marginTop: 12 }}>
-        Minors are excluded from public boards by default. Methodology uses discipline factors
-        (depth ×1, STA ×0.2, dynamic ×0.5).
+        Minors are excluded from public boards by default. Red cards / DQ never enter a PB;
+        yellow-card points follow the judging federation&apos;s penalties. Equal points share a
+        place (Olympic ranking); ties break on best %WR, then discipline count, then earlier PB
+        date.
       </p>
     </div>
   );

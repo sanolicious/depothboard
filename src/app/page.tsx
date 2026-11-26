@@ -207,7 +207,7 @@ export default function HomePage() {
           <div className="section-head">
             <div>
               <h2>Top of the board</h2>
-              <p>Portal Ranking · Overall · Active (last 24 months)</p>
+              <p>Portal Ranking · Overall · Active (rolling 24 months) · AIDA+CMAS PBs</p>
             </div>
             <Link className="link-arrow" href="/rankings">
               Full ranking <Icon name="arrow" />

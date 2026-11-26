@@ -50,3 +50,6 @@ __pycache__/
 *.pyc
 .Python
 .venv/
+node_modules/
+.next/
+tsconfig.tsbuildinfo
