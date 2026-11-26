@@ -270,6 +270,34 @@
       "watermarkRequired": false,
       "blockReason": "CMAS footage is embed / link only — Diveye cannot sell downloads",
       "embedUrl": "https://tv.cmas.org/"
+    },
+    {
+      "id": "rr-dive-1",
+      "diveId": "dive-1",
+      "eventId": "aida-ev-3717442",
+      "athleteSlug": "vitomir-maricic",
+      "federation": "AIDA",
+      "rightsModel": "diveye_owned",
+      "provenanceSourceId": "src-aida-html",
+      "downloadable": true,
+      "embedOnly": false,
+      "saleEnabled": true,
+      "maxLicenseTier": "commercial",
+      "watermarkRequired": true
+    },
+    {
+      "id": "rr-dive-4",
+      "diveId": "dive-4",
+      "eventId": "aida-ev-8728385",
+      "athleteSlug": "vitomir-maricic",
+      "federation": "AIDA",
+      "rightsModel": "diveye_owned",
+      "provenanceSourceId": "src-aida-html",
+      "downloadable": true,
+      "embedOnly": false,
+      "saleEnabled": true,
+      "maxLicenseTier": "commercial",
+      "watermarkRequired": true
     }
   ],
   "showcaseDives": [

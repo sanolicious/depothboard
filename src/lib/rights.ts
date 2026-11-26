@@ -1,12 +1,20 @@
 import type {
   ConsentPurpose,
   ConsentRecord,
+  FootageAsset,
   LicenseTier,
   Product,
   RecordingRights,
   SeedDb,
   ShowcaseDive,
 } from "@/types/domain";
+
+/** Pure check — kept here so client bundles importing rights never pull `fs`. */
+function hasPlayableFile(asset: FootageAsset | undefined): boolean {
+  if (!asset) return false;
+  if (asset.rightsModel === "cmas_link") return false;
+  return !!asset.storageKey && asset.durationSec > 0;
+}
 
 const TIER_RANK: Record<LicenseTier, number> = {
   sample: 0,
@@ -63,6 +71,21 @@ export function tierAllowed(
   return TIER_RANK[requested] <= TIER_RANK[max];
 }
 
+function footageForDive(
+  db: SeedDb,
+  diveId: string | undefined,
+): FootageAsset | undefined {
+  if (!diveId) return undefined;
+  const list = (db.footageAssets ?? []).filter(
+    (a) => a.performanceDiveId === diveId,
+  );
+  return (
+    list.find((a) => a.quality === "preview") ??
+    list.find((a) => a.quality === "hq") ??
+    list[0]
+  );
+}
+
 /** Evaluate whether a dive clip / licence tier can be sold or downloaded. */
 export function evaluateSale(
   db: SeedDb,
@@ -77,6 +100,7 @@ export function evaluateSale(
   const rights = opts.diveId
     ? getRecordingRights(db, opts.diveId)
     : undefined;
+  const footage = footageForDive(db, opts.diveId);
   const tier = opts.licenseTier ?? "social";
 
   if (athlete?.minor && !athlete.guardianConsentGranted) {
@@ -90,12 +114,16 @@ export function evaluateSale(
     };
   }
 
-  if (rights?.rightsModel === "cmas_link" || rights?.embedOnly) {
+  if (
+    rights?.rightsModel === "cmas_link" ||
+    rights?.embedOnly ||
+    footage?.rightsModel === "cmas_link"
+  ) {
     return {
       allowed: false,
       reason: "cmas_embed_only",
       message:
-        rights.blockReason ??
+        rights?.blockReason ??
         "CMAS footage is embed / link only — downloads and shop sales are disabled.",
       rights,
       badge: "embed_only",
@@ -155,11 +183,16 @@ export function evaluateSale(
     };
   }
 
-  if (opts.hasVideo === false && !rights) {
+  const hasFile =
+    opts.hasVideo === true ||
+    hasPlayableFile(footage) ||
+    (opts.hasVideo !== false && !!footage && hasPlayableFile(footage));
+
+  if (!hasFile) {
     return {
       allowed: false,
       reason: "no_footage",
-      message: "No Diveye footage linked yet.",
+      message: "No Diveye FootageAsset linked yet (footage pending).",
       rights,
       badge: "unavailable",
     };
@@ -200,7 +233,7 @@ export function evaluateProduct(db: SeedDb, product: Product): SaleDecision {
         diveId: dive.id,
         athleteSlug: dive.athleteSlug,
         licenseTier: product.licenseTier ?? "social",
-        hasVideo: true,
+        hasVideo: hasPlayableFile(footageForDive(db, dive.id)),
       });
     }
     return {
@@ -214,19 +247,22 @@ export function evaluateProduct(db: SeedDb, product: Product): SaleDecision {
 
   if (product.diveId) {
     const dive = db.showcaseDives.find((d) => d.id === product.diveId);
-    if (!dive) {
+    const footage = footageForDive(db, product.diveId);
+    if (!dive && !footage) {
       return {
         allowed: false,
         reason: "no_footage",
-        message: "Linked dive not found.",
+        message: "Linked dive / FootageAsset not found.",
         badge: "unavailable",
       };
     }
+    const athleteSlug =
+      dive?.athleteSlug ?? footage?.athleteSlug ?? "";
     return evaluateSale(db, {
-      diveId: dive.id,
-      athleteSlug: dive.athleteSlug,
+      diveId: product.diveId,
+      athleteSlug,
       licenseTier: product.licenseTier ?? "social",
-      hasVideo: true,
+      hasVideo: hasPlayableFile(footage),
     });
   }
 
@@ -243,11 +279,12 @@ export function evaluateShowcaseDive(
   db: SeedDb,
   dive: ShowcaseDive,
 ): SaleDecision {
+  const footage = footageForDive(db, dive.id);
   return evaluateSale(db, {
     diveId: dive.id,
     athleteSlug: dive.athleteSlug,
     licenseTier: dive.licenseTier ?? "social",
-    hasVideo: dive.durationSec > 0 || dive.cameras.length > 0,
+    hasVideo: hasPlayableFile(footage) || dive.durationSec > 0,
   });
 }
 
