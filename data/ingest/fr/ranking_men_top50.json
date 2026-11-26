@@ -1,0 +1,949 @@
+[
+  {
+    "rank": 1,
+    "name": "Mateusz Malina",
+    "points": 1022.25,
+    "country": "PL",
+    "slug": "Mateusz-Malina",
+    "pbs": {
+      "DYNB": "300 m",
+      "DYN": "326.5 m",
+      "DNF": "252 m",
+      "STA": "09:35",
+      "FIM": "130 m",
+      "CNF": "93 m",
+      "CWT": "130 m",
+      "CWTB": "116 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 2,
+    "name": "Alexey Molchanov",
+    "points": 980.35,
+    "country": "",
+    "slug": "Alexey-Molchanov",
+    "pbs": {
+      "CWT": "137 m",
+      "CWTB": "129 m",
+      "FIM": "133 m",
+      "VWT": "156 m",
+      "DYN": "305.5 m",
+      "DNF": "200 m",
+      "STA": "08:33",
+      "CNF": "100 m",
+      "DYNB": "252 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 3,
+    "name": "Vitomir Maričić",
+    "points": 980.0,
+    "country": "HR",
+    "slug": "Vitomir-Maricic",
+    "pbs": {
+      "FIM": "123 m",
+      "CWTB": "115 m",
+      "CNF": "90 m",
+      "CWT": "117 m",
+      "DYNB": "300 m",
+      "STA": "10:30",
+      "DYN": "284 m",
+      "DNF": "240 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 4,
+    "name": "Petar Klovar",
+    "points": 944.8,
+    "country": "HR",
+    "slug": "Petar-Klovar",
+    "pbs": {
+      "DNF": "218 m",
+      "CNF": "103 m",
+      "FIM": "137 m",
+      "STA": "08:09",
+      "DYNB": "250 m",
+      "DYN": "250 m",
+      "CWTB": "128 m",
+      "CWT": "125 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 5,
+    "name": "Francisco Quesada",
+    "points": 856.1,
+    "country": "ES",
+    "slug": "Francisco-Quesada",
+    "pbs": {
+      "CNF": "86 m",
+      "STA": "07:23",
+      "FIM": "107 m",
+      "CWTB": "105 m",
+      "DYN": "254 m",
+      "DNF": "217 m",
+      "DYNB": "254 m",
+      "CWT": "107 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 6,
+    "name": "Guillaume Bourdila",
+    "points": 835.0,
+    "country": "FR",
+    "slug": "Guillaume-Bourdila",
+    "pbs": {
+      "DYN": "306.6 m",
+      "DNF": "236 m",
+      "FIM": "113 m",
+      "DYNB": "298 m",
+      "CWTB": "103 m",
+      "STA": "07:10",
+      "CWT": "113 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 7,
+    "name": "Hakyong Kim",
+    "points": 833.9,
+    "country": "KR",
+    "slug": "Hakyong-Kim",
+    "pbs": {
+      "DNF": "200 m",
+      "DYNB": "250 m",
+      "STA": "07:57",
+      "DYN": "265 m",
+      "CWT": "103 m",
+      "CWTB": "103 m",
+      "FIM": "100 m",
+      "CNF": "75 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 8,
+    "name": "Samo Jeranko",
+    "points": 830.4000000000001,
+    "country": "SI",
+    "slug": "Samo-Jeranko",
+    "pbs": {
+      "FIM": "107 m",
+      "CWT": "110 m",
+      "CNF": "82 m",
+      "STA": "08:08",
+      "DYN": "256.6 m",
+      "DNF": "180 m",
+      "CWTB": "104 m",
+      "DYNB": "223 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 9,
+    "name": "Goran Colak",
+    "points": 825.0,
+    "country": "HR",
+    "slug": "Goran-Colak",
+    "pbs": {
+      "STA": "09:45",
+      "DYN": "299.5 m",
+      "DNF": "225 m",
+      "FIM": "98 m",
+      "CWT": "115 m",
+      "CNF": "83 m",
+      "DYNB": "300 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 10,
+    "name": "Kai Xiao",
+    "points": 813.9,
+    "country": "CN",
+    "slug": "Kai-Xiao",
+    "pbs": {
+      "STA": "07:32",
+      "DNF": "217 m",
+      "DYNB": "250 m",
+      "DYN": "272 m",
+      "CNF": "85 m",
+      "FIM": "87 m",
+      "CWT": "103 m",
+      "CWTB": "87 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 11,
+    "name": "Hua Yang Huang",
+    "points": 811.7,
+    "country": "TW",
+    "slug": "Hua-Yang-Huang",
+    "pbs": {
+      "DNF": "183 m",
+      "CWT": "120 m",
+      "DYNB": "216 m",
+      "STA": "06:31",
+      "DYN": "256 m",
+      "CWTB": "112 m",
+      "CNF": "71 m",
+      "FIM": "103 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 12,
+    "name": "Ming (William Joy) Jin",
+    "points": 796.6,
+    "country": "CN",
+    "slug": "Ming-(William-Joy)-Jin",
+    "pbs": {
+      "CWT": "100 m",
+      "DNF": "206 m",
+      "DYN": "311 m",
+      "STA": "09:08",
+      "DYNB": "287 m",
+      "CWTB": "88 m",
+      "CNF": "45 m",
+      "FIM": "67 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 13,
+    "name": "Dean Chaouche",
+    "points": 792.0,
+    "country": "GB",
+    "slug": "Dean-Chaouche",
+    "pbs": {
+      "CWTB": "98 m",
+      "FIM": "98 m",
+      "CNF": "82 m",
+      "DNF": "187 m",
+      "DYNB": "213,80 m",
+      "STA": "07:03",
+      "DYN": "246 m",
+      "CWT": "106 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 14,
+    "name": "Philipp Heinzelmann",
+    "points": 791.9,
+    "country": "DE",
+    "slug": "Philipp-Heinzelmann",
+    "pbs": {
+      "CNF": "79 m",
+      "STA": "07:57",
+      "FIM": "90 m",
+      "CWTB": "93 m",
+      "CWT": "85 m",
+      "DYNB": "237 m",
+      "DNF": "200 m",
+      "DYN": "262 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 15,
+    "name": "Eugen Goettling",
+    "points": 790.7,
+    "country": "AT",
+    "slug": "Eugen-Goettling",
+    "pbs": {
+      "STA": "08:46",
+      "FIM": "110 m",
+      "CWT": "95 m",
+      "CNF": "74 m",
+      "DYN": "254 m",
+      "DYNB": "177 m",
+      "CWTB": "100 m",
+      "DNF": "182 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 16,
+    "name": "Christos Karelos",
+    "points": 779.45,
+    "country": "GR",
+    "slug": "Christos-Karelos",
+    "pbs": {
+      "CWT": "117 m",
+      "CWTB": "108 m",
+      "DYNB": "253.5 m",
+      "STA": "06:46",
+      "DYN": "252.5 m",
+      "CNF": "41 m",
+      "FIM": "96 m",
+      "DNF": "166.5 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 17,
+    "name": "Mitch Ayres",
+    "points": 767.9,
+    "country": "AU",
+    "slug": "Mitch-Ayres",
+    "pbs": {
+      "CWTB": "104 m",
+      "FIM": "101 m",
+      "CNF": "84 m",
+      "DYNB": "201 m",
+      "DYN": "201 m",
+      "DNF": "151 m",
+      "CWT": "100 m",
+      "STA": "08:32"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 18,
+    "name": "Jan Knutzen",
+    "points": 766.6,
+    "country": "DE",
+    "slug": "Jan-Knutzen",
+    "pbs": {
+      "CWT": "102 m",
+      "FIM": "111 m",
+      "CNF": "75 m",
+      "CWTB": "100 m",
+      "DNF": "170 m",
+      "DYNB": "219 m",
+      "DYN": "219 m",
+      "STA": "06:13"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 19,
+    "name": "Piotr Kubiak",
+    "points": 763.15,
+    "country": "PL",
+    "slug": "Piotr-Kubiak",
+    "pbs": {
+      "STA": "8:32,00",
+      "DNF": "225.5 m",
+      "CNF": "91 m",
+      "FIM": "118 m",
+      "DYNB": "236 m",
+      "CWTB": "111 m",
+      "CWT": "110 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 20,
+    "name": "Vivien Richard",
+    "points": 762.0600000000001,
+    "country": "FR",
+    "slug": "Vivien-Richard",
+    "pbs": {
+      "FIM": "88 m",
+      "CWTB": "95 m",
+      "DYN": "254.72 m",
+      "CNF": "75 m",
+      "DYNB": "240 m",
+      "DNF": "195.45 m",
+      "CWT": "89 m",
+      "STA": "06:41"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 21,
+    "name": "Ioannis Kothonidis",
+    "points": 761.7,
+    "country": "GR",
+    "slug": "Ioannis-Kothonidis",
+    "pbs": {
+      "CNF": "70 m",
+      "DYN": "275 m",
+      "DNF": "204 m",
+      "STA": "06:01",
+      "DYNB": "250 m",
+      "CWT": "90 m",
+      "FIM": "94 m",
+      "CWTB": "88 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 22,
+    "name": "Yi(Zy) Zhang",
+    "points": 761.5,
+    "country": "CN",
+    "slug": "Yi(Zy)-Zhang",
+    "pbs": {
+      "DYNB": "267 m",
+      "DYN": "258 m",
+      "STA": "07:00",
+      "DNF": "196 m",
+      "CNF": "76 m",
+      "FIM": "81 m",
+      "CWTB": "85 m",
+      "CWT": "75 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 23,
+    "name": "Roberto Guzman",
+    "points": 761.3,
+    "country": "MX",
+    "slug": "Roberto-Guzman",
+    "pbs": {
+      "CWT": "114 m",
+      "CWTB": "106 m",
+      "CNF": "77 m",
+      "DYN": "220 m",
+      "FIM": "101 m",
+      "DNF": "166 m",
+      "STA": "05:49",
+      "DYNB": "201 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 24,
+    "name": "William Trubridge",
+    "points": 757.8,
+    "country": "NZ",
+    "slug": "William-Trubridge",
+    "pbs": {
+      "CWT": "122 m",
+      "FIM": "124 m",
+      "CNF": "102 m",
+      "STA": "07:29",
+      "DNF": "187 m",
+      "DYN": "237 m",
+      "CWTB": "108 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 25,
+    "name": "Boris Milosic",
+    "points": 750.6,
+    "country": "HR",
+    "slug": "Boris-Milosic",
+    "pbs": {
+      "STA": "8:03.48",
+      "DNF": "204.30 m",
+      "DYNB": "250.5 m",
+      "DYN": "271.5 m",
+      "FIM": "71 m",
+      "CWT": "84 m",
+      "CWTB": "83 m",
+      "CNF": "53.0 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 26,
+    "name": "Martin Ruman",
+    "points": 748.5,
+    "country": "SK",
+    "slug": "Martin-Ruman",
+    "pbs": {
+      "CWTB": "103 m",
+      "DYN": "200 m",
+      "CWT": "113 m",
+      "STA": "07:00",
+      "FIM": "116 m",
+      "DYNB": "204 m",
+      "CNF": "65 m",
+      "DNF": "131 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 27,
+    "name": "Kurt Chambers",
+    "points": 745.9,
+    "country": "US",
+    "slug": "Kurt-Chambers",
+    "pbs": {
+      "CNF": "65 m",
+      "CWTB": "115 m",
+      "FIM": "105 m",
+      "CWT": "110 m",
+      "DYNB": "201 m",
+      "DYN": "200 m",
+      "STA": "07:02",
+      "DNF": "132 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 28,
+    "name": "Vincent Mathieu",
+    "points": 740.6,
+    "country": "FR",
+    "slug": "Vincent-Mathieu",
+    "pbs": {
+      "CNF": "70 m",
+      "CWTB": "103 m",
+      "FIM": "100 m",
+      "CWT": "100 m",
+      "DYN": "224 m",
+      "STA": "08:53",
+      "DYNB": "200 m",
+      "DNF": "100 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 29,
+    "name": "Pablo Marti",
+    "points": 740.2,
+    "country": "MX",
+    "slug": "Pablo-Marti",
+    "pbs": {
+      "DNF": "183 m",
+      "STA": "07:26",
+      "CNF": "68 m",
+      "CWTB": "85 m",
+      "FIM": "80 m",
+      "CWT": "91 m",
+      "DYN": "237 m",
+      "DYNB": "234 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 30,
+    "name": "Alejandro Lemus",
+    "points": 739.9,
+    "country": "MX",
+    "slug": "Alejandro-Lemus",
+    "pbs": {
+      "CNF": "66 m",
+      "DNF": "153 m",
+      "CWT": "107m",
+      "DYN": "226 m",
+      "DYNB": "206 m",
+      "CWTB": "91 m",
+      "FIM": "98 m",
+      "STA": "07:07"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 31,
+    "name": "Jakob Hansen",
+    "points": 739.25,
+    "country": "DK",
+    "slug": "Jakob-Hansen",
+    "pbs": {
+      "CNF": "71 m",
+      "CWT": "96 m",
+      "STA": "8:20",
+      "DNF": "175 m",
+      "FIM": "86 m",
+      "DYN": "217.5 m",
+      "DYNB": "204 m",
+      "CWTB": "88 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 32,
+    "name": "Yixian Zhang",
+    "points": 732.4,
+    "country": "TW",
+    "slug": "Yixian-Zhang",
+    "pbs": {
+      "CWTB": "95 m",
+      "FIM": "80 m",
+      "STA": "06:42",
+      "DYNB": "215 m",
+      "CWT": "100 m",
+      "DNF": "165 m",
+      "DYN": "250 m",
+      "CNF": "62 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 33,
+    "name": "Sebastian Lira",
+    "points": 727.6,
+    "country": "CL",
+    "slug": "Sebastian-Lira",
+    "pbs": {
+      "CWTB": "116 m",
+      "CWT": "121 m",
+      "FIM": "116 m",
+      "CNF": "65 m",
+      "STA": "06:28",
+      "DYN": "183 m",
+      "DNF": "109 m",
+      "DYNB": "172 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 34,
+    "name": "Oleksandr Bubenchykov",
+    "points": 725.6,
+    "country": "UA",
+    "slug": "Oleksandr-Bubenchykov",
+    "pbs": {
+      "CWT": "98 m",
+      "FIM": "95 m",
+      "CNF": "71 m",
+      "STA": "09:03",
+      "DNF": "217 m",
+      "DYN": "289 m",
+      "DYNB": "200 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 35,
+    "name": "William Winram",
+    "points": 723.2,
+    "country": "CA",
+    "slug": "William-Winram",
+    "pbs": {
+      "CWT": "94 m",
+      "CNF": "86 m",
+      "FIM": "97 m",
+      "DNF": "175 m",
+      "CWTB": "91 m",
+      "DYNB": "160 m",
+      "STA": "07:06",
+      "DYN": "205 m",
+      "VWT": "145 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 36,
+    "name": "Ziyu Rocky Liu",
+    "points": 721.2,
+    "country": "CN",
+    "slug": "Ziyu-Rocky-Liu",
+    "pbs": {
+      "DYNB": "208 m",
+      "STA": "07:16",
+      "CWTB": "91 m",
+      "CNF": "63 m",
+      "CWT": "99 m",
+      "FIM": "89 m",
+      "DYN": "219 m",
+      "DNF": "157 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 37,
+    "name": "Walid Boudhiaf",
+    "points": 720.65,
+    "country": "TN",
+    "slug": "Walid-Boudhiaf",
+    "pbs": {
+      "FIM": "116 m",
+      "CWTB": "105 m",
+      "CWT": "118 m",
+      "CNF": "78 m",
+      "VWT": "150 m",
+      "STA": "06:27",
+      "DYN": "162 m",
+      "DNF": "127 m",
+      "DYNB": "193.5 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 38,
+    "name": "Martin Zajac",
+    "points": 718.0,
+    "country": "SK",
+    "slug": "Martin-Zajac",
+    "pbs": {
+      "CWT": "106 m",
+      "CWTB": "93 m",
+      "DNF": "150 m",
+      "DYN": "212 m",
+      "STA": "06:30",
+      "FIM": "100 m",
+      "CNF": "60 m",
+      "DYNB": "200 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 39,
+    "name": "Christian Langer",
+    "points": 717.3,
+    "country": "CH",
+    "slug": "Christian-Langer",
+    "pbs": {
+      "CWT": "92 m",
+      "DNF": "160 m",
+      "DYN": "226 m",
+      "FIM": "89 m",
+      "STA": "06:44",
+      "CNF": "66 m",
+      "CWTB": "89 m",
+      "DYNB": "215 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 40,
+    "name": "Karlo Grbin",
+    "points": 714.7,
+    "country": "SE",
+    "slug": "Karlo-Grbin",
+    "pbs": {
+      "DYNB": "233 m",
+      "DNF": "191 m",
+      "DYN": "251 m",
+      "STA": "06:26",
+      "CWTB": "82 m",
+      "CNF": "60 m",
+      "CWT": "85 m",
+      "FIM": "80 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 41,
+    "name": "Abdelatif Alouach",
+    "points": 712.96,
+    "country": "FR",
+    "slug": "Abdelatif-Alouach",
+    "pbs": {
+      "FIM": "118 m",
+      "CNF": "85 m",
+      "CWTB": "119 m",
+      "CWT": "116 m",
+      "DYNB": "152.27 m",
+      "DNF": "142.4 m",
+      "STA": "05:19",
+      "DYN": "127.63 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 42,
+    "name": "Daniel Losinski",
+    "points": 712.4,
+    "country": "SE",
+    "slug": "Daniel-Losinski",
+    "pbs": {
+      "CWTB": "75 m",
+      "DYN": "235.5 m",
+      "STA": "08:12",
+      "DNF": "181 m",
+      "CNF": "62 m",
+      "CWT": "80 m",
+      "DYNB": "217.5 m",
+      "FIM": "80 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 43,
+    "name": "Gimun Kwak",
+    "points": 711.35,
+    "country": "KR",
+    "slug": "Gimun-Kwak",
+    "pbs": {
+      "CWT": "91 m",
+      "CNF": "40 m",
+      "CWTB": "80 m",
+      "DNF": "160 m",
+      "DYN": "232.5 m",
+      "DYNB": "221 m",
+      "FIM": "70 m",
+      "STA": "10:18"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 44,
+    "name": "Emmanouil Giankos",
+    "points": 711.0,
+    "country": "GR",
+    "slug": "Emmanouil-Giankos",
+    "pbs": {
+      "CWT": "125 m",
+      "CWTB": "115 m",
+      "FIM": "113 m",
+      "DYN": "203 m",
+      "STA": "06:50",
+      "CNF": "60 m",
+      "DYNB": "229 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 45,
+    "name": "Michael Sadowicz",
+    "points": 708.95,
+    "country": "DE",
+    "slug": "Michael-Sadowicz",
+    "pbs": {
+      "DNF": "175 m",
+      "STA": "07:21",
+      "DYN": "257.5 m",
+      "DYNB": "229 m",
+      "FIM": "70 m",
+      "CWTB": "69 m",
+      "CNF": "60 m",
+      "CWT": "94 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 46,
+    "name": "Vootipong Limpanitivat",
+    "points": 708.8,
+    "country": "TH",
+    "slug": "Vootipong-Limpanitivat",
+    "pbs": {
+      "CWT": "93 m",
+      "CWTB": "91 m",
+      "CNF": "65 m",
+      "STA": "07:24",
+      "FIM": "96 m",
+      "DYN": "200 m",
+      "DNF": "150 m",
+      "DYNB": "200 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 47,
+    "name": "Guillaume Néry",
+    "points": 706.9,
+    "country": "FR",
+    "slug": "Guillaume-Nery",
+    "pbs": {
+      "DNF": "106 m",
+      "STA": "06:47",
+      "CWT": "126 m",
+      "CNF": "78 m",
+      "FIM": "103 m",
+      "DYN": "175 m",
+      "DYNB": "140 m",
+      "CWTB": "108 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 48,
+    "name": "Fynn Neb",
+    "points": 703.2,
+    "country": "DE",
+    "slug": "Fynn-Neb",
+    "pbs": {
+      "FIM": "85 m",
+      "CNF": "67 m",
+      "DYN": "207 m",
+      "DNF": "136 m",
+      "CWT": "113 m",
+      "DYNB": "205 m",
+      "CWTB": "101 m",
+      "STA": "05:16"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 49,
+    "name": "Jihoon Jang",
+    "points": 701.7,
+    "country": "KR",
+    "slug": "Jihoon-Jang",
+    "pbs": {
+      "CWTB": "104 m",
+      "CWT": "108 m",
+      "CNF": "73 m",
+      "FIM": "103 m",
+      "DYNB": "150 m",
+      "STA": "06:56",
+      "DYN": "201 m",
+      "DNF": "120 m"
+    },
+    "sex": "M",
+    "id": ""
+  },
+  {
+    "rank": 50,
+    "name": "Luxiao Huang",
+    "points": 701.1,
+    "country": "CN",
+    "slug": "Luxiao-Huang",
+    "pbs": {
+      "STA": "07:08",
+      "DYNB": "235 m",
+      "DNF": "165 m",
+      "CWTB": "80 m",
+      "DYN": "233 m",
+      "CNF": "66 m",
+      "FIM": "81 m",
+      "CWT": "83 m"
+    },
+    "sex": "M",
+    "id": ""
+  }
+]

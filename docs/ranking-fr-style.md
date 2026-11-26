@@ -1,70 +1,55 @@
 # Ranking w stylu FR (Portal Points)
 
-Data: 26 listopada 2026 (Europe/Warsaw).  
-Źródła rankingowe: **AIDA + CMAS (API + PDF)** — FR tylko do weryfikacji.
+Data: 26 listopada 2026 (Europe/Warsaw).
 
-## Metodologia (jak FR / AIDA)
+## Źródła
+
+| Priorytet | Źródło | Rola |
+|---|---|---|
+| 1 | AIDA (HTML/GUID) | wyniki + ranking slices |
+| 1 | CMAS (API + PDF) | wyniki oficjalne / historyczne |
+| 2 | FR (freediveranking.com) | **tylko uzupełnianie luk** — każdy rekord `source: FR` + `provenance` URL |
+
+Przy konflikcie tego samego dive’u (zawodnik×dyscyplina×data×wynik) wygrywa AIDA/CMAS. Boardy AIDA-only / CMAS-only **nie** biorą wierszy FR. Portal = suma PB z 8 dyscyplin (AIDA+CMAS+FR-gap).
+
+## Metodologia
 
 | Element | Reguła |
 |---|---|
-| Punkty | Głębia (CWT/CWTB/CNF/FIM): **1 m = 1 pkt**; dynamika (DYN/DYNB/DNF): **0,5 pkt/m**; STA: **0,2 pkt/s** |
-| OVERALL / Portal | Suma **personal bestów** z 8 dyscyplin |
-| Federacje w Portal | PB z wyników **AIDA i CMAS** (API Microplus + historyczne PDF-y CMAS) |
-| AIDA-only / CMAS-only | Osobne boardy |
-| Karty | **RED/DQ** → nie PB; **YELLOW** → wynik po karach; **WHITE** → pełne |
-| Active | Okno **24 miesiące** względem `asOf` |
-| All-time | Bez okna — porównywalne z FR |
-| Remisy | Pozycja olimpijska; tie-break %WR → liczba dyscyplin → wcześniejsza data PB |
+| Punkty | Głębia 1 pkt/m; DYN/DYNB/DNF 0,5; STA 0,2 pkt/s |
+| Active | 24 miesiące względem `asOf` |
+| All-time | bez okna (porównanie z FR) |
+| Karty | RED wykluczone; YELLOW = punkty po karach |
+| Remisy | olimpijskie; tie-break %WR → #dyscyplin → wcześniejsza data PB |
+| FR plausibility | twarde capy (np. CNF ≤130 m) — odrzut błędnych parsowań HTML |
 
-Kod: `src/lib/ranking.ts`. Rebuild: `ingest/bin/rebuild_seed.py`. PDF: `ingest/cmas/pdf_parse.py`, `ingest/bin/ingest_cmas_pdfs.py`.
+Kod: `src/lib/ranking.ts`. Rebuild: `ingest/bin/rebuild_seed.py`. FR: `ingest/fr/client.py`, `ingest/bin/fr_gap_fill.py`. Live: `ingest/bin/live_sync.py` + `.github/workflows/live-sync.yml`.
 
-## Co weszło do seeda
+## Seed (po FR gap-fill)
 
 | Metryka | Wartość |
 |---|---:|
 | Zawodnicy | **3050** |
-| Performances (seed) | **~22,9k** |
-| AIDA historia | ~13,2k |
-| CMAS API | 1948 |
-| CMAS PDF (po dedupie) | ~3,2k+ wierszy z WC/EC/World Cup indoor+depth |
-| Slice AIDA PB | ~5400 |
+| Results | **~24,4k** (w tym ~1,5k `source: FR`) |
+| asOf | 2026-11-26 |
 
-UI (`data/seed.json` / store `site/data/seed.json`) na tych danych.
+## Zgodność vs FR top-50 (cel ≥48/50)
 
-### CMAS PDF
+| Płeć | Nazwa w naszym top-50 | ±15 pkt | ±40 pkt |
+|---|---:|---:|---:|
+| M | **50/50** | 41 | 46 |
+| K | **50/50** | 47 | 48 |
 
-- Źródło: `cmas.org` edocman (`task=document.download&id=…`) — bez logowania; część archiwów to ZIP.
-- Indoor m.in.: Belgrade 2024, Lignano 2018/2016, EC Istanbul 2019, Kuwait 2023 (ZIP), Novi Sad 2026, Barranquilla/pool cups, nOxy.
-- Depth m.in.: Kalamata 2024, Roatan 2023, outdoor WC 2018–2022, Authentic Big Blue 2024, Vertical Blue 2021.
-- Parser obsługuje layouty Microplus / organizer / dive-log (per-row discipline).
+Wszystkie wcześniejsze luki (Richard, Lira, Alouach, Giankos, Kardašević, Załęcka, Paganelli, Wendland, Paris) są w top-50. Molchanov DYNB 252 m (126 pkt) domknięty z FR.
 
-## Zgodność vs FR top-50 (all-time Portal)
+Pozostałe rozjazdy punktów (Kubiak/Colak/Bourdila nieco wyżej; Kai Xiao niżej) = inne pokrycie zawodów / karty, nie brak nazwisk.
 
-Cel: **≥45/50** nazwisk w naszym top-50.
+## Live sync
 
-| Płeć | Nazwa w naszym top-50 | Obecni w DB | Punkty ±15 | Punkty ±40 |
-|---|---:|---:|---:|---:|
-| M | **46/50** | 50/50 | 36 | 38 |
-| K | **45/50** | 50/50 | 37 | 40 |
-
-### Nadal poza naszym top-50
-
-**M (4):** Vivien Richard, Sebastian Lira, Abdelatif Alouach, Emmanouil Giankos (brak GUID AIDA).  
-**K (5):** Mirela Kardašević (głównie brak głębokości CMAS w PB), Agata Załęcka, Linda Paganelli, Jennifer Wendland, Claire Beatrix Paris.
-
-### Po PDF — przykłady domknięć
-
-- **Alessia Zecchini** → #3 / **820** (DYN 253, DYNB 228,15 z EC 2019; było ~601).
-- **Guillaume Bourdila** → #10 / **801** (Kuwait DYN 306,6 + DNF 236).
-- **Boris Milosic**, **Vincent Mathieu**, **Ioannis Kothonidis** weszli do top-50 M po basenie/głębi z PDF.
-- **Molchanov** nadal bez DYNB 252 m (w dostępnych PDF tylko DQ / monofin) — Δ vs FR ~−130.
-
-## Wniosek
-
-Cel **≥45/50 M i K osiągnięty** dzięki CMAS PDF (szczególnie basen). Pozostałe luki = zawody poza pobranym zestawem PDF / warianty nazw / brak historii AIDA. Dalsze PDF (mini-cups, krajowe) + ręczne aliasy domkną resztę.
+Patrz `docs/live-sync.md` — cron GitHub Action co 6 h lub lokalny `live_sync.py`.
 
 ## Artefakty
 
-- PR: https://github.com/sanolicious/depothboard/pull/3 (`cursor/ranking-fr-style-bf02`)
-- Porównanie: `data/ingest/fr/portal_compare.json` / store `internal/ingest/fr/`
-- Ten dokument + `docs/weryfikacja-aida-cmas-fr.md`
+- Branch: `cursor/fr-gapfill-live-sync-bf02`
+- Porównanie: `data/ingest/fr/portal_compare.json`
+- Weryfikacja: `docs/weryfikacja-aida-cmas-fr.md`

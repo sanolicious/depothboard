@@ -1,93 +1,64 @@
 {
   "men": {
-    "matched_top50": 46,
+    "matched_top50": 50,
     "present": 50,
-    "point_within_15": 36,
-    "point_within_40": 38,
-    "missing_top50": [
-      {
-        "fr": "Vivien Richard",
-        "fr_pts": 762.06,
-        "fr_rank": 20,
-        "our_rank": 163,
-        "our_pts": 493.99
-      },
-      {
-        "fr": "Sebastian Lira",
-        "fr_pts": 727.6,
-        "fr_rank": 33,
-        "our_rank": 99,
-        "our_pts": 600.65
-      },
-      {
-        "fr": "Abdelatif Alouach",
-        "fr_pts": 712.96,
-        "fr_rank": 41,
-        "our_rank": 180,
-        "our_pts": 432.0
-      },
-      {
-        "fr": "Emmanouil Giankos",
-        "fr_pts": 711.0,
-        "fr_rank": 44,
-        "our_rank": 167,
-        "our_pts": 467.5
-      }
-    ],
+    "point_within_15": 41,
+    "point_within_40": 46,
+    "missing_top50": [],
     "matched_details": [
       {
         "fr": "Mateusz Malina",
         "fr_pts": 1022.25,
         "fr_rank": 1,
         "our": "Mateusz Malina",
-        "our_pts": 1017.0,
+        "our_pts": 1025.25,
         "our_rank": 1,
-        "delta": -5.25
+        "delta": 3.0
       },
       {
         "fr": "Alexey Molchanov",
         "fr_pts": 980.35,
         "fr_rank": 2,
         "our": "Alexey Molchanov",
-        "our_pts": 850.85,
-        "our_rank": 4,
-        "delta": -129.5
+        "our_pts": 980.35,
+        "our_rank": 3,
+        "delta": 0.0
       },
       {
         "fr": "Vitomir Maričić",
         "fr_pts": 980.0,
         "fr_rank": 3,
         "our": "Vitomir Maričić",
-        "our_pts": 980.0,
+        "our_pts": 983.0,
         "our_rank": 2,
-        "delta": 0.0
+        "delta": 3.0
       },
       {
         "fr": "Petar Klovar",
         "fr_pts": 944.8,
         "fr_rank": 4,
         "our": "Petar Klovar",
-        "our_pts": 944.8,
-        "our_rank": 3,
-        "delta": 0.0
+        "our_pts": 949.8,
+        "our_rank": 4,
+        "delta": 5.0
       },
       {
         "fr": "Francisco Quesada",
         "fr_pts": 856.1,
         "fr_rank": 5,
         "our": "Francisco Quesada",
-        "our_pts": 846.1,
-        "our_rank": 6,
-        "delta": -10.0
+        "our_pts": 856.1,
+        "our_rank": 8,
+        "delta": 0.0
       },
       {
         "fr": "Guillaume Bourdila",
         "fr_pts": 835.0,
         "fr_rank": 6,
         "our": "Guillaume Bourdila",
-        "our_pts": 801.3,
-        "our_rank": 10,
-        "delta": -33.7
+        "our_pts": 915.0,
+        "our_rank": 6,
+        "delta": 80.0
       },
       {
         "fr": "Hakyong Kim",
@@ -95,26 +66,26 @@
         "fr_rank": 7,
         "our": "Hakyong Kim",
         "our_pts": 833.9,
-        "our_rank": 7,
+        "our_rank": 9,
         "delta": 0.0
       },
       {
         "fr": "Samo Jeranko",
-        "fr_pts": 830.4,
+        "fr_pts": 830.4000000000001,
         "fr_rank": 8,
         "our": "Samo Jeranko",
-        "our_pts": 699.1,
-        "our_rank": 42,
-        "delta": -131.3
+        "our_pts": 830.4,
+        "our_rank": 10,
+        "delta": -0.0
       },
       {
         "fr": "Goran Colak",
         "fr_pts": 825.0,
         "fr_rank": 9,
         "our": "Goran Colak",
-        "our_pts": 813.5,
-        "our_rank": 9,
-        "delta": -11.5
+        "our_pts": 933.5,
+        "our_rank": 5,
+        "delta": 108.5
       },
       {
         "fr": "Kai Xiao",
@@ -122,7 +93,7 @@
         "fr_rank": 10,
         "our": "Kai Xiao",
         "our_pts": 730.9,
-        "our_rank": 26,
+        "our_rank": 33,
         "delta": -83.0
       },
       {
@@ -131,7 +102,7 @@
         "fr_rank": 11,
         "our": "Hua Yang Huang",
         "our_pts": 820.7,
-        "our_rank": 8,
+        "our_rank": 11,
         "delta": 9.0
       },
       {
@@ -139,18 +110,18 @@
         "fr_pts": 796.6,
         "fr_rank": 12,
         "our": "Ming (William Joy) Jin",
-        "our_pts": 800.6,
-        "our_rank": 11,
-        "delta": 4.0
+        "our_pts": 815.6,
+        "our_rank": 12,
+        "delta": 19.0
       },
       {
         "fr": "Dean Chaouche",
         "fr_pts": 792.0,
         "fr_rank": 13,
         "our": "Dean Chaouche",
-        "our_pts": 782.1,
+        "our_pts": 792.0,
         "our_rank": 14,
-        "delta": -9.9
+        "delta": 0.0
       },
       {
         "fr": "Philipp Heinzelmann",
@@ -158,7 +129,7 @@
         "fr_rank": 14,
         "our": "Philipp Heinzelmann",
         "our_pts": 791.9,
-        "our_rank": 12,
+        "our_rank": 15,
         "delta": 0.0
       },
       {
@@ -167,7 +138,7 @@
         "fr_rank": 15,
         "our": "Eugen Goettling",
         "our_pts": 790.7,
-        "our_rank": 13,
+        "our_rank": 16,
         "delta": 0.0
       },
       {
@@ -175,9 +146,9 @@
         "fr_pts": 779.45,
         "fr_rank": 16,
         "our": "Christos Karelos",
-        "our_pts": 700.45,
-        "our_rank": 41,
-        "delta": -79.0
+        "our_pts": 796.45,
+        "our_rank": 13,
+        "delta": 17.0
       },
       {
         "fr": "Mitch Ayres",
@@ -185,7 +156,7 @@
         "fr_rank": 17,
         "our": "Mitch Ayres",
         "our_pts": 767.9,
-        "our_rank": 15,
+        "our_rank": 19,
         "delta": 0.0
       },
       {
@@ -193,27 +164,36 @@
         "fr_pts": 766.6,
         "fr_rank": 18,
         "our": "Jan Knutzen",
-        "our_pts": 763.1,
-        "our_rank": 16,
-        "delta": -3.5
+        "our_pts": 766.6,
+        "our_rank": 20,
+        "delta": 0.0
       },
       {
         "fr": "Piotr Kubiak",
         "fr_pts": 763.15,
         "fr_rank": 19,
         "our": "Piotr Kubiak",
-        "our_pts": 846.45,
-        "our_rank": 5,
-        "delta": 83.3
+        "our_pts": 895.3,
+        "our_rank": 7,
+        "delta": 132.15
+      },
+      {
+        "fr": "Vivien Richard",
+        "fr_pts": 762.0600000000001,
+        "fr_rank": 20,
+        "our": "Vivien Richard",
+        "our_pts": 772.28,
+        "our_rank": 18,
+        "delta": 10.22
       },
       {
         "fr": "Ioannis Kothonidis",
         "fr_pts": 761.7,
         "fr_rank": 21,
         "our": "Ioannis Kothonidis",
-        "our_pts": 686.7,
-        "our_rank": 49,
-        "delta": -75.0
+        "our_pts": 780.7,
+        "our_rank": 17,
+        "delta": 19.0
       },
       {
         "fr": "Yi(Zy) Zhang",
@@ -221,7 +201,7 @@
         "fr_rank": 22,
         "our": "Yi(Zy) Zhang",
         "our_pts": 761.5,
-        "our_rank": 17,
+        "our_rank": 21,
         "delta": 0.0
       },
       {
@@ -230,7 +210,7 @@
         "fr_rank": 23,
         "our": "Roberto Guzman",
         "our_pts": 761.3,
-        "our_rank": 18,
+        "our_rank": 22,
         "delta": 0.0
       },
       {
@@ -239,7 +219,7 @@
         "fr_rank": 24,
         "our": "William Trubridge",
         "our_pts": 757.8,
-        "our_rank": 19,
+        "our_rank": 23,
         "delta": 0.0
       },
       {
@@ -247,9 +227,9 @@
         "fr_pts": 750.6,
         "fr_rank": 25,
         "our": "Boris Milosic",
-        "our_pts": 688.43,
-        "our_rank": 46,
-        "delta": -62.17
+        "our_pts": 750.85,
+        "our_rank": 25,
+        "delta": 0.25
       },
       {
         "fr": "Martin Ruman",
@@ -257,7 +237,7 @@
         "fr_rank": 26,
         "our": "Martin Ruman",
         "our_pts": 748.5,
-        "our_rank": 20,
+        "our_rank": 26,
         "delta": 0.0
       },
       {
@@ -265,18 +245,18 @@
         "fr_pts": 745.9,
         "fr_rank": 27,
         "our": "Kurt Chambers",
-        "our_pts": 745.9,
-        "our_rank": 21,
-        "delta": 0.0
+        "our_pts": 754.9,
+        "our_rank": 24,
+        "delta": 9.0
       },
       {
         "fr": "Vincent Mathieu",
         "fr_pts": 740.6,
         "fr_rank": 28,
         "our": "Vincent Mathieu",
-        "our_pts": 690.6,
-        "our_rank": 45,
-        "delta": -50.0
+        "our_pts": 741.6,
+        "our_rank": 28,
+        "delta": 1.0
       },
       {
         "fr": "Pablo Marti",
@@ -284,7 +264,7 @@
         "fr_rank": 29,
         "our": "Pablo Marti",
         "our_pts": 740.2,
-        "our_rank": 22,
+        "our_rank": 29,
         "delta": 0.0
       },
       {
@@ -292,18 +272,18 @@
         "fr_pts": 739.9,
         "fr_rank": 30,
         "our": "Alejandro Lemus",
-        "our_pts": 736.9,
-        "our_rank": 23,
-        "delta": -3.0
+        "our_pts": 739.9,
+        "our_rank": 30,
+        "delta": 0.0
       },
       {
         "fr": "Jakob Hansen",
         "fr_pts": 739.25,
         "fr_rank": 31,
         "our": "Jakob Hansen",
-        "our_pts": 736.0,
-        "our_rank": 24,
-        "delta": -3.25
+        "our_pts": 739.25,
+        "our_rank": 31,
+        "delta": 0.0
       },
       {
         "fr": "Yixian Zhang",
@@ -311,8 +291,17 @@
         "fr_rank": 32,
         "our": "Yixian Zhang",
         "our_pts": 732.4,
-        "our_rank": 25,
+        "our_rank": 32,
         "delta": 0.0
+      },
+      {
+        "fr": "Sebastian Lira",
+        "fr_pts": 727.6,
+        "fr_rank": 33,
+        "our": "Sebastian Lira",
+        "our_pts": 728.15,
+        "our_rank": 34,
+        "delta": 0.55
       },
       {
         "fr": "Oleksandr Bubenchykov",
@@ -320,7 +309,7 @@
         "fr_rank": 34,
         "our": "Oleksandr Bubenchykov",
         "our_pts": 725.6,
-        "our_rank": 27,
+        "our_rank": 35,
         "delta": 0.0
       },
       {
@@ -329,7 +318,7 @@
         "fr_rank": 35,
         "our": "William Winram",
         "our_pts": 723.2,
-        "our_rank": 28,
+        "our_rank": 36,
         "delta": 0.0
       },
       {
@@ -337,27 +326,27 @@
         "fr_pts": 721.2,
         "fr_rank": 36,
         "our": "Ziyu Rocky Liu",
-        "our_pts": 721.2,
-        "our_rank": 29,
-        "delta": 0.0
+        "our_pts": 722.45,
+        "our_rank": 37,
+        "delta": 1.25
       },
       {
         "fr": "Walid Boudhiaf",
         "fr_pts": 720.65,
         "fr_rank": 37,
         "our": "Walid Boudhiaf",
-        "our_pts": 710.65,
-        "our_rank": 34,
-        "delta": -10.0
+        "our_pts": 741.65,
+        "our_rank": 27,
+        "delta": 21.0
       },
       {
         "fr": "Martin Zajac",
         "fr_pts": 718.0,
         "fr_rank": 38,
         "our": "Martin Zajac",
-        "our_pts": 713.38,
-        "our_rank": 32,
-        "delta": -4.62
+        "our_pts": 718.0,
+        "our_rank": 41,
+        "delta": 0.0
       },
       {
         "fr": "Christian Langer",
@@ -365,7 +354,7 @@
         "fr_rank": 39,
         "our": "Christian Langer",
         "our_pts": 717.3,
-        "our_rank": 30,
+        "our_rank": 42,
         "delta": 0.0
       },
       {
@@ -373,45 +362,63 @@
         "fr_pts": 714.7,
         "fr_rank": 40,
         "our": "Karlo Grbin",
-        "our_pts": 714.7,
-        "our_rank": 31,
-        "delta": 0.0
+        "our_pts": 721.7,
+        "our_rank": 39,
+        "delta": 7.0
+      },
+      {
+        "fr": "Abdelatif Alouach",
+        "fr_pts": 712.96,
+        "fr_rank": 41,
+        "our": "Abdelatif Alouach",
+        "our_pts": 714.95,
+        "our_rank": 44,
+        "delta": 1.99
       },
       {
         "fr": "Daniel Losinski",
         "fr_pts": 712.4,
         "fr_rank": 42,
         "our": "Daniel Losinski",
-        "our_pts": 690.8,
-        "our_rank": 44,
-        "delta": -21.6
+        "our_pts": 715.4,
+        "our_rank": 43,
+        "delta": 3.0
       },
       {
         "fr": "Gimun Kwak",
         "fr_pts": 711.35,
         "fr_rank": 43,
         "our": "Gimun Kwak",
-        "our_pts": 709.6,
-        "our_rank": 35,
-        "delta": -1.75
+        "our_pts": 718.35,
+        "our_rank": 40,
+        "delta": 7.0
+      },
+      {
+        "fr": "Emmanouil Giankos",
+        "fr_pts": 711.0,
+        "fr_rank": 44,
+        "our": "Emmanouil Giankos",
+        "our_pts": 711.0,
+        "our_rank": 48,
+        "delta": 0.0
       },
       {
         "fr": "Michael Sadowicz",
         "fr_pts": 708.95,
         "fr_rank": 45,
         "our": "Michael Sadowicz",
-        "our_pts": 703.45,
-        "our_rank": 38,
-        "delta": -5.5
+        "our_pts": 711.95,
+        "our_rank": 47,
+        "delta": 3.0
       },
       {
         "fr": "Vootipong Limpanitivat",
         "fr_pts": 708.8,
         "fr_rank": 46,
         "our": "Vootipong Limpanitivat",
-        "our_pts": 703.8,
-        "our_rank": 37,
-        "delta": -5.0
+        "our_pts": 714.8,
+        "our_rank": 45,
+        "delta": 6.0
       },
       {
         "fr": "Guillaume Néry",
@@ -419,7 +426,7 @@
         "fr_rank": 47,
         "our": "Guillaume Néry",
         "our_pts": 706.9,
-        "our_rank": 36,
+        "our_rank": 49,
         "delta": 0.0
       },
       {
@@ -427,90 +434,54 @@
         "fr_pts": 703.2,
         "fr_rank": 48,
         "our": "Fynn Neb",
-        "our_pts": 703.2,
-        "our_rank": 39,
-        "delta": 0.0
+        "our_pts": 713.2,
+        "our_rank": 46,
+        "delta": 10.0
       },
       {
         "fr": "Jihoon Jang",
         "fr_pts": 701.7,
         "fr_rank": 49,
         "our": "Jihoon Jang",
-        "our_pts": 701.7,
-        "our_rank": 40,
-        "delta": 0.0
+        "our_pts": 706.7,
+        "our_rank": 50,
+        "delta": 5.0
       },
       {
         "fr": "Luxiao Huang",
         "fr_pts": 701.1,
         "fr_rank": 50,
         "our": "Luxiao Huang",
-        "our_pts": 711.1,
-        "our_rank": 33,
-        "delta": 10.0
+        "our_pts": 722.1,
+        "our_rank": 38,
+        "delta": 21.0
       }
     ]
   },
   "women": {
-    "matched_top50": 45,
+    "matched_top50": 50,
     "present": 50,
-    "point_within_15": 37,
-    "point_within_40": 40,
-    "missing_top50": [
-      {
-        "fr": "Mirela Kardašević",
-        "fr_pts": 705.5,
-        "fr_rank": 11,
-        "our_rank": 86,
-        "our_pts": 437.5
-      },
-      {
-        "fr": "Agata Załęcka",
-        "fr_pts": 628.2,
-        "fr_rank": 28,
-        "our_rank": 60,
-        "our_pts": 512.2
-      },
-      {
-        "fr": "Linda Paganelli",
-        "fr_pts": 619.67,
-        "fr_rank": 31,
-        "our_rank": 106,
-        "our_pts": 401.6
-      },
-      {
-        "fr": "Jennifer Wendland",
-        "fr_pts": 605.15,
-        "fr_rank": 40,
-        "our_rank": 54,
-        "our_pts": 540.9
-      },
-      {
-        "fr": "Claire Beatrix Paris",
-        "fr_pts": 586.8,
-        "fr_rank": 49,
-        "our_rank": 59,
-        "our_pts": 518.8
-      }
-    ],
+    "point_within_15": 47,
+    "point_within_40": 48,
+    "missing_top50": [],
     "matched_details": [
       {
         "fr": "Zsófia Törőcsik",
         "fr_pts": 852.35,
         "fr_rank": 1,
         "our": "Zsófia Törőcsik",
-        "our_pts": 852.35,
+        "our_pts": 864.35,
         "our_rank": 2,
-        "delta": 0.0
+        "delta": 12.0
       },
       {
         "fr": "Alessia Zecchini",
         "fr_pts": 831.88,
         "fr_rank": 2,
         "our": "Alessia Zecchini",
-        "our_pts": 820.03,
+        "our_pts": 833.88,
         "our_rank": 3,
-        "delta": -11.85
+        "delta": 2.0
       },
       {
         "fr": "Kateryna Sadurska",
@@ -526,9 +497,9 @@
         "fr_pts": 751.2,
         "fr_rank": 4,
         "our": "Enchante Gallardo",
-        "our_pts": 746.2,
-        "our_rank": 6,
-        "delta": -5.0
+        "our_pts": 754.2,
+        "our_rank": 5,
+        "delta": 3.0
       },
       {
         "fr": "Mariko Kaji",
@@ -536,7 +507,7 @@
         "fr_rank": 5,
         "our": "Mariko Kaji",
         "our_pts": 746.9,
-        "our_rank": 5,
+        "our_rank": 6,
         "delta": 0.0
       },
       {
@@ -544,36 +515,36 @@
         "fr_pts": 745.35,
         "fr_rank": 6,
         "our": "Hanako Hirose",
-        "our_pts": 807.6,
+        "our_pts": 812.35,
         "our_rank": 4,
-        "delta": 62.25
+        "delta": 67.0
       },
       {
         "fr": "Natalie Bruce",
         "fr_pts": 734.7,
         "fr_rank": 7,
         "our": "Natalie Bruce",
-        "our_pts": 700.7,
-        "our_rank": 9,
-        "delta": -34.0
+        "our_pts": 736.7,
+        "our_rank": 7,
+        "delta": 2.0
       },
       {
         "fr": "Isabel Sanchez Aran",
         "fr_pts": 734.28,
         "fr_rank": 8,
         "our": "Isabel Sanchez Aran",
-        "our_pts": 650.48,
-        "our_rank": 18,
-        "delta": -83.8
+        "our_pts": 734.28,
+        "our_rank": 8,
+        "delta": 0.0
       },
       {
         "fr": "Marianna Krupnitskaia",
         "fr_pts": 721.88,
         "fr_rank": 9,
         "our": "Marianna Krupnitskaia",
-        "our_pts": 707.6,
-        "our_rank": 8,
-        "delta": -14.28
+        "our_pts": 723.88,
+        "our_rank": 9,
+        "delta": 2.0
       },
       {
         "fr": "Jiyeon Kim",
@@ -581,8 +552,17 @@
         "fr_rank": 10,
         "our": "Jiyeon Kim",
         "our_pts": 718.2,
-        "our_rank": 7,
+        "our_rank": 10,
         "delta": 0.0
+      },
+      {
+        "fr": "Mirela Kardašević",
+        "fr_pts": 705.5,
+        "fr_rank": 11,
+        "our": "Mirela Kardašević",
+        "our_pts": 716.5,
+        "our_rank": 11,
+        "delta": 11.0
       },
       {
         "fr": "Tongtong Xu",
@@ -590,7 +570,7 @@
         "fr_rank": 12,
         "our": "Tongtong Xu",
         "our_pts": 693.8,
-        "our_rank": 10,
+        "our_rank": 12,
         "delta": 0.0
       },
       {
@@ -598,9 +578,9 @@
         "fr_pts": 684.2,
         "fr_rank": 13,
         "our": "Jessea Wenjie Lu",
-        "our_pts": 682.2,
-        "our_rank": 12,
-        "delta": -2.0
+        "our_pts": 684.2,
+        "our_rank": 14,
+        "delta": 0.0
       },
       {
         "fr": "Yongju Lee",
@@ -608,7 +588,7 @@
         "fr_rank": 14,
         "our": "Yongju Lee",
         "our_pts": 677.0,
-        "our_rank": 13,
+        "our_rank": 16,
         "delta": 0.0
       },
       {
@@ -616,9 +596,9 @@
         "fr_pts": 676.4,
         "fr_rank": 15,
         "our": "Sanda Delija",
-        "our_pts": 676.4,
-        "our_rank": 14,
-        "delta": 0.0
+        "our_pts": 683.6,
+        "our_rank": 15,
+        "delta": 7.2
       },
       {
         "fr": "Jung A Kim",
@@ -626,7 +606,7 @@
         "fr_rank": 16,
         "our": "Jung A Kim",
         "our_pts": 684.7,
-        "our_rank": 11,
+        "our_rank": 13,
         "delta": 14.0
       },
       {
@@ -635,7 +615,7 @@
         "fr_rank": 17,
         "our": "Yasuko Ozeki",
         "our_pts": 665.1,
-        "our_rank": 15,
+        "our_rank": 17,
         "delta": 0.0
       },
       {
@@ -643,9 +623,9 @@
         "fr_pts": 653.3,
         "fr_rank": 18,
         "our": "Jingyu Ning",
-        "our_pts": 654.8,
-        "our_rank": 16,
-        "delta": 1.5
+        "our_pts": 660.8,
+        "our_rank": 18,
+        "delta": 7.5
       },
       {
         "fr": "Patricia Paige Ong",
@@ -653,7 +633,7 @@
         "fr_rank": 19,
         "our": "Patricia Paige Ong",
         "our_pts": 652.7,
-        "our_rank": 17,
+        "our_rank": 19,
         "delta": 1.0
       },
       {
@@ -661,9 +641,9 @@
         "fr_pts": 651.6,
         "fr_rank": 20,
         "our": "Hyemi (Mimi) Kim",
-        "our_pts": 649.6,
-        "our_rank": 19,
-        "delta": -2.0
+        "our_pts": 651.6,
+        "our_rank": 20,
+        "delta": 0.0
       },
       {
         "fr": "Amber Bourke",
@@ -671,7 +651,7 @@
         "fr_rank": 21,
         "our": "Amber Bourke",
         "our_pts": 644.6,
-        "our_rank": 20,
+        "our_rank": 22,
         "delta": 0.0
       },
       {
@@ -679,9 +659,9 @@
         "fr_pts": 644.1,
         "fr_rank": 22,
         "our": "Lauren Matevish",
-        "our_pts": 589.5,
-        "our_rank": 41,
-        "delta": -54.6
+        "our_pts": 644.1,
+        "our_rank": 23,
+        "delta": 0.0
       },
       {
         "fr": "Montserrat Peart Reyes",
@@ -689,7 +669,7 @@
         "fr_rank": 23,
         "our": "Montserrat Peart Reyes",
         "our_pts": 642.5,
-        "our_rank": 21,
+        "our_rank": 24,
         "delta": 0.0
       },
       {
@@ -697,18 +677,18 @@
         "fr_pts": 637.4,
         "fr_rank": 24,
         "our": "Natalia Zharkova",
-        "our_pts": 634.4,
-        "our_rank": 22,
-        "delta": -3.0
+        "our_pts": 637.4,
+        "our_rank": 25,
+        "delta": 0.0
       },
       {
         "fr": "Carol Carrasco Navas",
         "fr_pts": 630.9,
         "fr_rank": 25,
         "our": "Carol Carrasco Navas",
-        "our_pts": 562.95,
-        "our_rank": 48,
-        "delta": -67.95
+        "our_pts": 630.95,
+        "our_rank": 27,
+        "delta": 0.05
       },
       {
         "fr": "Nicole Edensbo",
@@ -716,7 +696,7 @@
         "fr_rank": 26,
         "our": "Nicole Edensbo",
         "our_pts": 629.9,
-        "our_rank": 23,
+        "our_rank": 28,
         "delta": 0.0
       },
       {
@@ -724,9 +704,18 @@
         "fr_pts": 629.2,
         "fr_rank": 27,
         "our": "Olga Davydova",
-        "our_pts": 629.2,
-        "our_rank": 24,
-        "delta": 0.0
+        "our_pts": 631.2,
+        "our_rank": 26,
+        "delta": 2.0
+      },
+      {
+        "fr": "Agata Załęcka",
+        "fr_pts": 628.2,
+        "fr_rank": 28,
+        "our": "Agata Załęcka",
+        "our_pts": 649.95,
+        "our_rank": 21,
+        "delta": 21.75
       },
       {
         "fr": "Sheena McNally",
@@ -734,7 +723,7 @@
         "fr_rank": 29,
         "our": "Sheena McNally",
         "our_pts": 622.0,
-        "our_rank": 25,
+        "our_rank": 30,
         "delta": 0.0
       },
       {
@@ -743,8 +732,17 @@
         "fr_rank": 30,
         "our": "Namin Kim",
         "our_pts": 621.7,
-        "our_rank": 26,
+        "our_rank": 31,
         "delta": 0.0
+      },
+      {
+        "fr": "Linda Paganelli",
+        "fr_pts": 619.67,
+        "fr_rank": 31,
+        "our": "Linda Paganelli",
+        "our_pts": 627.67,
+        "our_rank": 29,
+        "delta": 8.0
       },
       {
         "fr": "Jie Dong",
@@ -752,7 +750,7 @@
         "fr_rank": 32,
         "our": "Jie Dong",
         "our_pts": 618.5,
-        "our_rank": 27,
+        "our_rank": 34,
         "delta": 0.0
       },
       {
@@ -760,27 +758,27 @@
         "fr_pts": 615.6,
         "fr_rank": 33,
         "our": "Yuanyuan Wang",
-        "our_pts": 615.6,
-        "our_rank": 28,
-        "delta": 0.0
+        "our_pts": 620.6,
+        "our_rank": 32,
+        "delta": 5.0
       },
       {
         "fr": "Yagmur Ergun",
         "fr_pts": 615.35,
         "fr_rank": 34,
         "our": "Yagmur Ergun",
-        "our_pts": 594.55,
-        "our_rank": 36,
-        "delta": -20.8
+        "our_pts": 619.1,
+        "our_rank": 33,
+        "delta": 3.75
       },
       {
         "fr": "Sofía Gómez Uribe",
         "fr_pts": 614.5,
         "fr_rank": 35,
         "our": "Sofía Gómez Uribe",
-        "our_pts": 600.5,
+        "our_pts": 616.0,
         "our_rank": 35,
-        "delta": -14.0
+        "delta": 1.5
       },
       {
         "fr": "Jinseul Yuk",
@@ -788,7 +786,7 @@
         "fr_rank": 36,
         "our": "Jinseul Yuk",
         "our_pts": 612.8,
-        "our_rank": 29,
+        "our_rank": 37,
         "delta": 0.0
       },
       {
@@ -796,9 +794,9 @@
         "fr_pts": 611.6,
         "fr_rank": 37,
         "our": "Veronika Kravtsova",
-        "our_pts": 611.6,
-        "our_rank": 30,
-        "delta": 0.0
+        "our_pts": 615.6,
+        "our_rank": 36,
+        "delta": 4.0
       },
       {
         "fr": "Talya Davidoff",
@@ -806,7 +804,7 @@
         "fr_rank": 38,
         "our": "Talya Davidoff",
         "our_pts": 609.5,
-        "our_rank": 31,
+        "our_rank": 39,
         "delta": 0.0
       },
       {
@@ -814,8 +812,17 @@
         "fr_pts": 606.8,
         "fr_rank": 39,
         "our": "Agnieszka Kalska",
-        "our_pts": 606.8,
-        "our_rank": 32,
+        "our_pts": 610.8,
+        "our_rank": 38,
+        "delta": 4.0
+      },
+      {
+        "fr": "Jennifer Wendland",
+        "fr_pts": 605.15,
+        "fr_rank": 40,
+        "our": "Jennifer Wendland",
+        "our_pts": 605.15,
+        "our_rank": 40,
         "delta": 0.0
       },
       {
@@ -823,9 +830,9 @@
         "fr_pts": 605.05,
         "fr_rank": 41,
         "our": "Jarmila Slovenčíková",
-        "our_pts": 575.3,
-        "our_rank": 47,
-        "delta": -29.75
+        "our_pts": 605.05,
+        "our_rank": 41,
+        "delta": 0.0
       },
       {
         "fr": "Natalia Wilk",
@@ -833,7 +840,7 @@
         "fr_rank": 42,
         "our": "Natalia Wilk",
         "our_pts": 603.85,
-        "our_rank": 33,
+        "our_rank": 42,
         "delta": 0.0
       },
       {
@@ -842,7 +849,7 @@
         "fr_rank": 43,
         "our": "Hou I Ming",
         "our_pts": 601.3,
-        "our_rank": 34,
+        "our_rank": 43,
         "delta": 0.0
       },
       {
@@ -850,59 +857,68 @@
         "fr_pts": 595.7,
         "fr_rank": 44,
         "our": "Camila Jaber",
-        "our_pts": 591.7,
-        "our_rank": 39,
-        "delta": -4.0
+        "our_pts": 595.7,
+        "our_rank": 45,
+        "delta": 0.0
       },
       {
         "fr": "Siew Ling, Elys Lai",
         "fr_pts": 592.8,
         "fr_rank": 45,
         "our": "Siew Ling, Elys Lai",
-        "our_pts": 592.8,
-        "our_rank": 37,
-        "delta": 0.0
+        "our_pts": 599.8,
+        "our_rank": 44,
+        "delta": 7.0
       },
       {
         "fr": "Alice Hickson",
         "fr_pts": 592.1,
         "fr_rank": 46,
         "our": "Alice Hickson",
-        "our_pts": 592.1,
-        "our_rank": 38,
-        "delta": 0.0
+        "our_pts": 594.1,
+        "our_rank": 46,
+        "delta": 2.0
       },
       {
         "fr": "Vicky Jiaoyi Li",
         "fr_pts": 590.7,
         "fr_rank": 47,
         "our": "Vicky Jiaoyi Li",
-        "our_pts": 590.7,
-        "our_rank": 40,
-        "delta": 0.0
+        "our_pts": 592.7,
+        "our_rank": 47,
+        "delta": 2.0
       },
       {
         "fr": "Jingzhe Li",
         "fr_pts": 590.15,
         "fr_rank": 48,
         "our": "Jingzhe Li",
-        "our_pts": 588.9,
-        "our_rank": 42,
-        "delta": -1.25
+        "our_pts": 592.15,
+        "our_rank": 48,
+        "delta": 2.0
+      },
+      {
+        "fr": "Claire Beatrix Paris",
+        "fr_pts": 586.8,
+        "fr_rank": 49,
+        "our": "Claire Beatrix Paris",
+        "our_pts": 586.8,
+        "our_rank": 49,
+        "delta": 0.0
       },
       {
         "fr": "Misuzu Okamoto",
         "fr_pts": 586.0,
         "fr_rank": 50,
         "our": "Misuzu Okamoto",
-        "our_pts": 582.0,
-        "our_rank": 43,
-        "delta": -4.0
+        "our_pts": 586.0,
+        "our_rank": 50,
+        "delta": 0.0
       }
     ]
   },
   "methodology": {
-    "portal": "sum of best points over 8 disciplines from AIDA+CMAS (+ AIDA ranking-slice PBs when history is thin)",
+    "portal": "sum of best points over 8 disciplines from AIDA+CMAS (+ AIDA ranking-slice PBs + FR gap-fill when primary history is thin)",
     "factors": {
       "STA": 0.2,
       "DYN": 0.5,
@@ -915,13 +931,15 @@
     },
     "cards": "RED excluded; YELLOW uses source points after penalties",
     "active_window": "UI Active = rolling 24 months from asOf; FR compare = all-time",
-    "ties": "Olympic place for equal points; tie-break %WR → disc count → earlier PB date"
+    "ties": "Olympic place for equal points; tie-break %WR → disc count → earlier PB date",
+    "fr_gap_fill": "FR rows tagged source=FR + provenance URL; same-dive conflicts prefer AIDA/CMAS; FR excluded from AIDA/CMAS-only boards"
   },
   "seed_stats": {
     "athletes": 3050,
-    "events": 4032,
-    "results": 22925,
+    "events": 4736,
+    "results": 24396,
     "asOf": "2026-11-26"
   },
-  "slice_enrichment_rows": 5403
+  "slice_enrichment_rows": 5403,
+  "fr_gap_linked": 1471
 }

@@ -61,6 +61,10 @@ function pointsOf(att: Performance): number {
   return Math.floor(att.rp * f * 10) / 10;
 }
 
+function isFrSource(att: Performance): boolean {
+  return (att.source || "").toUpperCase() === "FR";
+}
+
 function bests(
   athleteId: string,
   performances: Performance[],
@@ -70,13 +74,28 @@ function bests(
   const out: Record<string, Performance> = {};
   for (const att of performances) {
     if (att.athleteId !== athleteId) continue;
-    if (opts.board !== "PORTAL" && att.federation !== opts.board) continue;
+    // Federation boards stay AIDA/CMAS-only — FR gap-fill is Portal only.
+    if (opts.board !== "PORTAL") {
+      if (att.federation !== opts.board) continue;
+      if (isFrSource(att)) continue;
+    }
     if (!inScope(att.date, opts.scope, asOf)) continue;
     // RED / DQ = 0 pts, never a PB. Card comes from the judging federation.
     if (att.card === "R") continue;
     if (!(att.discipline in FACTOR)) continue;
     const cur = out[att.discipline];
-    if (!cur || pointsOf(att) > pointsOf(cur)) out[att.discipline] = att;
+    if (!cur) {
+      out[att.discipline] = att;
+      continue;
+    }
+    const aPts = pointsOf(att);
+    const cPts = pointsOf(cur);
+    if (aPts > cPts) {
+      out[att.discipline] = att;
+    } else if (aPts === cPts && isFrSource(cur) && !isFrSource(att)) {
+      // Prefer AIDA/CMAS provenance when points tie.
+      out[att.discipline] = att;
+    }
   }
   return out;
 }

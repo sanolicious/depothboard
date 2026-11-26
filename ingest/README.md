@@ -1,6 +1,6 @@
 # Ingest pipeline (AIDA + CMAS)
 
-Polite public-source ingest for Depthboard. **FR (freediveranking.com) is used only for verification**, never as a data source.
+Polite public-source ingest for Depthboard. **FR (freediveranking.com)** is verification + **gap-fill only** (`source: FR`). Primary sources remain AIDA/CMAS.
 
 ## Layout
 
@@ -38,3 +38,19 @@ CMAS API returns birth dates and accreditation codes. Before storage we:
 ## Coverage note
 
 A full AIDA overall ranking is ~1200 pages per gender. Default run takes top pages across overall + 8 disciplines × M/F (all-time) plus year filters 2025/2026, then full history for top-N athletes, and **all** freediving competitions from the CMAS Microplus API.
+
+
+## Live sync
+
+```bash
+PYTHONPATH=. python3 ingest/bin/live_sync.py --mode incremental
+```
+
+See `ingest/scheduler/README.md`, `docs/live-sync.md`, and `.github/workflows/live-sync.yml`.
+
+## FR gap-fill
+
+```bash
+PYTHONPATH=. python3 ingest/bin/fr_gap_fill.py
+PYTHONPATH=. python3 ingest/bin/rebuild_seed.py
+```

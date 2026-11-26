@@ -1,0 +1,614 @@
+{
+  "started_at": "2026-11-26T12:12:24Z",
+  "targets": 100,
+  "fetched": 100,
+  "fetch_errors": [],
+  "result_rows": 8517,
+  "kept_rows": 1506,
+  "skipped_primary_dive": 7067,
+  "pb_gap_rows": 56,
+  "by_athlete": {
+    "Vivien Richard": {
+      "slug": "Vivien-Richard",
+      "result_rows": 59,
+      "kept": 53,
+      "pb_gaps": 1
+    },
+    "Sebastian Lira": {
+      "slug": "Sebastian-Lira",
+      "result_rows": 36,
+      "kept": 16,
+      "pb_gaps": 1
+    },
+    "Abdelatif Alouach": {
+      "slug": "Abdelatif-Alouach",
+      "result_rows": 83,
+      "kept": 42,
+      "pb_gaps": 0
+    },
+    "Emmanouil Giankos": {
+      "slug": "Emmanouil-Giankos",
+      "result_rows": 35,
+      "kept": 35,
+      "pb_gaps": 3
+    },
+    "Mirela Kardašević": {
+      "slug": "Mirela-Kardasevic",
+      "result_rows": 49,
+      "kept": 40,
+      "pb_gaps": 1
+    },
+    "Agata Załęcka": {
+      "slug": "Agata-Zalecka",
+      "result_rows": 52,
+      "kept": 30,
+      "pb_gaps": 0
+    },
+    "Linda Paganelli": {
+      "slug": "Linda-Paganelli",
+      "result_rows": 65,
+      "kept": 16,
+      "pb_gaps": 2
+    },
+    "Jennifer Wendland": {
+      "slug": "Jennifer-Wendland",
+      "result_rows": 94,
+      "kept": 9,
+      "pb_gaps": 0
+    },
+    "Claire Beatrix Paris": {
+      "slug": "Claire-Beatrix-Paris",
+      "result_rows": 85,
+      "kept": 29,
+      "pb_gaps": 0
+    },
+    "Alexey Molchanov": {
+      "slug": "Alexey-Molchanov",
+      "result_rows": 276,
+      "kept": 34,
+      "pb_gaps": 1
+    },
+    "Samo Jeranko": {
+      "slug": "Samo-Jeranko",
+      "result_rows": 108,
+      "kept": 21,
+      "pb_gaps": 0
+    },
+    "Guillaume Bourdila": {
+      "slug": "Guillaume-Bourdila",
+      "result_rows": 111,
+      "kept": 98,
+      "pb_gaps": 1
+    },
+    "Francisco Quesada": {
+      "slug": "Francisco-Quesada",
+      "result_rows": 62,
+      "kept": 25,
+      "pb_gaps": 0
+    },
+    "Goran Colak": {
+      "slug": "Goran-Colak",
+      "result_rows": 133,
+      "kept": 35,
+      "pb_gaps": 1
+    },
+    "Mateusz Malina": {
+      "slug": "Mateusz-Malina",
+      "result_rows": 232,
+      "kept": 44,
+      "pb_gaps": 0
+    },
+    "Vitomir Maričić": {
+      "slug": "Vitomir-Maricic",
+      "result_rows": 119,
+      "kept": 21,
+      "pb_gaps": 2
+    },
+    "Petar Klovar": {
+      "slug": "Petar-Klovar",
+      "result_rows": 107,
+      "kept": 10,
+      "pb_gaps": 1
+    },
+    "Hakyong Kim": {
+      "slug": "Hakyong-Kim",
+      "result_rows": 82,
+      "kept": 4,
+      "pb_gaps": 0
+    },
+    "Kai Xiao": {
+      "slug": "Kai-Xiao",
+      "result_rows": 44,
+      "kept": 5,
+      "pb_gaps": 1
+    },
+    "Hua Yang Huang": {
+      "slug": "Hua-Yang-Huang",
+      "result_rows": 88,
+      "kept": 1,
+      "pb_gaps": 0
+    },
+    "Ming (William Joy) Jin": {
+      "slug": "Ming-(William-Joy)-Jin",
+      "result_rows": 105,
+      "kept": 20,
+      "pb_gaps": 2
+    },
+    "Dean Chaouche": {
+      "slug": "Dean-Chaouche",
+      "result_rows": 70,
+      "kept": 3,
+      "pb_gaps": 0
+    },
+    "Philipp Heinzelmann": {
+      "slug": "Philipp-Heinzelmann",
+      "result_rows": 41,
+      "kept": 3,
+      "pb_gaps": 0
+    },
+    "Eugen Goettling": {
+      "slug": "Eugen-Goettling",
+      "result_rows": 66,
+      "kept": 19,
+      "pb_gaps": 0
+    },
+    "Christos Karelos": {
+      "slug": "Christos-Karelos",
+      "result_rows": 60,
+      "kept": 16,
+      "pb_gaps": 0
+    },
+    "Mitch Ayres": {
+      "slug": "Mitch-Ayres",
+      "result_rows": 43,
+      "kept": 0,
+      "pb_gaps": 0
+    },
+    "Jan Knutzen": {
+      "slug": "Jan-Knutzen",
+      "result_rows": 86,
+      "kept": 17,
+      "pb_gaps": 0
+    },
+    "Piotr Kubiak": {
+      "slug": "Piotr-Kubiak",
+      "result_rows": 36,
+      "kept": 17,
+      "pb_gaps": 3
+    },
+    "Ioannis Kothonidis": {
+      "slug": "Ioannis-Kothonidis",
+      "result_rows": 57,
+      "kept": 9,
+      "pb_gaps": 1
+    },
+    "Yi(Zy) Zhang": {
+      "slug": "Yi(Zy)-Zhang",
+      "result_rows": 46,
+      "kept": 4,
+      "pb_gaps": 0
+    },
+    "Roberto Guzman": {
+      "slug": "Roberto-Guzman",
+      "result_rows": 143,
+      "kept": 4,
+      "pb_gaps": 0
+    },
+    "William Trubridge": {
+      "slug": "William-Trubridge",
+      "result_rows": 192,
+      "kept": 21,
+      "pb_gaps": 2
+    },
+    "Boris Milosic": {
+      "slug": "Boris-Milosic",
+      "result_rows": 88,
+      "kept": 44,
+      "pb_gaps": 1
+    },
+    "Martin Ruman": {
+      "slug": "Martin-Ruman",
+      "result_rows": 76,
+      "kept": 2,
+      "pb_gaps": 0
+    },
+    "Kurt Chambers": {
+      "slug": "Kurt-Chambers",
+      "result_rows": 94,
+      "kept": 2,
+      "pb_gaps": 0
+    },
+    "Vincent Mathieu": {
+      "slug": "Vincent-Mathieu",
+      "result_rows": 39,
+      "kept": 10,
+      "pb_gaps": 1
+    },
+    "Pablo Marti": {
+      "slug": "Pablo-Marti",
+      "result_rows": 32,
+      "kept": 0,
+      "pb_gaps": 0
+    },
+    "Alejandro Lemus": {
+      "slug": "Alejandro-Lemus",
+      "result_rows": 196,
+      "kept": 13,
+      "pb_gaps": 0
+    },
+    "Jakob Hansen": {
+      "slug": "Jakob-Hansen",
+      "result_rows": 107,
+      "kept": 29,
+      "pb_gaps": 0
+    },
+    "Yixian Zhang": {
+      "slug": "Yixian-Zhang",
+      "result_rows": 59,
+      "kept": 2,
+      "pb_gaps": 0
+    },
+    "Oleksandr Bubenchykov": {
+      "slug": "Oleksandr-Bubenchykov",
+      "result_rows": 85,
+      "kept": 2,
+      "pb_gaps": 2
+    },
+    "William Winram": {
+      "slug": "William-Winram",
+      "result_rows": 151,
+      "kept": 4,
+      "pb_gaps": 0
+    },
+    "Ziyu Rocky Liu": {
+      "slug": "Ziyu-Rocky-Liu",
+      "result_rows": 56,
+      "kept": 4,
+      "pb_gaps": 0
+    },
+    "Walid Boudhiaf": {
+      "slug": "Walid-Boudhiaf",
+      "result_rows": 82,
+      "kept": 22,
+      "pb_gaps": 2
+    },
+    "Martin Zajac": {
+      "slug": "Martin-Zajac",
+      "result_rows": 67,
+      "kept": 7,
+      "pb_gaps": 0
+    },
+    "Christian Langer": {
+      "slug": "Christian-Langer",
+      "result_rows": 53,
+      "kept": 6,
+      "pb_gaps": 0
+    },
+    "Karlo Grbin": {
+      "slug": "Karlo-Grbin",
+      "result_rows": 95,
+      "kept": 4,
+      "pb_gaps": 1
+    },
+    "Daniel Losinski": {
+      "slug": "Daniel-Losinski",
+      "result_rows": 95,
+      "kept": 13,
+      "pb_gaps": 0
+    },
+    "Gimun Kwak": {
+      "slug": "Gimun-Kwak",
+      "result_rows": 68,
+      "kept": 3,
+      "pb_gaps": 0
+    },
+    "Michael Sadowicz": {
+      "slug": "Michael-Sadowicz",
+      "result_rows": 48,
+      "kept": 15,
+      "pb_gaps": 1
+    },
+    "Vootipong Limpanitivat": {
+      "slug": "Vootipong-Limpanitivat",
+      "result_rows": 60,
+      "kept": 5,
+      "pb_gaps": 0
+    },
+    "Guillaume Néry": {
+      "slug": "Guillaume-Nery",
+      "result_rows": 98,
+      "kept": 0,
+      "pb_gaps": 0
+    },
+    "Fynn Neb": {
+      "slug": "Fynn-Neb",
+      "result_rows": 47,
+      "kept": 13,
+      "pb_gaps": 0
+    },
+    "Jihoon Jang": {
+      "slug": "Jihoon-Jang",
+      "result_rows": 143,
+      "kept": 1,
+      "pb_gaps": 1
+    },
+    "Luxiao Huang": {
+      "slug": "Luxiao-Huang",
+      "result_rows": 25,
+      "kept": 2,
+      "pb_gaps": 2
+    },
+    "Zsófia Törőcsik": {
+      "slug": "Zsofia-Torocsik",
+      "result_rows": 65,
+      "kept": 15,
+      "pb_gaps": 1
+    },
+    "Alessia Zecchini": {
+      "slug": "Alessia-Zecchini",
+      "result_rows": 107,
+      "kept": 55,
+      "pb_gaps": 1
+    },
+    "Kateryna Sadurska": {
+      "slug": "Kateryna-Sadurska",
+      "result_rows": 135,
+      "kept": 46,
+      "pb_gaps": 0
+    },
+    "Enchante Gallardo": {
+      "slug": "Enchante-Gallardo",
+      "result_rows": 178,
+      "kept": 36,
+      "pb_gaps": 0
+    },
+    "Mariko Kaji": {
+      "slug": "Mariko-Kaji",
+      "result_rows": 81,
+      "kept": 0,
+      "pb_gaps": 0
+    },
+    "Hanako Hirose": {
+      "slug": "Hanako-Hirose",
+      "result_rows": 188,
+      "kept": 18,
+      "pb_gaps": 0
+    },
+    "Natalie Bruce": {
+      "slug": "Natalie-Bruce",
+      "result_rows": 48,
+      "kept": 24,
+      "pb_gaps": 0
+    },
+    "Isabel Sanchez Aran": {
+      "slug": "Isabel-Sanchez-Aran",
+      "result_rows": 83,
+      "kept": 50,
+      "pb_gaps": 0
+    },
+    "Marianna Krupnitskaia": {
+      "slug": "Marianna-Krupnitskaia",
+      "result_rows": 133,
+      "kept": 25,
+      "pb_gaps": 0
+    },
+    "Jiyeon Kim": {
+      "slug": "Jiyeon-Kim",
+      "result_rows": 57,
+      "kept": 4,
+      "pb_gaps": 0
+    },
+    "Tongtong Xu": {
+      "slug": "Tongtong-Xu",
+      "result_rows": 42,
+      "kept": 0,
+      "pb_gaps": 0
+    },
+    "Jessea Wenjie Lu": {
+      "slug": "Jessea-Wenjie-Lu",
+      "result_rows": 75,
+      "kept": 5,
+      "pb_gaps": 0
+    },
+    "Yongju Lee": {
+      "slug": "Yongju-Lee",
+      "result_rows": 114,
+      "kept": 7,
+      "pb_gaps": 0
+    },
+    "Sanda Delija": {
+      "slug": "Sanda-Delija",
+      "result_rows": 100,
+      "kept": 8,
+      "pb_gaps": 2
+    },
+    "Jung A Kim": {
+      "slug": "Jung-A-Kim",
+      "result_rows": 106,
+      "kept": 14,
+      "pb_gaps": 0
+    },
+    "Yasuko Ozeki": {
+      "slug": "Yasuko-Ozeki",
+      "result_rows": 121,
+      "kept": 8,
+      "pb_gaps": 0
+    },
+    "Jingyu Ning": {
+      "slug": "Jingyu-Ning",
+      "result_rows": 42,
+      "kept": 4,
+      "pb_gaps": 0
+    },
+    "Patricia Paige Ong": {
+      "slug": "Patricia-Paige-Ong",
+      "result_rows": 68,
+      "kept": 5,
+      "pb_gaps": 0
+    },
+    "Hyemi (Mimi) Kim": {
+      "slug": "Hyemi-(Mimi)-Kim",
+      "result_rows": 73,
+      "kept": 5,
+      "pb_gaps": 0
+    },
+    "Amber Bourke": {
+      "slug": "Amber-Bourke",
+      "result_rows": 115,
+      "kept": 5,
+      "pb_gaps": 0
+    },
+    "Lauren Matevish": {
+      "slug": "Lauren-Matevish",
+      "result_rows": 61,
+      "kept": 10,
+      "pb_gaps": 0
+    },
+    "Montserrat Peart Reyes": {
+      "slug": "Montserrat-Peart-Reyes",
+      "result_rows": 78,
+      "kept": 6,
+      "pb_gaps": 0
+    },
+    "Natalia Zharkova": {
+      "slug": "Natalia-Zharkova",
+      "result_rows": 130,
+      "kept": 28,
+      "pb_gaps": 3
+    },
+    "Carol Carrasco Navas": {
+      "slug": "Carol-Carrasco-Navas",
+      "result_rows": 30,
+      "kept": 16,
+      "pb_gaps": 0
+    },
+    "Nicole Edensbo": {
+      "slug": "Nicole-Edensbo",
+      "result_rows": 60,
+      "kept": 0,
+      "pb_gaps": 0
+    },
+    "Olga Davydova": {
+      "slug": "Olga-Davydova",
+      "result_rows": 61,
+      "kept": 4,
+      "pb_gaps": 1
+    },
+    "Sheena McNally": {
+      "slug": "Sheena-McNally",
+      "result_rows": 120,
+      "kept": 12,
+      "pb_gaps": 4
+    },
+    "Namin Kim": {
+      "slug": "Namin-Kim",
+      "result_rows": 50,
+      "kept": 0,
+      "pb_gaps": 0
+    },
+    "Jie Dong": {
+      "slug": "Jie-Dong",
+      "result_rows": 71,
+      "kept": 0,
+      "pb_gaps": 0
+    },
+    "Yuanyuan Wang": {
+      "slug": "Yuanyuan-Wang",
+      "result_rows": 49,
+      "kept": 5,
+      "pb_gaps": 1
+    },
+    "Yagmur Ergun": {
+      "slug": "Yagmur-Ergun",
+      "result_rows": 37,
+      "kept": 18,
+      "pb_gaps": 0
+    },
+    "Sofía Gómez Uribe": {
+      "slug": "Sofia-Gomez",
+      "result_rows": 94,
+      "kept": 17,
+      "pb_gaps": 1
+    },
+    "Jinseul Yuk": {
+      "slug": "Jinseul-Yuk",
+      "result_rows": 47,
+      "kept": 6,
+      "pb_gaps": 0
+    },
+    "Veronika Kravtsova": {
+      "slug": "Veronika-Kravtsova",
+      "result_rows": 58,
+      "kept": 1,
+      "pb_gaps": 1
+    },
+    "Talya Davidoff": {
+      "slug": "Talya-Davidoff",
+      "result_rows": 54,
+      "kept": 20,
+      "pb_gaps": 0
+    },
+    "Agnieszka Kalska": {
+      "slug": "Agnieszka-Kalska",
+      "result_rows": 122,
+      "kept": 6,
+      "pb_gaps": 1
+    },
+    "Jarmila Slovenčíková": {
+      "slug": "Jarmila-Slovencikova",
+      "result_rows": 157,
+      "kept": 32,
+      "pb_gaps": 0
+    },
+    "Natalia Wilk": {
+      "slug": "Natalia-Wilk",
+      "result_rows": 90,
+      "kept": 38,
+      "pb_gaps": 0
+    },
+    "Hou I Ming": {
+      "slug": "Hou-I-Ming",
+      "result_rows": 99,
+      "kept": 5,
+      "pb_gaps": 0
+    },
+    "Camila Jaber": {
+      "slug": "Camila-Jaber",
+      "result_rows": 59,
+      "kept": 8,
+      "pb_gaps": 1
+    },
+    "Siew Ling, Elys Lai": {
+      "slug": "Siew-Ling-Elys-Lai",
+      "result_rows": 40,
+      "kept": 3,
+      "pb_gaps": 2
+    },
+    "Alice Hickson": {
+      "slug": "Alice-Hickson",
+      "result_rows": 75,
+      "kept": 5,
+      "pb_gaps": 1
+    },
+    "Vicky Jiaoyi Li": {
+      "slug": "Vicky-Jiaoyi-Li",
+      "result_rows": 35,
+      "kept": 1,
+      "pb_gaps": 1
+    },
+    "Jingzhe Li": {
+      "slug": "Jingzhe-Li",
+      "result_rows": 60,
+      "kept": 9,
+      "pb_gaps": 1
+    },
+    "Misuzu Okamoto": {
+      "slug": "Misuzu-Okamoto",
+      "result_rows": 120,
+      "kept": 18,
+      "pb_gaps": 0
+    }
+  },
+  "finished_at": "2026-11-26T12:16:20Z",
+  "final_attempts": 1506
+}

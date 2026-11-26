@@ -138,29 +138,33 @@ def build_seed(
             continue
         eid = str(perf.get("event_id") or "unknown")
         ename = perf.get("event_name") or eid
-        perf_out.append(
-            {
-                "id": perf.get("id") or f"perf-{i}",
-                "athleteId": aid,
-                "athleteSlug": slug_by_id[aid],
-                "eventId": eid,
-                "eventName": ename,
-                "discipline": disc,
-                "federation": perf.get("federation") or "AIDA",
-                "date": (perf.get("date") or as_of)[:10],
-                "ap": float(perf.get("ap") or perf.get("rp") or 0),
-                "rp": float(perf.get("rp") or 0),
-                "card": card_short,
-                "points": float(pts),
-                "wr": "WR" in (perf.get("record_flags") or [])
-                or perf.get("record") in {"WR", "WRSENIORS"},
-                "nr": "NR" in (perf.get("record_flags") or []),
-                "status": "official",
-                "diveId": perf.get("id") or f"dive-{i}",
-                "day": 1,
-                "ot": "00:00",
-            }
-        )
+        row = {
+            "id": perf.get("id") or f"perf-{i}",
+            "athleteId": aid,
+            "athleteSlug": slug_by_id[aid],
+            "eventId": eid,
+            "eventName": ename,
+            "discipline": disc,
+            "federation": perf.get("federation") or "AIDA",
+            "date": (perf.get("date") or as_of)[:10],
+            "ap": float(perf.get("ap") or perf.get("rp") or 0),
+            "rp": float(perf.get("rp") or 0),
+            "card": card_short,
+            "points": float(pts),
+            "wr": "WR" in (perf.get("record_flags") or [])
+            or perf.get("record") in {"WR", "WRSENIORS"},
+            "nr": "NR" in (perf.get("record_flags") or []),
+            "status": "official",
+            "diveId": perf.get("id") or f"dive-{i}",
+            "day": 1,
+            "ot": "00:00",
+        }
+        src = (perf.get("source") or "").upper()
+        if src == "FR" or perf.get("provenance"):
+            row["source"] = "FR" if src == "FR" else (perf.get("source") or "FR")
+            if perf.get("provenance"):
+                row["provenance"] = perf["provenance"]
+        perf_out.append(row)
 
     return {
         "asOf": as_of,
@@ -183,7 +187,10 @@ def build_seed(
             "name": "Depthboard",
             "url": "https://depthboard.example",
             "tagline": "Freediving results from AIDA & CMAS",
-            "endorsement": "Data sourced from public AIDA and CMAS results.",
+            "endorsement": (
+                "Primary data from public AIDA and CMAS results; "
+                "FR (freediveranking.com) used only to fill documented gaps."
+            ),
         },
     }
 
