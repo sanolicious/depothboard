@@ -121,3 +121,11 @@ export function ownsAthlete(
   if (!session || !athleteSlug) return false;
   return session.athleteSlug === athleteSlug;
 }
+
+/** Field app (/field) — operator or admin demo roles. */
+export function canAccessField(
+  session: SessionUser | null | undefined,
+): boolean {
+  if (!session) return false;
+  return session.role === "operator" || session.role === "admin";
+}

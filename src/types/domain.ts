@@ -113,7 +113,13 @@ export interface ClaimRequest {
   notes?: string;
 }
 
-export type UserRole = "visitor" | "athlete" | "guardian" | "steward";
+export type UserRole =
+  | "visitor"
+  | "athlete"
+  | "guardian"
+  | "steward"
+  | "operator"
+  | "admin";
 
 /** Seed demo account (credentials auth MVP). */
 export interface DemoUser {

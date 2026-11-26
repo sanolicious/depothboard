@@ -41,7 +41,8 @@ export default async function LoginPage({
           <h1>Sign in</h1>
           <p>
             Session unlocks the athlete panel, consent edits and claim wizard.
-            After claim approval you see your profile under Account.
+            Operator / admin demos open the field app at{" "}
+            <Link href="/field">/field</Link>.
           </p>
         </div>
       </div>

@@ -479,6 +479,9 @@ export function SiteFooter() {
               <li>
                 <Link href="/devices">Devices (admin)</Link>
               </li>
+              <li>
+                <Link href="/field">Field app</Link>
+              </li>
             </ul>
           </div>
           <div>
