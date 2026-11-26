@@ -37,7 +37,9 @@ function sceneFromResult(rp: number, card: Card): { h: number; x: string; d: num
 }
 
 function fromShowcase(d: ShowcaseDive): DiveView {
-  return { ...d, hasVideo: true };
+  // CMAS embed-only rows may sit in showcase for rights demos without Diveye files.
+  const hasVideo = d.durationSec > 0 || d.cameras.length > 0;
+  return { ...d, hasVideo };
 }
 
 export function resolveDive(repo: Repository, id: string): DiveView | undefined {

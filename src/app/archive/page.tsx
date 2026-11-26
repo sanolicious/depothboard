@@ -4,8 +4,10 @@ import { CardBadge } from "@/components/CardBadge";
 import { CountryChip } from "@/components/CountryChip";
 import { EmptyState } from "@/components/EmptyState";
 import { Icon } from "@/components/Icon";
+import { RightsBadge } from "@/components/DiveRightsPanel";
 import { fmtDuration, fmtValue } from "@/lib/format";
 import { getRepository } from "@/lib/repository";
+import { evaluateShowcaseDive, WATERMARK_NOTE } from "@/lib/rights";
 
 export const metadata: Metadata = {
   title: "Archive / VOD",
@@ -19,6 +21,7 @@ export default async function ArchivePage({ searchParams }: { searchParams: SP }
   const sp = await searchParams;
   const q = (Array.isArray(sp.q) ? sp.q[0] : sp.q)?.toLowerCase() ?? "";
   const repo = getRepository();
+  const db = repo.getDb();
   let dives = repo.listShowcaseDives();
   if (q) {
     dives = dives.filter((d) => {
@@ -42,11 +45,14 @@ export default async function ArchivePage({ searchParams }: { searchParams: SP }
         <div>
           <h1>Archive / VOD</h1>
           <p>
-            Search dives with OT markers. Sample preview → licence purchase when
-            footage is linked.
+            Search dives with OT markers. Unavailable when consent is missing or
+            the event is CMAS embed-only.
           </p>
         </div>
       </div>
+      <p className="caption" style={{ marginBottom: 20 }}>
+        {WATERMARK_NOTE}
+      </p>
       <form
         className="hero-search"
         action="/archive"
@@ -87,7 +93,7 @@ export default async function ArchivePage({ searchParams }: { searchParams: SP }
         <EmptyState
           icon="film"
           title="Diveye archive is empty for now"
-          body="Federation results are online on athlete and event pages. VOD clips with OT markers will land here once production footage is linked — we are not showing fake videos."
+          body="Federation results are online on athlete and event pages. VOD clips with OT markers will land here once production footage is linked."
           actionHref="/athletes"
           actionLabel="Browse athletes"
         />
@@ -103,8 +109,15 @@ export default async function ArchivePage({ searchParams }: { searchParams: SP }
         <div className="grid grid-3">
           {dives.map((d) => {
             const a = repo.getAthleteBySlug(d.athleteSlug)!;
+            const decision = evaluateShowcaseDive(db, d);
+            const hasFile = d.durationSec > 0 || d.cameras.length > 0;
             return (
-              <Link key={d.id} className="vcard" href={`/dives/${d.id}`}>
+              <Link
+                key={d.id}
+                className="vcard"
+                href={`/dives/${d.id}`}
+                style={{ opacity: decision.allowed || decision.badge === "embed_only" ? 1 : 0.72 }}
+              >
                 <div className="vthumb">
                   <div
                     className="scene"
@@ -117,15 +130,26 @@ export default async function ArchivePage({ searchParams }: { searchParams: SP }
                     }
                   >
                     <span className="rope" />
-                    <span className="wm">DEPTHBOARD</span>
+                    <span className="wm">
+                      {hasFile ? "DEPTHBOARD" : decision.badge === "embed_only" ? "EMBED" : "HELD"}
+                    </span>
                   </div>
-                  <div className="tags">
+                  <div className="tags" style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
                     <CardBadge card={d.card} />
+                    {decision.badge === "embed_only" ? (
+                      <RightsBadge label="CMAS embed" tone="warn" />
+                    ) : !decision.allowed ? (
+                      <RightsBadge label="No sale" tone="warn" />
+                    ) : (
+                      <RightsBadge label="AIDA DL" tone="ok" />
+                    )}
                   </div>
                   <span className="res num">
                     {d.card === "R" ? "DQ" : fmtValue(d.discipline, d.rp)}
                   </span>
-                  <span className="dur num">{fmtDuration(d.durationSec)}</span>
+                  <span className="dur num">
+                    {hasFile ? fmtDuration(d.durationSec) : "—"}
+                  </span>
                 </div>
                 <div className="vbody">
                   <div className="who">
@@ -133,7 +157,10 @@ export default async function ArchivePage({ searchParams }: { searchParams: SP }
                     {a.name}
                   </div>
                   <div className="meta">
-                    {d.discipline} · {d.markers.length} markers
+                    {d.discipline} ·{" "}
+                    {decision.allowed
+                      ? `${d.markers.length} markers · preview watermarked`
+                      : decision.message}
                   </div>
                 </div>
               </Link>
