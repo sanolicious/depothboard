@@ -84,6 +84,9 @@ export default async function CalendarPage({ searchParams }: { searchParams: SP 
               : "Live, upcoming and past events. Pins are schematic for the MVP."}
           </p>
         </div>
+        <Link className="btn btn--ghost" href="/centers">
+          Schools &amp; centers map
+        </Link>
       </div>
 
       <div className="row row--wrap" style={{ gap: 8, marginBottom: 20 }}>

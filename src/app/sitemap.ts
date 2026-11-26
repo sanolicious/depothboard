@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { listDiveCenters } from "@/lib/centers";
 import { getRepository } from "@/lib/repository";
 import { siteUrl } from "@/lib/format";
 
@@ -10,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/rankings",
     "/athletes",
     "/calendar",
+    "/centers",
     "/records",
     "/shop",
     "/archive",
@@ -23,6 +25,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: asOf,
     changeFrequency: "daily" as const,
     priority: p === "" ? 1 : 0.7,
+  }));
+
+  const centers = listDiveCenters().map((c) => ({
+    url: siteUrl(`/centers/${c.slug}`),
+    lastModified: asOf,
+    changeFrequency: "weekly" as const,
+    priority: 0.55,
   }));
 
   // Cap URL count so sitemap stays practical with the full real seed.
@@ -56,5 +65,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...athletes, ...events, ...dives];
+  return [...staticRoutes, ...centers, ...athletes, ...events, ...dives];
 }

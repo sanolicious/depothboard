@@ -50,6 +50,11 @@ body {
   animation: pulse 1.8s infinite;
 }
 
+.map-dot--diveye {
+  background: var(--accent);
+  box-shadow: 0 0 0 6px rgba(60, 200, 220, 0.35);
+}
+
 .cookie-banner {
   position: fixed;
   left: 16px;

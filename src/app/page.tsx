@@ -190,9 +190,14 @@ export default function HomePage() {
                   : "Live coverage is free. Results are provisional until the jury confirms them."}
               </p>
             </div>
-            <Link className="link-arrow" href="/calendar">
-              All events <Icon name="arrow" />
-            </Link>
+            <div className="row" style={{ gap: 16, flexWrap: "wrap" }}>
+              <Link className="link-arrow" href="/calendar">
+                All events <Icon name="arrow" />
+              </Link>
+              <Link className="link-arrow" href="/centers">
+                Schools &amp; centers <Icon name="arrow" />
+              </Link>
+            </div>
           </div>
           {eventCards.length === 0 ? (
             <EmptyState

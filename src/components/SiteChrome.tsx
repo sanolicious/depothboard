@@ -21,6 +21,7 @@ import type { CartLine } from "@/types/domain";
 const NAV = [
   { href: "/rankings", label: "Rankings", key: "rankings" },
   { href: "/calendar", label: "Events", key: "events" },
+  { href: "/centers", label: "Centers", key: "centers" },
   { href: "/athletes", label: "Athletes", key: "athletes" },
   { href: "/records", label: "Records", key: "records" },
   { href: "/coaching", label: "Coaching", key: "coaching" },
@@ -348,6 +349,7 @@ export function SiteHeader({
         {[
           ["/rankings", "rank", "Rankings"],
           ["/calendar", "calendar", "Events & calendar"],
+          ["/centers", "pin", "Schools & centers"],
           ["/athletes", "user", "Athletes"],
           ["/records", "trophy", "Records"],
           ["/archive", "film", "Archive / VOD"],
@@ -470,6 +472,9 @@ export function SiteFooter() {
                 <Link href="/calendar">Events &amp; calendar</Link>
               </li>
               <li>
+                <Link href="/centers">Schools &amp; centers</Link>
+              </li>
+              <li>
                 <Link href="/records">Records</Link>
               </li>
               <li>
@@ -497,6 +502,9 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link href="/coaching">Coaching marketplace</Link>
+              </li>
+              <li>
+                <Link href="/centers">Schools &amp; centers</Link>
               </li>
               <li>
                 <Link href="/account">My library</Link>

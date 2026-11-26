@@ -758,6 +758,55 @@ export interface CoachingMarketplaceSeed {
 }
 
 /* ------------------------------------------------------------------ */
+/* Schools / centers map catalog (PWF-24, Diveye S1.7 / S1.8 light) */
+/* ------------------------------------------------------------------ */
+
+/** Filterable course families on a school or dive center. */
+export type CenterCourseType =
+  | "aida"
+  | "cmas"
+  | "fun"
+  | "competition"
+  | "safety"
+  | "instructor";
+
+export type CenterKind = "school" | "center" | "club" | "partner";
+
+/** Public school / club / partner venue (catalog seed; bookings deferred). */
+export interface DiveCenter {
+  id: string;
+  slug: string;
+  name: string;
+  kind: CenterKind;
+  /** ISO 3166-1 alpha-2. */
+  country: string;
+  city: string;
+  venue: string;
+  lat: number;
+  lng: number;
+  summary: string;
+  description: string;
+  /** Human-readable course labels shown on the profile. */
+  courses: string[];
+  /** Normalized keys used by `/centers` filters. */
+  courseTypes: CenterCourseType[];
+  /** True when the venue has Diveye Connected capture gear available. */
+  diveyeConnected: boolean;
+  /** Orientative course / day-rate range in EUR. */
+  priceFromEur: number;
+  priceToEur: number;
+  languages: string[];
+  website?: string;
+  /** CSS scene hue for profile header (no photo assets in MVP). */
+  photoHue: number;
+  active: boolean;
+}
+
+export interface CentersCatalogSeed {
+  centers: DiveCenter[];
+}
+
+/* ------------------------------------------------------------------ */
 /* Archive AI index — searchable VOD moments (PWF-22, Diveye S2.2/S2.3) */
 /* ------------------------------------------------------------------ */
 
