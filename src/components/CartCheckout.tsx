@@ -14,17 +14,28 @@ import {
 } from "@/lib/cart";
 import type { CartLine, Order } from "@/types/domain";
 
-export function CartCheckout({ signedIn }: { signedIn: boolean }) {
+export function CartCheckout({
+  signedIn,
+  stripeConfigured,
+}: {
+  signedIn: boolean;
+  stripeConfigured: boolean;
+}) {
   const [cart, setCart] = useState<CartLine[]>([]);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [order, setOrder] = useState<Order | null>(null);
+  const [cancelled, setCancelled] = useState(false);
 
   useEffect(() => {
     const sync = () => setCart(readCart());
     sync();
     window.addEventListener(CART_EVENT, sync);
     window.addEventListener("storage", sync);
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("checkout") === "cancelled") {
+      setCancelled(true);
+    }
     return () => {
       window.removeEventListener(CART_EVENT, sync);
       window.removeEventListener("storage", sync);
@@ -72,6 +83,47 @@ export function CartCheckout({ signedIn }: { signedIn: boolean }) {
     } catch {
       setError("Network error during checkout");
     } finally {
+      setBusy(false);
+    }
+  }
+
+  async function payWithStripe() {
+    setError(null);
+    setCancelled(false);
+    if (!signedIn) {
+      setError("Sign in required to checkout. Guests may keep items in the cart.");
+      return;
+    }
+    if (!cart.length) {
+      setError("Cart is empty.");
+      return;
+    }
+    setBusy(true);
+    try {
+      const res = await fetch("/api/checkout/session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ items: cart }),
+      });
+      const data = (await res.json()) as {
+        ok?: boolean;
+        error?: string;
+        loginRequired?: boolean;
+        url?: string;
+        stripeConfigured?: boolean;
+      };
+      if (!res.ok || !data.ok || !data.url) {
+        if (data.loginRequired || res.status === 401) {
+          window.location.href = `/login?next=${encodeURIComponent("/cart")}`;
+          return;
+        }
+        setError(data.error || "Stripe Checkout failed");
+        return;
+      }
+      // Keep cart until success — cancel returns with items intact.
+      window.location.href = data.url;
+    } catch {
+      setError("Network error starting Stripe Checkout");
       setBusy(false);
     }
   }
@@ -199,16 +251,67 @@ export function CartCheckout({ signedIn }: { signedIn: boolean }) {
             <span>€{total.toFixed(2)}</span>
           </div>
         </div>
-        {signedIn ? (
-          <button
-            className="btn btn--primary btn--lg btn--block"
-            type="button"
-            disabled={busy}
-            onClick={() => void paySimulated()}
+
+        {!stripeConfigured && (
+          <p
+            className="caption"
+            role="status"
+            style={{
+              marginBottom: 12,
+              padding: "10px 12px",
+              borderRadius: 8,
+              background: "rgba(232, 160, 112, 0.12)",
+              border: "1px solid rgba(232, 160, 112, 0.35)",
+              color: "#e8a070",
+            }}
           >
-            <Icon name="cart" />
-            {busy ? "Processing…" : `Pay (simulated) · €${total.toFixed(2)}`}
-          </button>
+            Stripe keys not set — using <strong>simulated</strong> checkout for
+            local demo. Add <code>STRIPE_SECRET_KEY</code> (and webhook secret)
+            to enable test-mode Checkout.
+          </p>
+        )}
+
+        {cancelled && (
+          <p
+            className="caption"
+            role="status"
+            style={{
+              marginBottom: 12,
+              padding: "10px 12px",
+              borderRadius: 8,
+              background: "rgba(180, 180, 200, 0.1)",
+              border: "1px solid rgba(180, 180, 200, 0.25)",
+            }}
+          >
+            Stripe Checkout was cancelled. Your cart is unchanged — try again
+            when ready.
+          </p>
+        )}
+
+        {signedIn ? (
+          stripeConfigured ? (
+            <button
+              className="btn btn--primary btn--lg btn--block"
+              type="button"
+              disabled={busy}
+              onClick={() => void payWithStripe()}
+            >
+              <Icon name="cart" />
+              {busy
+                ? "Redirecting to Stripe…"
+                : `Pay with Stripe · €${total.toFixed(2)}`}
+            </button>
+          ) : (
+            <button
+              className="btn btn--primary btn--lg btn--block"
+              type="button"
+              disabled={busy}
+              onClick={() => void paySimulated()}
+            >
+              <Icon name="cart" />
+              {busy ? "Processing…" : `Pay (simulated) · €${total.toFixed(2)}`}
+            </button>
+          )
         ) : (
           <>
             <Link
@@ -229,8 +332,19 @@ export function CartCheckout({ signedIn }: { signedIn: boolean }) {
           </p>
         )}
         <p className="caption" style={{ marginTop: 12 }}>
-          Creates an Order in JSON with status <code>paid_simulated</code>.
-          Stripe hooks documented for later — no live keys required.
+          {stripeConfigured ? (
+            <>
+              Opens Stripe Checkout (test mode). Success and cancel return to{" "}
+              <Link href="/account">account / orders</Link>. Webhook{" "}
+              <code>checkout.session.completed</code> marks the order paid and
+              delivers entitlements.
+            </>
+          ) : (
+            <>
+              Creates an Order in JSON with status{" "}
+              <code>paid_simulated</code>. Same entitlements as Stripe path.
+            </>
+          )}
         </p>
       </aside>
     </div>

@@ -3,16 +3,18 @@ import type { Metadata } from "next";
 import { CartCheckout } from "@/components/CartCheckout";
 import { Icon } from "@/components/Icon";
 import { getSession } from "@/lib/auth";
+import { isStripeConfigured } from "@/lib/stripe";
 
 export const metadata: Metadata = {
   title: "Cart",
   description:
-    "Checkout Diveye footage licences — simulated pay creates a JSON order.",
+    "Checkout Diveye footage licences — Stripe Checkout when configured, otherwise simulated pay.",
   alternates: { canonical: "/cart" },
 };
 
 export default async function CartPage() {
   const session = await getSession();
+  const stripeConfigured = isStripeConfigured();
 
   return (
     <div className="container section">
@@ -29,8 +31,16 @@ export default async function CartPage() {
         → commercial quote. Guests can add items;{" "}
         {session ? (
           <>
-            signed in as <strong>{session.email}</strong> — pay creates a{" "}
-            <code>paid_simulated</code> order.
+            signed in as <strong>{session.email}</strong> —{" "}
+            {stripeConfigured ? (
+              <>
+                pay opens <strong>Stripe Checkout</strong> (test mode).
+              </>
+            ) : (
+              <>
+                pay creates a <code>paid_simulated</code> order (no Stripe keys).
+              </>
+            )}
           </>
         ) : (
           <>
@@ -39,7 +49,10 @@ export default async function CartPage() {
           </>
         )}
       </p>
-      <CartCheckout signedIn={!!session} />
+      <CartCheckout
+        signedIn={!!session}
+        stripeConfigured={stripeConfigured}
+      />
     </div>
   );
 }

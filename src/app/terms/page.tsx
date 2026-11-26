@@ -25,7 +25,8 @@ export default function Page() {
       <h2>Service</h2>
       <p>
         Depthboard provides rankings, results, athlete pages and a Diveye
-        footage shop with simulated checkout (see /shop). Live Stripe is optional later.
+        footage shop with Stripe Checkout when keys are set, otherwise simulated
+        pay (see /shop).
       </p>
 
       <h2>Recording rights</h2>
