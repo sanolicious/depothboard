@@ -154,43 +154,60 @@ export default async function RankingsPage({ searchParams }: { searchParams: SP 
       </div>
 
       <div className="rt-wrap">
-        <table className="rt">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th className="l" scope="col">
-                Athlete
-              </th>
-              <th scope="col">Points</th>
-              <th scope="col">% WR</th>
-              <th className="l hide-mobile" scope="col">
-                Best sample
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.slice(0, 50).map((row) => {
-              const sample = Object.entries(row.best)[0];
-              return (
-                <tr key={row.athlete.id}>
-                  <td className="p">{row.pos}</td>
-                  <td className="n">
-                    <CountryChip code={row.athlete.country} neutral={row.athlete.neutral} />
-                    <Link href={`/athletes/${row.athlete.slug}`}>{row.athlete.name}</Link>
-                  </td>
-                  <td className="num">{fmtPoints(row.total)}</td>
-                  <td className="num">{row.pct.toFixed(1)}%</td>
-                  <td className="hide-mobile muted small">
-                    {sample
-                      ? `${sample[0]} ${fmtValue(sample[0], sample[1].rp)} · ${sample[1].federation}`
-                      : "—"}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        {rows.length === 0 ? (
+          <p className="muted" style={{ padding: 24 }}>
+            No athletes match this board filter yet.
+          </p>
+        ) : (
+          <table className="rt">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th className="l" scope="col">
+                  Athlete
+                </th>
+                <th scope="col">Points</th>
+                <th scope="col">% WR</th>
+                <th className="l hide-mobile" scope="col">
+                  Best sample
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.slice(0, 50).map((row) => {
+                const sample = Object.entries(row.best)[0];
+                return (
+                  <tr key={row.athlete.id}>
+                    <td className="p">{row.pos}</td>
+                    <td className="n">
+                      <CountryChip
+                        code={row.athlete.country}
+                        neutral={row.athlete.neutral}
+                      />
+                      <Link href={`/athletes/${row.athlete.slug}`}>
+                        {row.athlete.name}
+                      </Link>
+                    </td>
+                    <td className="num">{fmtPoints(row.total)}</td>
+                    <td className="num">{row.pct.toFixed(1)}%</td>
+                    <td className="hide-mobile muted small">
+                      {sample
+                        ? `${sample[0]} ${fmtValue(sample[0], sample[1].rp)} · ${sample[1].federation}`
+                        : "—"}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        )}
       </div>
+      {rows.length > 50 && (
+        <p className="caption" style={{ marginTop: 8 }}>
+          Showing top 50 of {rows.length.toLocaleString("en-GB")} athletes on
+          this board.
+        </p>
+      )}
       <p className="caption" style={{ marginTop: 12 }}>
         Minors are excluded from public boards by default. Red cards / DQ never enter a PB;
         yellow-card points follow the judging federation&apos;s penalties. Equal points share a

@@ -11,10 +11,37 @@ import { getRepository } from "@/lib/repository";
 
 type Params = Promise<{ slug: string }>;
 
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-  return getRepository()
-    .listAthletes({ includeMinors: true })
-    .map((a) => ({ slug: a.slug }));
+  // Top of active board + a slice of the roster; others resolve on demand.
+  const repo = getRepository();
+  const top = repo
+    .getRanking({
+      board: "PORTAL",
+      sex: "M",
+      disc: "OVERALL",
+      scope: "active",
+      metric: "points",
+    })
+    .slice(0, 80)
+    .map((r) => ({ slug: r.athlete.slug }));
+  const women = repo
+    .getRanking({
+      board: "PORTAL",
+      sex: "F",
+      disc: "OVERALL",
+      scope: "active",
+      metric: "points",
+    })
+    .slice(0, 40)
+    .map((r) => ({ slug: r.athlete.slug }));
+  const seen = new Set<string>();
+  return [...top, ...women].filter((a) => {
+    if (seen.has(a.slug)) return false;
+    seen.add(a.slug);
+    return true;
+  });
 }
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
@@ -208,25 +235,41 @@ export default async function AthletePage({ params }: { params: Params }) {
               </tr>
             </thead>
             <tbody>
-              {performances.slice(0, 20).map((p) => (
-                <tr key={p.id}>
-                  <td>{fmtDate(p.date)}</td>
-                  <td>{p.discipline}</td>
-                  <td className="num">
-                    {fmtValue(p.discipline, p.ap)} →{" "}
-                    {p.card === "R" ? "DQ" : fmtValue(p.discipline, p.rp)}
-                  </td>
-                  <td>
-                    <CardBadge card={p.card} />
-                  </td>
-                  <td>{p.eventName}</td>
-                  <td>
-                    <span className="badge badge--fed">{p.federation}</span>
-                  </td>
-                </tr>
-              ))}
+              {performances.slice(0, 20).map((p) => {
+                const ev = repo.getEventById(p.eventId);
+                return (
+                  <tr key={p.id}>
+                    <td>
+                      <Link href={`/dives/${p.diveId}`}>{fmtDate(p.date)}</Link>
+                    </td>
+                    <td>{p.discipline}</td>
+                    <td className="num">
+                      {fmtValue(p.discipline, p.ap)} →{" "}
+                      {p.card === "R" ? "DQ" : fmtValue(p.discipline, p.rp)}
+                    </td>
+                    <td>
+                      <CardBadge card={p.card} />
+                    </td>
+                    <td>
+                      {ev ? (
+                        <Link href={`/events/${ev.slug}`}>{p.eventName}</Link>
+                      ) : (
+                        p.eventName
+                      )}
+                    </td>
+                    <td>
+                      <span className="badge badge--fed">{p.federation}</span>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
+          {performances.length === 0 && (
+            <p className="muted" style={{ padding: 16 }}>
+              No performances in the seed for this athlete yet.
+            </p>
+          )}
         </div>
       </section>
     </div>

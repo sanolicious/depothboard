@@ -29,36 +29,49 @@ type CartLine = {
   scene: { h: number; x: string; d: number };
 };
 
-const DEFAULT_CART: CartLine[] = [
-  {
-    title: "Dive clip: K. Wiśniewska, CWT 110 m",
-    description: "Social edit · vertical + horizontal · personal licence",
-    price: 29,
-    scene: { h: 205, x: "60%", d: 0.55 },
-  },
-  {
-    title: "Event pack: K. Wiśniewska",
-    description: "Depth World Championship 2026 · all dives · pre-order",
-    price: 79,
-    scene: { h: 196, x: "60%", d: 0.35 },
-  },
-];
+export type LiveBarEvent = {
+  slug: string;
+  shortName: string;
+  day?: number;
+  ofDays?: number;
+  disciplines: string[];
+  venue: string;
+};
+
+export type SearchAthlete = {
+  slug: string;
+  name: string;
+  country: string;
+  hint: string;
+};
+
+export type SearchEvent = {
+  slug: string;
+  shortName: string;
+  hint: string;
+};
 
 function matchNav(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export function LiveBar() {
+export function LiveBar({ event }: { event: LiveBarEvent }) {
+  const dayLabel =
+    event.day && event.ofDays
+      ? ` · Day ${event.day} of ${event.ofDays}`
+      : "";
+  const disc = event.disciplines[0] ? ` · ${event.disciplines[0]}` : "";
   return (
     <div className="livebar" role="region" aria-label="Live now">
       <div className="container">
-        <Link href="/events/2026-aida-depth-world-championship">
+        <Link href={`/events/${event.slug}`}>
           <span className="dot-live" aria-hidden="true" />
           <strong>LIVE</strong>
           <span className="ticker">
-            AIDA Depth World Championship · Day 5 · CWT · K. Wiśniewska 110 m,
-            provisional
+            {event.shortName}
+            {dayLabel}
+            {disc} · {event.venue}
           </span>
           <span className="go">
             Watch live <Icon name="arrow" />
@@ -69,13 +82,21 @@ export function LiveBar() {
   );
 }
 
-export function SiteHeader({ solid = false }: { solid?: boolean }) {
+export function SiteHeader({
+  solid = false,
+  featuredAthletes = [],
+  featuredEvents = [],
+}: {
+  solid?: boolean;
+  featuredAthletes?: SearchAthlete[];
+  featuredEvents?: SearchEvent[];
+}) {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [cart, setCart] = useState<CartLine[]>(DEFAULT_CART);
+  const [cart, setCart] = useState<CartLine[]>([]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -226,6 +247,10 @@ export function SiteHeader({ solid = false }: { solid?: boolean }) {
             <div className="cart-empty empty">
               <Icon name="cart" />
               <p>Your cart is empty.</p>
+              <p className="small muted">
+                Footage licences will appear here once Diveye archive clips are
+                listed in the shop.
+              </p>
             </div>
           ) : (
             cart.map((item, idx) => (
@@ -348,35 +373,42 @@ export function SiteHeader({ solid = false }: { solid?: boolean }) {
               Esc
             </button>
           </div>
-          <div className="grp">Live now</div>
-          <Link
-            className="it"
-            href="/events/2026-aida-depth-world-championship"
-            onClick={() => setSearchOpen(false)}
-          >
-            <Icon name="calendar" /> AIDA Depth World Championship 2026{" "}
-            <small>Roatan · Day 5</small>
-          </Link>
-          <div className="grp">Athletes</div>
-          <Link className="it" href="/athletes/sofia-marchetti" onClick={() => setSearchOpen(false)}>
-            <CountryChip code="ITA" /> Sofia Marchetti <small>World #1 · Women</small>
-          </Link>
-          <Link
-            className="it"
-            href="/athletes/katarzyna-wisniewska"
-            onClick={() => setSearchOpen(false)}
-          >
-            <CountryChip code="POL" /> Katarzyna Wiśniewska{" "}
-            <small>World #3 · Women</small>
-          </Link>
-          <Link
-            className="it"
-            href="/athletes/mathis-delacroix"
-            onClick={() => setSearchOpen(false)}
-          >
-            <CountryChip code="FRA" /> Mathis Delacroix <small>World #2 · Men</small>
-          </Link>
+          {featuredEvents.length > 0 && (
+            <>
+              <div className="grp">Events</div>
+              {featuredEvents.map((ev) => (
+                <Link
+                  key={ev.slug}
+                  className="it"
+                  href={`/events/${ev.slug}`}
+                  onClick={() => setSearchOpen(false)}
+                >
+                  <Icon name="calendar" /> {ev.shortName}{" "}
+                  <small>{ev.hint}</small>
+                </Link>
+              ))}
+            </>
+          )}
+          {featuredAthletes.length > 0 && (
+            <>
+              <div className="grp">Top athletes</div>
+              {featuredAthletes.map((a) => (
+                <Link
+                  key={a.slug}
+                  className="it"
+                  href={`/athletes/${a.slug}`}
+                  onClick={() => setSearchOpen(false)}
+                >
+                  <CountryChip code={a.country} /> {a.name}{" "}
+                  <small>{a.hint}</small>
+                </Link>
+              ))}
+            </>
+          )}
           <div className="grp">Explore</div>
+          <Link className="it" href="/rankings" onClick={() => setSearchOpen(false)}>
+            <Icon name="rank" /> Rankings
+          </Link>
           <Link className="it" href="/archive" onClick={() => setSearchOpen(false)}>
             <Icon name="film" /> Archive &amp; VOD search
           </Link>
@@ -471,7 +503,7 @@ export function SiteFooter() {
             © 2026 Depthboard. Working name. AIDA and CMAS are trademarks of
             their respective owners.
           </span>
-          <span>MVP · sample seed data via Repository adapter</span>
+          <span>Results via AIDA/CMAS ingest · footage archive coming next</span>
         </div>
       </div>
     </footer>
