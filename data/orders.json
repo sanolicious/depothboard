@@ -1,0 +1,54 @@
+[
+  {
+    "id": "ord-demo-001",
+    "userId": "user-vitomir",
+    "email": "vitomir.demo@example.com",
+    "status": "paid_simulated",
+    "createdAt": "2026-09-12T14:22:00Z",
+    "totalEur": 79,
+    "items": [
+      {
+        "sku": "prod-ft-dive-0-hq",
+        "productId": "prod-ft-dive-0-hq",
+        "title": "HQ master · DYN Fiume",
+        "priceEur": 79,
+        "licenseTier": "master",
+        "diveId": "dive-0",
+        "delivery": {
+          "kind": "processing",
+          "status": "processing",
+          "note": "HQ / master — Diveye montage after purchase. We email when the file is ready (≈72 h stub)."
+        }
+      }
+    ],
+    "payment": { "provider": "simulated", "simulated": true },
+    "notes": "Seed demo order — HQ processing state."
+  },
+  {
+    "id": "ord-demo-002",
+    "userId": "user-vitomir",
+    "email": "vitomir.demo@example.com",
+    "status": "paid_simulated",
+    "createdAt": "2026-10-01T09:00:00Z",
+    "totalEur": 29,
+    "items": [
+      {
+        "sku": "prod-ft-dive-1-social",
+        "productId": "prod-ft-dive-1-social",
+        "title": "Social licence · DYNB Fiume",
+        "priceEur": 29,
+        "licenseTier": "social",
+        "diveId": "dive-1",
+        "delivery": {
+          "kind": "download",
+          "status": "ready",
+          "downloadUrl": "/video/hero.mp4",
+          "streamUrl": "/video/hero.mp4?licence=social",
+          "note": "Social licence · downloadable placeholder (vertical + horizontal stub)."
+        }
+      }
+    ],
+    "payment": { "provider": "simulated", "simulated": true },
+    "notes": "Seed demo — social download ready."
+  }
+]

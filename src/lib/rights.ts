@@ -18,9 +18,11 @@ function hasPlayableFile(asset: FootageAsset | undefined): boolean {
 
 const TIER_RANK: Record<LicenseTier, number> = {
   sample: 0,
-  social: 1,
-  master: 2,
-  commercial: 3,
+  short: 1,
+  watermark: 2,
+  social: 3,
+  master: 4,
+  commercial: 5,
 };
 
 export type SaleBlockReason =
@@ -208,13 +210,28 @@ export function evaluateSale(
     };
   }
 
+  if (tier === "short" || tier === "watermark") {
+    return {
+      allowed: true,
+      reason: "ok",
+      message:
+        tier === "short"
+          ? "Short access · watermarked stream (48 h)."
+          : "Long watermarked stream access.",
+      rights,
+      badge: "preview",
+    };
+  }
+
   return {
     allowed: true,
     reason: "ok",
     message:
       rights?.downloadable === false
         ? "Preview only."
-        : "Diveye-owned · downloadable after licence purchase (checkout stub).",
+        : tier === "master"
+          ? "HQ / master · montage after purchase · email when ready."
+          : "Diveye-owned · downloadable after licence purchase.",
     rights,
     badge: rights?.downloadable ? "downloadable" : "preview",
   };

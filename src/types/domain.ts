@@ -5,8 +5,17 @@ export type AthleteStatus = "active" | "inactive" | "minor";
 export type EventStatus = "live" | "upcoming" | "past";
 export type ResultStatus = "provisional" | "official" | "unofficial";
 
-/** Licence funnel tiers (sample → social → master → commercial). */
-export type LicenseTier = "sample" | "social" | "master" | "commercial";
+/**
+ * Licence funnel tiers:
+ * free sample → short access → long/watermark → social → HQ/master → commercial quote.
+ */
+export type LicenseTier =
+  | "sample"
+  | "short"
+  | "watermark"
+  | "social"
+  | "master"
+  | "commercial";
 
 export type ConsentPurpose =
   | "recording"
@@ -122,20 +131,69 @@ export interface SessionUser {
   athleteSlug: string | null;
 }
 
-export interface OrderStub {
+export type OrderStatus =
+  | "paid_simulated"
+  | "pending"
+  | "cancelled"
+  /** Legacy seed statuses (PWF-14 stubs). */
+  | "paid_stub"
+  | "pending_stub"
+  | "cancelled_stub";
+
+export type DeliveryKind = "download" | "stream" | "processing" | "quote";
+
+export type DeliveryStatus = "ready" | "processing" | "quote_pending";
+
+export interface OrderDelivery {
+  kind: DeliveryKind;
+  status: DeliveryStatus;
+  /** Placeholder file download (sample / social). */
+  downloadUrl?: string;
+  /** Watermarked stream link (sample / watermark / short). */
+  streamUrl?: string;
+  /** Human-readable delivery note (HQ processing, commercial quote). */
+  note?: string;
+}
+
+export interface OrderItem {
+  sku: string;
+  productId?: string;
+  title: string;
+  priceEur: number;
+  licenseTier?: LicenseTier;
+  diveId?: string;
+  footageAssetId?: string;
+  delivery?: OrderDelivery;
+}
+
+export interface Order {
   id: string;
   userId: string;
   email: string;
-  status: "paid_stub" | "pending_stub" | "cancelled_stub";
+  status: OrderStatus;
   createdAt: string;
   totalEur: number;
-  items: Array<{
-    sku: string;
-    title: string;
-    priceEur: number;
-    licenseTier?: LicenseTier;
-  }>;
+  items: OrderItem[];
+  payment?: {
+    provider: "simulated" | "stripe_test";
+    simulated: boolean;
+  };
   notes?: string;
+}
+
+/** @deprecated Prefer Order — kept as alias for older imports. */
+export type OrderStub = Order;
+
+/** Client cart line (localStorage + drawer). */
+export interface CartLine {
+  productId: string;
+  sku: string;
+  title: string;
+  description: string;
+  price: number;
+  licenseTier?: LicenseTier;
+  diveId?: string;
+  scene: { h: number; x: string; d: number };
 }
 
 export interface Discipline {
@@ -314,12 +372,16 @@ export interface Product {
   saleEnabled?: boolean;
 }
 
+/** Seed cart seed rows (optional demo). Prefer CartLine in the UI. */
 export interface CartItem {
   productId: string;
   title: string;
   description: string;
   price: number;
   scene: { h: number; x: string; d: number };
+  sku?: string;
+  licenseTier?: LicenseTier;
+  diveId?: string;
 }
 
 export interface LiveResultRow {

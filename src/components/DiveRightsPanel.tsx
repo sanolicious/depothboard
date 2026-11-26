@@ -93,7 +93,7 @@ function decide(opts: {
   return {
     allowed: true,
     message: opts.rights?.downloadable
-      ? "AIDA · Diveye-owned · downloadable after licence (checkout stub)."
+      ? "AIDA · Diveye-owned · add to cart when eligible."
       : "Preview available.",
     badge: opts.rights?.downloadable ? "AIDA downloadable" : "Preview",
   };
@@ -113,6 +113,9 @@ export function DiveRightsPanel({
   rights,
   seedFlags,
   licenseTier = "social",
+  productId,
+  productSku,
+  diveId,
 }: {
   athleteSlug: string;
   athleteName: string;
@@ -127,6 +130,9 @@ export function DiveRightsPanel({
   rights?: RecordingRights;
   seedFlags: SeedFlags;
   licenseTier?: LicenseTier;
+  productId?: string;
+  productSku?: string;
+  diveId?: string;
 }) {
   const [local, setLocal] = useState<LocalConsentState>({});
 
@@ -221,25 +227,36 @@ export function DiveRightsPanel({
             </li>
           </ul>
           <AddToCartButton
+            productId={productId}
+            sku={productSku}
+            diveId={diveId}
+            licenseTier={licenseTier}
             title={`Dive clip: ${athleteName
               .split(" ")
               .map((p, i, a) => (i === a.length - 1 ? p : p[0] + "."))
               .join(" ")}, ${discipline} ${rpLabel}`}
-            description={`Social edit · ${licenseTier} licence`}
+            description={`${licenseTier} licence · ${eventShortName}`}
             price={price}
             scene={scene}
+            label={`Buy clip · €${price}`}
           />
           <div className="row row--between row--wrap">
             <AddToCartButton
-              title={`Event pack: ${athleteName}`}
-              description={`${eventShortName} · all dives`}
-              price={79}
+              productId={
+                diveId ? `prod-ft-${diveId}-sample` : undefined
+              }
+              sku={diveId ? `sample-${diveId}` : undefined}
+              diveId={diveId}
+              licenseTier="sample"
+              title={`Sample: ${athleteName} · ${discipline}`}
+              description="Free watermarked sample"
+              price={0}
               scene={{ h: 196, x: "50%", d: 0.4 }}
-              label="Add to event pack · €79"
+              label="Add free sample"
               ghost
             />
             <Link className="link-arrow small" href="/shop">
-              Compare options <Icon name="arrow" />
+              Compare funnel <Icon name="arrow" />
             </Link>
           </div>
         </>

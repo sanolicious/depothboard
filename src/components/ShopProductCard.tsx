@@ -25,9 +25,11 @@ type SeedFlags = {
 
 const TIER_RANK: Record<LicenseTier, number> = {
   sample: 0,
-  social: 1,
-  master: 2,
-  commercial: 3,
+  short: 1,
+  watermark: 2,
+  social: 3,
+  master: 4,
+  commercial: 5,
 };
 
 function productAllowed(
@@ -128,7 +130,11 @@ export function ShopProductCard({
       </div>
       <h2 style={{ marginTop: 8, fontSize: "1.35rem" }}>{product.name}</h2>
       <div className="price" style={{ margin: "12px 0" }}>
-        {product.price > 0 ? `€${product.price}` : "on request"}
+        {product.price > 0
+          ? `€${product.price}`
+          : product.licenseTier === "sample"
+            ? "Free"
+            : "on request"}
       </div>
       <p className="muted small">{product.description}</p>
       <p className="caption" style={{ marginTop: 10 }}>
@@ -136,18 +142,28 @@ export function ShopProductCard({
       </p>
       <div style={{ marginTop: 16 }}>
         {decision.ok ? (
-          product.price > 0 ? (
+          product.kind === "media" || product.licenseTier === "commercial" ? (
+            <Link className="btn btn--ghost btn--sm" href="#media-pack">
+              {product.kind === "media"
+                ? "Request media pack quote"
+                : "Commercial quote form"}
+            </Link>
+          ) : (
             <AddToCartButton
+              productId={product.id}
+              sku={product.slug}
               title={product.name}
               description={product.description}
               price={product.price}
+              licenseTier={product.licenseTier}
+              diveId={product.diveId}
               scene={{ h: 200, x: "50%", d: 0.45 }}
-              label={`Add · €${product.price}`}
+              label={
+                product.price > 0
+                  ? `Add · €${product.price}`
+                  : "Add free sample"
+              }
             />
-          ) : (
-            <Link className="btn btn--ghost btn--sm" href="/claim">
-              Request quote via claim
-            </Link>
           )
         ) : (
           <span className="btn btn--ghost btn--sm" aria-disabled>

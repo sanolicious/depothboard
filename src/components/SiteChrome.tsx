@@ -5,6 +5,18 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Icon } from "@/components/Icon";
 import { CountryChip } from "@/components/CountryChip";
+import {
+  ADD_CART_EVENT,
+  CART_EVENT,
+  addToCart,
+  cartTotal,
+  normalizeCartLine,
+  readCart,
+  removeFromCart,
+  vatIncluded,
+  type AddCartDetail,
+} from "@/lib/cart";
+import type { CartLine } from "@/types/domain";
 
 const NAV = [
   { href: "/rankings", label: "Rankings", key: "rankings" },
@@ -21,13 +33,6 @@ const BOTTOM = [
   { href: "/shop", label: "Shop", icon: "cart" },
   { href: "/account", label: "Me", icon: "user" },
 ];
-
-type CartLine = {
-  title: string;
-  description: string;
-  price: number;
-  scene: { h: number; x: string; d: number };
-};
 
 export type LiveBarEvent = {
   slug: string;
@@ -99,6 +104,10 @@ export function SiteHeader({
   const [cart, setCart] = useState<CartLine[]>([]);
 
   useEffect(() => {
+    setCart(readCart());
+  }, []);
+
+  useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -123,12 +132,19 @@ export function SiteHeader({
 
   useEffect(() => {
     const onAdd = (e: Event) => {
-      const detail = (e as CustomEvent).detail as CartLine;
-      setCart((prev) => [...prev, detail]);
+      const detail = (e as CustomEvent).detail as AddCartDetail;
+      setCart(addToCart(normalizeCartLine(detail)));
       setCartOpen(true);
     };
-    window.addEventListener("depthboard:add-cart", onAdd);
-    return () => window.removeEventListener("depthboard:add-cart", onAdd);
+    const onChanged = () => setCart(readCart());
+    window.addEventListener(ADD_CART_EVENT, onAdd);
+    window.addEventListener(CART_EVENT, onChanged);
+    window.addEventListener("storage", onChanged);
+    return () => {
+      window.removeEventListener(ADD_CART_EVENT, onAdd);
+      window.removeEventListener(CART_EVENT, onChanged);
+      window.removeEventListener("storage", onChanged);
+    };
   }, []);
 
   useEffect(() => {
@@ -146,8 +162,8 @@ export function SiteHeader({
     };
   }, [cartOpen, menuOpen, searchOpen]);
 
-  const total = cart.reduce((s, i) => s + i.price, 0);
-  const vat = total - total / 1.23;
+  const total = cartTotal(cart);
+  const vat = vatIncluded(total);
 
   return (
     <>
@@ -248,8 +264,8 @@ export function SiteHeader({
               <Icon name="cart" />
               <p>Your cart is empty.</p>
               <p className="small muted">
-                Footage licences will appear here once Diveye archive clips are
-                listed in the shop.
+                Browse the shop for Diveye AIDA clips (sample → social → HQ).
+                Guests can cart; checkout needs sign-in.
               </p>
             </div>
           ) : (
@@ -273,14 +289,14 @@ export function SiteHeader({
                   <button
                     className="rm"
                     type="button"
-                    onClick={() =>
-                      setCart((prev) => prev.filter((_, i) => i !== idx))
-                    }
+                    onClick={() => setCart(removeFromCart(idx))}
                   >
                     Remove
                   </button>
                 </div>
-                <div className="pr">€{item.price.toFixed(2)}</div>
+                <div className="pr">
+                  {item.price > 0 ? `€${item.price.toFixed(2)}` : "Free"}
+                </div>
               </div>
             ))
           )}
@@ -301,14 +317,12 @@ export function SiteHeader({
             href="/cart"
             onClick={() => setCartOpen(false)}
           >
-            Checkout · €{total.toFixed(2)}
+            {cart.length ? `Go to checkout · €${total.toFixed(2)}` : "Open cart"}
           </Link>
           <div className="pay-methods">
-            <span className="pay">Card</span>
-            <span className="pay">Apple Pay</span>
-            <span className="pay">Google Pay</span>
-            <span className="pay">BLIK</span>
-            <span className="pay">Przelewy24</span>
+            <span className="pay">Simulated pay</span>
+            <span className="pay">Stripe later</span>
+            <span className="pay">P24 later</span>
           </div>
         </footer>
       </aside>

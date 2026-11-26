@@ -6,7 +6,11 @@ import { LogoutButton } from "@/components/LogoutButton";
 import { getSession, ownsAthlete } from "@/lib/auth";
 import { claimsForUser, resolveAthleteSlug } from "@/lib/claims";
 import { fmtDate, resultDisplay } from "@/lib/format";
-import { listOrdersForUser } from "@/lib/orders";
+import {
+  deliveryKindLabel,
+  isPaidStatus,
+  listOrdersForUser,
+} from "@/lib/orders";
 import { getRepository } from "@/lib/repository";
 
 export const metadata: Metadata = {
@@ -15,6 +19,8 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
   alternates: { canonical: "/account" },
 };
+
+type Search = Promise<{ order?: string }>;
 
 function statusLabel(status: string) {
   switch (status) {
@@ -31,7 +37,11 @@ function statusLabel(status: string) {
   }
 }
 
-export default async function AccountPage() {
+export default async function AccountPage({
+  searchParams,
+}: {
+  searchParams?: Search;
+}) {
   const session = await getSession();
   // Middleware should redirect, but keep a safe fallback for RSC.
   if (!session) {
@@ -44,6 +54,7 @@ export default async function AccountPage() {
     );
   }
 
+  const highlightOrderId = (await searchParams)?.order;
   const repo = getRepository();
   const db = repo.getDb();
   const claims = claimsForUser(session);
@@ -65,6 +76,15 @@ export default async function AccountPage() {
     : [];
 
   const orders = listOrdersForUser(session.id);
+  const libraryItems = orders
+    .filter((o) => isPaidStatus(o.status))
+    .flatMap((o) =>
+      o.items.map((item) => ({
+        orderId: o.id,
+        createdAt: o.createdAt,
+        ...item,
+      })),
+    );
   const inbox = db.claimsInbox ?? "claims@depthboard.com";
 
   return (
@@ -202,39 +222,139 @@ export default async function AccountPage() {
           </div>
         )}
 
-        <div className="card" style={{ padding: 20 }}>
-          <h2 style={{ fontSize: "1.2rem" }}>Orders (stub)</h2>
+        <div className="card" style={{ padding: 20, gridColumn: "1 / -1" }}>
+          <h2 style={{ fontSize: "1.2rem" }}>Orders</h2>
+          {highlightOrderId && (
+            <p className="caption" style={{ marginTop: 8 }}>
+              Highlighting order <code>{highlightOrderId}</code> from checkout.
+            </p>
+          )}
           {orders.length === 0 ? (
             <p className="muted small" style={{ marginTop: 8 }}>
-              No stub orders. Stripe checkout is PWF-15 — cart only for now.
+              No orders yet. Add a clip in the shop and pay (simulated) from the
+              cart while signed in.
             </p>
           ) : (
-            <ul style={{ marginTop: 12, paddingLeft: 18 }}>
-              {orders.map((o) => (
-                <li key={o.id} className="small" style={{ marginBottom: 10 }}>
-                  <strong>{o.id}</strong>
-                  <span className="muted">
-                    {" "}
-                    · {o.status} · €{o.totalEur} · {o.createdAt.slice(0, 10)}
-                  </span>
-                  <span className="caption" style={{ display: "block" }}>
-                    {o.items.map((i) => i.title).join(", ")}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <div className="table-scroll" style={{ marginTop: 12 }}>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Order</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                    <th>Items / delivery</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {orders.map((o) => (
+                    <tr
+                      key={o.id}
+                      style={
+                        o.id === highlightOrderId
+                          ? { background: "rgba(80, 160, 180, 0.12)" }
+                          : undefined
+                      }
+                    >
+                      <td>
+                        <strong className="small">{o.id}</strong>
+                        <div className="caption">{o.createdAt.slice(0, 10)}</div>
+                      </td>
+                      <td className="small">
+                        <code>{o.status}</code>
+                      </td>
+                      <td className="small">€{o.totalEur}</td>
+                      <td className="small">
+                        {o.items.map((i, idx) => (
+                          <div key={idx} style={{ marginBottom: 8 }}>
+                            <strong>{i.title}</strong>
+                            <span className="muted">
+                              {" "}
+                              · {i.licenseTier ?? "licence"} ·{" "}
+                              {deliveryKindLabel(i.delivery?.kind)}
+                            </span>
+                            {i.delivery?.note && (
+                              <span
+                                className="caption"
+                                style={{ display: "block" }}
+                              >
+                                {i.delivery.note}
+                              </span>
+                            )}
+                            <span style={{ display: "block", marginTop: 4 }}>
+                              {i.delivery?.downloadUrl && (
+                                <a href={i.delivery.downloadUrl} download>
+                                  Download
+                                </a>
+                              )}
+                              {i.delivery?.downloadUrl &&
+                                i.delivery?.streamUrl &&
+                                " · "}
+                              {i.delivery?.streamUrl && (
+                                <a href={i.delivery.streamUrl}>Stream</a>
+                              )}
+                              {i.delivery?.status === "processing" && (
+                                <span className="muted">
+                                  Processing — email when ready
+                                </span>
+                              )}
+                              {i.delivery?.status === "quote_pending" && (
+                                <span className="muted">Quote pending</span>
+                              )}
+                            </span>
+                          </div>
+                        ))}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           )}
           <Link className="btn btn--sm" href="/cart" style={{ marginTop: 10 }}>
             Open cart
           </Link>
         </div>
 
-        <div className="card" style={{ padding: 20 }}>
+        <div className="card" style={{ padding: 20, gridColumn: "1 / -1" }}>
           <h2 style={{ fontSize: "1.2rem" }}>My library</h2>
-          <p className="muted small" style={{ marginTop: 8 }}>
-            Purchased clips appear after checkout (PWF-15). Only Diveye-owned
-            AIDA titles with consent clear the shop gate.
-          </p>
+          {libraryItems.length === 0 ? (
+            <p className="muted small" style={{ marginTop: 8 }}>
+              Purchased sample/social placeholders and HQ processing rows appear
+              here after simulated checkout.
+            </p>
+          ) : (
+            <ul style={{ marginTop: 12, paddingLeft: 18 }}>
+              {libraryItems.map((item, idx) => (
+                <li key={`${item.orderId}-${idx}`} className="small" style={{ marginBottom: 10 }}>
+                  <strong>{item.title}</strong>
+                  <span className="muted">
+                    {" "}
+                    · {item.licenseTier} · order {item.orderId}
+                  </span>
+                  {item.delivery?.downloadUrl && (
+                    <>
+                      {" "}
+                      ·{" "}
+                      <a href={item.delivery.downloadUrl} download>
+                        Download
+                      </a>
+                    </>
+                  )}
+                  {item.delivery?.streamUrl && (
+                    <>
+                      {" "}
+                      · <a href={item.delivery.streamUrl}>Stream</a>
+                    </>
+                  )}
+                  {item.delivery?.status === "processing" && (
+                    <span className="caption" style={{ display: "block" }}>
+                      HQ processing — email when montage is ready
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
           <Link className="btn btn--sm btn--ghost" href="/shop" style={{ marginTop: 14 }}>
             Browse shop
           </Link>

@@ -226,18 +226,68 @@ export function showcaseFromFootage(
   return out;
 }
 
+type FunnelSku = "sample" | "short" | "watermark" | "social" | "hq" | "commercial";
+
 const TIER_META: Record<
-  "sample" | "social" | "hq",
-  { licenseTier: "sample" | "social" | "master"; price: number; label: string }
+  FunnelSku,
+  {
+    licenseTier: Product["licenseTier"];
+    price: number;
+    label: string;
+    description: string;
+    delivery: string;
+  }
 > = {
-  sample: { licenseTier: "sample", price: 0, label: "sample" },
-  social: { licenseTier: "social", price: 29, label: "social" },
-  hq: { licenseTier: "master", price: 79, label: "HQ" },
+  sample: {
+    licenseTier: "sample",
+    price: 0,
+    label: "sample",
+    description:
+      "Free watermarked sample — Diveye OT footage + athlete publication consent.",
+    delivery: "Instant download / stream placeholder",
+  },
+  short: {
+    licenseTier: "short",
+    price: 9,
+    label: "short access",
+    description: "48 h watermarked short access to the OT clip.",
+    delivery: "Watermarked stream link · 48 h stub",
+  },
+  watermark: {
+    licenseTier: "watermark",
+    price: 19,
+    label: "long / watermark",
+    description: "Full-length watermarked stream (personal viewing).",
+    delivery: "Watermarked stream + placeholder file",
+  },
+  social: {
+    licenseTier: "social",
+    price: 29,
+    label: "social",
+    description: "Social licence (vertical + horizontal) with result overlay.",
+    delivery: "Instant placeholder download after pay",
+  },
+  hq: {
+    licenseTier: "master",
+    price: 79,
+    label: "HQ / master",
+    description:
+      "HQ / master from Diveye disk — montage after purchase, email when ready.",
+    delivery: "Processing · email when ready (≈72 h)",
+  },
+  commercial: {
+    licenseTier: "commercial",
+    price: 129,
+    label: "commercial quote",
+    description:
+      "Commercial / broadcast use — requires commercial consent; quote fulfilment.",
+    delivery: "B2B quote · Diveye follows up by email",
+  },
 };
 
 /**
- * Derive shop SKUs (sample / social / HQ) for Diveye-owned assets that have
- * a playable file. CMAS assets never produce products.
+ * Derive shop SKUs for the licence funnel on Diveye-owned assets with a
+ * playable file. CMAS assets never produce products.
  */
 export function productsFromFootage(
   assets: FootageAsset[],
@@ -260,28 +310,34 @@ export function productsFromFootage(
     const base = `${preview.athleteSlug}-${preview.discipline}`.toLowerCase();
     const titleCore = `${preview.athleteSlug.replace(/-/g, " ")} · ${preview.discipline}`;
 
-    for (const sku of ["sample", "social", "hq"] as const) {
+    const skus: FunnelSku[] = [
+      "sample",
+      "short",
+      "watermark",
+      "social",
+      "hq",
+      "commercial",
+    ];
+    for (const sku of skus) {
       if (sku === "hq" && !hq) continue;
       const meta = TIER_META[sku];
       const id = `prod-ft-${diveId}-${sku}`;
+      const price =
+        sku === "sample"
+          ? 0
+          : sku === "hq"
+            ? (hq?.priceEur ?? meta.price)
+            : sku === "social"
+              ? (preview.priceEur ?? meta.price)
+              : meta.price;
       generated.push({
         id,
         slug: `${base}-${diveId}-${sku}`,
         name: `${titleCore} · ${meta.label}`,
         kind: "clip",
-        price: sku === "sample" ? 0 : sku === "hq" ? (hq?.priceEur ?? meta.price) : (preview.priceEur ?? meta.price),
-        description:
-          sku === "sample"
-            ? "Watermarked preview — Diveye OT footage + athlete publication consent."
-            : sku === "social"
-              ? "Social licence (vertical + horizontal) with result overlay."
-              : "HQ / master file from Diveye disk — delivery after licence (checkout stub).",
-        delivery:
-          sku === "sample"
-            ? "Instant preview in portal"
-            : sku === "hq"
-              ? "HQ file from Diveye storage · 72 h stub"
-              : "72 h after purchase · personal licence",
+        price,
+        description: meta.description,
+        delivery: meta.delivery,
         licenseTier: meta.licenseTier,
         diveId,
         saleEnabled: true,
@@ -289,11 +345,10 @@ export function productsFromFootage(
     }
   }
 
-  // Keep non-dive / media-pack products from overlay; replace dive products.
+  // Keep media-pack / non-dive overlay products; dive SKUs come from footage.
   const overlayKeep = existing.filter((p) => !p.diveId || p.kind === "media");
   const byId = new Map<string, Product>();
   for (const p of [...overlayKeep, ...generated]) byId.set(p.id, p);
-  // Drop legacy dive products that are not in generated set for footage dives.
   return [...byId.values()];
 }
 

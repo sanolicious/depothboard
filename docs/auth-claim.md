@@ -32,6 +32,10 @@ Account shows claims for the signed-in email/userId. After **approved**, athlete
 
 Consent toggles on `/account` only when the session owns that athlete (`athleteSlug` on user **or** approved claim).
 
+## Related
+
+Video shop / simulated checkout: `docs/shop-video.md` (PWF-15).
+
 ## Out of scope
 
-Stripe / real checkout (PWF-15), production email magic-link delivery, OAuth providers.
+Live Stripe keys, production email magic-link delivery, OAuth providers.
