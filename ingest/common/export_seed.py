@@ -98,26 +98,37 @@ def build_seed(
         start = (e.get("startDate") or e.get("date") or as_of)[:10]
         end = (e.get("endDate") or start)[:10]
         status = e.get("status") or ("past" if start < as_of else "upcoming")
-        ev_out.append(
-            {
-                "id": eid,
-                "slug": slug,
-                "name": name,
-                "shortName": e.get("shortName") or name[:40],
-                "federation": fed if fed in {"AIDA", "CMAS"} else "AIDA",
-                "type": e.get("type") or "depth",
-                "status": status,
-                "startDate": start,
-                "endDate": end,
-                "venue": e.get("venue") or "",
-                "country": country_to_iso3(e.get("country")),
-                "lat": e.get("lat") or 0,
-                "lng": e.get("lng") or 0,
-                "disciplines": e.get("disciplines")
-                or ["CWT", "CWTB", "CNF", "FIM", "STA", "DYN", "DYNB", "DNF"],
-                "rightsModel": "diveye_owned" if fed == "AIDA" else "cmas_link",
-            }
-        )
+        # live_sync may stamp status=live while endDate >= as_of; keep that.
+        if status == "live" and end < as_of:
+            status = "past"
+        elif status not in {"live", "upcoming", "past"}:
+            status = "past" if start < as_of else "upcoming"
+        live_url = e.get("liveUrl") or e.get("live_url")
+        ev_row = {
+            "id": eid,
+            "slug": slug,
+            "name": name,
+            "shortName": e.get("shortName") or name[:40],
+            "federation": fed if fed in {"AIDA", "CMAS"} else "AIDA",
+            "type": e.get("type") or "depth",
+            "status": status,
+            "startDate": start,
+            "endDate": end,
+            "venue": e.get("venue") or "",
+            "country": country_to_iso3(e.get("country")),
+            "lat": e.get("lat") or 0,
+            "lng": e.get("lng") or 0,
+            "disciplines": e.get("disciplines")
+            or ["CWT", "CWTB", "CNF", "FIM", "STA", "DYN", "DYNB", "DNF"],
+            "rightsModel": "diveye_owned" if fed == "AIDA" else "cmas_link",
+        }
+        if live_url:
+            ev_row["liveUrl"] = live_url
+        if e.get("day") is not None:
+            ev_row["day"] = e.get("day")
+        if e.get("ofDays") is not None:
+            ev_row["ofDays"] = e.get("ofDays")
+        ev_out.append(ev_row)
 
     # map athlete id by various keys
     by_id = {a["id"]: a for a in athletes}
@@ -138,6 +149,20 @@ def build_seed(
             continue
         eid = str(perf.get("event_id") or "unknown")
         ename = perf.get("event_name") or eid
+        # Result status cycle: provisional (live) → unofficial → official.
+        # live_sync stamps `result_status` / `status` on attempts; default official
+        # except while the parent event is still live.
+        event_status = next(
+            (ev["status"] for ev in ev_out if ev["id"] == eid),
+            "past",
+        )
+        raw_status = (
+            perf.get("result_status")
+            or perf.get("status")
+            or ("provisional" if event_status == "live" else "official")
+        )
+        if raw_status not in {"provisional", "unofficial", "official"}:
+            raw_status = "provisional" if event_status == "live" else "official"
         row = {
             "id": perf.get("id") or f"perf-{i}",
             "athleteId": aid,
@@ -154,7 +179,7 @@ def build_seed(
             "wr": "WR" in (perf.get("record_flags") or [])
             or perf.get("record") in {"WR", "WRSENIORS"},
             "nr": "NR" in (perf.get("record_flags") or []),
-            "status": "official",
+            "status": raw_status,
             "diveId": perf.get("id") or f"dive-{i}",
             "day": 1,
             "ot": "00:00",
@@ -166,6 +191,31 @@ def build_seed(
                 row["provenance"] = perf["provenance"]
         perf_out.append(row)
 
+    # Home LiveBar board: top provisional/unofficial rows from the first live event.
+    live_event_ids = [e["id"] for e in ev_out if e.get("status") == "live"]
+    live_results = []
+    if live_event_ids:
+        live_eid = live_event_ids[0]
+        board = [
+            p
+            for p in perf_out
+            if p["eventId"] == live_eid
+            and p.get("status") in {"provisional", "unofficial"}
+            and p.get("card") != "R"
+        ]
+        board.sort(key=lambda p: (-float(p.get("rp") or 0), p.get("athleteSlug") or ""))
+        for place, p in enumerate(board[:8], start=1):
+            live_results.append(
+                {
+                    "place": place,
+                    "athleteSlug": p["athleteSlug"],
+                    "ap": p["ap"],
+                    "rp": p["rp"],
+                    "card": p["card"],
+                    **({"nr": True} if p.get("nr") else {}),
+                }
+            )
+
     return {
         "asOf": as_of,
         "disciplines": DISCIPLINES,
@@ -176,7 +226,7 @@ def build_seed(
         "showcaseDives": [],
         "products": [],
         "cartSeed": [],
-        "liveResults": [],
+        "liveResults": live_results,
         "stats": {
             "athletes": len(athletes),
             "events": len(ev_out),

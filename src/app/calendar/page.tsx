@@ -150,7 +150,7 @@ export default async function CalendarPage({ searchParams }: { searchParams: SP 
           </div>
           <div className="stack" style={{ gap: 12 }}>
             {events.map((ev) => (
-              <Link key={ev.id} className="event-card" href={`/events/${ev.slug}`}>
+              <article key={ev.id} className="event-card">
                 <div className="row row--between">
                   <span
                     className={`badge${
@@ -171,11 +171,31 @@ export default async function CalendarPage({ searchParams }: { searchParams: SP 
                   </span>
                   <span className="badge badge--fed">{ev.federation}</span>
                 </div>
-                <h3 style={{ marginTop: 10 }}>{ev.shortName}</h3>
+                <h3 style={{ marginTop: 10 }}>
+                  <Link href={`/events/${ev.slug}`}>{ev.shortName}</Link>
+                </h3>
                 <p className="where">
                   {ev.venue} · {fmtDate(ev.startDate)} – {fmtDate(ev.endDate)}
                 </p>
-              </Link>
+                <div
+                  className="row row--between row--wrap"
+                  style={{ marginTop: 12, gap: 8 }}
+                >
+                  <Link className="btn btn--sm" href={`/events/${ev.slug}`}>
+                    {ev.status === "live" ? "Follow live" : "Details"}
+                  </Link>
+                  {ev.liveUrl ? (
+                    <a
+                      className="btn btn--sm btn--primary"
+                      href={ev.liveUrl}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Watch live
+                    </a>
+                  ) : null}
+                </div>
+              </article>
             ))}
             {totalPages > 1 && (
               <div className="row row--between" style={{ marginTop: 8 }}>

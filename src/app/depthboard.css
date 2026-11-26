@@ -190,8 +190,9 @@ table { border-collapse: collapse; width: 100%; }
 .delta--flat { color: var(--text-subtle); }
 .status { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8125rem; font-weight: 600; }
 .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--text-muted); }
-.status--official { color: var(--success); } .status--official::before { background: var(--success); }
+.status--official, .status--ok { color: var(--success); } .status--official::before, .status--ok::before { background: var(--success); }
 .status--prov { color: var(--card-yellow); } .status--prov::before { background: var(--card-yellow); }
+.status--unofficial { color: #f0c060; } .status--unofficial::before { background: #f0c060; }
 .status--live { color: #ff8a84; } .status--live::before { background: var(--live); animation: pulse 1.8s infinite; }
 .source { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8125rem; color: var(--text-muted); }
 .source .icon { color: var(--success); }

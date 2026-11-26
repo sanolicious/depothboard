@@ -49,6 +49,26 @@ Pakiet: `ingest/scheduler/` (stałe + README).
 | PII | CMAS DOB drop; accreditation → HMAC |
 | FR | tylko luki; `source: FR` + provenance; preferencja AIDA/CMAS przy tym samym dive |
 
+## Provisional → official (PWF-17)
+
+`live_sync` / rebuild stampują status wyniku w cyklu:
+
+| Status | Kiedy | UI | Ranking |
+|---|---|---|---|
+| `provisional` | Zawody `status=live`; świeży feed (brak jury) | badge **live** / provisional | poza rankingiem |
+| `unofficial` | Dzień zamknięty / jury pending | badge unofficial | poza rankingiem |
+| `official` | Potwierdzenie federacji / steward / timeout | badge official | Portal Points |
+
+Hook w kodzie:
+
+1. Event w toku → `events[].status = "live"` (+ opcjonalnie `liveUrl`, `day`, `ofDays`).
+2. Attempt bez `result_status` przy live evencie → `export_seed` ustawia `performances[].status = "provisional"` (`ingest/common/export_seed.py`).
+3. Federacja / steward może nadpisać `result_status` / `status` na `unofficial` lub `official`.
+4. `export_seed` buduje `seed.liveResults` z provisional/unofficial pierwszego live eventu (home LiveBar board).
+5. Portal: `GET /api/events/[id]/results` + client poll ~30 s; ranking filtruje tylko `official`.
+
+Demo bez pełnego rebuildu: `data/live-demo.json` (merge w `src/lib/live-demo.ts`).
+
 ## Logi
 
 - `data/ingest/canonical/live_sync_coverage.json` — ostatni run
@@ -60,3 +80,4 @@ Pakiet: `ingest/scheduler/` (stałe + README).
 
 - `docs/ranking-fr-style.md` — metodologia Portal Points
 - `docs/weryfikacja-aida-cmas-fr.md` — liczby zgodności
+- Project store `docs/live-provisional.md` — ścieżka UI live/provisional
