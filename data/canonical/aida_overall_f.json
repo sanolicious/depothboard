@@ -1,0 +1,3602 @@
+[
+  {
+    "rank": 1,
+    "athlete_id": "03c784fa-8fd4-4ca2-8f83-ca561ef33c5a",
+    "name": "Zsófia Törőcsik",
+    "country": "Hungary",
+    "sex": "F",
+    "points": 839.6,
+    "result_text": "839.6"
+  },
+  {
+    "rank": 2,
+    "athlete_id": "a45b53d5-d3f9-40cb-927f-7e2fcc77a9a3",
+    "name": "Kateryna Sadurska",
+    "country": "Ukraine",
+    "sex": "F",
+    "points": 785.4,
+    "result_text": "785.4"
+  },
+  {
+    "rank": 3,
+    "athlete_id": "32da7298-b739-4a9a-a82c-495b9c7b83e4",
+    "name": "Mariko Kaji",
+    "country": "Japan",
+    "sex": "F",
+    "points": 746.9,
+    "result_text": "746.9"
+  },
+  {
+    "rank": 4,
+    "athlete_id": "b99f4d0b-c314-479f-a301-46d03630a08f",
+    "name": "Enchante Gallardo",
+    "country": "United States",
+    "sex": "F",
+    "points": 746.2,
+    "result_text": "746.2"
+  },
+  {
+    "rank": 5,
+    "athlete_id": "00000000-0000-0000-0000-000000000701",
+    "name": "Hanako Hirose",
+    "country": "Japan",
+    "sex": "F",
+    "points": 728.6,
+    "result_text": "728.6"
+  },
+  {
+    "rank": 6,
+    "athlete_id": "124359e5-74f1-43b6-b2a6-72de466cd310",
+    "name": "Jiyeon Kim",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 718.2,
+    "result_text": "718.2"
+  },
+  {
+    "rank": 7,
+    "athlete_id": "cabfbb72-5ce5-411c-977a-8efec283e349",
+    "name": "Marianna Krupnitskaia",
+    "country": "France",
+    "sex": "F",
+    "points": 707.6,
+    "result_text": "707.6"
+  },
+  {
+    "rank": 8,
+    "athlete_id": "bdfa1dce-3ba2-4fcb-b6d3-bf97f4bd918a",
+    "name": "Tongtong Xu",
+    "country": "China",
+    "sex": "F",
+    "points": 693.8,
+    "result_text": "693.8"
+  },
+  {
+    "rank": 9,
+    "athlete_id": "f4d7a811-dbcc-428b-98ba-d6940b594701",
+    "name": "Jung A Kim",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 684.7,
+    "result_text": "684.7"
+  },
+  {
+    "rank": 10,
+    "athlete_id": "60d5ef69-a645-4d18-bc97-284d2ab1a2d9",
+    "name": "Jessea Wenjie Lu",
+    "country": "China",
+    "sex": "F",
+    "points": 682.2,
+    "result_text": "682.2"
+  },
+  {
+    "rank": 11,
+    "athlete_id": "9819b1e6-23c0-45d9-a704-59672ab6639b",
+    "name": "Yongju Lee",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 677.0,
+    "result_text": "677"
+  },
+  {
+    "rank": 12,
+    "athlete_id": "77cac478-f42d-44b5-a0d0-531f0d738859",
+    "name": "Sanda Delija",
+    "country": "Croatia",
+    "sex": "F",
+    "points": 676.4,
+    "result_text": "676.4"
+  },
+  {
+    "rank": 13,
+    "athlete_id": "0d43ba83-2d26-4fbf-acff-07a002819c4d",
+    "name": "Yasuko Ozeki",
+    "country": "Japan",
+    "sex": "F",
+    "points": 665.1,
+    "result_text": "665.1"
+  },
+  {
+    "rank": 14,
+    "athlete_id": "b2e5e183-82f9-4300-9a54-427ddaa8fa3d",
+    "name": "Jingyu Ning",
+    "country": "China",
+    "sex": "F",
+    "points": 654.8,
+    "result_text": "654.8"
+  },
+  {
+    "rank": 15,
+    "athlete_id": "852cfb09-be67-4d29-8431-7ae095dd1dca",
+    "name": "Patricia Paige Ong",
+    "country": "Singapore",
+    "sex": "F",
+    "points": 652.7,
+    "result_text": "652.7"
+  },
+  {
+    "rank": 16,
+    "athlete_id": "0ef054dd-87ec-4946-b267-34f9fff57aa3",
+    "name": "Hyemi (Mimi) Kim",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 649.6,
+    "result_text": "649.6"
+  },
+  {
+    "rank": 17,
+    "athlete_id": "9545dbaa-46ea-4ff6-8d70-23dd0b3b42b7",
+    "name": "Amber Bourke",
+    "country": "Australia",
+    "sex": "F",
+    "points": 644.6,
+    "result_text": "644.6"
+  },
+  {
+    "rank": 18,
+    "athlete_id": "8b9f0ade-6e13-43bf-a8bb-86a5bf4f4dc3",
+    "name": "Montserrat Peart Reyes",
+    "country": "Mexico",
+    "sex": "F",
+    "points": 642.5,
+    "result_text": "642.5"
+  },
+  {
+    "rank": 19,
+    "athlete_id": "aafce31a-387b-435f-8c0f-8f7f2112c3a8",
+    "name": "Natalia Zharkova",
+    "country": "Ukraine",
+    "sex": "F",
+    "points": 634.4,
+    "result_text": "634.4"
+  },
+  {
+    "rank": 20,
+    "athlete_id": "4fa448ce-ac46-43d2-b4d1-cb727136466e",
+    "name": "Natalie Bruce",
+    "country": "United States",
+    "sex": "F",
+    "points": 630.7,
+    "result_text": "630.7"
+  },
+  {
+    "rank": 21,
+    "athlete_id": "9b9a9ab7-9ce6-484f-be7a-c05cb553fdd7",
+    "name": "Nicole Edensbo",
+    "country": "Sweden",
+    "sex": "F",
+    "points": 629.9,
+    "result_text": "629.9"
+  },
+  {
+    "rank": 22,
+    "athlete_id": "8a749658-722e-479b-a9f1-dfa41c7b245f",
+    "name": "Olga Davydova",
+    "country": "International",
+    "sex": "F",
+    "points": 629.2,
+    "result_text": "629.2"
+  },
+  {
+    "rank": 23,
+    "athlete_id": "fc8ba26c-a76e-4acc-bb37-7b843bfba524",
+    "name": "Sheena McNally",
+    "country": "Canada",
+    "sex": "F",
+    "points": 622.0,
+    "result_text": "622"
+  },
+  {
+    "rank": 24,
+    "athlete_id": "8c6fb2f5-0bc6-4698-9bef-32ad8009e698",
+    "name": "Namin Kim",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 621.7,
+    "result_text": "621.7"
+  },
+  {
+    "rank": 25,
+    "athlete_id": "8bfe5ec9-094f-47b7-9fb5-9f1cc1a39d57",
+    "name": "Jie Dong",
+    "country": "China",
+    "sex": "F",
+    "points": 618.5,
+    "result_text": "618.5"
+  },
+  {
+    "rank": 26,
+    "athlete_id": "20a5dfc6-1cb7-46a2-9317-afbc0bfb5f4b",
+    "name": "Yuanyuan Wang",
+    "country": "China",
+    "sex": "F",
+    "points": 615.6,
+    "result_text": "615.6"
+  },
+  {
+    "rank": 27,
+    "athlete_id": "f096bc42-21b0-4f05-a741-8ee38f5cda70",
+    "name": "Jinseul Yuk",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 612.8,
+    "result_text": "612.8"
+  },
+  {
+    "rank": 28,
+    "athlete_id": "bc5fa5b8-5df5-46ac-b64c-7d5f6631d0a1",
+    "name": "Veronika Kravtsova",
+    "country": "International",
+    "sex": "F",
+    "points": 611.6,
+    "result_text": "611.6"
+  },
+  {
+    "rank": 29,
+    "athlete_id": "00000000-0000-0000-0000-0000000010d3",
+    "name": "Agnieszka Kalska",
+    "country": "Poland",
+    "sex": "F",
+    "points": 606.8,
+    "result_text": "606.8"
+  },
+  {
+    "rank": 30,
+    "athlete_id": "54a1d55c-d4fb-4f40-a8c3-2127491fa564",
+    "name": "Hou I Ming",
+    "country": "Chinese Taipei",
+    "sex": "F",
+    "points": 601.3,
+    "result_text": "601.3"
+  },
+  {
+    "rank": 31,
+    "athlete_id": "b9e3db2b-401d-4997-b601-82baf57193eb",
+    "name": "Talya Davidoff",
+    "country": "South Africa",
+    "sex": "F",
+    "points": 599.5,
+    "result_text": "599.5"
+  },
+  {
+    "rank": 32,
+    "athlete_id": "763fc9ba-a337-43aa-961e-edaa22c6da9f",
+    "name": "Sofia Gomez",
+    "country": "Colombia",
+    "sex": "F",
+    "points": 599.5,
+    "result_text": "599.5"
+  },
+  {
+    "rank": 33,
+    "athlete_id": "27ee09ed-33d6-45d6-8c45-5f125f0bee55",
+    "name": "Alessia Zecchini",
+    "country": "Italy",
+    "sex": "F",
+    "points": 594.3,
+    "result_text": "594.3"
+  },
+  {
+    "rank": 34,
+    "athlete_id": "bc1262a6-66a5-4428-b07e-922304ba692d",
+    "name": "Siew Ling, Elys Lai",
+    "country": "Singapore",
+    "sex": "F",
+    "points": 592.8,
+    "result_text": "592.8"
+  },
+  {
+    "rank": 35,
+    "athlete_id": "f1009edc-bdd5-457f-9e53-a800d7363cb0",
+    "name": "Alice Hickson",
+    "country": "United Kingdom",
+    "sex": "F",
+    "points": 592.1,
+    "result_text": "592.1"
+  },
+  {
+    "rank": 36,
+    "athlete_id": "c3c1803b-5b32-4823-b4d1-adfa8c1b17d0",
+    "name": "Camila Jaber",
+    "country": "Mexico",
+    "sex": "F",
+    "points": 591.7,
+    "result_text": "591.7"
+  },
+  {
+    "rank": 37,
+    "athlete_id": "131edb67-e647-459b-b758-8a2d390c72ba",
+    "name": "Vicky Jiaoyi Li",
+    "country": "Hong Kong, China",
+    "sex": "F",
+    "points": 590.7,
+    "result_text": "590.7"
+  },
+  {
+    "rank": 38,
+    "athlete_id": "346dd773-209f-4093-8def-4ed4d1fe46af",
+    "name": "Lauren Matevish",
+    "country": "United States",
+    "sex": "F",
+    "points": 589.5,
+    "result_text": "589.5"
+  },
+  {
+    "rank": 39,
+    "athlete_id": "0d6ed9c3-0a4d-468c-8393-47992242c4e7",
+    "name": "Jingzhe Li",
+    "country": "China",
+    "sex": "F",
+    "points": 588.9,
+    "result_text": "588.9"
+  },
+  {
+    "rank": 40,
+    "athlete_id": "00000000-0000-0000-0000-0000000002e2",
+    "name": "Natalia Molchanova",
+    "country": "Russian Federation",
+    "sex": "F",
+    "points": 580.9,
+    "result_text": "580.9"
+  },
+  {
+    "rank": 41,
+    "athlete_id": "0f95a0e3-b648-47d6-b09c-cfea169857c4",
+    "name": "Tracy Roxanne",
+    "country": "Philippines",
+    "sex": "F",
+    "points": 580.9,
+    "result_text": "580.9"
+  },
+  {
+    "rank": 42,
+    "athlete_id": "6e3f7982-f116-4dce-ae46-1285259ebc8b",
+    "name": "Shoko Kobayashi",
+    "country": "Japan",
+    "sex": "F",
+    "points": 580.2,
+    "result_text": "580.2"
+  },
+  {
+    "rank": 43,
+    "athlete_id": "00000000-0000-0000-0000-000000001186",
+    "name": "Sayuri Kinoshita",
+    "country": "Japan",
+    "sex": "F",
+    "points": 575.6,
+    "result_text": "575.6"
+  },
+  {
+    "rank": 44,
+    "athlete_id": "bb4aa3ec-e87a-48f5-9a6c-ece92e3d95db",
+    "name": "Alenka Artnik Burghardt",
+    "country": "Slovenia",
+    "sex": "F",
+    "points": 574.0,
+    "result_text": "574"
+  },
+  {
+    "rank": 45,
+    "athlete_id": "e9a188f1-4d3a-4586-a049-a21e8096ec3e",
+    "name": "Natalia Wilk",
+    "country": "Poland",
+    "sex": "F",
+    "points": 572.1,
+    "result_text": "572.1"
+  },
+  {
+    "rank": 46,
+    "athlete_id": "00000000-0000-0000-0000-0000000012af",
+    "name": "Misuzu Okamoto",
+    "country": "Japan",
+    "sex": "F",
+    "points": 572.0,
+    "result_text": "572"
+  },
+  {
+    "rank": 47,
+    "athlete_id": "e73c1047-c850-4811-940d-68f1b31fc645",
+    "name": "Anastasia Devana Tajik",
+    "country": "United States",
+    "sex": "F",
+    "points": 570.7,
+    "result_text": "570.7"
+  },
+  {
+    "rank": 48,
+    "athlete_id": "25849da8-67ae-424c-85d4-193fa6ffa2df",
+    "name": "Janita Kulkula",
+    "country": "Finland",
+    "sex": "F",
+    "points": 568.0,
+    "result_text": "568"
+  },
+  {
+    "rank": 49,
+    "athlete_id": "c1e4ecb9-26c7-43ba-bf02-4846e5bdf20a",
+    "name": "Alena Konecna",
+    "country": "Czech Republic",
+    "sex": "F",
+    "points": 567.9,
+    "result_text": "567.9"
+  },
+  {
+    "rank": 50,
+    "athlete_id": "4d1dba7f-3d44-4e0f-9492-7e7a4bcf4bea",
+    "name": "Olga Markina",
+    "country": "International",
+    "sex": "F",
+    "points": 565.0,
+    "result_text": "565"
+  },
+  {
+    "rank": 51,
+    "athlete_id": "00000000-0000-0000-0000-000000000ef3",
+    "name": "Tatiana Zemskikh",
+    "country": "International",
+    "sex": "F",
+    "points": 558.1,
+    "result_text": "558.1"
+  },
+  {
+    "rank": 52,
+    "athlete_id": "a9846cd8-6635-4d57-9b7c-39765946198e",
+    "name": "Kathryn Nevatt",
+    "country": "New Zealand",
+    "sex": "F",
+    "points": 557.3,
+    "result_text": "557.3"
+  },
+  {
+    "rank": 53,
+    "athlete_id": "9c0cb7ec-7788-4158-8510-ee24d98db1e0",
+    "name": "Hyegeum Oh",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 552.9,
+    "result_text": "552.9"
+  },
+  {
+    "rank": 54,
+    "athlete_id": "3b987a12-a4b1-471e-8e1e-325d0e335bb0",
+    "name": "Viktoria Urbanek",
+    "country": "Austria",
+    "sex": "F",
+    "points": 551.2,
+    "result_text": "551.2"
+  },
+  {
+    "rank": 55,
+    "athlete_id": "42ab4510-8c06-4cbd-908c-439aab0d376b",
+    "name": "Anni Højgaard",
+    "country": "Denmark",
+    "sex": "F",
+    "points": 550.4,
+    "result_text": "550.4"
+  },
+  {
+    "rank": 56,
+    "athlete_id": "d5857d5b-ab14-4b77-9e19-42c822953314",
+    "name": "Yu Han Liu",
+    "country": "Chinese Taipei",
+    "sex": "F",
+    "points": 544.3,
+    "result_text": "544.3"
+  },
+  {
+    "rank": 57,
+    "athlete_id": "ad4b8ed7-8170-4bad-a070-663e4c1be32f",
+    "name": "Michelle Ooi",
+    "country": "Singapore",
+    "sex": "F",
+    "points": 542.5,
+    "result_text": "542.5"
+  },
+  {
+    "rank": 58,
+    "athlete_id": "cb804306-bcd9-4a0d-ae83-1360c2bfaaaa",
+    "name": "Jennifer Wendland",
+    "country": "Germany",
+    "sex": "F",
+    "points": 540.9,
+    "result_text": "540.9"
+  },
+  {
+    "rank": 59,
+    "athlete_id": "bf6f2053-292d-4042-813e-75a255e9199b",
+    "name": "Yulia Marievich",
+    "country": "Latvia",
+    "sex": "F",
+    "points": 538.7,
+    "result_text": "538.7"
+  },
+  {
+    "rank": 60,
+    "athlete_id": "222e747f-5de5-4a47-a6e9-ba712aab2e48",
+    "name": "Suwon Kim",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 538.3,
+    "result_text": "538.3"
+  },
+  {
+    "rank": 61,
+    "athlete_id": "5a358b38-4e5e-4115-945f-a22152abefb8",
+    "name": "Mariel Barjau",
+    "country": "Mexico",
+    "sex": "F",
+    "points": 530.4,
+    "result_text": "530.4"
+  },
+  {
+    "rank": 62,
+    "athlete_id": "00000000-0000-0000-0000-0000000009db",
+    "name": "Alice Modolo",
+    "country": "France",
+    "sex": "F",
+    "points": 524.4,
+    "result_text": "524.4"
+  },
+  {
+    "rank": 63,
+    "athlete_id": "ef775ea9-638c-44c5-907f-612af73243c5",
+    "name": "Yadira Sistos",
+    "country": "Mexico",
+    "sex": "F",
+    "points": 524.1,
+    "result_text": "524.1"
+  },
+  {
+    "rank": 64,
+    "athlete_id": "3998e4fc-6d79-40e6-a374-50be419a29c9",
+    "name": "Amanda Tran",
+    "country": "Australia",
+    "sex": "F",
+    "points": 522.7,
+    "result_text": "522.7"
+  },
+  {
+    "rank": 65,
+    "athlete_id": "1983bcee-53a0-4b06-952b-471b8431c702",
+    "name": "Jana Strain",
+    "country": "Canada",
+    "sex": "F",
+    "points": 522.0,
+    "result_text": "522"
+  },
+  {
+    "rank": 66,
+    "athlete_id": "2f6be422-9df9-42ce-8818-7d10e22f0020",
+    "name": "Anna Lechermann",
+    "country": "Germany",
+    "sex": "F",
+    "points": 520.7,
+    "result_text": "520.7"
+  },
+  {
+    "rank": 67,
+    "athlete_id": "11b2e23b-57ac-4578-8827-1c09c3c505c0",
+    "name": "Yujung Chen",
+    "country": "Chinese Taipei",
+    "sex": "F",
+    "points": 519.1,
+    "result_text": "519.1"
+  },
+  {
+    "rank": 68,
+    "athlete_id": "120037d8-ea6b-4fee-b923-89d1cc4acc82",
+    "name": "Claire Beatrix Paris",
+    "country": "United States",
+    "sex": "F",
+    "points": 518.8,
+    "result_text": "518.8"
+  },
+  {
+    "rank": 69,
+    "athlete_id": "52281fe8-384b-4f50-bb35-a8614a5983fc",
+    "name": "Seon Hwangbo",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 513.1,
+    "result_text": "513.1"
+  },
+  {
+    "rank": 70,
+    "athlete_id": "21a9be38-7a25-4d30-8850-9e7cd62fc972",
+    "name": "Agata Załęcka",
+    "country": "Poland",
+    "sex": "F",
+    "points": 512.2,
+    "result_text": "512.2"
+  },
+  {
+    "rank": 71,
+    "athlete_id": "b35205cf-e12e-42a9-997f-f49a63b38b72",
+    "name": "Georgina Miller",
+    "country": "United Kingdom",
+    "sex": "F",
+    "points": 511.8,
+    "result_text": "511.8"
+  },
+  {
+    "rank": 72,
+    "athlete_id": "00000000-0000-0000-0000-00000000157d",
+    "name": "Aki Shimoyama",
+    "country": "Japan",
+    "sex": "F",
+    "points": 511.8,
+    "result_text": "511.8"
+  },
+  {
+    "rank": 73,
+    "athlete_id": "8f5a94b3-35dc-4caf-bf0a-27c04dcc12bd",
+    "name": "Jade Agboton",
+    "country": "France",
+    "sex": "F",
+    "points": 511.8,
+    "result_text": "511.8"
+  },
+  {
+    "rank": 74,
+    "athlete_id": "410a5d3c-e4e2-4334-b402-9d48e6666438",
+    "name": "Vanessa Estol",
+    "country": "Uruguay",
+    "sex": "F",
+    "points": 510.8,
+    "result_text": "510.8"
+  },
+  {
+    "rank": 75,
+    "athlete_id": "a942e4e1-bbc6-4ba2-aecc-64a9619ad2b9",
+    "name": "Yu Fang Liu",
+    "country": "Chinese Taipei",
+    "sex": "F",
+    "points": 509.5,
+    "result_text": "509.5"
+  },
+  {
+    "rank": 76,
+    "athlete_id": "4c8afd54-f114-4988-ae7a-389bad0641b1",
+    "name": "Katie McCarthy",
+    "country": "United States",
+    "sex": "F",
+    "points": 509.5,
+    "result_text": "509.5"
+  },
+  {
+    "rank": 77,
+    "athlete_id": "94357845-2efe-44c5-bf65-bd7a1304d328",
+    "name": "Yukine Toshinaga",
+    "country": "Japan",
+    "sex": "F",
+    "points": 509.4,
+    "result_text": "509.4"
+  },
+  {
+    "rank": 78,
+    "athlete_id": "3bb34d12-0242-4794-adeb-3dd8fdb9a5da",
+    "name": "Yagmur Ergun",
+    "country": "Turkiye",
+    "sex": "F",
+    "points": 509.0,
+    "result_text": "509"
+  },
+  {
+    "rank": 79,
+    "athlete_id": "8885d177-2c66-44e5-9c72-4687af64f36a",
+    "name": "Sofia Tapani",
+    "country": "Sweden",
+    "sex": "F",
+    "points": 508.5,
+    "result_text": "508.5"
+  },
+  {
+    "rank": 80,
+    "athlete_id": "2e9028f5-24b6-4859-ac43-1d5436ed2fac",
+    "name": "Nikita Fima Atriyu",
+    "country": "Indonesia",
+    "sex": "F",
+    "points": 508.0,
+    "result_text": "508"
+  },
+  {
+    "rank": 81,
+    "athlete_id": "95884193-bec6-4a59-96a7-872734e40421",
+    "name": "Jisoo Kim",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 507.9,
+    "result_text": "507.9"
+  },
+  {
+    "rank": 82,
+    "athlete_id": "338103e4-59f9-4cb3-b5a7-48d952ab46ea",
+    "name": "Anna-Marie Christiansen",
+    "country": "Denmark",
+    "sex": "F",
+    "points": 506.7,
+    "result_text": "506.7"
+  },
+  {
+    "rank": 83,
+    "athlete_id": "83e436ef-f331-403a-85e3-c2cda2788a3c",
+    "name": "Lin Lan Lien",
+    "country": "Chinese Taipei",
+    "sex": "F",
+    "points": 504.7,
+    "result_text": "504.7"
+  },
+  {
+    "rank": 84,
+    "athlete_id": "0f7f7fd5-632b-477d-ae15-222b8009bc50",
+    "name": "Sanae Kabakura",
+    "country": "Japan",
+    "sex": "F",
+    "points": 500.3,
+    "result_text": "500.3"
+  },
+  {
+    "rank": 85,
+    "athlete_id": "a750bb5d-74e4-4d56-b87f-2abac74627b2",
+    "name": "Syafidatul Azua Shafii",
+    "country": "Malaysia",
+    "sex": "F",
+    "points": 499.9,
+    "result_text": "499.9"
+  },
+  {
+    "rank": 86,
+    "athlete_id": "875f425d-944d-49e2-81a0-98357012289d",
+    "name": "Tracii Verdejo",
+    "country": "Philippines",
+    "sex": "F",
+    "points": 499.5,
+    "result_text": "499.5"
+  },
+  {
+    "rank": 87,
+    "athlete_id": "5df9f0e6-0d49-43bb-9b0d-0b4788c1899a",
+    "name": "Jisook Cho",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 499.1,
+    "result_text": "499.1"
+  },
+  {
+    "rank": 88,
+    "athlete_id": "08a7bbe4-d1fd-46d4-8f3e-84ebfa2e666b",
+    "name": "Sahika Ercumen",
+    "country": "Turkiye",
+    "sex": "F",
+    "points": 499.0,
+    "result_text": "499"
+  },
+  {
+    "rank": 89,
+    "athlete_id": "ab959fed-9c8b-4a1b-8b08-7d42c9c80d19",
+    "name": "Anna-Marie Richardson",
+    "country": "United Kingdom",
+    "sex": "F",
+    "points": 498.3,
+    "result_text": "498.3"
+  },
+  {
+    "rank": 90,
+    "athlete_id": "c3bf1749-b126-486d-8bb0-5403c6a46f5a",
+    "name": "Natalia Padró",
+    "country": "Puerto Rico",
+    "sex": "F",
+    "points": 497.4,
+    "result_text": "497.4"
+  },
+  {
+    "rank": 91,
+    "athlete_id": "a167f35e-e43d-4e30-a4b1-aeac78b3eb5b",
+    "name": "Susan Melinda Gosal",
+    "country": "Indonesia",
+    "sex": "F",
+    "points": 495.6,
+    "result_text": "495.6"
+  },
+  {
+    "rank": 92,
+    "athlete_id": "8c298761-d82b-4f4e-8ad4-9f2558eada5f",
+    "name": "Anna Von Boetticher",
+    "country": "Germany",
+    "sex": "F",
+    "points": 494.9,
+    "result_text": "494.9"
+  },
+  {
+    "rank": 93,
+    "athlete_id": "7029b4f9-2627-409a-aaf7-100ad6789c4c",
+    "name": "Naomi Iwazawa",
+    "country": "Japan",
+    "sex": "F",
+    "points": 493.5,
+    "result_text": "493.5"
+  },
+  {
+    "rank": 94,
+    "athlete_id": "f09db57e-c0bf-4ee1-bc6f-42657b6c2bea",
+    "name": "Magdalena Solich-Talanda",
+    "country": "Poland",
+    "sex": "F",
+    "points": 491.0,
+    "result_text": "491"
+  },
+  {
+    "rank": 95,
+    "athlete_id": "795395d0-cf2c-45eb-9ef2-36d6f8009e0c",
+    "name": "Elena Kovaleva",
+    "country": "International",
+    "sex": "F",
+    "points": 490.4,
+    "result_text": "490.4"
+  },
+  {
+    "rank": 96,
+    "athlete_id": "32f928eb-4443-4a5f-9ee6-107c58719a78",
+    "name": "Irena Vanova",
+    "country": "Czech Republic",
+    "sex": "F",
+    "points": 488.8,
+    "result_text": "488.8"
+  },
+  {
+    "rank": 97,
+    "athlete_id": "e4213029-79d0-4f3c-bd6f-ae34cb37d3f4",
+    "name": "Sunkyoung Lee",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 488.0,
+    "result_text": "488"
+  },
+  {
+    "rank": 98,
+    "athlete_id": "085867a0-c698-4b10-9ee9-42f2c13e3ec8",
+    "name": "Yunsun Kim",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 487.2,
+    "result_text": "487.2"
+  },
+  {
+    "rank": 99,
+    "athlete_id": "63c8c7ce-cb8e-4efe-b67f-c8fad9b4fb54",
+    "name": "Mariana Cañas",
+    "country": "Colombia",
+    "sex": "F",
+    "points": 486.5,
+    "result_text": "486.5"
+  },
+  {
+    "rank": 100,
+    "athlete_id": "730c8714-ef35-4033-bb22-a9d957052711",
+    "name": "Kayo Oda",
+    "country": "Japan",
+    "sex": "F",
+    "points": 484.0,
+    "result_text": "484"
+  },
+  {
+    "rank": 101,
+    "athlete_id": "d5b4e9ea-8930-49dd-9196-bbda0a444228",
+    "name": "Christine Gallifet-Lauter",
+    "country": "Canada",
+    "sex": "F",
+    "points": 482.5,
+    "result_text": "482.5"
+  },
+  {
+    "rank": 102,
+    "athlete_id": "85bb49c0-5230-4d00-81b8-74dd71eb3a4f",
+    "name": "Renee Blundon",
+    "country": "United States",
+    "sex": "F",
+    "points": 482.0,
+    "result_text": "482"
+  },
+  {
+    "rank": 103,
+    "athlete_id": "96995470-cffb-41ef-a26d-e6a19776e8cf",
+    "name": "Soonsook Chung",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 480.9,
+    "result_text": "480.9"
+  },
+  {
+    "rank": 104,
+    "athlete_id": "82bd3218-c9f9-4cda-b114-947d0264da4c",
+    "name": "Camilla Salling Olsen",
+    "country": "Denmark",
+    "sex": "F",
+    "points": 480.4,
+    "result_text": "480.4"
+  },
+  {
+    "rank": 105,
+    "athlete_id": "00000000-0000-0000-0000-000000000ca1",
+    "name": "Elisabeth Mattes",
+    "country": "Austria",
+    "sex": "F",
+    "points": 478.7,
+    "result_text": "478.7"
+  },
+  {
+    "rank": 106,
+    "athlete_id": "35fc47e0-e5e6-47f0-a048-97f1f3b25d61",
+    "name": "Jessica Deady",
+    "country": "United States",
+    "sex": "F",
+    "points": 477.5,
+    "result_text": "477.5"
+  },
+  {
+    "rank": 107,
+    "athlete_id": "0ebebea8-2a09-4a27-b84c-1b99a5049ca4",
+    "name": "Jarmila Slovenčíková",
+    "country": "Czech Republic",
+    "sex": "F",
+    "points": 475.3,
+    "result_text": "475.3"
+  },
+  {
+    "rank": 108,
+    "athlete_id": "62c058d6-0a2b-474a-94f5-27dd56004b75",
+    "name": "Taylor Reidlinger",
+    "country": "Canada",
+    "sex": "F",
+    "points": 473.6,
+    "result_text": "473.6"
+  },
+  {
+    "rank": 109,
+    "athlete_id": "e341cd5f-922c-4fc2-bc28-1b53e6f6c296",
+    "name": "Yoko Ota",
+    "country": "Japan",
+    "sex": "F",
+    "points": 472.1,
+    "result_text": "472.1"
+  },
+  {
+    "rank": 110,
+    "athlete_id": "2b6c7e74-38fc-4d57-a24c-d86e8435dd94",
+    "name": "Mikaela Concepcion",
+    "country": "Philippines",
+    "sex": "F",
+    "points": 467.1,
+    "result_text": "467.1"
+  },
+  {
+    "rank": 111,
+    "athlete_id": "7379aa8b-5eca-4abb-b7bb-6ad5f2bfb758",
+    "name": "Natsuko Saito",
+    "country": "United States",
+    "sex": "F",
+    "points": 466.6,
+    "result_text": "466.6"
+  },
+  {
+    "rank": 112,
+    "athlete_id": "02a654ca-a88d-4332-ae0b-ff3c70c63adb",
+    "name": "Sin Hang Ma",
+    "country": "Hong Kong, China",
+    "sex": "F",
+    "points": 466.0,
+    "result_text": "466"
+  },
+  {
+    "rank": 113,
+    "athlete_id": "00000000-0000-0000-0000-000000001a8b",
+    "name": "Stephanie Rendl",
+    "country": "Austria",
+    "sex": "F",
+    "points": 464.8,
+    "result_text": "464.8"
+  },
+  {
+    "rank": 114,
+    "athlete_id": "6318fc96-6973-4ae5-b257-e251df79221b",
+    "name": "Vera Giampietro",
+    "country": "Switzerland",
+    "sex": "F",
+    "points": 464.4,
+    "result_text": "464.4"
+  },
+  {
+    "rank": 115,
+    "athlete_id": "d7eb770f-a9f5-4c1d-b239-9113613fab8c",
+    "name": "Jeanine Grasmeijer",
+    "country": "Netherlands",
+    "sex": "F",
+    "points": 464.2,
+    "result_text": "464.2"
+  },
+  {
+    "rank": 116,
+    "athlete_id": "ad7be667-8c54-40b7-8576-14f5831c76ca",
+    "name": "Suzanne Malseed",
+    "country": "New Zealand",
+    "sex": "F",
+    "points": 464.2,
+    "result_text": "464.2"
+  },
+  {
+    "rank": 117,
+    "athlete_id": "00000000-0000-0000-0000-00000000054a",
+    "name": "Lidija Lijic",
+    "country": "Croatia",
+    "sex": "F",
+    "points": 464.1,
+    "result_text": "464.1"
+  },
+  {
+    "rank": 118,
+    "athlete_id": "868c1225-baf4-46c2-b949-5387b5478a45",
+    "name": "Lorena Prieto Cacabelos",
+    "country": "Spain",
+    "sex": "F",
+    "points": 463.4,
+    "result_text": "463.4"
+  },
+  {
+    "rank": 119,
+    "athlete_id": "e24f091a-2936-45b3-b6bd-1f3ccbb93d8f",
+    "name": "Maria Zosa",
+    "country": "Philippines",
+    "sex": "F",
+    "points": 462.9,
+    "result_text": "462.9"
+  },
+  {
+    "rank": 120,
+    "athlete_id": "5fc1e6ff-9b1e-4deb-adb3-80827745adbe",
+    "name": "Celina Jinguji",
+    "country": "Japan",
+    "sex": "F",
+    "points": 462.7,
+    "result_text": "462.7"
+  },
+  {
+    "rank": 121,
+    "athlete_id": "d4990530-0462-4628-b5dd-9dc9da17d4cb",
+    "name": "Esmeralda Estrella Navarro Holm",
+    "country": "Mexico",
+    "sex": "F",
+    "points": 459.0,
+    "result_text": "459"
+  },
+  {
+    "rank": 122,
+    "athlete_id": "fd57625a-7e0b-4b8c-9cf1-cce8f782a277",
+    "name": "Jindřiška Zajacová",
+    "country": "Czech Republic",
+    "sex": "F",
+    "points": 458.8,
+    "result_text": "458.8"
+  },
+  {
+    "rank": 123,
+    "athlete_id": "00000000-0000-0000-0000-0000000006f1",
+    "name": "Irina Smolentseva",
+    "country": "Russian Federation",
+    "sex": "F",
+    "points": 457.8,
+    "result_text": "457.8"
+  },
+  {
+    "rank": 124,
+    "athlete_id": "8f97df2f-acdc-4462-a568-64e9cb66db8e",
+    "name": "Ying Huang",
+    "country": "China",
+    "sex": "F",
+    "points": 454.8,
+    "result_text": "454.8"
+  },
+  {
+    "rank": 125,
+    "athlete_id": "c6ad8058-7fd2-43c2-9be8-cc98b80c418d",
+    "name": "Flintull Anna-Lena Eriksson",
+    "country": "Sweden",
+    "sex": "F",
+    "points": 454.7,
+    "result_text": "454.7"
+  },
+  {
+    "rank": 126,
+    "athlete_id": "3d7ddace-c873-4328-bda2-9e1656fba4ff",
+    "name": "Ayaka Ishihata",
+    "country": "Japan",
+    "sex": "F",
+    "points": 453.9,
+    "result_text": "453.9"
+  },
+  {
+    "rank": 127,
+    "athlete_id": "07e3fa29-7b8c-4110-bef2-850ede4877fe",
+    "name": "Vera Burkard",
+    "country": "Switzerland",
+    "sex": "F",
+    "points": 453.0,
+    "result_text": "453"
+  },
+  {
+    "rank": 128,
+    "athlete_id": "48dc6d74-22c4-40d3-983b-4b5f0bfdcd7b",
+    "name": "Heike Schwerdtner",
+    "country": "Germany",
+    "sex": "F",
+    "points": 452.8,
+    "result_text": "452.8"
+  },
+  {
+    "rank": 129,
+    "athlete_id": "2bd910a6-9c29-4470-afdb-e57079cebea5",
+    "name": "Laura Nebuloni",
+    "country": "Italy",
+    "sex": "F",
+    "points": 452.7,
+    "result_text": "452.7"
+  },
+  {
+    "rank": 130,
+    "athlete_id": "21e75a23-5856-46e3-b28d-6dd898597e62",
+    "name": "Binna Kang",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 452.3,
+    "result_text": "452.3"
+  },
+  {
+    "rank": 131,
+    "athlete_id": "462b2bf5-52fc-43a2-9556-8d356835ed61",
+    "name": "Ashleigh Mercer",
+    "country": "Australia",
+    "sex": "F",
+    "points": 451.4,
+    "result_text": "451.4"
+  },
+  {
+    "rank": 132,
+    "athlete_id": "3ff8ca87-47bb-41f7-a85a-c9d5303846c6",
+    "name": "Luz Vgómez Tagle",
+    "country": "Mexico",
+    "sex": "F",
+    "points": 451.3,
+    "result_text": "451.3"
+  },
+  {
+    "rank": 133,
+    "athlete_id": "e5b10709-41f5-47d6-9fcc-77331b509d01",
+    "name": "Glorija Stecenko",
+    "country": "Latvia",
+    "sex": "F",
+    "points": 451.2,
+    "result_text": "451.2"
+  },
+  {
+    "rank": 134,
+    "athlete_id": "3079f098-d8b1-4ba5-8bdd-21e3af2449e0",
+    "name": "Tracy Lau",
+    "country": "Hong Kong, China",
+    "sex": "F",
+    "points": 451.0,
+    "result_text": "451"
+  },
+  {
+    "rank": 135,
+    "athlete_id": "44b0c772-7284-4289-9f89-12688273b66e",
+    "name": "Wenpei Hsu",
+    "country": "Chinese Taipei",
+    "sex": "F",
+    "points": 450.0,
+    "result_text": "450"
+  },
+  {
+    "rank": 136,
+    "athlete_id": "d0728156-7290-4fa1-bd9a-8f64860f1a0d",
+    "name": "Julia Kozerska",
+    "country": "Poland",
+    "sex": "F",
+    "points": 449.6,
+    "result_text": "449.6"
+  },
+  {
+    "rank": 137,
+    "athlete_id": "38a78037-cc30-412b-8c73-cff15d048eef",
+    "name": "Sara Burnett",
+    "country": "United States",
+    "sex": "F",
+    "points": 449.3,
+    "result_text": "449.3"
+  },
+  {
+    "rank": 138,
+    "athlete_id": "60c2b686-4702-4eae-93b4-81b0ef6fc182",
+    "name": "Sun Young(Bianca) Kim",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 449.0,
+    "result_text": "449"
+  },
+  {
+    "rank": 139,
+    "athlete_id": "272fae70-cdce-4ce2-b9f9-0cf7d5682fd6",
+    "name": "Beci Ryan",
+    "country": "United Kingdom",
+    "sex": "F",
+    "points": 449.0,
+    "result_text": "449"
+  },
+  {
+    "rank": 140,
+    "athlete_id": "c2ceb035-fd29-44eb-8b91-c04771dcd99d",
+    "name": "Stefanie Pietsch",
+    "country": "Germany",
+    "sex": "F",
+    "points": 448.4,
+    "result_text": "448.4"
+  },
+  {
+    "rank": 141,
+    "athlete_id": "f196790a-5411-4939-a235-f930792af800",
+    "name": "Chih-Lin Yeh",
+    "country": "Sweden",
+    "sex": "F",
+    "points": 447.7,
+    "result_text": "447.7"
+  },
+  {
+    "rank": 142,
+    "athlete_id": "9ab7671d-9b83-4e35-a050-74df922488c3",
+    "name": "Hsin Yuan Yang",
+    "country": "Chinese Taipei",
+    "sex": "F",
+    "points": 442.7,
+    "result_text": "442.7"
+  },
+  {
+    "rank": 143,
+    "athlete_id": "3c13329a-966d-48b1-96de-829f513d541a",
+    "name": "Ivonne Rodríguez Estrada",
+    "country": "Mexico",
+    "sex": "F",
+    "points": 442.3,
+    "result_text": "442.3"
+  },
+  {
+    "rank": 144,
+    "athlete_id": "6969dcef-ef0d-41ea-ac0a-b7b6520f715b",
+    "name": "Marese Secades",
+    "country": "Philippines",
+    "sex": "F",
+    "points": 441.3,
+    "result_text": "441.3"
+  },
+  {
+    "rank": 145,
+    "athlete_id": "ac5c5d30-d2dc-427c-84d4-e31f2e69a97d",
+    "name": "Wei-Hsuan Yen",
+    "country": "Chinese Taipei",
+    "sex": "F",
+    "points": 440.4,
+    "result_text": "440.4"
+  },
+  {
+    "rank": 146,
+    "athlete_id": "95adcecf-a2f4-45de-8160-dbfdcf7806e7",
+    "name": "Mojca Haberman",
+    "country": "Slovenia",
+    "sex": "F",
+    "points": 439.8,
+    "result_text": "439.8"
+  },
+  {
+    "rank": 147,
+    "athlete_id": "a7fb6f13-d8ed-425a-bb66-3563458ecbc2",
+    "name": "Siri Østvold",
+    "country": "Norway",
+    "sex": "F",
+    "points": 438.7,
+    "result_text": "438.7"
+  },
+  {
+    "rank": 148,
+    "athlete_id": "1e898699-c969-4f3e-93d2-096c5a2f5e92",
+    "name": "Oksana Grushetska",
+    "country": "Ukraine",
+    "sex": "F",
+    "points": 438.4,
+    "result_text": "438.4"
+  },
+  {
+    "rank": 149,
+    "athlete_id": "115c3154-fdb3-467b-905e-ffaf902a77d5",
+    "name": "Carolina Schrappe",
+    "country": "Brazil",
+    "sex": "F",
+    "points": 438.0,
+    "result_text": "438"
+  },
+  {
+    "rank": 150,
+    "athlete_id": "00000000-0000-0000-0000-0000000014b5",
+    "name": "Gemma O'Brien",
+    "country": "New Zealand",
+    "sex": "F",
+    "points": 437.2,
+    "result_text": "437.2"
+  },
+  {
+    "rank": 151,
+    "athlete_id": "c9b80cc1-cc94-4034-b281-73efcd8b7606",
+    "name": "Hsin-Ying Hsieh",
+    "country": "Chinese Taipei",
+    "sex": "F",
+    "points": 436.5,
+    "result_text": "436.5"
+  },
+  {
+    "rank": 152,
+    "athlete_id": "002124ec-9468-4c4d-988b-44e176453b6b",
+    "name": "Christin Gerstorfer",
+    "country": "Austria",
+    "sex": "F",
+    "points": 436.2,
+    "result_text": "436.2"
+  },
+  {
+    "rank": 153,
+    "athlete_id": "d61b7fc8-d4a1-4da6-b4f0-423698ef92e8",
+    "name": "Miho Hikosaka",
+    "country": "Japan",
+    "sex": "F",
+    "points": 436.2,
+    "result_text": "436.2"
+  },
+  {
+    "rank": 154,
+    "athlete_id": "00000000-0000-0000-0000-000000000c56",
+    "name": "Ashley Chapman",
+    "country": "United States",
+    "sex": "F",
+    "points": 433.8,
+    "result_text": "433.8"
+  },
+  {
+    "rank": 155,
+    "athlete_id": "0f4a158e-d8a6-4651-ad83-f716bf5a8baa",
+    "name": "Maria Sitti",
+    "country": "Cyprus",
+    "sex": "F",
+    "points": 433.3,
+    "result_text": "433.3"
+  },
+  {
+    "rank": 156,
+    "athlete_id": "ce16d98d-46ce-4b0c-b07f-d10a3cbbf240",
+    "name": "Karla Mendez",
+    "country": "Venezuela",
+    "sex": "F",
+    "points": 433.2,
+    "result_text": "433.2"
+  },
+  {
+    "rank": 157,
+    "athlete_id": "a452fe68-eb0d-4b83-9617-cde470d14b5b",
+    "name": "Christina Sours Molina",
+    "country": "United States",
+    "sex": "F",
+    "points": 432.5,
+    "result_text": "432.5"
+  },
+  {
+    "rank": 158,
+    "athlete_id": "72d4a97b-a0ec-42e2-8b1e-af3ad1b47765",
+    "name": "Zhi Christina Li",
+    "country": "China",
+    "sex": "F",
+    "points": 432.2,
+    "result_text": "432.2"
+  },
+  {
+    "rank": 159,
+    "athlete_id": "a2c64abf-f52f-455f-a7aa-3ccb72325a9d",
+    "name": "Maria Antonia Vergara",
+    "country": "Panama",
+    "sex": "F",
+    "points": 432.1,
+    "result_text": "432.1"
+  },
+  {
+    "rank": 160,
+    "athlete_id": "00000000-0000-0000-0000-0000000014bd",
+    "name": "Yuriko Ichihara",
+    "country": "Japan",
+    "sex": "F",
+    "points": 431.4,
+    "result_text": "431.4"
+  },
+  {
+    "rank": 161,
+    "athlete_id": "725adae1-49d8-4da1-a01a-c4cfed250006",
+    "name": "Anna-Karina Schmitt",
+    "country": "Germany",
+    "sex": "F",
+    "points": 431.0,
+    "result_text": "431"
+  },
+  {
+    "rank": 162,
+    "athlete_id": "c40873ca-2c9d-4d4d-9efc-f246a5d6dbcd",
+    "name": "Ka Yan (Rebecca) Lo",
+    "country": "Hong Kong, China",
+    "sex": "F",
+    "points": 430.7,
+    "result_text": "430.7"
+  },
+  {
+    "rank": 163,
+    "athlete_id": "00000000-0000-0000-0000-000000000f90",
+    "name": "Tomoka Fukuda",
+    "country": "Japan",
+    "sex": "F",
+    "points": 429.8,
+    "result_text": "429.8"
+  },
+  {
+    "rank": 164,
+    "athlete_id": "62b87735-432b-4b4d-b7da-83e25a53a094",
+    "name": "Cassandra Cooper",
+    "country": "Canada",
+    "sex": "F",
+    "points": 429.6,
+    "result_text": "429.6"
+  },
+  {
+    "rank": 165,
+    "athlete_id": "c070ea9f-f747-4a60-8e99-1ec72ed297b6",
+    "name": "Anna Van Nieuwenhuizen",
+    "country": "Italy",
+    "sex": "F",
+    "points": 427.9,
+    "result_text": "427.9"
+  },
+  {
+    "rank": 166,
+    "athlete_id": "24fe8083-d326-4e8b-aa51-eed1e4bedbd8",
+    "name": "Isabel Sanchez Aran",
+    "country": "Spain",
+    "sex": "F",
+    "points": 427.1,
+    "result_text": "427.1"
+  },
+  {
+    "rank": 167,
+    "athlete_id": "9e81ccc5-825e-4da0-ba06-814ddba1f71a",
+    "name": "Xin Yi (Ruby） Wang",
+    "country": "China",
+    "sex": "F",
+    "points": 425.0,
+    "result_text": "425"
+  },
+  {
+    "rank": 168,
+    "athlete_id": "33ef8a58-6eaa-459b-8b75-b16985816979",
+    "name": "Keummi Koo",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 423.9,
+    "result_text": "423.9"
+  },
+  {
+    "rank": 169,
+    "athlete_id": "4f5541b4-950e-47bf-baa6-3f9ee67195af",
+    "name": "Ya Wen Huang",
+    "country": "Chinese Taipei",
+    "sex": "F",
+    "points": 420.8,
+    "result_text": "420.8"
+  },
+  {
+    "rank": 170,
+    "athlete_id": "9f8cd5d5-0f54-4e49-b371-a39be55acf18",
+    "name": "Bevin Reynolds",
+    "country": "South Africa",
+    "sex": "F",
+    "points": 420.2,
+    "result_text": "420.2"
+  },
+  {
+    "rank": 171,
+    "athlete_id": "adfc9f15-5d41-4204-82a0-a466815ef08c",
+    "name": "Julia Serrano",
+    "country": "Colombia",
+    "sex": "F",
+    "points": 418.5,
+    "result_text": "418.5"
+  },
+  {
+    "rank": 172,
+    "athlete_id": "58b91497-16ea-46cf-9f71-48f6f746816c",
+    "name": "Maria Olshevskaya",
+    "country": "International",
+    "sex": "F",
+    "points": 418.4,
+    "result_text": "418.4"
+  },
+  {
+    "rank": 173,
+    "athlete_id": "212a0695-ab1a-4a8e-be40-4f07eace43ae",
+    "name": "Brigitte Banegas",
+    "country": "France",
+    "sex": "F",
+    "points": 415.6,
+    "result_text": "415.6"
+  },
+  {
+    "rank": 174,
+    "athlete_id": "208c69ab-7326-4458-9e33-de50f1114ea7",
+    "name": "Fayrouz El Mehdawi",
+    "country": "Greece",
+    "sex": "F",
+    "points": 414.8,
+    "result_text": "414.8"
+  },
+  {
+    "rank": 175,
+    "athlete_id": "981f4fae-3159-403a-abe1-2a4612407ea3",
+    "name": "Silviya Rashkova",
+    "country": "Bulgaria",
+    "sex": "F",
+    "points": 414.8,
+    "result_text": "414.8"
+  },
+  {
+    "rank": 176,
+    "athlete_id": "2f458485-bc43-4c1e-80e4-8d5b11478d70",
+    "name": "Xueqin Liu",
+    "country": "China",
+    "sex": "F",
+    "points": 413.2,
+    "result_text": "413.2"
+  },
+  {
+    "rank": 177,
+    "athlete_id": "a6d73fc8-926b-49fa-9522-f29598270e93",
+    "name": "Estefania Dejuk",
+    "country": "Costa Rica",
+    "sex": "F",
+    "points": 413.1,
+    "result_text": "413.1"
+  },
+  {
+    "rank": 178,
+    "athlete_id": "1e7008dd-6f89-4c39-8662-d44402a227d9",
+    "name": "Hannah Nicol",
+    "country": "United Kingdom",
+    "sex": "F",
+    "points": 412.9,
+    "result_text": "412.9"
+  },
+  {
+    "rank": 179,
+    "athlete_id": "670a44f0-cf2c-4898-9492-98cd33225e96",
+    "name": "Isabelle Cid",
+    "country": "Switzerland",
+    "sex": "F",
+    "points": 412.5,
+    "result_text": "412.5"
+  },
+  {
+    "rank": 180,
+    "athlete_id": "77a8a159-fdde-4455-a7a3-2e33d6e432c7",
+    "name": "Eline Postma",
+    "country": "Thailand",
+    "sex": "F",
+    "points": 412.1,
+    "result_text": "412.1"
+  },
+  {
+    "rank": 181,
+    "athlete_id": "650b4d75-243f-4bf0-b03c-7efc5b9746e5",
+    "name": "Lin Hsin Ju",
+    "country": "Chinese Taipei",
+    "sex": "F",
+    "points": 410.9,
+    "result_text": "410.9"
+  },
+  {
+    "rank": 182,
+    "athlete_id": "ed6cdaca-0a32-47fb-a034-de207e202c79",
+    "name": "Chunxiao Song",
+    "country": "China",
+    "sex": "F",
+    "points": 410.0,
+    "result_text": "410"
+  },
+  {
+    "rank": 183,
+    "athlete_id": "186735fc-c6a6-41e6-bdb0-8cfcfb80016a",
+    "name": "Jantakarn Jantanakul",
+    "country": "Thailand",
+    "sex": "F",
+    "points": 409.8,
+    "result_text": "409.8"
+  },
+  {
+    "rank": 184,
+    "athlete_id": "c5ab60e6-a567-4bab-9091-e0035c4534bf",
+    "name": "Kristine Zipfel",
+    "country": "Norway",
+    "sex": "F",
+    "points": 409.5,
+    "result_text": "409.5"
+  },
+  {
+    "rank": 185,
+    "athlete_id": "e3f91683-a59b-4ff3-a4f7-a4d7b814fe42",
+    "name": "Vendula Strachotová",
+    "country": "Czech Republic",
+    "sex": "F",
+    "points": 409.2,
+    "result_text": "409.2"
+  },
+  {
+    "rank": 186,
+    "athlete_id": "be1e7300-5b1e-4a41-bd9e-c0ff939136d0",
+    "name": "Birgit Standhartinger",
+    "country": "Austria",
+    "sex": "F",
+    "points": 408.9,
+    "result_text": "408.9"
+  },
+  {
+    "rank": 187,
+    "athlete_id": "06c31a7b-5197-4267-8b58-969e0c513ba4",
+    "name": "Lalena Desautels",
+    "country": "Canada",
+    "sex": "F",
+    "points": 408.7,
+    "result_text": "408.7"
+  },
+  {
+    "rank": 188,
+    "athlete_id": "8117ef13-c67b-4f6a-81af-5d938a2eb2e0",
+    "name": "Salla Hakanpää",
+    "country": "Finland",
+    "sex": "F",
+    "points": 408.0,
+    "result_text": "408"
+  },
+  {
+    "rank": 189,
+    "athlete_id": "18571631-d3eb-46ac-85f2-32b945f8284a",
+    "name": "Archana Thiagarajan",
+    "country": "India",
+    "sex": "F",
+    "points": 407.4,
+    "result_text": "407.4"
+  },
+  {
+    "rank": 190,
+    "athlete_id": "a025ebf7-e5db-4b8d-8902-df5e4f3ac6ba",
+    "name": "Liv Philip",
+    "country": "United Kingdom",
+    "sex": "F",
+    "points": 407.3,
+    "result_text": "407.3"
+  },
+  {
+    "rank": 191,
+    "athlete_id": "a4bc7574-76ec-4da8-acea-42b78142bebb",
+    "name": "Anne-Sophie Passalboni",
+    "country": "France",
+    "sex": "F",
+    "points": 406.0,
+    "result_text": "406"
+  },
+  {
+    "rank": 192,
+    "athlete_id": "d4bf4f9e-238a-4126-8fad-4474fad9d294",
+    "name": "Polina Polusk-Paaso",
+    "country": "Finland",
+    "sex": "F",
+    "points": 404.6,
+    "result_text": "404.6"
+  },
+  {
+    "rank": 193,
+    "athlete_id": "21a1dad2-9cfb-42e2-96e7-1b69fbdd3679",
+    "name": "Kira Tulupova",
+    "country": "Israel",
+    "sex": "F",
+    "points": 404.4,
+    "result_text": "404.4"
+  },
+  {
+    "rank": 194,
+    "athlete_id": "4d5e18c2-a342-4a37-b77f-cd275628d720",
+    "name": "Agata Bogusz",
+    "country": "Poland",
+    "sex": "F",
+    "points": 403.6,
+    "result_text": "403.6"
+  },
+  {
+    "rank": 195,
+    "athlete_id": "24714966-e259-4c83-93a3-cbe83d523e82",
+    "name": "Melinda Bajai",
+    "country": "Hungary",
+    "sex": "F",
+    "points": 403.3,
+    "result_text": "403.3"
+  },
+  {
+    "rank": 196,
+    "athlete_id": "5fdc351d-3ae6-400b-b5c7-0a65f1539135",
+    "name": "Eunhee Hong",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 402.6,
+    "result_text": "402.6"
+  },
+  {
+    "rank": 197,
+    "athlete_id": "0c5c0531-ac64-4193-a328-7ae019adcea1",
+    "name": "Niina Marttinen",
+    "country": "Finland",
+    "sex": "F",
+    "points": 402.3,
+    "result_text": "402.3"
+  },
+  {
+    "rank": 198,
+    "athlete_id": "106dbfc5-b414-43f8-88bc-a7e7f170d303",
+    "name": "Hwakyung Ann",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 402.2,
+    "result_text": "402.2"
+  },
+  {
+    "rank": 199,
+    "athlete_id": "664cd5f9-f9a9-4168-bea2-8d4dd09bb9d0",
+    "name": "Natsumi Capdevila",
+    "country": "Japan",
+    "sex": "F",
+    "points": 401.9,
+    "result_text": "401.9"
+  },
+  {
+    "rank": 200,
+    "athlete_id": "71015f3e-51a1-4a61-80f6-93a0166f2ac9",
+    "name": "Yuki Muto",
+    "country": "Japan",
+    "sex": "F",
+    "points": 401.7,
+    "result_text": "401.7"
+  },
+  {
+    "rank": 201,
+    "athlete_id": "00000000-0000-0000-0000-00000000125f",
+    "name": "Marina Kazankova",
+    "country": "Russian Federation",
+    "sex": "F",
+    "points": 401.1,
+    "result_text": "401.1"
+  },
+  {
+    "rank": 202,
+    "athlete_id": "00000000-0000-0000-0000-000000000524",
+    "name": "Karla Fabrio",
+    "country": "Croatia",
+    "sex": "F",
+    "points": 399.9,
+    "result_text": "399.9"
+  },
+  {
+    "rank": 203,
+    "athlete_id": "0d328f2f-100f-41bc-82f0-a1a40bfb2829",
+    "name": "Mia Cho",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 398.5,
+    "result_text": "398.5"
+  },
+  {
+    "rank": 204,
+    "athlete_id": "b360e30b-bd7d-4f5a-9acc-c46f08049d03",
+    "name": "Smaragda Xenofou",
+    "country": "Greece",
+    "sex": "F",
+    "points": 398.5,
+    "result_text": "398.5"
+  },
+  {
+    "rank": 205,
+    "athlete_id": "6454db0f-e721-41d3-aad3-b35418b5a803",
+    "name": "Kathy MacDonald",
+    "country": "Ireland",
+    "sex": "F",
+    "points": 398.4,
+    "result_text": "398.4"
+  },
+  {
+    "rank": 206,
+    "athlete_id": "5498f7c2-f8c6-4244-b2ff-a4e7afd127eb",
+    "name": "Nikola Kofentová",
+    "country": "Czech Republic",
+    "sex": "F",
+    "points": 398.0,
+    "result_text": "398"
+  },
+  {
+    "rank": 207,
+    "athlete_id": "3d09de35-d8cf-4817-90d4-30b6796e2016",
+    "name": "Pathricia Pyatt",
+    "country": "Indonesia",
+    "sex": "F",
+    "points": 396.7,
+    "result_text": "396.7"
+  },
+  {
+    "rank": 208,
+    "athlete_id": "82cd7960-cfd3-46fb-ba2f-9b6089fb5b33",
+    "name": "Yichen Ma",
+    "country": "Chinese Taipei",
+    "sex": "F",
+    "points": 396.4,
+    "result_text": "396.4"
+  },
+  {
+    "rank": 209,
+    "athlete_id": "66dc5e74-406f-4b31-affd-d5ef554da536",
+    "name": "Yi Ling",
+    "country": "China",
+    "sex": "F",
+    "points": 396.0,
+    "result_text": "396"
+  },
+  {
+    "rank": 210,
+    "athlete_id": "00000000-0000-0000-0000-00000000083a",
+    "name": "Annabel Edwards",
+    "country": "United States",
+    "sex": "F",
+    "points": 395.1,
+    "result_text": "395.1"
+  },
+  {
+    "rank": 211,
+    "athlete_id": "c412fb00-0180-4d45-bda3-cb2b7df32f8b",
+    "name": "Lulu Stahlberg",
+    "country": "Germany",
+    "sex": "F",
+    "points": 395.0,
+    "result_text": "395"
+  },
+  {
+    "rank": 212,
+    "athlete_id": "17ab4603-4b79-4431-8e38-47a6575e92a2",
+    "name": "Natalia Domashenko",
+    "country": "Russian Federation",
+    "sex": "F",
+    "points": 394.3,
+    "result_text": "394.3"
+  },
+  {
+    "rank": 213,
+    "athlete_id": "611ee36b-18d7-4142-8451-fc45d999e856",
+    "name": "Hinatea Penilla Y Perella",
+    "country": "France",
+    "sex": "F",
+    "points": 394.1,
+    "result_text": "394.1"
+  },
+  {
+    "rank": 214,
+    "athlete_id": "b2c5603f-aa88-4b8e-9276-bab31fece15d",
+    "name": "Nara Martins Ishikawa",
+    "country": "Brazil",
+    "sex": "F",
+    "points": 393.8,
+    "result_text": "393.8"
+  },
+  {
+    "rank": 215,
+    "athlete_id": "00000000-0000-0000-0000-00000000059b",
+    "name": "Linda Paganelli",
+    "country": "Italy",
+    "sex": "F",
+    "points": 393.6,
+    "result_text": "393.6"
+  },
+  {
+    "rank": 216,
+    "athlete_id": "95a9160c-6423-4576-96c1-85083ab5e592",
+    "name": "Jade MacDonald-Razvi",
+    "country": "Australia",
+    "sex": "F",
+    "points": 393.5,
+    "result_text": "393.5"
+  },
+  {
+    "rank": 217,
+    "athlete_id": "b849f5ab-1039-49a3-9298-21131933e75d",
+    "name": "Benben Zhang ( Lisa Zhang )",
+    "country": "China",
+    "sex": "F",
+    "points": 393.5,
+    "result_text": "393.5"
+  },
+  {
+    "rank": 218,
+    "athlete_id": "c8c277c5-2eab-4385-979f-43698d4fa6ec",
+    "name": "Jieun Lee",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 393.3,
+    "result_text": "393.3"
+  },
+  {
+    "rank": 219,
+    "athlete_id": "1da56440-b283-4844-aa26-33c74270e968",
+    "name": "Irene Villaflor",
+    "country": "Philippines",
+    "sex": "F",
+    "points": 392.9,
+    "result_text": "392.9"
+  },
+  {
+    "rank": 220,
+    "athlete_id": "00000000-0000-0000-0000-000000001901",
+    "name": "Anqi Lim",
+    "country": "Singapore",
+    "sex": "F",
+    "points": 392.7,
+    "result_text": "392.7"
+  },
+  {
+    "rank": 221,
+    "athlete_id": "da888750-60c7-4e9c-845e-936ec1a52bcb",
+    "name": "Fumi Sonezaki",
+    "country": "Japan",
+    "sex": "F",
+    "points": 392.1,
+    "result_text": "392.1"
+  },
+  {
+    "rank": 222,
+    "athlete_id": "c69b7a11-a99b-4929-90d3-c4adf4ca7882",
+    "name": "Verena Fleißner",
+    "country": "Germany",
+    "sex": "F",
+    "points": 391.9,
+    "result_text": "391.9"
+  },
+  {
+    "rank": 223,
+    "athlete_id": "a56e60a4-06da-4ba6-b05f-ff0d4eafe18a",
+    "name": "Sanghee Park",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 391.9,
+    "result_text": "391.9"
+  },
+  {
+    "rank": 224,
+    "athlete_id": "3b2c188d-cb63-4202-8d54-8f450ca8abb4",
+    "name": "Mitsue Kanemoto",
+    "country": "Japan",
+    "sex": "F",
+    "points": 391.4,
+    "result_text": "391.4"
+  },
+  {
+    "rank": 225,
+    "athlete_id": "00000000-0000-0000-0000-00000000052c",
+    "name": "Misuzu Hirai",
+    "country": "Japan",
+    "sex": "F",
+    "points": 391.2,
+    "result_text": "391.2"
+  },
+  {
+    "rank": 226,
+    "athlete_id": "d2befb58-7825-40e5-90df-c0e7dc7ac60a",
+    "name": "Richelle Co",
+    "country": "Philippines",
+    "sex": "F",
+    "points": 391.1,
+    "result_text": "391.1"
+  },
+  {
+    "rank": 227,
+    "athlete_id": "00000000-0000-0000-0000-00000000144f",
+    "name": "Shelby Eisenberg",
+    "country": "United States",
+    "sex": "F",
+    "points": 390.8,
+    "result_text": "390.8"
+  },
+  {
+    "rank": 228,
+    "athlete_id": "9e9b0b9e-8418-41f8-bb37-25305c88d051",
+    "name": "Melissa Lodes",
+    "country": "Germany",
+    "sex": "F",
+    "points": 390.7,
+    "result_text": "390.7"
+  },
+  {
+    "rank": 229,
+    "athlete_id": "3c6e0577-c983-4b90-b3c8-2c2f80d6438b",
+    "name": "Marcela Avila Lopez",
+    "country": "Colombia",
+    "sex": "F",
+    "points": 388.5,
+    "result_text": "388.5"
+  },
+  {
+    "rank": 230,
+    "athlete_id": "91821c29-bd88-4e02-af50-52cb0bd78e96",
+    "name": "Twigy Feng",
+    "country": "United States",
+    "sex": "F",
+    "points": 388.1,
+    "result_text": "388.1"
+  },
+  {
+    "rank": 231,
+    "athlete_id": "173e2b9b-61d0-48df-aa38-f4cf00292aab",
+    "name": "Melissa Ponder",
+    "country": "United States",
+    "sex": "F",
+    "points": 388.1,
+    "result_text": "388.1"
+  },
+  {
+    "rank": 232,
+    "athlete_id": "00000000-0000-0000-0000-0000000012c9",
+    "name": "Michie Kokusyo",
+    "country": "Japan",
+    "sex": "F",
+    "points": 387.0,
+    "result_text": "387"
+  },
+  {
+    "rank": 233,
+    "athlete_id": "28a5e34d-9b0d-41c9-93d8-83173378a49b",
+    "name": "Jihee Yun",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 386.9,
+    "result_text": "386.9"
+  },
+  {
+    "rank": 234,
+    "athlete_id": "2d68f2fa-0b19-4ee8-bf42-c4d96b9880c3",
+    "name": "Debora Mariotti",
+    "country": "Philippines",
+    "sex": "F",
+    "points": 386.2,
+    "result_text": "386.2"
+  },
+  {
+    "rank": 235,
+    "athlete_id": "f72f7b9d-b0b1-40e7-9d99-b4c962b882bd",
+    "name": "Jody Fisher",
+    "country": "Australia",
+    "sex": "F",
+    "points": 385.8,
+    "result_text": "385.8"
+  },
+  {
+    "rank": 236,
+    "athlete_id": "638b6e25-888d-49ba-bd92-bea21a5f0fde",
+    "name": "Ke Tang",
+    "country": "China",
+    "sex": "F",
+    "points": 385.4,
+    "result_text": "385.4"
+  },
+  {
+    "rank": 237,
+    "athlete_id": "63794601-d3e5-43ba-9715-928bc27fb41a",
+    "name": "Junko Kitahama",
+    "country": "Japan",
+    "sex": "F",
+    "points": 385.4,
+    "result_text": "385.4"
+  },
+  {
+    "rank": 238,
+    "athlete_id": "558c7915-a7cc-49aa-be1e-dde5b3ff56de",
+    "name": "Mai Morimura",
+    "country": "Japan",
+    "sex": "F",
+    "points": 385.1,
+    "result_text": "385.1"
+  },
+  {
+    "rank": 239,
+    "athlete_id": "c39755ae-698f-417e-82ac-729cfe775d5e",
+    "name": "Jungeun Seo",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 384.6,
+    "result_text": "384.6"
+  },
+  {
+    "rank": 240,
+    "athlete_id": "0c67dcb9-ae82-4572-95b0-66bc981b40eb",
+    "name": "Jiajun Tung",
+    "country": "Chinese Taipei",
+    "sex": "F",
+    "points": 384.5,
+    "result_text": "384.5"
+  },
+  {
+    "rank": 241,
+    "athlete_id": "314ba016-f1d0-4cae-88a4-7a597b96803c",
+    "name": "Jeongseon Kim",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 384.3,
+    "result_text": "384.3"
+  },
+  {
+    "rank": 242,
+    "athlete_id": "f952df2c-4057-4263-afaf-970a0befaa76",
+    "name": "Iru Balic",
+    "country": "Venezuela",
+    "sex": "F",
+    "points": 383.4,
+    "result_text": "383.4"
+  },
+  {
+    "rank": 243,
+    "athlete_id": "00000000-0000-0000-0000-0000000005c3",
+    "name": "Maria Livbjerg",
+    "country": "Denmark",
+    "sex": "F",
+    "points": 383.2,
+    "result_text": "383.2"
+  },
+  {
+    "rank": 244,
+    "athlete_id": "d62c683e-34cd-46ca-9ccf-2dfc43338097",
+    "name": "Naurarat Suksomstarn",
+    "country": "Thailand",
+    "sex": "F",
+    "points": 382.3,
+    "result_text": "382.3"
+  },
+  {
+    "rank": 245,
+    "athlete_id": "56a0a464-48b6-4334-ace6-af6d045f4a29",
+    "name": "Valeria Loyola López",
+    "country": "Mexico",
+    "sex": "F",
+    "points": 381.8,
+    "result_text": "381.8"
+  },
+  {
+    "rank": 246,
+    "athlete_id": "258151e7-1574-4d0e-9f33-4f0ab0c0101f",
+    "name": "Yoeun Chun",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 381.2,
+    "result_text": "381.2"
+  },
+  {
+    "rank": 247,
+    "athlete_id": "1560260e-bcd9-4d35-8341-dea111d060cb",
+    "name": "Neza Cec",
+    "country": "Slovenia",
+    "sex": "F",
+    "points": 380.6,
+    "result_text": "380.6"
+  },
+  {
+    "rank": 248,
+    "athlete_id": "c6ad2845-f0dd-4602-a8e3-88654e6f0607",
+    "name": "Katerina Suranska",
+    "country": "Czech Republic",
+    "sex": "F",
+    "points": 380.5,
+    "result_text": "380.5"
+  },
+  {
+    "rank": 249,
+    "athlete_id": "89bbe8dc-523e-4f71-b968-f0dc6a3efb4c",
+    "name": "Emilie Vernier",
+    "country": "France",
+    "sex": "F",
+    "points": 380.4,
+    "result_text": "380.4"
+  },
+  {
+    "rank": 250,
+    "athlete_id": "00000000-0000-0000-0000-000000000c51",
+    "name": "Lena Jovanovic Balta",
+    "country": "Serbia",
+    "sex": "F",
+    "points": 380.4,
+    "result_text": "380.4"
+  },
+  {
+    "rank": 251,
+    "athlete_id": "7bf32cf3-005b-4870-868b-dd794e3f42ab",
+    "name": "Karoline Meyer",
+    "country": "Brazil",
+    "sex": "F",
+    "points": 380.1,
+    "result_text": "380.1"
+  },
+  {
+    "rank": 252,
+    "athlete_id": "14062f5a-7c14-4766-9f5d-dc7d2b9750df",
+    "name": "Klara Hansson",
+    "country": "Sweden",
+    "sex": "F",
+    "points": 380.0,
+    "result_text": "380"
+  },
+  {
+    "rank": 253,
+    "athlete_id": "20e4bcba-c627-4f52-9107-8a5c0caa6a2c",
+    "name": "Valentina Gaona Robles",
+    "country": "Colombia",
+    "sex": "F",
+    "points": 379.7,
+    "result_text": "379.7"
+  },
+  {
+    "rank": 254,
+    "athlete_id": "3ab5df1e-73da-458b-8fda-c50015ea0857",
+    "name": "Maxine McLaughlin",
+    "country": "Australia",
+    "sex": "F",
+    "points": 379.1,
+    "result_text": "379.1"
+  },
+  {
+    "rank": 255,
+    "athlete_id": "c399805c-856f-46cd-ab64-921abb1f34c4",
+    "name": "Emilia Biała",
+    "country": "Poland",
+    "sex": "F",
+    "points": 378.6,
+    "result_text": "378.6"
+  },
+  {
+    "rank": 256,
+    "athlete_id": "38d85ef8-ffa6-4005-83de-9ad71c8685e8",
+    "name": "Dhea Reyssent",
+    "country": "Indonesia",
+    "sex": "F",
+    "points": 378.5,
+    "result_text": "378.5"
+  },
+  {
+    "rank": 257,
+    "athlete_id": "3d35a241-bc6c-4d87-b2d2-c3be4330c721",
+    "name": "Ayumi Ishizaka",
+    "country": "Japan",
+    "sex": "F",
+    "points": 378.1,
+    "result_text": "378.1"
+  },
+  {
+    "rank": 258,
+    "athlete_id": "dc84bfd4-7710-4bda-bece-4576aaea6731",
+    "name": "Mandy-Rae Cruickshank/Krack",
+    "country": "Canada",
+    "sex": "F",
+    "points": 377.9,
+    "result_text": "377.9"
+  },
+  {
+    "rank": 259,
+    "athlete_id": "80b16778-f005-4623-ad1c-4cd216568bb4",
+    "name": "Alejandra Lopez",
+    "country": "Mexico",
+    "sex": "F",
+    "points": 377.8,
+    "result_text": "377.8"
+  },
+  {
+    "rank": 260,
+    "athlete_id": "2615a631-cb1f-40ec-9e53-a9e453b830f8",
+    "name": "Jordan Duncan",
+    "country": "Australia",
+    "sex": "F",
+    "points": 377.1,
+    "result_text": "377.1"
+  },
+  {
+    "rank": 261,
+    "athlete_id": "82182990-cc50-4264-a180-6566a8876626",
+    "name": "Mayuko Goto",
+    "country": "Japan",
+    "sex": "F",
+    "points": 376.9,
+    "result_text": "376.9"
+  },
+  {
+    "rank": 262,
+    "athlete_id": "00000000-0000-0000-0000-000000001031",
+    "name": "Sophie Jacquin",
+    "country": "France",
+    "sex": "F",
+    "points": 376.2,
+    "result_text": "376.2"
+  },
+  {
+    "rank": 263,
+    "athlete_id": "fa3c90f3-5534-4dde-b67c-ef6debf85384",
+    "name": "Laia Sopeña Spa",
+    "country": "Spain",
+    "sex": "F",
+    "points": 376.2,
+    "result_text": "376.2"
+  },
+  {
+    "rank": 264,
+    "athlete_id": "f23ddec6-8059-4409-bcda-5c72672a417a",
+    "name": "Sinikka Mäkinen",
+    "country": "Finland",
+    "sex": "F",
+    "points": 375.9,
+    "result_text": "375.9"
+  },
+  {
+    "rank": 265,
+    "athlete_id": "00000000-0000-0000-0000-0000000005b9",
+    "name": "Elisabeth Sveen Kristoffersen",
+    "country": "Norway",
+    "sex": "F",
+    "points": 375.5,
+    "result_text": "375.5"
+  },
+  {
+    "rank": 266,
+    "athlete_id": "639fd4ec-25de-4921-9410-49af3e22d57f",
+    "name": "Izabela Lisek",
+    "country": "Poland",
+    "sex": "F",
+    "points": 375.0,
+    "result_text": "375"
+  },
+  {
+    "rank": 267,
+    "athlete_id": "b413dd84-e484-4901-925e-cc28240ddcdc",
+    "name": "Libertad Coronel",
+    "country": "Mexico",
+    "sex": "F",
+    "points": 375.0,
+    "result_text": "375"
+  },
+  {
+    "rank": 268,
+    "athlete_id": "aaf9ea6b-c1b5-4a52-bd73-5fc4fdcafec2",
+    "name": "Birgül Erken",
+    "country": "Turkiye",
+    "sex": "F",
+    "points": 374.1,
+    "result_text": "374.1"
+  },
+  {
+    "rank": 269,
+    "athlete_id": "c583689a-47c2-490a-a838-607bcdffc8f4",
+    "name": "Jisun Lee",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 373.1,
+    "result_text": "373.1"
+  },
+  {
+    "rank": 270,
+    "athlete_id": "a2304e29-2765-4858-99f5-986e7f756d00",
+    "name": "Mimi Zou",
+    "country": "China",
+    "sex": "F",
+    "points": 373.0,
+    "result_text": "373"
+  },
+  {
+    "rank": 271,
+    "athlete_id": "c6267891-0899-475f-9904-46b21c2d8484",
+    "name": "Lotta Ericson",
+    "country": "Sweden",
+    "sex": "F",
+    "points": 372.8,
+    "result_text": "372.8"
+  },
+  {
+    "rank": 272,
+    "athlete_id": "00000000-0000-0000-0000-000000000408",
+    "name": "Natalia Avseenko",
+    "country": "Russian Federation",
+    "sex": "F",
+    "points": 372.8,
+    "result_text": "372.8"
+  },
+  {
+    "rank": 273,
+    "athlete_id": "f87f1893-42c7-4ece-8963-48fb77c5d30b",
+    "name": "Sohee Og",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 372.5,
+    "result_text": "372.5"
+  },
+  {
+    "rank": 274,
+    "athlete_id": "2b0ecfc6-7217-4ebc-acdc-d04eebff8da6",
+    "name": "Yee Hui Lim",
+    "country": "Singapore",
+    "sex": "F",
+    "points": 371.9,
+    "result_text": "371.9"
+  },
+  {
+    "rank": 275,
+    "athlete_id": "00000000-0000-0000-0000-00000000089c",
+    "name": "Irina Veverka(Karina)",
+    "country": "Russian Federation",
+    "sex": "F",
+    "points": 371.7,
+    "result_text": "371.7"
+  },
+  {
+    "rank": 276,
+    "athlete_id": "f2f8f86b-2595-4019-b4bc-0676ec264805",
+    "name": "Zoya Golovnya",
+    "country": "Russian Federation",
+    "sex": "F",
+    "points": 371.0,
+    "result_text": "371"
+  },
+  {
+    "rank": 277,
+    "athlete_id": "00000000-0000-0000-0000-000000000b86",
+    "name": "Veera Lopez-Lehto",
+    "country": "Finland",
+    "sex": "F",
+    "points": 370.6,
+    "result_text": "370.6"
+  },
+  {
+    "rank": 278,
+    "athlete_id": "4603499e-db55-416b-9e42-1049bc97d83d",
+    "name": "Dagmar Andres-Brümmer",
+    "country": "Germany",
+    "sex": "F",
+    "points": 368.7,
+    "result_text": "368.7"
+  },
+  {
+    "rank": 279,
+    "athlete_id": "0489142c-c8c0-485a-b2f4-627daf89e085",
+    "name": "Dena Parsa",
+    "country": "Denmark",
+    "sex": "F",
+    "points": 368.5,
+    "result_text": "368.5"
+  },
+  {
+    "rank": 280,
+    "athlete_id": "566b70f1-a8e8-4aae-b3a3-e17a0f2bec9c",
+    "name": "Emily Padjen",
+    "country": "United States",
+    "sex": "F",
+    "points": 368.4,
+    "result_text": "368.4"
+  },
+  {
+    "rank": 281,
+    "athlete_id": "59d605f2-87ca-476e-90c2-79d063261325",
+    "name": "Ranalina Alim",
+    "country": "Egypt",
+    "sex": "F",
+    "points": 367.0,
+    "result_text": "367"
+  },
+  {
+    "rank": 282,
+    "athlete_id": "b83cbfef-698d-4de1-b59f-1ad6c6dddb26",
+    "name": "Karen Ogilvie",
+    "country": "Canada",
+    "sex": "F",
+    "points": 366.4,
+    "result_text": "366.4"
+  },
+  {
+    "rank": 283,
+    "athlete_id": "00000000-0000-0000-0000-000000001661",
+    "name": "Surya Lecona",
+    "country": "Mexico",
+    "sex": "F",
+    "points": 366.4,
+    "result_text": "366.4"
+  },
+  {
+    "rank": 284,
+    "athlete_id": "ec951341-de23-44cf-a78a-af9c301f6046",
+    "name": "Anna Greta Horvath",
+    "country": "Hungary",
+    "sex": "F",
+    "points": 366.3,
+    "result_text": "366.3"
+  },
+  {
+    "rank": 285,
+    "athlete_id": "7e9e95ed-0b2d-406a-a620-8f6831a5909a",
+    "name": "Veronika Mihalská",
+    "country": "Slovakia",
+    "sex": "F",
+    "points": 365.8,
+    "result_text": "365.8"
+  },
+  {
+    "rank": 286,
+    "athlete_id": "00000000-0000-0000-0000-000000000c7f",
+    "name": "Anna Paraiyar",
+    "country": "United Kingdom",
+    "sex": "F",
+    "points": 365.1,
+    "result_text": "365.1"
+  },
+  {
+    "rank": 287,
+    "athlete_id": "5ef08cb2-7038-4a35-b3aa-6dff3816c022",
+    "name": "Chenxiao Wu",
+    "country": "China",
+    "sex": "F",
+    "points": 364.8,
+    "result_text": "364.8"
+  },
+  {
+    "rank": 288,
+    "athlete_id": "b358e8fe-0837-48c3-adcd-104e73b2f2e9",
+    "name": "Kristina Iseeva",
+    "country": "Russian Federation",
+    "sex": "F",
+    "points": 364.5,
+    "result_text": "364.5"
+  },
+  {
+    "rank": 289,
+    "athlete_id": "c76fc319-35d1-4b17-93f1-41f84198ed14",
+    "name": "Amanda Sumner",
+    "country": "United States",
+    "sex": "F",
+    "points": 364.4,
+    "result_text": "364.4"
+  },
+  {
+    "rank": 290,
+    "athlete_id": "7f74d01a-f68e-423c-a9b3-25d476e5e108",
+    "name": "Tereza Navratilova",
+    "country": "Czech Republic",
+    "sex": "F",
+    "points": 363.1,
+    "result_text": "363.1"
+  },
+  {
+    "rank": 291,
+    "athlete_id": "e811e042-c326-4a99-932b-627990fdd1d1",
+    "name": "Paula Johnsson",
+    "country": "Sweden",
+    "sex": "F",
+    "points": 362.6,
+    "result_text": "362.6"
+  },
+  {
+    "rank": 292,
+    "athlete_id": "4131c007-88d5-4bc6-a246-07b87c5472f8",
+    "name": "Seunga Pi",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 362.5,
+    "result_text": "362.5"
+  },
+  {
+    "rank": 293,
+    "athlete_id": "00000000-0000-0000-0000-000000001622",
+    "name": "Meghan Gilmore",
+    "country": "United States",
+    "sex": "F",
+    "points": 362.3,
+    "result_text": "362.3"
+  },
+  {
+    "rank": 294,
+    "athlete_id": "00000000-0000-0000-0000-0000000000a8",
+    "name": "Megumi Matsumoto",
+    "country": "Japan",
+    "sex": "F",
+    "points": 362.0,
+    "result_text": "362"
+  },
+  {
+    "rank": 295,
+    "athlete_id": "a91c2f30-328e-45c7-b041-ee6a167f386e",
+    "name": "Udovenko Alena",
+    "country": "Ukraine",
+    "sex": "F",
+    "points": 360.9,
+    "result_text": "360.9"
+  },
+  {
+    "rank": 296,
+    "athlete_id": "ced83e8a-7bc9-49e0-9f30-cd3d97cc035e",
+    "name": "Mirim Kim",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 360.5,
+    "result_text": "360.5"
+  },
+  {
+    "rank": 297,
+    "athlete_id": "36f96f28-29a0-4f56-8d0e-4b9315a51f3a",
+    "name": "Karina Kienast",
+    "country": "Austria",
+    "sex": "F",
+    "points": 360.1,
+    "result_text": "360.1"
+  },
+  {
+    "rank": 298,
+    "athlete_id": "6e59d323-76ad-4f96-8301-7e1ec34b82a3",
+    "name": "Sangmi Park",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 359.8,
+    "result_text": "359.8"
+  },
+  {
+    "rank": 299,
+    "athlete_id": "7f9b9d1a-959f-483b-9550-9dc260e294f5",
+    "name": "Rebekah Nutter",
+    "country": "Australia",
+    "sex": "F",
+    "points": 359.1,
+    "result_text": "359.1"
+  },
+  {
+    "rank": 300,
+    "athlete_id": "16a3560f-2cf0-416e-97c2-2bb95c49ff1f",
+    "name": "Karolína Štiková",
+    "country": "Czech Republic",
+    "sex": "F",
+    "points": 358.8,
+    "result_text": "358.8"
+  },
+  {
+    "rank": 301,
+    "athlete_id": "d02ef3e4-cdcd-40bf-adb5-18f76be5d2bb",
+    "name": "Sandra Palmer Trejo",
+    "country": "Mexico",
+    "sex": "F",
+    "points": 358.5,
+    "result_text": "358.5"
+  },
+  {
+    "rank": 302,
+    "athlete_id": "d2acd490-0823-4044-babb-0f5f504c12f2",
+    "name": "Eun Jung Lee",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 358.5,
+    "result_text": "358.5"
+  },
+  {
+    "rank": 303,
+    "athlete_id": "bb66adf6-4770-4d2f-bc1e-fa6982d9ab2b",
+    "name": "Eunae Jeoung",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 358.3,
+    "result_text": "358.3"
+  },
+  {
+    "rank": 304,
+    "athlete_id": "e25080ea-d685-414f-879c-0e5a0c0aa1f0",
+    "name": "Yung-Yen Chen",
+    "country": "Chinese Taipei",
+    "sex": "F",
+    "points": 358.2,
+    "result_text": "358.2"
+  },
+  {
+    "rank": 305,
+    "athlete_id": "5fd07208-0475-4381-9c90-467048963508",
+    "name": "Kerry Hollowell",
+    "country": "United States",
+    "sex": "F",
+    "points": 358.2,
+    "result_text": "358.2"
+  },
+  {
+    "rank": 306,
+    "athlete_id": "1253871d-3ee6-41a1-8736-3f9932e65035",
+    "name": "Inge Verbruggen",
+    "country": "Belgium",
+    "sex": "F",
+    "points": 357.2,
+    "result_text": "357.2"
+  },
+  {
+    "rank": 307,
+    "athlete_id": "313e8d87-9303-4edc-9e02-b35e45839561",
+    "name": "Iryna Kapusta",
+    "country": "Ukraine",
+    "sex": "F",
+    "points": 356.8,
+    "result_text": "356.8"
+  },
+  {
+    "rank": 308,
+    "athlete_id": "69e5cd59-0df1-4f61-a976-9bfb70cd69ea",
+    "name": "Soobeen Kim",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 356.4,
+    "result_text": "356.4"
+  },
+  {
+    "rank": 309,
+    "athlete_id": "044a18eb-fa62-4075-91a7-07840af44147",
+    "name": "Ana Giselle Kafie",
+    "country": "Honduras",
+    "sex": "F",
+    "points": 355.7,
+    "result_text": "355.7"
+  },
+  {
+    "rank": 310,
+    "athlete_id": "bd5bd603-9de1-4ddd-9a46-58f8ca9219c1",
+    "name": "Kisun Jung",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 354.3,
+    "result_text": "354.3"
+  },
+  {
+    "rank": 311,
+    "athlete_id": "2688142c-7e8e-483d-b9b6-e80ef78ca41c",
+    "name": "Elham Shareghi Boroujeni",
+    "country": "Iran",
+    "sex": "F",
+    "points": 354.1,
+    "result_text": "354.1"
+  },
+  {
+    "rank": 312,
+    "athlete_id": "7814195d-e839-41e2-a8e0-d5b68ed93917",
+    "name": "Evgeniia Kuzina",
+    "country": "International",
+    "sex": "F",
+    "points": 354.0,
+    "result_text": "354"
+  },
+  {
+    "rank": 313,
+    "athlete_id": "b8d38324-273a-4e60-b37a-4b4b72982fd9",
+    "name": "Fatima Korok",
+    "country": "Hungary",
+    "sex": "F",
+    "points": 354.0,
+    "result_text": "354"
+  },
+  {
+    "rank": 314,
+    "athlete_id": "00000000-0000-0000-0000-000000000c57",
+    "name": "Rosibel Molina",
+    "country": "Cuba",
+    "sex": "F",
+    "points": 353.6,
+    "result_text": "353.6"
+  },
+  {
+    "rank": 315,
+    "athlete_id": "abbbbb3e-ec59-463a-8db9-53a9fa8e2c17",
+    "name": "Amanda Balding",
+    "country": "Australia",
+    "sex": "F",
+    "points": 353.5,
+    "result_text": "353.5"
+  },
+  {
+    "rank": 316,
+    "athlete_id": "185c9a20-2c89-4f15-8316-b913b481c85f",
+    "name": "Lady Nancy Lisondra",
+    "country": "Philippines",
+    "sex": "F",
+    "points": 353.4,
+    "result_text": "353.4"
+  },
+  {
+    "rank": 317,
+    "athlete_id": "4f5eee38-3e59-4dc4-849f-81f33ee33e5e",
+    "name": "Marina Valitova",
+    "country": "International",
+    "sex": "F",
+    "points": 353.2,
+    "result_text": "353.2"
+  },
+  {
+    "rank": 318,
+    "athlete_id": "3e82f7d3-f34f-4a04-b6a1-ef7dcd14efcf",
+    "name": "Adriana Buechner de Freitas Brandao",
+    "country": "Brazil",
+    "sex": "F",
+    "points": 353.1,
+    "result_text": "353.1"
+  },
+  {
+    "rank": 319,
+    "athlete_id": "7aa51af3-5e6e-4b8d-b9b9-8b671a83e11b",
+    "name": "Evelina Navašinskaitė",
+    "country": "Lithuania",
+    "sex": "F",
+    "points": 352.3,
+    "result_text": "352.3"
+  },
+  {
+    "rank": 320,
+    "athlete_id": "487ddb91-e5e3-48b1-b93a-aaf696e03171",
+    "name": "Kate Middleton",
+    "country": "New Zealand",
+    "sex": "F",
+    "points": 351.8,
+    "result_text": "351.8"
+  },
+  {
+    "rank": 321,
+    "athlete_id": "be0205ec-21fa-4fd8-b6c6-60912b28224a",
+    "name": "Miyuki Komiyama",
+    "country": "Japan",
+    "sex": "F",
+    "points": 349.1,
+    "result_text": "349.1"
+  },
+  {
+    "rank": 322,
+    "athlete_id": "eef2150d-d4f8-4a83-a9a8-d063ade1a2e4",
+    "name": "Nicky Margieson",
+    "country": "United Kingdom",
+    "sex": "F",
+    "points": 349.1,
+    "result_text": "349.1"
+  },
+  {
+    "rank": 323,
+    "athlete_id": "81b90b2c-71d1-4054-b709-ba1dadd91f21",
+    "name": "Yujia Yang",
+    "country": "China",
+    "sex": "F",
+    "points": 348.7,
+    "result_text": "348.7"
+  },
+  {
+    "rank": 324,
+    "athlete_id": "e37b479a-0e2a-45dd-bf76-867bdcb9a885",
+    "name": "Mara Guida",
+    "country": "Italy",
+    "sex": "F",
+    "points": 348.2,
+    "result_text": "348.2"
+  },
+  {
+    "rank": 325,
+    "athlete_id": "3a8554b8-dbbc-47a2-81c2-c5dd77812735",
+    "name": "Darja Tjioe",
+    "country": "Netherlands",
+    "sex": "F",
+    "points": 348.0,
+    "result_text": "348"
+  },
+  {
+    "rank": 326,
+    "athlete_id": "00000000-0000-0000-0000-000000000531",
+    "name": "Olga Surykova",
+    "country": "Russian Federation",
+    "sex": "F",
+    "points": 347.6,
+    "result_text": "347.6"
+  },
+  {
+    "rank": 327,
+    "athlete_id": "26bacaf5-a726-4d28-ac0e-f4ad9941fe2b",
+    "name": "Riya Sakakibara",
+    "country": "Japan",
+    "sex": "F",
+    "points": 347.4,
+    "result_text": "347.4"
+  },
+  {
+    "rank": 328,
+    "athlete_id": "a90b01f3-2424-412d-b20c-5acef7e18ea8",
+    "name": "Adina Van Reijn",
+    "country": "Netherlands",
+    "sex": "F",
+    "points": 346.6,
+    "result_text": "346.6"
+  },
+  {
+    "rank": 329,
+    "athlete_id": "00000000-0000-0000-0000-000000001a57",
+    "name": "Gisela Sola Lafuente",
+    "country": "Spain",
+    "sex": "F",
+    "points": 345.9,
+    "result_text": "345.9"
+  },
+  {
+    "rank": 330,
+    "athlete_id": "4912e454-6586-48f0-a5c5-f4d55ff4c7fb",
+    "name": "Viktorija Stanulionyte",
+    "country": "Lithuania",
+    "sex": "F",
+    "points": 345.2,
+    "result_text": "345.2"
+  },
+  {
+    "rank": 331,
+    "athlete_id": "1e06494d-3f99-4f6d-9088-e6177b61ad70",
+    "name": "Laurence Gueguen",
+    "country": "France",
+    "sex": "F",
+    "points": 345.2,
+    "result_text": "345.2"
+  },
+  {
+    "rank": 332,
+    "athlete_id": "955649be-c23a-4f7c-add8-0d011ef26b99",
+    "name": "Audrey Jiwajennie",
+    "country": "Indonesia",
+    "sex": "F",
+    "points": 345.0,
+    "result_text": "345"
+  },
+  {
+    "rank": 333,
+    "athlete_id": "00000000-0000-0000-0000-000000001765",
+    "name": "Hanli Prinsloo",
+    "country": "South Africa",
+    "sex": "F",
+    "points": 345.0,
+    "result_text": "345"
+  },
+  {
+    "rank": 334,
+    "athlete_id": "38daa6eb-66af-407c-9ab4-aa77603b71c7",
+    "name": "Jihyang Surk",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 344.7,
+    "result_text": "344.7"
+  },
+  {
+    "rank": 335,
+    "athlete_id": "9603f140-a998-4081-8f35-05f0bb611c8d",
+    "name": "Yvette Bezuidenhout",
+    "country": "United Kingdom",
+    "sex": "F",
+    "points": 344.6,
+    "result_text": "344.6"
+  },
+  {
+    "rank": 336,
+    "athlete_id": "ee22b841-0f76-48cf-972e-d166ee68a453",
+    "name": "Nancy Gibson",
+    "country": "United Kingdom",
+    "sex": "F",
+    "points": 344.5,
+    "result_text": "344.5"
+  },
+  {
+    "rank": 337,
+    "athlete_id": "00000000-0000-0000-0000-000000000c5b",
+    "name": "Tania Rounthwaite",
+    "country": "New Zealand",
+    "sex": "F",
+    "points": 344.2,
+    "result_text": "344.2"
+  },
+  {
+    "rank": 338,
+    "athlete_id": "00000000-0000-0000-0000-00000000009a",
+    "name": "Tanya Streeter",
+    "country": "United States",
+    "sex": "F",
+    "points": 343.9,
+    "result_text": "343.9"
+  },
+  {
+    "rank": 339,
+    "athlete_id": "33c03e8a-5b70-4304-a6c5-31c813c9f531",
+    "name": "Hanxiao（Leah） Gu",
+    "country": "China",
+    "sex": "F",
+    "points": 343.8,
+    "result_text": "343.8"
+  },
+  {
+    "rank": 340,
+    "athlete_id": "85ffcd6d-4d20-4f49-8023-1bb40627b4d1",
+    "name": "Aruna Yamashita",
+    "country": "Japan",
+    "sex": "F",
+    "points": 343.1,
+    "result_text": "343.1"
+  },
+  {
+    "rank": 341,
+    "athlete_id": "00000000-0000-0000-0000-000000000087",
+    "name": "Nanja Van den Broek",
+    "country": "Netherlands",
+    "sex": "F",
+    "points": 342.4,
+    "result_text": "342.4"
+  },
+  {
+    "rank": 342,
+    "athlete_id": "e078d44e-93cb-4657-af6c-1a65d4e64693",
+    "name": "Kat Fairweather",
+    "country": "New Zealand",
+    "sex": "F",
+    "points": 342.3,
+    "result_text": "342.3"
+  },
+  {
+    "rank": 343,
+    "athlete_id": "9043021d-689b-424d-94f6-e5d617a20b77",
+    "name": "Veronika Kruse",
+    "country": "Germany",
+    "sex": "F",
+    "points": 342.1,
+    "result_text": "342.1"
+  },
+  {
+    "rank": 344,
+    "athlete_id": "ce18d166-2113-4329-82a6-d1e105ee7727",
+    "name": "Eunjung Park",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 341.5,
+    "result_text": "341.5"
+  },
+  {
+    "rank": 345,
+    "athlete_id": "7276ae32-f693-4528-98fb-636c19a6ae12",
+    "name": "Jiwon Shin",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 341.2,
+    "result_text": "341.2"
+  },
+  {
+    "rank": 346,
+    "athlete_id": "3c9323ee-fcb2-4a26-b1a6-699d9233ccfe",
+    "name": "He Dai",
+    "country": "China",
+    "sex": "F",
+    "points": 340.8,
+    "result_text": "340.8"
+  },
+  {
+    "rank": 347,
+    "athlete_id": "a6d2f0e8-fd31-4300-b90f-9684f9d4597c",
+    "name": "Natalia Ovodova",
+    "country": "Russian Federation",
+    "sex": "F",
+    "points": 340.3,
+    "result_text": "340.3"
+  },
+  {
+    "rank": 348,
+    "athlete_id": "161094bb-16a4-491f-81e6-e79fa491c314",
+    "name": "Sylvia Falomir",
+    "country": "Mexico",
+    "sex": "F",
+    "points": 339.8,
+    "result_text": "339.8"
+  },
+  {
+    "rank": 349,
+    "athlete_id": "294dc6a3-17ef-4961-9ffb-6095277b48a1",
+    "name": "Marina Romanova",
+    "country": "Russian Federation",
+    "sex": "F",
+    "points": 339.8,
+    "result_text": "339.8"
+  },
+  {
+    "rank": 350,
+    "athlete_id": "2ce4d0d3-81eb-4a54-9514-1a4d550a529d",
+    "name": "Da Yeong Lee",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 339.7,
+    "result_text": "339.7"
+  },
+  {
+    "rank": 351,
+    "athlete_id": "e9362568-495b-4769-a77f-d579ded13db3",
+    "name": "Mariia Tsuran",
+    "country": "International",
+    "sex": "F",
+    "points": 339.1,
+    "result_text": "339.1"
+  },
+  {
+    "rank": 352,
+    "athlete_id": "07120fb6-e145-4f22-b3a2-3ceab8fd5e5b",
+    "name": "Natalie Rudman",
+    "country": "South Africa",
+    "sex": "F",
+    "points": 339.0,
+    "result_text": "339"
+  },
+  {
+    "rank": 353,
+    "athlete_id": "6f6c20d4-09a8-4174-8749-8baf5fd96a05",
+    "name": "Tijana Nikolic",
+    "country": "Serbia",
+    "sex": "F",
+    "points": 339.0,
+    "result_text": "339"
+  },
+  {
+    "rank": 354,
+    "athlete_id": "87fd69c0-e53b-4ce2-a882-457867fe4467",
+    "name": "Anastasia Postnikova",
+    "country": "International",
+    "sex": "F",
+    "points": 338.0,
+    "result_text": "338"
+  },
+  {
+    "rank": 355,
+    "athlete_id": "00000000-0000-0000-0000-000000000801",
+    "name": "Sara Campbell",
+    "country": "United Kingdom",
+    "sex": "F",
+    "points": 337.8,
+    "result_text": "337.8"
+  },
+  {
+    "rank": 356,
+    "athlete_id": "725819dd-2bcb-4b3b-acee-c94341f1bd61",
+    "name": "Haehui Park",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 337.8,
+    "result_text": "337.8"
+  },
+  {
+    "rank": 357,
+    "athlete_id": "6640a03a-2360-4611-bcec-98cf38bc75f7",
+    "name": "Ga Eun Jun",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 337.6,
+    "result_text": "337.6"
+  },
+  {
+    "rank": 358,
+    "athlete_id": "85825343-12b0-4c4a-b007-b5c2ef58f1cc",
+    "name": "Zuzana Judge",
+    "country": "Czech Republic",
+    "sex": "F",
+    "points": 337.2,
+    "result_text": "337.2"
+  },
+  {
+    "rank": 359,
+    "athlete_id": "00000000-0000-0000-0000-0000000008a0",
+    "name": "Cristina Kümmel",
+    "country": "Denmark",
+    "sex": "F",
+    "points": 336.5,
+    "result_text": "336.5"
+  },
+  {
+    "rank": 360,
+    "athlete_id": "97f57511-855e-4f50-98ae-f84cf6257430",
+    "name": "Dhyana Landa",
+    "country": "Peru",
+    "sex": "F",
+    "points": 336.4,
+    "result_text": "336.4"
+  },
+  {
+    "rank": 361,
+    "athlete_id": "29f90998-ba23-4889-844d-e4cf580c1db1",
+    "name": "Aleksandra Pilipoveca",
+    "country": "Latvia",
+    "sex": "F",
+    "points": 336.4,
+    "result_text": "336.4"
+  },
+  {
+    "rank": 362,
+    "athlete_id": "3328cf7c-1470-4c98-a55a-db2bf066131b",
+    "name": "Simona Auteri",
+    "country": "Italy",
+    "sex": "F",
+    "points": 336.4,
+    "result_text": "336.4"
+  },
+  {
+    "rank": 363,
+    "athlete_id": "5341c4e7-6423-42e4-8b90-af58f4db26a0",
+    "name": "Li Karlsen",
+    "country": "Sweden",
+    "sex": "F",
+    "points": 336.2,
+    "result_text": "336.2"
+  },
+  {
+    "rank": 364,
+    "athlete_id": "00000000-0000-0000-0000-0000000008c4",
+    "name": "Barbora Ivanska",
+    "country": "Czech Republic",
+    "sex": "F",
+    "points": 335.9,
+    "result_text": "335.9"
+  },
+  {
+    "rank": 365,
+    "athlete_id": "ee7438e5-fd3d-4f0c-8746-d11efdbe9722",
+    "name": "Maria Bobela",
+    "country": "Poland",
+    "sex": "F",
+    "points": 335.0,
+    "result_text": "335"
+  },
+  {
+    "rank": 366,
+    "athlete_id": "0968c00c-687d-45eb-9bae-7415811e85c5",
+    "name": "Ludmilla Eimer",
+    "country": "Germany",
+    "sex": "F",
+    "points": 334.3,
+    "result_text": "334.3"
+  },
+  {
+    "rank": 367,
+    "athlete_id": "4e407332-04ab-418f-88d0-b0a51d4d5ebd",
+    "name": "Iiris Ala-Olla",
+    "country": "Finland",
+    "sex": "F",
+    "points": 334.1,
+    "result_text": "334.1"
+  },
+  {
+    "rank": 368,
+    "athlete_id": "86d8f1c0-19e6-41b3-b938-e90b758a459a",
+    "name": "Suyeon Jeong",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 333.9,
+    "result_text": "333.9"
+  },
+  {
+    "rank": 369,
+    "athlete_id": "44ea7621-e29b-46a0-ae8e-68132cd60fa3",
+    "name": "Sophia Van Coller",
+    "country": "South Africa",
+    "sex": "F",
+    "points": 333.1,
+    "result_text": "333.1"
+  },
+  {
+    "rank": 370,
+    "athlete_id": "f2394c1b-c2c9-4b46-948b-177c28309616",
+    "name": "Katarina Kušić",
+    "country": "Croatia",
+    "sex": "F",
+    "points": 332.2,
+    "result_text": "332.2"
+  },
+  {
+    "rank": 371,
+    "athlete_id": "b37b5b27-4ec4-4645-b00f-b74e8a2de526",
+    "name": "Tatsiana Melnichuk",
+    "country": "International",
+    "sex": "F",
+    "points": 331.9,
+    "result_text": "331.9"
+  },
+  {
+    "rank": 372,
+    "athlete_id": "5ecf6c4e-fe28-4374-acff-82b7d8c10b85",
+    "name": "Juhui Kim",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 331.8,
+    "result_text": "331.8"
+  },
+  {
+    "rank": 373,
+    "athlete_id": "a8f83f77-18b7-4018-b6c1-edf1ebda2ed0",
+    "name": "Yasemin Ulucan",
+    "country": "Turkiye",
+    "sex": "F",
+    "points": 331.0,
+    "result_text": "331"
+  },
+  {
+    "rank": 374,
+    "athlete_id": "00000000-0000-0000-0000-000000000535",
+    "name": "Bettina Wolfer",
+    "country": "Switzerland",
+    "sex": "F",
+    "points": 331.0,
+    "result_text": "331"
+  },
+  {
+    "rank": 375,
+    "athlete_id": "00000000-0000-0000-0000-000000000545",
+    "name": "Annelie Pompe",
+    "country": "Sweden",
+    "sex": "F",
+    "points": 330.8,
+    "result_text": "330.8"
+  },
+  {
+    "rank": 376,
+    "athlete_id": "89c2d262-f625-44b4-9708-5664c8219bf6",
+    "name": "Veronika Badilla",
+    "country": "Czech Republic",
+    "sex": "F",
+    "points": 330.8,
+    "result_text": "330.8"
+  },
+  {
+    "rank": 377,
+    "athlete_id": "00000000-0000-0000-0000-0000000008c6",
+    "name": "Jana Oujezdska",
+    "country": "Czech Republic",
+    "sex": "F",
+    "points": 330.5,
+    "result_text": "330.5"
+  },
+  {
+    "rank": 378,
+    "athlete_id": "00000000-0000-0000-0000-000000000220",
+    "name": "Aurore Asso",
+    "country": "France",
+    "sex": "F",
+    "points": 330.5,
+    "result_text": "330.5"
+  },
+  {
+    "rank": 379,
+    "athlete_id": "47933e92-277c-459e-a15c-4538381f1240",
+    "name": "Yasmin Elewa",
+    "country": "Egypt",
+    "sex": "F",
+    "points": 330.2,
+    "result_text": "330.2"
+  },
+  {
+    "rank": 380,
+    "athlete_id": "304ae8e6-fe4b-474b-8428-6f16e87d677d",
+    "name": "Flory Ambarita",
+    "country": "Indonesia",
+    "sex": "F",
+    "points": 330.1,
+    "result_text": "330.1"
+  },
+  {
+    "rank": 381,
+    "athlete_id": "14123eea-a620-458b-9c9d-f9c716140a9c",
+    "name": "Catalina Ferlan",
+    "country": "Argentina",
+    "sex": "F",
+    "points": 330.0,
+    "result_text": "330"
+  },
+  {
+    "rank": 382,
+    "athlete_id": "e414e355-7ad8-4c2c-936e-05c4a43c8199",
+    "name": "Ilaria Bosi",
+    "country": "Italy",
+    "sex": "F",
+    "points": 329.8,
+    "result_text": "329.8"
+  },
+  {
+    "rank": 383,
+    "athlete_id": "1d2d3289-cfaa-41de-88aa-aa426d4b3ba5",
+    "name": "Katsiaryna Spiryna",
+    "country": "International",
+    "sex": "F",
+    "points": 329.8,
+    "result_text": "329.8"
+  },
+  {
+    "rank": 384,
+    "athlete_id": "aef2230e-b808-4797-963e-4c27049d257d",
+    "name": "Linde Muyshondt",
+    "country": "Belgium",
+    "sex": "F",
+    "points": 328.5,
+    "result_text": "328.5"
+  },
+  {
+    "rank": 385,
+    "athlete_id": "a9b14196-9a7f-4bde-b4fe-6c084a792723",
+    "name": "Carolina Lopez Arango",
+    "country": "Colombia",
+    "sex": "F",
+    "points": 328.5,
+    "result_text": "328.5"
+  },
+  {
+    "rank": 386,
+    "athlete_id": "bdbc938e-c83c-487d-944c-d6fded7b1d0e",
+    "name": "Verena Hoelzer",
+    "country": "Germany",
+    "sex": "F",
+    "points": 328.4,
+    "result_text": "328.4"
+  },
+  {
+    "rank": 387,
+    "athlete_id": "998d6627-1edd-4b7c-964a-75ea1fd7d8b2",
+    "name": "Leena Oijala",
+    "country": "Finland",
+    "sex": "F",
+    "points": 328.0,
+    "result_text": "328"
+  },
+  {
+    "rank": 388,
+    "athlete_id": "672e097a-1a06-4415-808f-abdaf9adc872",
+    "name": "Ilka Michaelis",
+    "country": "Germany",
+    "sex": "F",
+    "points": 326.7,
+    "result_text": "326.7"
+  },
+  {
+    "rank": 389,
+    "athlete_id": "e640b19d-7cad-4224-a64c-503020396272",
+    "name": "Ryoko Kemmotsu",
+    "country": "Japan",
+    "sex": "F",
+    "points": 326.4,
+    "result_text": "326.4"
+  },
+  {
+    "rank": 390,
+    "athlete_id": "c73e3304-6edc-4de6-871b-a52bfb9af33c",
+    "name": "Kim Kyeongseon",
+    "country": "Republic of Korea",
+    "sex": "F",
+    "points": 326.0,
+    "result_text": "326"
+  },
+  {
+    "rank": 391,
+    "athlete_id": "9e3cf4ee-f64d-4f2a-932a-01090ac02520",
+    "name": "Meredith Cudmore-Keating",
+    "country": "Canada",
+    "sex": "F",
+    "points": 325.7,
+    "result_text": "325.7"
+  },
+  {
+    "rank": 392,
+    "athlete_id": "706fe36f-e665-4ac5-af82-83360e4e59ce",
+    "name": "Hui Mian Chai",
+    "country": "Singapore",
+    "sex": "F",
+    "points": 325.5,
+    "result_text": "325.5"
+  },
+  {
+    "rank": 393,
+    "athlete_id": "b383b9a5-0d44-42d3-bf26-3766b97e2162",
+    "name": "Xiao Han",
+    "country": "China",
+    "sex": "F",
+    "points": 325.2,
+    "result_text": "325.2"
+  },
+  {
+    "rank": 394,
+    "athlete_id": "e8d01d52-3881-411a-a66e-cbaedcb5c862",
+    "name": "Ruth Osborn",
+    "country": "United Kingdom",
+    "sex": "F",
+    "points": 325.0,
+    "result_text": "325"
+  },
+  {
+    "rank": 395,
+    "athlete_id": "25d76aab-2e44-4c3c-98d2-7973a973fe78",
+    "name": "Diana Boesan",
+    "country": "Romania",
+    "sex": "F",
+    "points": 324.9,
+    "result_text": "324.9"
+  },
+  {
+    "rank": 396,
+    "athlete_id": "c4d878c5-99c2-4427-b2b8-3d73e8af1c8e",
+    "name": "Tatjana Skobo",
+    "country": "Croatia",
+    "sex": "F",
+    "points": 324.5,
+    "result_text": "324.5"
+  },
+  {
+    "rank": 397,
+    "athlete_id": "00000000-0000-0000-0000-000000001a60",
+    "name": "Vita Kremser",
+    "country": "Slovenia",
+    "sex": "F",
+    "points": 324.4,
+    "result_text": "324.4"
+  },
+  {
+    "rank": 398,
+    "athlete_id": "a40ae309-fd19-4bd1-8fcb-8f5330140fc2",
+    "name": "Madoka Okuyama",
+    "country": "Japan",
+    "sex": "F",
+    "points": 324.3,
+    "result_text": "324.3"
+  },
+  {
+    "rank": 399,
+    "athlete_id": "29d65c79-c30e-4d68-9bd7-eacd9e32da21",
+    "name": "Katarzyna Wrzosek",
+    "country": "Poland",
+    "sex": "F",
+    "points": 323.8,
+    "result_text": "323.8"
+  },
+  {
+    "rank": 400,
+    "athlete_id": "434891dd-d98a-49c3-93f3-0f592dd3d0dd",
+    "name": "Wyanet P.",
+    "country": "Indonesia",
+    "sex": "F",
+    "points": 323.8,
+    "result_text": "323.8"
+  }
+]

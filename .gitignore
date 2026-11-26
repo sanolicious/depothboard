@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ingest pipeline
+data/ingest/raw/
+data/ingest/cmas_scrubbed/
+data/ingest/canonical/
+data/ingest/fr/
+data/ingest/seed.json
+__pycache__/
+*.pyc
+.Python
+.venv/
