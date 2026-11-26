@@ -854,3 +854,87 @@ body.palette-open .palette-back { display: flex; }
   .stat-row.keep .stat { padding: 12px; }
   .stat-row.keep .stat b { font-size: 1.375rem; }
 }
+
+/* ---------- Field app (PWF-19) ---------- */
+.field-app-page { max-width: 560px; padding-bottom: 48px; }
+.field-app { display: grid; gap: 16px; margin-top: 12px; }
+.field-app__bar {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+}
+.field-app__eyebrow {
+  margin: 0; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-muted); font-weight: 600;
+}
+.field-app__title { margin: 4px 0 0; font-size: 1.5rem; line-height: 1.2; }
+.field-app__meta {
+  margin: 6px 0 0; font-size: 0.875rem; color: var(--text-muted);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+}
+.field-app__pill {
+  display: inline-flex; align-items: center; min-height: 22px; padding: 0 8px;
+  border-radius: 999px; font-size: 0.75rem; font-weight: 600; border: 1px solid var(--line);
+  background: var(--surface-2); color: var(--text-muted);
+}
+.field-app__pill.is-on {
+  background: rgba(74, 222, 128, 0.12); color: var(--success);
+  border-color: rgba(74, 222, 128, 0.35);
+}
+.field-app__pill.is-off {
+  background: rgba(245, 197, 24, 0.12); color: var(--card-yellow);
+  border-color: rgba(245, 197, 24, 0.4);
+}
+.field-app__sync { flex: none; min-width: 110px; }
+.field-app__msg { margin: 0; }
+.banner--danger {
+  background: rgba(248, 113, 113, 0.1); border-color: rgba(248, 113, 113, 0.4);
+}
+.field-app__card {
+  background: var(--surface-1); border: 1px solid var(--line-soft);
+  border-radius: var(--r-lg); padding: 18px; display: grid; gap: 12px;
+}
+.field-app__card h2 {
+  margin: 0; font-size: 1.05rem; display: flex; align-items: center; gap: 8px;
+}
+.field-app__row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+}
+.field-app__actions {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.field-app__session-status {
+  margin: 0; font-size: 0.875rem; word-break: break-all;
+}
+.field-app__qr { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+.field-app__athletes {
+  list-style: none; margin: 0; padding: 0; display: grid; gap: 8px;
+  max-height: 280px; overflow: auto; -webkit-overflow-scrolling: touch;
+}
+.field-app__athlete {
+  width: 100%; text-align: left; display: grid; gap: 4px;
+  padding: 12px 14px; border-radius: var(--r-md);
+  background: var(--surface-0); border: 1px solid var(--line);
+  color: var(--text); cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.field-app__athlete:hover { border-color: #5a5a5a; background: var(--surface-2); }
+.field-app__athlete.is-selected {
+  border-color: var(--accent); background: var(--accent-soft);
+}
+.field-app__athlete-name {
+  font-weight: 600; font-size: 0.975rem;
+  display: flex; align-items: center; flex-wrap: wrap;
+}
+.field-app__athlete-meta {
+  font-size: 0.8125rem; color: var(--text-muted);
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+}
+.field-app__buffer {
+  margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 0.875rem;
+}
+@media (max-width: 520px) {
+  .field-app__bar { flex-direction: column; }
+  .field-app__sync { width: 100%; }
+  .field-app__row, .field-app__actions, .field-app__qr {
+    grid-template-columns: 1fr;
+  }
+}

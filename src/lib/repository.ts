@@ -33,6 +33,7 @@ import {
   listTelemetrySamples,
   loadEcosystemCatalog,
 } from "@/lib/ecosystem";
+import { loadFieldRuntime } from "@/lib/field-runtime";
 import { loadLiveDemoCatalog } from "@/lib/live-demo";
 import { computeRanking } from "@/lib/ranking";
 
@@ -256,8 +257,27 @@ function applyFootageCatalog(db: SeedDb): SeedDb {
 /** Merge device / field-session / telemetry hooks; stamp consents with session ids. */
 function applyEcosystemCatalog(db: SeedDb): SeedDb {
   const eco = loadEcosystemCatalog();
+  const runtime = loadFieldRuntime();
+
+  const sessionById = new Map(
+    eco.fieldSessions.map((s) => [s.id, s] as const),
+  );
+  for (const s of runtime.fieldSessions) {
+    const prev = sessionById.get(s.id);
+    sessionById.set(s.id, prev ? { ...prev, ...s } : s);
+  }
+  const fieldSessions = [...sessionById.values()];
+
+  const assignById = new Map(
+    eco.diveAssignments.map((a) => [a.id, a] as const),
+  );
+  for (const a of runtime.diveAssignments) {
+    assignById.set(a.id, a);
+  }
+  const diveAssignments = [...assignById.values()];
+
   const sessionByConsent = new Map<string, string>();
-  for (const session of eco.fieldSessions) {
+  for (const session of fieldSessions) {
     for (const cid of session.consentIds ?? []) {
       sessionByConsent.set(cid, session.id);
     }
@@ -269,12 +289,18 @@ function applyEcosystemCatalog(db: SeedDb): SeedDb {
     return linked ? { ...c, fieldSessionId: linked } : c;
   });
 
+  const perfById = new Map(db.performances.map((p) => [p.id, p]));
+  for (const p of runtime.performances) {
+    perfById.set(p.id, p);
+  }
+
   return {
     ...db,
     consents,
+    performances: [...perfById.values()],
     devices: eco.devices,
-    fieldSessions: eco.fieldSessions,
-    diveAssignments: eco.diveAssignments,
+    fieldSessions,
+    diveAssignments,
     telemetrySamples: eco.telemetrySamples,
   };
 }

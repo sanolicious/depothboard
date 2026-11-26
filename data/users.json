@@ -34,5 +34,23 @@
     "role": "visitor",
     "athleteSlug": null,
     "notes": "Has a pending claim on petar-klovar in seed claim-requests."
+  },
+  {
+    "id": "user-operator",
+    "email": "operator.demo@example.com",
+    "password": "demo",
+    "name": "Field Operator",
+    "role": "operator",
+    "athleteSlug": null,
+    "notes": "Field app operator — can open /field sessions and sync dive assignments."
+  },
+  {
+    "id": "user-admin",
+    "email": "admin.demo@example.com",
+    "password": "demo",
+    "name": "Depthboard Admin",
+    "role": "admin",
+    "athleteSlug": null,
+    "notes": "Admin — full field app access plus devices admin demo."
   }
 ]
