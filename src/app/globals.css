@@ -1,0 +1,124 @@
+/* App-level tweaks on top of depthboard.css */
+body {
+  padding-bottom: 72px;
+}
+
+@media (min-width: 901px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero video {
+    display: none;
+  }
+  .hero {
+    background:
+      radial-gradient(120% 80% at 70% 20%, rgba(60, 200, 220, 0.18), transparent 55%),
+      linear-gradient(180deg, #0b2a4a 0%, #061423 48%, #1c1c1c 100%);
+  }
+}
+
+.map-panel {
+  position: relative;
+  min-height: 420px;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse 70% 55% at 48% 42%, rgba(60, 200, 220, 0.1), transparent 55%),
+    radial-gradient(circle at 22% 58%, rgba(11, 42, 74, 0.85), transparent 28%),
+    radial-gradient(circle at 72% 48%, rgba(11, 42, 74, 0.7), transparent 22%),
+    linear-gradient(165deg, #101820 0%, #0b1218 55%, #1c1c1c 100%);
+  overflow: hidden;
+}
+
+.map-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 6px rgba(60, 200, 220, 0.2);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.map-dot--live {
+  background: var(--live);
+  box-shadow: 0 0 0 6px rgba(255, 90, 82, 0.25);
+  animation: pulse 1.8s infinite;
+}
+
+.cookie-banner {
+  position: fixed;
+  left: 16px;
+  bottom: 88px;
+  z-index: 80;
+  max-width: 360px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 12px;
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 10px 12px;
+  box-shadow: var(--shadow-2);
+}
+
+.cookie-banner p {
+  margin: 0;
+  flex: 1 1 160px;
+  color: var(--text-muted);
+}
+
+@media (min-width: 901px) {
+  .cookie-banner {
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .calendar-split {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.legal {
+  max-width: 720px;
+}
+
+.legal h2 {
+  margin: 28px 0 10px;
+  font-size: 1.25rem;
+}
+
+.legal p,
+.legal li {
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.legal ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+  margin-bottom: 16px;
+}
+
+.embed-shell {
+  min-height: 100vh;
+  background: var(--surface-0);
+  padding: 16px;
+}
+
+body:has(.embed-shell) .livebar,
+body:has(.embed-shell) .site-header,
+body:has(.embed-shell) .site-footer,
+body:has(.embed-shell) .bottom-nav {
+  display: none !important;
+}
+
+body:has(.embed-shell) {
+  padding-bottom: 0;
+}
