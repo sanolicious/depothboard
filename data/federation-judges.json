@@ -1,0 +1,284 @@
+{
+  "asOf": "2026-11-26",
+  "notes": "Synthetic / anonymized judge training cases for PWF-20 (Diveye module 6). Evidence packs link existing FootageAsset ids — no real athlete names in case copy.",
+  "materials": [
+    {
+      "id": "mat-cards-overview",
+      "title": "White / yellow / red — decision tree",
+      "federation": "BOTH",
+      "body": "White = valid performance. Yellow = penalty applied but dive stands (AIDA points / CMAS metres after penalty). Red = disqualification. Borderline calls usually sit on surface protocol, early/late start, or airway control in the first seconds after surfacing."
+    },
+    {
+      "id": "mat-aida-surface",
+      "title": "AIDA surface protocol checklist",
+      "federation": "AIDA",
+      "body": "After surfacing the athlete must complete the surface protocol within the allowed window: remove facial equipment, give the OK sign, and say “I’m OK” (or equivalent) without airway compromise. Incomplete or late protocol → yellow or red depending on severity and safety."
+    },
+    {
+      "id": "mat-cmas-start",
+      "title": "CMAS start-window notes",
+      "federation": "CMAS",
+      "body": "CMAS start timing is stricter than AIDA on early starts in several depth disciplines: an early start can be a full DQ (red) rather than a yellow with time penalty. Always apply the judging federation’s rulebook for the attempt."
+    }
+  ],
+  "evidencePacks": [
+    {
+      "id": "ev-clean-dyn",
+      "title": "Clean DYN — protocol textbook",
+      "notes": "Preview footage with clear start → turn → surface → protocol → white card markers.",
+      "mode": "async",
+      "footageAssetId": "fa-dive-0-preview",
+      "diveId": "dive-0",
+      "markerIds": ["m-start", "m-surf", "m-proto", "m-card"],
+      "tags": ["surface_protocol"],
+      "federation": "AIDA",
+      "discipline": "DYN"
+    },
+    {
+      "id": "ev-dynb-penalty",
+      "title": "DYNB — mid-dive penalty marker",
+      "notes": "Synthetic pack highlighting a penalty marker before surface; used for yellow-card borderline training.",
+      "mode": "async",
+      "footageAssetId": "fa-dive-1-preview",
+      "diveId": "dive-1",
+      "markerIds": ["m-start", "m-pen", "m-surf", "m-proto"],
+      "tags": ["lane_line", "grab"],
+      "federation": "AIDA",
+      "discipline": "DYNB"
+    },
+    {
+      "id": "ev-cnf-bo-watch",
+      "title": "CNF — BO watch after protocol",
+      "notes": "Blackout-watch marker after surface; safety-first red vs yellow training.",
+      "mode": "async",
+      "footageAssetId": "fa-dive-4-preview",
+      "diveId": "dive-4",
+      "markerIds": ["m-surf", "m-proto", "m-bo"],
+      "tags": ["blackout", "airway", "surface_protocol"],
+      "federation": "AIDA",
+      "discipline": "CNF"
+    },
+    {
+      "id": "ev-cwt-depth",
+      "title": "CWT — bottom turn + surface",
+      "notes": "Depth discipline markers for turn / surface protocol review.",
+      "mode": "async",
+      "footageAssetId": "fa-dive-505-preview",
+      "diveId": "dive-505",
+      "markerIds": ["m-start", "m-turn", "m-surf", "m-proto"],
+      "tags": ["turn", "depth_marker", "surface_protocol"],
+      "federation": "AIDA",
+      "discipline": "CWT"
+    },
+    {
+      "id": "ev-fim-surface",
+      "title": "FIM — surface timing",
+      "notes": "Shorter clip; focus on surface and airway without a dedicated card marker.",
+      "mode": "async",
+      "footageAssetId": "fa-dive-9792-preview",
+      "diveId": "dive-9792",
+      "markerIds": ["m-start", "m-turn", "m-surf"],
+      "tags": ["surface_protocol", "airway"],
+      "federation": "AIDA",
+      "discipline": "FIM"
+    },
+    {
+      "id": "ev-cmas-cnf-link",
+      "title": "CMAS CNF — embed-only rights path",
+      "notes": "CMAS footage asset (link/embed model). Useful for federation-admin evidence routing, not sale.",
+      "mode": "async",
+      "footageAssetId": "fa-cmas-31686",
+      "diveId": "cmas-res-31686",
+      "markerIds": [],
+      "tags": ["other"],
+      "federation": "CMAS",
+      "discipline": "CNF"
+    },
+    {
+      "id": "ev-hq-reference",
+      "title": "HQ twin of clean DYN",
+      "notes": "Same dive as ev-clean-dyn at HQ quality — for panel tag practice.",
+      "mode": "async",
+      "footageAssetId": "fa-dive-0-hq",
+      "diveId": "dive-0",
+      "markerIds": ["m-proto", "m-card"],
+      "tags": ["surface_protocol"],
+      "federation": "AIDA",
+      "discipline": "DYN"
+    },
+    {
+      "id": "ev-cwt-hq",
+      "title": "CWT HQ — depth markers",
+      "notes": "HQ companion for depth turn evidence.",
+      "mode": "async",
+      "footageAssetId": "fa-dive-505-hq",
+      "diveId": "dive-505",
+      "markerIds": ["m-turn", "m-surf", "m-proto"],
+      "tags": ["turn", "depth_marker"],
+      "federation": "AIDA",
+      "discipline": "CWT"
+    }
+  ],
+  "trainingCases": [
+    {
+      "id": "tc-01-clean-white",
+      "title": "Textbook white — DYN protocol",
+      "summary": "Clear surface protocol; no safety concern.",
+      "discipline": "DYN",
+      "federation": "AIDA",
+      "difficulty": "clear",
+      "mode": "async",
+      "anonymizedAthlete": "Athlete A",
+      "scenario": "Athlete surfaces on time, removes mask within the window, shows OK and speaks clearly. Markers show a clean protocol and a white-card stamp.",
+      "briefing": [
+        "Watch surface → protocol → card markers in order.",
+        "Confirm airway stays open; no grab of the lane line."
+      ],
+      "referenceCard": "W",
+      "referenceTags": ["surface_protocol"],
+      "referenceRationale": "Protocol completed correctly with no penalty markers. Reference card is white.",
+      "evidencePackId": "ev-clean-dyn",
+      "ruleHints": ["AIDA surface protocol window", "White = valid dive"]
+    },
+    {
+      "id": "tc-02-lane-yellow",
+      "title": "Borderline yellow — lane contact",
+      "summary": "Mid-dive penalty marker; dive otherwise completed.",
+      "discipline": "DYNB",
+      "federation": "AIDA",
+      "difficulty": "borderline",
+      "mode": "async",
+      "anonymizedAthlete": "Athlete B",
+      "scenario": "A penalty marker fires before surface. Athlete finishes the protocol. Debate: incidental lane touch vs assisted propulsion.",
+      "briefing": [
+        "Scrub to the penalty marker.",
+        "Decide whether the contact warrants a yellow (penalty) or red (DQ for pull)."
+      ],
+      "referenceCard": "Y",
+      "referenceTags": ["lane_line", "grab"],
+      "referenceRationale": "Incidental contact with measurable effect → yellow with penalty, not a full pull DQ in this synthetic reference.",
+      "evidencePackId": "ev-dynb-penalty",
+      "ruleHints": ["AIDA pool: lane-line assistance", "Yellow vs red on intentional pull"]
+    },
+    {
+      "id": "tc-03-bo-red",
+      "title": "Hard red — BO watch",
+      "summary": "Blackout watch after surface; safety overrides borderline protocol.",
+      "discipline": "CNF",
+      "federation": "AIDA",
+      "difficulty": "hard",
+      "mode": "async",
+      "anonymizedAthlete": "Athlete C",
+      "scenario": "Protocol starts, then a BO-watch marker appears. Athlete loses airway control briefly; safety intervenes.",
+      "briefing": [
+        "Prioritise safety signals over formal protocol timing.",
+        "Tag blackout / airway if present."
+      ],
+      "referenceCard": "R",
+      "referenceTags": ["blackout", "airway", "surface_protocol"],
+      "referenceRationale": "Loss of consciousness / airway after surface → red (DQ) with safety notes. Training focus: never “upgrade” to white after BO.",
+      "evidencePackId": "ev-cnf-bo-watch",
+      "ruleHints": ["AIDA DQ BO", "Safety first"]
+    },
+    {
+      "id": "tc-04-depth-turn",
+      "title": "Borderline white — depth turn",
+      "summary": "Bottom turn looks late but marker stays legal.",
+      "discipline": "CWT",
+      "federation": "AIDA",
+      "difficulty": "borderline",
+      "mode": "async",
+      "anonymizedAthlete": "Athlete D",
+      "scenario": "Bottom turn is visually late relative to the plate; surface protocol is clean. Reference panel kept white with a depth-marker note for training discussion.",
+      "briefing": [
+        "Compare turn marker vs declared depth behaviour.",
+        "Surface protocol is secondary here — focus on turn legality."
+      ],
+      "referenceCard": "W",
+      "referenceTags": ["turn", "depth_marker", "surface_protocol"],
+      "referenceRationale": "Synthetic reference: turn accepted; white card. Useful as a false-red trap for trainees.",
+      "evidencePackId": "ev-cwt-depth",
+      "ruleHints": ["Depth turn / tag", "Do not invent penalties"]
+    },
+    {
+      "id": "tc-05-fim-airway",
+      "title": "Borderline yellow — delayed OK",
+      "summary": "Surface OK delayed; no full BO.",
+      "discipline": "FIM",
+      "federation": "AIDA",
+      "difficulty": "borderline",
+      "mode": "async",
+      "anonymizedAthlete": "Athlete E",
+      "scenario": "Athlete surfaces, hesitates on the OK sign and speech. Airway remains open; no grab. Panel reference is yellow for incomplete protocol timing.",
+      "briefing": [
+        "No dedicated card marker on this clip — judge from surface timing alone.",
+        "Distinguish incomplete protocol (yellow) from BO (red)."
+      ],
+      "referenceCard": "Y",
+      "referenceTags": ["surface_protocol", "airway"],
+      "referenceRationale": "Delayed / incomplete surface protocol without BO → yellow in this synthetic AIDA reference.",
+      "evidencePackId": "ev-fim-surface",
+      "ruleHints": ["Surface protocol timing", "Yellow before red when airway OK"]
+    },
+    {
+      "id": "tc-06-cmas-early",
+      "title": "CMAS early start — red",
+      "summary": "Federation-rule contrast: early start as DQ under CMAS.",
+      "discipline": "CNF",
+      "federation": "CMAS",
+      "difficulty": "borderline",
+      "mode": "async",
+      "anonymizedAthlete": "Athlete F",
+      "scenario": "CMAS embed-only clip with sparse markers. Scenario text states an early start relative to OT. Apply CMAS (not AIDA) start rules.",
+      "briefing": [
+        "Judging federation is CMAS for this attempt.",
+        "Early start → red in this training reference (contrast with AIDA yellow/time penalty)."
+      ],
+      "referenceCard": "R",
+      "referenceTags": ["early_start"],
+      "referenceRationale": "Training contrast case: CMAS early start treated as DQ (red). Do not import AIDA yellow habits blindly.",
+      "evidencePackId": "ev-cmas-cnf-link",
+      "ruleHints": ["CMAS start window", "Federation of the attempt rules"]
+    },
+    {
+      "id": "tc-07-hq-confirm",
+      "title": "HQ confirm — still white",
+      "summary": "Same dive as case 01 at HQ quality; card should not flip.",
+      "discipline": "DYN",
+      "federation": "AIDA",
+      "difficulty": "clear",
+      "mode": "async",
+      "anonymizedAthlete": "Athlete A",
+      "scenario": "HQ twin of the clean DYN. Trainees sometimes over-call after scrubbing; reference remains white.",
+      "briefing": [
+        "Use HQ only to confirm protocol clarity.",
+        "Do not invent a yellow from compression artefacts."
+      ],
+      "referenceCard": "W",
+      "referenceTags": ["surface_protocol"],
+      "referenceRationale": "Same reference as the preview clean dive — white.",
+      "evidencePackId": "ev-hq-reference",
+      "ruleHints": ["Preview vs HQ consistency"]
+    },
+    {
+      "id": "tc-08-grab-red",
+      "title": "Hard red — assisted pull",
+      "summary": "Clear intentional pull on the line after the penalty marker.",
+      "discipline": "DYNB",
+      "federation": "AIDA",
+      "difficulty": "hard",
+      "mode": "async",
+      "anonymizedAthlete": "Athlete G",
+      "scenario": "Same evidence pack as the borderline yellow, but the written scenario escalates: athlete clearly pulls for propulsion after the marker. Reference panel: red.",
+      "briefing": [
+        "Re-read the scenario — same footage, different facts for this case.",
+        "Intentional propulsion assistance → DQ."
+      ],
+      "referenceCard": "R",
+      "referenceTags": ["grab", "lane_line"],
+      "referenceRationale": "When the narrative establishes intentional pull, card upgrades from yellow training case to red.",
+      "evidencePackId": "ev-dynb-penalty",
+      "ruleHints": ["Assisted propulsion DQ", "Scenario + footage together"]
+    }
+  ]
+}

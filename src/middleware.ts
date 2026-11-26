@@ -55,7 +55,9 @@ async function hasValidSession(token: string | undefined): Promise<boolean> {
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const needsAuth =
-    pathname.startsWith("/account") || pathname.startsWith("/field");
+    pathname.startsWith("/account") ||
+    pathname.startsWith("/field") ||
+    pathname.startsWith("/federation");
   if (!needsAuth) {
     return NextResponse.next();
   }
@@ -71,5 +73,12 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/account", "/account/:path*", "/field", "/field/:path*"],
+  matcher: [
+    "/account",
+    "/account/:path*",
+    "/field",
+    "/field/:path*",
+    "/federation",
+    "/federation/:path*",
+  ],
 };

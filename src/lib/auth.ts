@@ -129,3 +129,11 @@ export function canAccessField(
   if (!session) return false;
   return session.role === "operator" || session.role === "admin";
 }
+
+/** Federation judges hub (/federation) — judge or admin (federation admin). */
+export function canAccessFederation(
+  session: SessionUser | null | undefined,
+): boolean {
+  if (!session) return false;
+  return session.role === "judge" || session.role === "admin";
+}
