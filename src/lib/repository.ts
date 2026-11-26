@@ -3,6 +3,7 @@ import path from "path";
 import type {
   Athlete,
   Event,
+  Performance,
   Product,
   RankingOpts,
   RankingRow,
@@ -15,13 +16,19 @@ export interface Repository {
   getDb(): SeedDb;
   listAthletes(opts?: { q?: string; includeMinors?: boolean }): Athlete[];
   getAthleteBySlug(slug: string): Athlete | undefined;
-  listEvents(opts?: { status?: Event["status"] | "all" }): Event[];
+  listEvents(opts?: {
+    status?: Event["status"] | "all";
+    sort?: "asc" | "desc";
+    limit?: number;
+  }): Event[];
   getEventBySlug(slug: string): Event | undefined;
   getEventById(id: string): Event | undefined;
   getRanking(opts: RankingOpts): RankingRow[];
   getShowcaseDive(id: string): ShowcaseDive | undefined;
   listShowcaseDives(): ShowcaseDive[];
   listProducts(): Product[];
+  getPerformanceByDiveId(diveId: string): Performance | undefined;
+  listPerformancesForEvent(eventId: string, limit?: number): Performance[];
   search(q: string): {
     athletes: Athlete[];
     events: Event[];
@@ -71,13 +78,24 @@ class JsonRepository implements Repository {
     return this.getDb().athletes.find((a) => a.slug === slug);
   }
 
-  listEvents(opts: { status?: Event["status"] | "all" } = {}): Event[] {
+  listEvents(
+    opts: {
+      status?: Event["status"] | "all";
+      sort?: "asc" | "desc";
+      limit?: number;
+    } = {},
+  ): Event[] {
     const db = this.getDb();
-    const list =
+    let list =
       !opts.status || opts.status === "all"
         ? db.events
         : db.events.filter((e) => e.status === opts.status);
-    return [...list].sort((a, b) => a.startDate.localeCompare(b.startDate));
+    const dir = opts.sort === "desc" ? -1 : 1;
+    list = [...list].sort(
+      (a, b) => dir * a.startDate.localeCompare(b.startDate),
+    );
+    if (opts.limit !== undefined) list = list.slice(0, opts.limit);
+    return list;
   }
 
   getEventBySlug(slug: string): Event | undefined {
@@ -104,14 +122,29 @@ class JsonRepository implements Repository {
     return this.getDb().products;
   }
 
+  getPerformanceByDiveId(diveId: string): Performance | undefined {
+    return this.getDb().performances.find((p) => p.diveId === diveId);
+  }
+
+  listPerformancesForEvent(eventId: string, limit = 48): Performance[] {
+    return this.getDb()
+      .performances.filter((p) => p.eventId === eventId)
+      .sort((a, b) => b.rp - a.rp)
+      .slice(0, limit);
+  }
+
   search(q: string) {
     const query = q.trim();
     if (!query) return { athletes: [], events: [] };
     return {
       athletes: this.listAthletes({ q: query, includeMinors: false }).slice(0, 8),
-      events: this.listEvents().filter((e) =>
-        normalize(`${e.name} ${e.venue} ${e.federation}`).includes(normalize(query)),
-      ).slice(0, 6),
+      events: this.listEvents({ sort: "desc" })
+        .filter((e) =>
+          normalize(`${e.name} ${e.venue} ${e.federation}`).includes(
+            normalize(query),
+          ),
+        )
+        .slice(0, 6),
     };
   }
 }

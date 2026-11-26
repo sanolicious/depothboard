@@ -9,7 +9,8 @@ import {
   SiteHeader,
 } from "@/components/SiteChrome";
 import { JsonLd } from "@/components/JsonLd";
-import { siteUrl } from "@/lib/format";
+import { fmtDate, siteUrl } from "@/lib/format";
+import { getRepository } from "@/lib/repository";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
@@ -47,6 +48,33 @@ export const viewport: Viewport = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const repo = getRepository();
+  const live = repo.listEvents({ status: "live", limit: 1 })[0];
+  const featuredEvents = (
+    live
+      ? [live]
+      : repo.listEvents({ sort: "desc", limit: 2 })
+  ).map((e) => ({
+    slug: e.slug,
+    shortName: e.shortName,
+    hint: `${e.venue} · ${fmtDate(e.startDate)}`,
+  }));
+  const featuredAthletes = repo
+    .getRanking({
+      board: "PORTAL",
+      sex: "M",
+      disc: "OVERALL",
+      scope: "active",
+      metric: "points",
+    })
+    .slice(0, 3)
+    .map((r) => ({
+      slug: r.athlete.slug,
+      name: r.athlete.name,
+      country: r.athlete.country,
+      hint: `World #${r.pos} · Men`,
+    }));
+
   return (
     <html lang="en">
       <body>
@@ -68,8 +96,22 @@ export default function RootLayout({
             },
           }}
         />
-        <LiveBar />
-        <SiteHeader />
+        {live && (
+          <LiveBar
+            event={{
+              slug: live.slug,
+              shortName: live.shortName,
+              day: live.day,
+              ofDays: live.ofDays,
+              disciplines: live.disciplines,
+              venue: live.venue,
+            }}
+          />
+        )}
+        <SiteHeader
+          featuredAthletes={featuredAthletes}
+          featuredEvents={featuredEvents}
+        />
         <main id="main">{children}</main>
         <SiteFooter />
         <BottomNav />

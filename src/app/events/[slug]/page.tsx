@@ -10,9 +10,12 @@ import { getRepository } from "@/lib/repository";
 
 type Params = Promise<{ slug: string }>;
 
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
+  // Pre-render a recent slice; remaining slugs resolve on demand.
   return getRepository()
-    .listEvents()
+    .listEvents({ sort: "desc", limit: 120 })
     .map((e) => ({ slug: e.slug }));
 }
 
@@ -30,14 +33,10 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
 export default async function EventPage({ params }: { params: Params }) {
   const { slug } = await params;
   const repo = getRepository();
-  const db = repo.getDb();
   const ev = repo.getEventBySlug(slug);
   if (!ev) notFound();
 
-  const results = db.performances
-    .filter((p) => p.eventId === ev.id)
-    .sort((a, b) => b.rp - a.rp)
-    .slice(0, 24);
+  const results = repo.listPerformancesForEvent(ev.id, 48);
   const dives = repo.listShowcaseDives().filter((d) => d.eventId === ev.id);
 
   return (
@@ -143,7 +142,7 @@ export default async function EventPage({ params }: { params: Params }) {
         </div>
       )}
 
-      {dives.length > 0 && (
+      {dives.length > 0 ? (
         <section style={{ marginTop: 32 }}>
           <h2 style={{ marginBottom: 14 }}>Dive archive from this event</h2>
           <div className="grid grid-3">
@@ -185,57 +184,78 @@ export default async function EventPage({ params }: { params: Params }) {
             })}
           </div>
         </section>
+      ) : (
+        <section style={{ marginTop: 32 }}>
+          <div className="card" style={{ padding: 20 }}>
+            <p className="eyebrow">Footage</p>
+            <h2 style={{ fontSize: "1.2rem", marginTop: 6 }}>
+              No Diveye archive clips for this event yet
+            </h2>
+            <p className="muted small" style={{ marginTop: 8, maxWidth: 520 }}>
+              Official results below still open dive pages with scores. OT video
+              and licences appear when production footage is linked.
+            </p>
+          </div>
+        </section>
       )}
 
       <section style={{ marginTop: 32 }}>
         <div className="section-head">
           <div>
-            <h2>Results sample</h2>
-            <p>Seed performances linked to this event.</p>
+            <h2>Results</h2>
+            <p>
+              {results.length === 0
+                ? "No performances linked to this event in the seed."
+                : "Click a row to open the dive / result page."}
+            </p>
           </div>
         </div>
-        <div className="rt-wrap">
-          <table className="rt">
-            <thead>
-              <tr>
-                <th className="l">Athlete</th>
-                <th>Disc</th>
-                <th>AP→RP</th>
-                <th>Card</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {results.map((p) => {
-                const a = repo.getAthleteBySlug(p.athleteSlug);
-                if (!a) return null;
-                return (
-                  <tr key={p.id}>
-                    <td className="n">
-                      <CountryChip code={a.country} neutral={a.neutral} />
-                      <Link href={`/athletes/${a.slug}`}>{a.name}</Link>
-                    </td>
-                    <td>{p.discipline}</td>
-                    <td className="num">
-                      {fmtValue(p.discipline, p.ap)} →{" "}
-                      {p.card === "R" ? "DQ" : fmtValue(p.discipline, p.rp)}
-                    </td>
-                    <td>
-                      <CardBadge card={p.card} />
-                    </td>
-                    <td>
-                      <span
-                        className={`status ${p.status === "provisional" ? "status--prov" : "status--ok"}`}
-                      >
-                        {p.status}
-                      </span>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+        {results.length === 0 ? (
+          <p className="muted">Nothing to show for this event.</p>
+        ) : (
+          <div className="rt-wrap">
+            <table className="rt">
+              <thead>
+                <tr>
+                  <th className="l">Athlete</th>
+                  <th>Disc</th>
+                  <th>AP→RP</th>
+                  <th>Card</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {results.map((p) => {
+                  const a = repo.getAthleteBySlug(p.athleteSlug);
+                  if (!a) return null;
+                  return (
+                    <tr key={p.id}>
+                      <td className="n">
+                        <CountryChip code={a.country} neutral={a.neutral} />
+                        <Link href={`/dives/${p.diveId}`}>{a.name}</Link>
+                      </td>
+                      <td>{p.discipline}</td>
+                      <td className="num">
+                        {fmtValue(p.discipline, p.ap)} →{" "}
+                        {p.card === "R" ? "DQ" : fmtValue(p.discipline, p.rp)}
+                      </td>
+                      <td>
+                        <CardBadge card={p.card} />
+                      </td>
+                      <td>
+                        <span
+                          className={`status ${p.status === "provisional" ? "status--prov" : "status--ok"}`}
+                        >
+                          {p.status}
+                        </span>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
       </section>
     </div>
   );
