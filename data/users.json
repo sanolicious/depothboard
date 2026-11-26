@@ -61,5 +61,14 @@
     "role": "judge",
     "athleteSlug": null,
     "notes": "Federation judge — /federation training quizzes and evidence packs (PWF-20)."
+  },
+  {
+    "id": "user-coach",
+    "email": "coach.demo@example.com",
+    "password": "demo",
+    "name": "Demo Coach",
+    "role": "coach",
+    "athleteSlug": null,
+    "notes": "AI coach demo — assigned to vitomir-maricic via coach-links.json (PWF-21)."
   }
 ]

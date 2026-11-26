@@ -45,6 +45,7 @@ Composite **0–100** = 70% card match + 30% tag F1 against `referenceCard` / `r
 
 ## Out of scope
 
-- AI coach / technique feedback (**PWF-21**)
 - Live on-site judge hardware sync (stub copy only)
 - Persisted quiz history / federation CMS
+
+AI coach / technique feedback is **PWF-21** — see `docs/ai-coach.md`.

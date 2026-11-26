@@ -2,11 +2,18 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { CardBadge } from "@/components/CardBadge";
+import { CoachAnalyzePanel } from "@/components/CoachAnalyzePanel";
 import { CountryChip } from "@/components/CountryChip";
 import { DivePlayer } from "@/components/DivePlayer";
 import { Icon } from "@/components/Icon";
 import { JsonLd } from "@/components/JsonLd";
 import { DiveRightsPanel, RightsBadge } from "@/components/DiveRightsPanel";
+import { getSession } from "@/lib/auth";
+import {
+  canAnalyzeDive,
+  canViewCoachReports,
+  listReportsForDive,
+} from "@/lib/coach";
 import { resolveDive } from "@/lib/dives";
 import { fmtDate, fmtDuration, fmtValue, siteUrl } from "@/lib/format";
 import { getRepository } from "@/lib/repository";
@@ -54,6 +61,11 @@ export default async function DivePage({ params }: { params: Params }) {
   const athlete = repo.getAthleteBySlug(dive.athleteSlug);
   const event = repo.getEventById(dive.eventId);
   if (!athlete || !event) notFound();
+  const session = await getSession();
+  const canAnalyze = canAnalyzeDive(session, dive.athleteSlug);
+  const canViewCoach = canViewCoachReports(session, dive.athleteSlug);
+  const coachReports =
+    session && canViewCoach ? listReportsForDive(dive.id, session) : [];
   const db = repo.getDb();
   const rights = getRecordingRights(db, dive.id);
   const sale =
@@ -416,6 +428,16 @@ export default async function DivePage({ params }: { params: Params }) {
               minor: athlete.minor,
             }}
           />
+
+          {(canAnalyze || canViewCoach) && (
+            <CoachAnalyzePanel
+              diveId={dive.id}
+              athleteName={athlete.name}
+              canAnalyze={canAnalyze}
+              canView={canViewCoach}
+              existing={coachReports}
+            />
+          )}
         </aside>
       </div>
     </div>
