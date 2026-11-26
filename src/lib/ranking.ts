@@ -74,6 +74,8 @@ function bests(
   const out: Record<string, Performance> = {};
   for (const att of performances) {
     if (att.athleteId !== athleteId) continue;
+    // Rankings only count jury-confirmed rows (spec: LIVE/UNOFFICIAL stay out).
+    if (att.status && att.status !== "official") continue;
     // Federation boards stay AIDA/CMAS-only — FR gap-fill is Portal only.
     if (opts.board !== "PORTAL") {
       if (att.federation !== opts.board) continue;

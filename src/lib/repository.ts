@@ -33,6 +33,7 @@ import {
   listTelemetrySamples,
   loadEcosystemCatalog,
 } from "@/lib/ecosystem";
+import { loadLiveDemoCatalog } from "@/lib/live-demo";
 import { computeRanking } from "@/lib/ranking";
 
 export interface Repository {
@@ -187,7 +188,41 @@ function applyRightsOverlay(base: SeedDb): SeedDb {
     claimsInbox: overlay.claimsInbox ?? "claims@depthboard.com",
   };
 
-  return applyEcosystemCatalog(applyFootageCatalog(withRights));
+  return applyLiveDemo(
+    applyEcosystemCatalog(applyFootageCatalog(withRights)),
+  );
+}
+
+/** Merge live / upcoming demo events + provisional performances + liveResults. */
+function applyLiveDemo(db: SeedDb): SeedDb {
+  const live = loadLiveDemoCatalog();
+  if (!live.events.length && !live.performances.length && !live.liveResults.length) {
+    return db;
+  }
+
+  const events = [...db.events];
+  const eventIdx = new Map(events.map((e, i) => [e.id, i]));
+  for (const ev of live.events) {
+    const idx = eventIdx.get(ev.id);
+    if (idx === undefined) {
+      eventIdx.set(ev.id, events.length);
+      events.push(ev);
+    } else {
+      events[idx] = { ...events[idx], ...ev };
+    }
+  }
+
+  const perfById = new Map(db.performances.map((p) => [p.id, p]));
+  for (const p of live.performances) {
+    perfById.set(p.id, p);
+  }
+
+  return {
+    ...db,
+    events,
+    performances: [...perfById.values()],
+    liveResults: live.liveResults.length ? live.liveResults : db.liveResults,
+  };
 }
 
 /** Merge Diveye OT/HQ catalog: attach showcase dives + sample/social/HQ SKUs. */

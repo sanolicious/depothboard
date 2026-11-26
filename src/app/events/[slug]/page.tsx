@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { CardBadge } from "@/components/CardBadge";
 import { CountryChip } from "@/components/CountryChip";
+import { EventResultsPanel } from "@/components/EventResultsPanel";
 import { Icon } from "@/components/Icon";
 import { JsonLd } from "@/components/JsonLd";
 import { fmtDate, fmtValue, siteUrl } from "@/lib/format";
@@ -199,64 +200,28 @@ export default async function EventPage({ params }: { params: Params }) {
         </section>
       )}
 
-      <section style={{ marginTop: 32 }}>
-        <div className="section-head">
-          <div>
-            <h2>Results</h2>
-            <p>
-              {results.length === 0
-                ? "No performances linked to this event in the seed."
-                : "Click a row to open the dive / result page."}
-            </p>
-          </div>
-        </div>
-        {results.length === 0 ? (
-          <p className="muted">Nothing to show for this event.</p>
-        ) : (
-          <div className="rt-wrap">
-            <table className="rt">
-              <thead>
-                <tr>
-                  <th className="l">Athlete</th>
-                  <th>Disc</th>
-                  <th>AP→RP</th>
-                  <th>Card</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {results.map((p) => {
-                  const a = repo.getAthleteBySlug(p.athleteSlug);
-                  if (!a) return null;
-                  return (
-                    <tr key={p.id}>
-                      <td className="n">
-                        <CountryChip code={a.country} neutral={a.neutral} />
-                        <Link href={`/dives/${p.diveId}`}>{a.name}</Link>
-                      </td>
-                      <td>{p.discipline}</td>
-                      <td className="num">
-                        {fmtValue(p.discipline, p.ap)} →{" "}
-                        {p.card === "R" ? "DQ" : fmtValue(p.discipline, p.rp)}
-                      </td>
-                      <td>
-                        <CardBadge card={p.card} />
-                      </td>
-                      <td>
-                        <span
-                          className={`status ${p.status === "provisional" ? "status--prov" : "status--ok"}`}
-                        >
-                          {p.status}
-                        </span>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+      <EventResultsPanel
+        eventId={ev.id}
+        eventLive={ev.status === "live"}
+        initialResults={results}
+        initialAthletes={Object.fromEntries(
+          results
+            .map((p) => {
+              const a = repo.getAthleteBySlug(p.athleteSlug);
+              if (!a) return null;
+              return [
+                p.athleteSlug,
+                {
+                  slug: a.slug,
+                  name: a.name,
+                  country: a.country,
+                  neutral: a.neutral,
+                },
+              ] as const;
+            })
+            .filter((row): row is NonNullable<typeof row> => row !== null),
         )}
-      </section>
+      />
     </div>
   );
 }

@@ -6,6 +6,15 @@ Designed for cron / GitHub Actions:
 
 Idempotent: reuses PoliteClient raw cache, merges by stable ids, scrubs CMAS PII.
 Backoff/rate-limit via PoliteClient. FR gap-fill is optional secondary step.
+
+Provisional marking (consumed by export_seed / portal UI):
+  - Events still in progress should carry status \"live\" (and optional liveUrl/day/ofDays).
+  - Attempts under a live event default to result status \"provisional\" unless the
+    federation payload (or steward) stamps result_status=unofficial|official.
+  - Cycle: provisional (live feed) → unofficial (day closed / jury pending) →
+    official (confirmed). Only official rows enter Portal Points rankings.
+  - export_seed builds seed.liveResults from provisional/unofficial rows of the
+    first live event for the home LiveBar board.
 """
 
 from __future__ import annotations
