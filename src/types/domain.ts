@@ -66,6 +66,11 @@ export interface ConsentRecord {
   version: string;
   /** True when a guardian granted (or must grant) this consent for a minor. */
   guardianConsent?: boolean;
+  /**
+   * Optional link to a field / capture session (ecosystem hook).
+   * Lets later field apps and drones attach recording consent to a session.
+   */
+  fieldSessionId?: string;
 }
 
 /** Per-dive / per-event recording rights grant (AIDA owned vs CMAS link-only). */
@@ -372,6 +377,106 @@ export interface Product {
   saleEnabled?: boolean;
 }
 
+/* ------------------------------------------------------------------ */
+/* Ecosystem hooks — devices / field sessions / telemetry (no HW UI)  */
+/* ------------------------------------------------------------------ */
+
+/** Diveye capture / computer tiers (fleet model only — not product UI). */
+export type DeviceTier = "Compact" | "Connected" | "Pro";
+
+export type DeviceStatus = "online" | "offline" | "maintenance" | "retired";
+
+/**
+ * Capture or dive-computer device registered to an org / centre.
+ * Hook for later field app + drone plug-in (M8, S8.*).
+ */
+export interface Device {
+  id: string;
+  serial: string;
+  tier: DeviceTier;
+  /** Owning organisation / freediving centre slug or id. */
+  ownerOrg: string;
+  firmware: string;
+  /** ISO-8601 last heartbeat / telemetry. */
+  lastSeen: string;
+  /** Optional battery % when the device reports it. */
+  battery?: number;
+  label?: string;
+  status?: DeviceStatus;
+  notes?: string;
+}
+
+export type FieldSessionKind = "competition" | "training" | "demo";
+export type FieldSessionStatus =
+  | "planned"
+  | "active"
+  | "completed"
+  | "cancelled";
+
+/**
+ * Field / capture session — competition day or training block at a site.
+ * Maps to future `capture_session` in the product spec.
+ */
+export interface FieldSession {
+  id: string;
+  kind: FieldSessionKind;
+  status: FieldSessionStatus;
+  ownerOrg: string;
+  /** Competition event when kind is competition. */
+  eventId?: string;
+  label: string;
+  venue?: string;
+  startedAt: string;
+  endedAt?: string;
+  /** Devices assigned to this session (fleet slice). */
+  deviceIds: string[];
+  /** Consent records covering recording/publication for this session. */
+  consentIds?: string[];
+  notes?: string;
+}
+
+/**
+ * Person ↔ dive ↔ device assignment for a field session.
+ * Hook for the field app (M2) without building that UI now.
+ */
+export interface DiveAssignment {
+  id: string;
+  fieldSessionId: string;
+  athleteSlug: string;
+  /** Links to Performance.diveId / ShowcaseDive.id when known. */
+  diveId?: string;
+  deviceId: string;
+  assignedAt: string;
+  role?: "primary" | "backup" | "safety";
+  notes?: string;
+}
+
+export type TelemetryChannel =
+  | "depth_m"
+  | "speed_ms"
+  | "heart_rate"
+  | "battery_pct"
+  | "temperature_c"
+  | "custom";
+
+/**
+ * Sparse telemetry hook for overlay / dive computer sync (S4.2, S8.1).
+ * Samples stay tiny in seed — real streams come later.
+ */
+export interface TelemetrySample {
+  id: string;
+  deviceId: string;
+  /** Relative seconds from session or dive start. */
+  atSec: number;
+  channel: TelemetryChannel;
+  value: number;
+  unit: string;
+  fieldSessionId?: string;
+  diveId?: string;
+  diveAssignmentId?: string;
+  recordedAt?: string;
+}
+
 /** Seed cart seed rows (optional demo). Prefer CartLine in the UI. */
 export interface CartItem {
   productId: string;
@@ -417,6 +522,10 @@ export interface SeedDb {
   recordingRights?: RecordingRights[];
   claimRequests?: ClaimRequest[];
   footageAssets?: FootageAsset[];
+  devices?: Device[];
+  fieldSessions?: FieldSession[];
+  diveAssignments?: DiveAssignment[];
+  telemetrySamples?: TelemetrySample[];
   mockAccountAthleteSlug?: string;
   claimsInbox?: string;
 }
