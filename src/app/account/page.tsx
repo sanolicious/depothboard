@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ClearCartOnCheckoutSuccess } from "@/components/ClearCartOnCheckoutSuccess";
 import { ConsentPanel } from "@/components/ConsentPanel";
 import { Icon } from "@/components/Icon";
 import { LogoutButton } from "@/components/LogoutButton";
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/account" },
 };
 
-type Search = Promise<{ order?: string }>;
+type Search = Promise<{ order?: string; checkout?: string }>;
 
 function statusLabel(status: string) {
   switch (status) {
@@ -54,7 +55,9 @@ export default async function AccountPage({
     );
   }
 
-  const highlightOrderId = (await searchParams)?.order;
+  const params = (await searchParams) ?? {};
+  const highlightOrderId = params.order;
+  const checkoutState = params.checkout;
   const repo = getRepository();
   const db = repo.getDb();
   const claims = claimsForUser(session);
@@ -96,6 +99,7 @@ export default async function AccountPage({
 
   return (
     <div className="container section">
+      <ClearCartOnCheckoutSuccess checkout={checkoutState} />
       <nav className="crumbs" aria-label="Breadcrumb">
         <Link href="/">Home</Link>
         <Icon name="chev-r" />
@@ -252,6 +256,19 @@ export default async function AccountPage({
 
         <div className="card" style={{ padding: 20, gridColumn: "1 / -1" }}>
           <h2 style={{ fontSize: "1.2rem" }}>Orders</h2>
+          {checkoutState === "success" && (
+            <p className="caption" style={{ marginTop: 8 }}>
+              Stripe Checkout completed. If the order still shows{" "}
+              <code>pending</code>, wait a moment for the webhook — entitlements
+              appear once status is <code>paid</code>.
+            </p>
+          )}
+          {checkoutState === "cancelled" && (
+            <p className="caption" style={{ marginTop: 8 }}>
+              Stripe Checkout was cancelled.{" "}
+              <Link href="/cart">Return to cart</Link> to try again.
+            </p>
+          )}
           {highlightOrderId && (
             <p className="caption" style={{ marginTop: 8 }}>
               Highlighting order <code>{highlightOrderId}</code> from checkout.
@@ -259,8 +276,8 @@ export default async function AccountPage({
           )}
           {orders.length === 0 ? (
             <p className="muted small" style={{ marginTop: 8 }}>
-              No orders yet. Add a clip in the shop and pay (simulated) from the
-              cart while signed in.
+              No orders yet. Add a clip in the shop and pay from the cart while
+              signed in (Stripe when keys are set, otherwise simulated).
             </p>
           ) : (
             <div className="table-scroll" style={{ marginTop: 12 }}>
@@ -348,7 +365,7 @@ export default async function AccountPage({
           {libraryItems.length === 0 ? (
             <p className="muted small" style={{ marginTop: 8 }}>
               Purchased sample/social placeholders and HQ processing rows appear
-              here after simulated checkout.
+              here after paid checkout (Stripe or simulated).
             </p>
           ) : (
             <ul style={{ marginTop: 12, paddingLeft: 18 }}>

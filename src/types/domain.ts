@@ -138,6 +138,8 @@ export interface SessionUser {
 
 export type OrderStatus =
   | "paid_simulated"
+  /** Stripe Checkout completed (test or live). */
+  | "paid"
   | "pending"
   | "cancelled"
   /** Legacy seed statuses (PWF-14 stubs). */
@@ -182,6 +184,9 @@ export interface Order {
   payment?: {
     provider: "simulated" | "stripe_test";
     simulated: boolean;
+    /** Stripe Checkout Session id when provider is stripe_test. */
+    stripeSessionId?: string;
+    stripePaymentIntentId?: string | null;
   };
   notes?: string;
 }

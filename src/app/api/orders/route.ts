@@ -1,15 +1,12 @@
 import { NextResponse } from "next/server";
 import { getSession } from "@/lib/auth";
+import { prepareCheckout } from "@/lib/checkout";
 import {
   buildOrderFromCart,
   createOrder,
   listOrdersForUser,
 } from "@/lib/orders";
-import { resolveStorageUrl } from "@/lib/footage";
-import { getRepository } from "@/lib/repository";
-import { evaluateProduct } from "@/lib/rights";
-import type { CartLine } from "@/types/domain";
-import { normalizeCartLine, type AddCartDetail } from "@/lib/cart";
+import type { AddCartDetail } from "@/lib/cart";
 
 export const runtime = "nodejs";
 
@@ -24,6 +21,7 @@ export async function GET() {
   });
 }
 
+/** Simulated checkout (local demo without Stripe keys). */
 export async function POST(req: Request) {
   const session = await getSession();
   if (!session) {
@@ -45,50 +43,19 @@ export async function POST(req: Request) {
   }
 
   const rawItems = Array.isArray(body.items) ? body.items : [];
-  if (!rawItems.length) {
+  const prep = prepareCheckout(session, rawItems);
+  if (!prep.ok) {
     return NextResponse.json(
-      { ok: false, error: "Cart is empty" },
-      { status: 400 },
+      { ok: false, error: prep.error },
+      { status: prep.status },
     );
   }
 
-  const lines: CartLine[] = rawItems.map((row) => normalizeCartLine(row));
-  const repo = getRepository();
-  const db = repo.getDb();
-  const products = repo.listProducts();
-  const byId = new Map(products.map((p) => [p.id, p]));
-
-  for (const line of lines) {
-    const product = byId.get(line.productId);
-    if (product) {
-      const decision = evaluateProduct(db, {
-        ...product,
-        licenseTier: line.licenseTier ?? product.licenseTier,
-      });
-      if (!decision.allowed) {
-        return NextResponse.json(
-          {
-            ok: false,
-            error: `“${line.title}” is not sellable: ${decision.message}`,
-          },
-          { status: 403 },
-        );
-      }
-    }
-  }
-
   const order = buildOrderFromCart({
-    user: session,
-    lines,
-    productsById: byId,
-    previewUrlForDive: (diveId) => {
-      if (!diveId) return resolveStorageUrl("local:preview/shared.mp4");
-      const footage = repo.getPrimaryFootage(diveId);
-      return (
-        resolveStorageUrl(footage?.storageKey) ||
-        resolveStorageUrl("local:preview/shared.mp4")
-      );
-    },
+    user: prep.user,
+    lines: prep.lines,
+    productsById: prep.productsById,
+    previewUrlForDive: prep.previewUrlForDive,
   });
 
   const result = createOrder(order);

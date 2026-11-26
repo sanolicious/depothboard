@@ -71,7 +71,7 @@ export function getOrderById(id: string): Order | undefined {
   return readAllOrders().find((o) => o.id === id);
 }
 
-/** Map licence tier → delivery artefact after simulated pay. */
+/** Map licence tier → delivery artefact after pay (simulated or Stripe). */
 export function deliveryForTier(
   tier: LicenseTier | undefined,
   opts: {
@@ -158,7 +158,11 @@ export function deliveryKindLabel(kind: DeliveryKind | undefined): string {
 }
 
 export function isPaidStatus(status: Order["status"]): boolean {
-  return status === "paid_simulated" || status === "paid_stub";
+  return (
+    status === "paid" ||
+    status === "paid_simulated" ||
+    status === "paid_stub"
+  );
 }
 
 type CheckoutInput = {
@@ -168,30 +172,43 @@ type CheckoutInput = {
   previewUrlForDive: (diveId: string | undefined) => string | undefined;
 };
 
-export function buildOrderFromCart(input: CheckoutInput): Order {
-  const items: OrderItem[] = input.lines.map((line) => {
+function nextOrderId(): string {
+  return `ORD-${new Date().getFullYear()}-${Date.now().toString(36).toUpperCase()}`;
+}
+
+function buildItems(
+  input: CheckoutInput,
+  withDelivery: boolean,
+): OrderItem[] {
+  return input.lines.map((line) => {
     const product = input.productsById.get(line.productId);
     const tier = line.licenseTier ?? product?.licenseTier;
     const diveId = line.diveId ?? product?.diveId;
-    const delivery = deliveryForTier(tier, {
-      diveId,
-      previewUrl: input.previewUrlForDive(diveId),
-      productKind: product?.kind,
-    });
-    return {
+    const item: OrderItem = {
       sku: line.sku || product?.slug || line.productId,
       productId: line.productId,
       title: line.title,
       priceEur: line.price,
       licenseTier: tier,
       diveId,
-      delivery,
     };
+    if (withDelivery) {
+      item.delivery = deliveryForTier(tier, {
+        diveId,
+        previewUrl: input.previewUrlForDive(diveId),
+        productKind: product?.kind,
+      });
+    }
+    return item;
   });
+}
 
+/** Simulated checkout — immediately paid with entitlements. */
+export function buildOrderFromCart(input: CheckoutInput): Order {
+  const items = buildItems(input, true);
   const totalEur = items.reduce((s, i) => s + i.priceEur, 0);
   return {
-    id: `ORD-${new Date().getFullYear()}-${Date.now().toString(36).toUpperCase()}`,
+    id: nextOrderId(),
     userId: input.user.id,
     email: input.user.email,
     status: "paid_simulated",
@@ -199,15 +216,123 @@ export function buildOrderFromCart(input: CheckoutInput): Order {
     totalEur,
     items,
     payment: { provider: "simulated", simulated: true },
-    notes: "Simulated checkout (PWF-15) — replace with Stripe PaymentIntent later.",
+    notes: "Simulated checkout (PWF-15) — local demo without Stripe keys.",
   };
 }
 
-export function createOrder(order: Order): { ok: true; order: Order } | { ok: false; error: string } {
+/**
+ * Pending Stripe order — entitlements applied on
+ * `checkout.session.completed` via {@link fulfillStripeOrder}.
+ */
+export function buildPendingStripeOrder(input: CheckoutInput): Order {
+  const items = buildItems(input, false);
+  const totalEur = items.reduce((s, i) => s + i.priceEur, 0);
+  return {
+    id: nextOrderId(),
+    userId: input.user.id,
+    email: input.user.email,
+    status: "pending",
+    createdAt: new Date().toISOString(),
+    totalEur,
+    items,
+    payment: { provider: "stripe_test", simulated: false },
+    notes: "Awaiting Stripe Checkout (test mode).",
+  };
+}
+
+export function createOrder(
+  order: Order,
+): { ok: true; order: Order } | { ok: false; error: string } {
   const all = readAllOrders();
   all.push(order);
   if (!persistOrders(all)) {
     return { ok: false, error: "Could not persist order JSON" };
   }
   return { ok: true, order };
+}
+
+export function attachStripeSession(
+  orderId: string,
+  stripeSessionId: string,
+): { ok: true; order: Order } | { ok: false; error: string } {
+  const all = readAllOrders();
+  const idx = all.findIndex((o) => o.id === orderId);
+  if (idx < 0) return { ok: false, error: "Order not found" };
+  const prev = all[idx]!;
+  const next: Order = {
+    ...prev,
+    payment: {
+      provider: "stripe_test",
+      simulated: false,
+      stripeSessionId,
+      stripePaymentIntentId: prev.payment?.stripePaymentIntentId ?? null,
+    },
+  };
+  all[idx] = next;
+  if (!persistOrders(all)) {
+    return { ok: false, error: "Could not persist order JSON" };
+  }
+  return { ok: true, order: next };
+}
+
+/**
+ * Mark a pending order paid and attach the same entitlements as simulated pay.
+ * Idempotent if already paid.
+ */
+export function fulfillStripeOrder(opts: {
+  orderId: string;
+  stripeSessionId: string;
+  stripePaymentIntentId?: string | null;
+  productsById: Map<string, Product>;
+  previewUrlForDive: (diveId: string | undefined) => string | undefined;
+}): { ok: true; order: Order; alreadyPaid: boolean } | { ok: false; error: string } {
+  const all = readAllOrders();
+  const idx = all.findIndex((o) => o.id === opts.orderId);
+  if (idx < 0) return { ok: false, error: "Order not found" };
+  const prev = all[idx]!;
+
+  if (isPaidStatus(prev.status)) {
+    return { ok: true, order: prev, alreadyPaid: true };
+  }
+
+  const items: OrderItem[] = prev.items.map((item) => {
+    if (item.delivery) return item;
+    const product = item.productId
+      ? opts.productsById.get(item.productId)
+      : undefined;
+    return {
+      ...item,
+      delivery: deliveryForTier(item.licenseTier ?? product?.licenseTier, {
+        diveId: item.diveId ?? product?.diveId,
+        previewUrl: opts.previewUrlForDive(item.diveId ?? product?.diveId),
+        productKind: product?.kind,
+      }),
+    };
+  });
+
+  const next: Order = {
+    ...prev,
+    status: "paid",
+    items,
+    payment: {
+      provider: "stripe_test",
+      simulated: false,
+      stripeSessionId: opts.stripeSessionId,
+      stripePaymentIntentId: opts.stripePaymentIntentId ?? null,
+    },
+    notes: "Paid via Stripe Checkout (test mode) — entitlements delivered.",
+  };
+  all[idx] = next;
+  if (!persistOrders(all)) {
+    return { ok: false, error: "Could not persist order JSON" };
+  }
+  return { ok: true, order: next, alreadyPaid: false };
+}
+
+export function findOrderByStripeSession(
+  stripeSessionId: string,
+): Order | undefined {
+  return readAllOrders().find(
+    (o) => o.payment?.stripeSessionId === stripeSessionId,
+  );
 }
