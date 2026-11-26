@@ -1,7 +1,8 @@
 import { appendFileSync, existsSync, readFileSync, writeFileSync } from "fs";
 import path from "path";
 import { NextResponse } from "next/server";
-import type { ClaimRequest } from "@/types/domain";
+import type { ClaimRequest, ClaimVerifyMethod } from "@/types/domain";
+import { getSession } from "@/lib/auth";
 import { invalidateSeedCache } from "@/lib/repository";
 
 export const runtime = "nodejs";
@@ -21,17 +22,54 @@ function readClaims(): ClaimRequest[] {
   }
 }
 
+function persistClaims(claims: ClaimRequest[]): boolean {
+  try {
+    writeFileSync(claimsPath(), JSON.stringify(claims, null, 2) + "\n", "utf8");
+    return true;
+  } catch {
+    try {
+      appendFileSync(
+        path.join(process.cwd(), "data", "claim-requests.jsonl"),
+        JSON.stringify(claims[claims.length - 1]) + "\n",
+        "utf8",
+      );
+      return true;
+    } catch {
+      return false;
+    }
+  }
+}
+
 export async function GET() {
-  return NextResponse.json({ claims: readClaims() });
+  const session = await getSession();
+  const all = readClaims();
+  if (!session) {
+    return NextResponse.json({ claims: [] });
+  }
+  return NextResponse.json({
+    claims: all.filter(
+      (c) => c.userId === session.id || c.email.toLowerCase() === session.email.toLowerCase(),
+    ),
+  });
 }
 
 export async function POST(req: Request) {
+  const session = await getSession();
+  if (!session) {
+    return NextResponse.json(
+      { ok: false, error: "Sign in required to submit a claim" },
+      { status: 401 },
+    );
+  }
+
   let body: {
     athleteName?: string;
     email?: string;
     federationId?: string;
     athleteSlug?: string;
     guardian?: boolean;
+    verifyMethod?: ClaimVerifyMethod;
+    eventProofIds?: string[];
   };
   try {
     body = (await req.json()) as typeof body;
@@ -40,7 +78,7 @@ export async function POST(req: Request) {
   }
 
   const athleteName = body.athleteName?.trim();
-  const email = body.email?.trim();
+  const email = (body.email?.trim() || session.email).trim();
   if (!athleteName || !email) {
     return NextResponse.json(
       { ok: false, error: "athleteName and email are required" },
@@ -48,48 +86,58 @@ export async function POST(req: Request) {
     );
   }
 
+  if (session.athleteSlug && body.athleteSlug && session.athleteSlug !== body.athleteSlug) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: "This account already owns another athlete profile",
+      },
+      { status: 409 },
+    );
+  }
+
   const inbox = "claims@depthboard.com";
   const claim: ClaimRequest = {
-    id: `claim-${Date.now().toString(36)}`,
+    id: `CLAIM-${new Date().getFullYear()}-${Date.now().toString(36).toUpperCase()}`,
     athleteName,
     athleteSlug: body.athleteSlug?.trim() || undefined,
     email,
+    userId: session.id,
     federationId: body.federationId?.trim() || undefined,
     guardian: !!body.guardian,
+    verifyMethod: body.verifyMethod,
+    eventProofIds: body.eventProofIds?.filter(Boolean),
     status: "pending",
     createdAt: new Date().toISOString(),
-    notes: "Submitted via /claim form",
+    notes: "Submitted via /claim wizard (auth session)",
   };
 
   const existing = readClaims();
   existing.push(claim);
-  try {
-    writeFileSync(claimsPath(), JSON.stringify(existing, null, 2) + "\n", "utf8");
-  } catch {
-    // Fallback append-only line log if rewrite fails
-    try {
-      appendFileSync(
-        path.join(process.cwd(), "data", "claim-requests.jsonl"),
-        JSON.stringify(claim) + "\n",
-        "utf8",
-      );
-    } catch {
-      return NextResponse.json(
-        { ok: false, error: "Could not persist claim log" },
-        { status: 500 },
-      );
-    }
+  if (!persistClaims(existing)) {
+    return NextResponse.json(
+      { ok: false, error: "Could not persist claim log" },
+      { status: 500 },
+    );
   }
 
   invalidateSeedCache();
 
-  const subject = encodeURIComponent(`Profile claim: ${athleteName}`);
+  const subject = encodeURIComponent(
+    `Profile claim ${claim.id}: ${athleteName}`,
+  );
   const mailBody = encodeURIComponent(
     [
       `Claim ID: ${claim.id}`,
+      `User ID: ${session.id}`,
       `Athlete: ${athleteName}`,
+      claim.athleteSlug ? `Slug: ${claim.athleteSlug}` : null,
       `Email: ${email}`,
       claim.federationId ? `Federation ID: ${claim.federationId}` : null,
+      claim.verifyMethod ? `Verify method: ${claim.verifyMethod}` : null,
+      claim.eventProofIds?.length
+        ? `Event proof: ${claim.eventProofIds.join("; ")}`
+        : null,
       `Guardian claim: ${claim.guardian ? "yes" : "no"}`,
       `Submitted: ${claim.createdAt}`,
     ]

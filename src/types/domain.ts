@@ -77,15 +77,64 @@ export interface RecordingRights {
   embedUrl?: string;
 }
 
+export type ClaimVerifyMethod =
+  | "email_match"
+  | "event_proof"
+  | "coach_confirm"
+  | "id_document";
+
 export interface ClaimRequest {
   id: string;
   athleteName: string;
   athleteSlug?: string;
   email: string;
+  userId?: string;
   federationId?: string;
   guardian: boolean;
+  verifyMethod?: ClaimVerifyMethod;
+  eventProofIds?: string[];
   status: "pending" | "needs_info" | "approved" | "rejected";
   createdAt: string;
+  reviewedAt?: string;
+  notes?: string;
+}
+
+export type UserRole = "visitor" | "athlete" | "guardian" | "steward";
+
+/** Seed demo account (credentials auth MVP). */
+export interface DemoUser {
+  id: string;
+  email: string;
+  /** Plaintext demo password only — never for production. */
+  password: string;
+  name: string;
+  role: UserRole;
+  /** Linked athlete after approved claim (null while pending / fan). */
+  athleteSlug: string | null;
+  notes?: string;
+}
+
+export interface SessionUser {
+  id: string;
+  email: string;
+  name: string;
+  role: UserRole;
+  athleteSlug: string | null;
+}
+
+export interface OrderStub {
+  id: string;
+  userId: string;
+  email: string;
+  status: "paid_stub" | "pending_stub" | "cancelled_stub";
+  createdAt: string;
+  totalEur: number;
+  items: Array<{
+    sku: string;
+    title: string;
+    priceEur: number;
+    licenseTier?: LicenseTier;
+  }>;
   notes?: string;
 }
 

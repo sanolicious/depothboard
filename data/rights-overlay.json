@@ -486,15 +486,57 @@
   ],
   "claimRequests": [
     {
-      "id": "claim-seed-001",
+      "id": "CLAIM-2026-SEED001",
       "athleteName": "Vitomir Maričić",
       "athleteSlug": "vitomir-maricic",
       "email": "vitomir.demo@example.com",
+      "userId": "user-vitomir",
       "federationId": "AIDA-demo",
       "guardian": false,
+      "verifyMethod": "event_proof",
       "status": "approved",
       "createdAt": "2026-01-10T09:00:00Z",
-      "notes": "Seed example — approved mock claim"
+      "reviewedAt": "2026-01-11T12:00:00Z",
+      "notes": "Seed — approved; user-vitomir linked via athleteSlug"
+    },
+    {
+      "id": "CLAIM-2026-SEED002",
+      "athleteName": "Demo Junior",
+      "athleteSlug": "demo-junior-diver",
+      "email": "guardian.demo@example.com",
+      "userId": "user-guardian",
+      "guardian": true,
+      "verifyMethod": "coach_confirm",
+      "status": "approved",
+      "createdAt": "2026-02-01T10:00:00Z",
+      "reviewedAt": "2026-02-02T09:00:00Z",
+      "notes": "Seed — guardian approved for junior demo"
+    },
+    {
+      "id": "CLAIM-2026-SEED003",
+      "athleteName": "Petar Klovar",
+      "athleteSlug": "petar-klovar",
+      "email": "pending.demo@example.com",
+      "userId": "user-pending",
+      "federationId": "AIDA-pending",
+      "guardian": false,
+      "verifyMethod": "email_match",
+      "status": "pending",
+      "createdAt": "2026-11-20T08:30:00Z",
+      "notes": "Seed — under review (pending.demo account)"
+    },
+    {
+      "id": "CLAIM-2026-SEED004",
+      "athleteName": "Mateusz Malina",
+      "athleteSlug": "mateusz-malina",
+      "email": "fan.demo@example.com",
+      "userId": "user-fan",
+      "guardian": false,
+      "verifyMethod": "id_document",
+      "status": "rejected",
+      "createdAt": "2026-10-05T11:00:00Z",
+      "reviewedAt": "2026-10-07T15:00:00Z",
+      "notes": "Seed — rejected (insufficient proof). Fan can re-submit via /claim."
     }
   ]
 }

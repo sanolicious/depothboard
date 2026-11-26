@@ -1,0 +1,38 @@
+[
+  {
+    "id": "user-vitomir",
+    "email": "vitomir.demo@example.com",
+    "password": "demo",
+    "name": "Vitomir Maričić",
+    "role": "athlete",
+    "athleteSlug": "vitomir-maricic",
+    "notes": "Seed claimed athlete — approved claim in rights-overlay."
+  },
+  {
+    "id": "user-guardian",
+    "email": "guardian.demo@example.com",
+    "password": "demo",
+    "name": "Demo Guardian",
+    "role": "guardian",
+    "athleteSlug": "demo-junior-diver",
+    "notes": "Guardian of synthetic junior; can edit junior consents."
+  },
+  {
+    "id": "user-fan",
+    "email": "fan.demo@example.com",
+    "password": "demo",
+    "name": "Demo Fan",
+    "role": "visitor",
+    "athleteSlug": null,
+    "notes": "No claimed profile — use /claim wizard. Seed has a pending claim for mateusz-malina."
+  },
+  {
+    "id": "user-pending",
+    "email": "pending.demo@example.com",
+    "password": "demo",
+    "name": "Pending Claimant",
+    "role": "visitor",
+    "athleteSlug": null,
+    "notes": "Has a pending claim on petar-klovar in seed claim-requests."
+  }
+]
