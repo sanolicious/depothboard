@@ -119,6 +119,7 @@ export type UserRole =
   | "guardian"
   | "steward"
   | "operator"
+  | "judge"
   | "admin";
 
 /** Seed demo account (credentials auth MVP). */
@@ -539,6 +540,80 @@ export interface SeedDb {
   telemetrySamples?: TelemetrySample[];
   mockAccountAthleteSlug?: string;
   claimsInbox?: string;
+}
+
+/* ------------------------------------------------------------------ */
+/* Federation judges — training / evidence (PWF-20, Diveye module 6)   */
+/* ------------------------------------------------------------------ */
+
+/** Tags a judge attaches when reviewing footage / a training case. */
+export type JudgeEvidenceTag =
+  | "early_start"
+  | "late_start"
+  | "surface_protocol"
+  | "blackout"
+  | "grab"
+  | "lane_line"
+  | "turn"
+  | "depth_marker"
+  | "airway"
+  | "other";
+
+/** Review mode: async UI first; on-site panel is a stub for hybrid later. */
+export type JudgeReviewMode = "async" | "on_site";
+
+export type JudgeCaseDifficulty = "clear" | "borderline" | "hard";
+
+/** Pack linking Diveye FootageAsset + marker subset as review evidence. */
+export interface JudgeEvidencePack {
+  id: string;
+  title: string;
+  notes: string;
+  mode: JudgeReviewMode;
+  footageAssetId: string;
+  /** Optional strong link to Performance.diveId. */
+  diveId?: string;
+  /** Highlighted FootageMarker ids from the linked asset. */
+  markerIds: string[];
+  tags: JudgeEvidenceTag[];
+  federation: "AIDA" | "CMAS";
+  discipline: string;
+}
+
+/**
+ * Anonymized / synthetic training case for white / yellow / red card quizzes.
+ * Scored against referenceCard (+ optional tag overlap).
+ */
+export interface JudgeTrainingCase {
+  id: string;
+  title: string;
+  summary: string;
+  discipline: string;
+  federation: "AIDA" | "CMAS";
+  difficulty: JudgeCaseDifficulty;
+  /** Always async for MVP; on_site reserved for hybrid panel. */
+  mode: JudgeReviewMode;
+  anonymizedAthlete: string;
+  scenario: string;
+  briefing: string[];
+  referenceCard: Card;
+  referenceTags: JudgeEvidenceTag[];
+  referenceRationale: string;
+  evidencePackId: string;
+  ruleHints?: string[];
+}
+
+export interface FederationJudgesCatalog {
+  asOf: string;
+  notes?: string;
+  materials: Array<{
+    id: string;
+    title: string;
+    body: string;
+    federation: "AIDA" | "CMAS" | "BOTH";
+  }>;
+  evidencePacks: JudgeEvidencePack[];
+  trainingCases: JudgeTrainingCase[];
 }
 
 export type RankingBoard = "PORTAL" | "AIDA" | "CMAS";

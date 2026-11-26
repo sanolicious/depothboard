@@ -51,6 +51,15 @@
     "name": "Depthboard Admin",
     "role": "admin",
     "athleteSlug": null,
-    "notes": "Admin — full field app access plus devices admin demo."
+    "notes": "Admin — federation admin + field app + devices demo."
+  },
+  {
+    "id": "user-judge",
+    "email": "judge.demo@example.com",
+    "password": "demo",
+    "name": "Demo Federation Judge",
+    "role": "judge",
+    "athleteSlug": null,
+    "notes": "Federation judge — /federation training quizzes and evidence packs (PWF-20)."
   }
 ]

@@ -42,7 +42,8 @@ export default async function LoginPage({
           <p>
             Session unlocks the athlete panel, consent edits and claim wizard.
             Operator / admin demos open the field app at{" "}
-            <Link href="/field">/field</Link>.
+            <Link href="/field">/field</Link>. Judge / admin demos open{" "}
+            <Link href="/federation">/federation</Link>.
           </p>
         </div>
       </div>
