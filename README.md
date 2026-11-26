@@ -17,9 +17,21 @@ npm run build && npm start
 
 ## Data layer
 
-- Seed JSON: `data/seed.json` (fictional athletes/events/results).
+- Seed JSON: `data/seed.json` (AIDA/CMAS ingest + partial real data; fictional fallback where needed).
 - Access via `getRepository()` in `src/lib/repository.ts` (`JsonRepository`).
 - Swap for `PostgresRepository` later without changing page code.
+
+## Ingest
+
+See [`ingest/README.md`](ingest/README.md).
+
+```bash
+PYTHONPATH=. python3 ingest/bin/run_ingest.py --out data/ingest
+```
+
+- Sources: AIDA HTML/AJAX, CMAS Microplus JSON API (PII scrubbed).
+- **freediveranking.com is verification-only** — never imported into the database.
+- Output: `data/ingest/canonical/`, `data/seed.json` (JsonRepository shape).
 
 ## Postgres / scrapers plan
 

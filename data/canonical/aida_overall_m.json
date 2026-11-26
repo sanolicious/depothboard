@@ -1,0 +1,3143 @@
+[
+  {
+    "rank": 1,
+    "athlete_id": "900feea2-6eff-40b5-ae30-a72f710137fe",
+    "name": "Vitomir Maričić",
+    "country": "Croatia",
+    "sex": "M",
+    "points": 980.0,
+    "result_text": "980"
+  },
+  {
+    "rank": 2,
+    "athlete_id": "ef89ac03-a2b3-4b66-91c2-39b912b67a34",
+    "name": "Petar Klovar",
+    "country": "Croatia",
+    "sex": "M",
+    "points": 944.8,
+    "result_text": "944.8"
+  },
+  {
+    "rank": 3,
+    "athlete_id": "f8c634fd-af19-4b82-88a6-dfb068e92f8c",
+    "name": "Mateusz Malina",
+    "country": "Poland",
+    "sex": "M",
+    "points": 901.0,
+    "result_text": "901"
+  },
+  {
+    "rank": 4,
+    "athlete_id": "24e7eaec-e57d-4bd8-a23a-5f6556f3d526",
+    "name": "Francisco Quesada",
+    "country": "Spain",
+    "sex": "M",
+    "points": 839.1,
+    "result_text": "839.1"
+  },
+  {
+    "rank": 5,
+    "athlete_id": "cd9b9cd8-d03c-4c8f-8cdd-263f5efb6a7a",
+    "name": "Hakyong Kim",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 833.9,
+    "result_text": "833.9"
+  },
+  {
+    "rank": 6,
+    "athlete_id": "2e49e1ad-580c-4b06-a13e-0e36682f2a1f",
+    "name": "Alexey Molchanov",
+    "country": "International",
+    "sex": "M",
+    "points": 827.1,
+    "result_text": "827.1"
+  },
+  {
+    "rank": 7,
+    "athlete_id": "d974e3ef-5450-4f39-a306-497a270aa927",
+    "name": "Hua Yang Huang",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 820.7,
+    "result_text": "820.7"
+  },
+  {
+    "rank": 8,
+    "athlete_id": "17308d78-0884-4d85-b416-588fc187cae8",
+    "name": "Ming (William Joy) Jin",
+    "country": "China",
+    "sex": "M",
+    "points": 800.6,
+    "result_text": "800.6"
+  },
+  {
+    "rank": 9,
+    "athlete_id": "86646245-adec-4ee8-abc4-81ae780036e3",
+    "name": "Philipp Heinzelmann",
+    "country": "Germany",
+    "sex": "M",
+    "points": 791.9,
+    "result_text": "791.9"
+  },
+  {
+    "rank": 10,
+    "athlete_id": "f35643b7-98b0-409b-8f97-59cf381f9095",
+    "name": "Dean Chaouche",
+    "country": "United Kingdom",
+    "sex": "M",
+    "points": 782.1,
+    "result_text": "782.1"
+  },
+  {
+    "rank": 11,
+    "athlete_id": "4fb1e52f-0b30-4d73-85c7-ab16f6f5c975",
+    "name": "Mitch Ayres",
+    "country": "Australia",
+    "sex": "M",
+    "points": 767.9,
+    "result_text": "767.9"
+  },
+  {
+    "rank": 12,
+    "athlete_id": "da6f61da-33ec-4a37-8293-f968e3cb67f0",
+    "name": "Jan Knutzen",
+    "country": "Germany",
+    "sex": "M",
+    "points": 763.1,
+    "result_text": "763.1"
+  },
+  {
+    "rank": 13,
+    "athlete_id": "b2cedec0-ee64-4420-89be-4e4e182a9283",
+    "name": "Yi(Zy) Zhang",
+    "country": "China",
+    "sex": "M",
+    "points": 761.5,
+    "result_text": "761.5"
+  },
+  {
+    "rank": 14,
+    "athlete_id": "5148dc7e-4aa9-43e3-a8b0-53544f622078",
+    "name": "Roberto Guzman",
+    "country": "Mexico",
+    "sex": "M",
+    "points": 761.3,
+    "result_text": "761.3"
+  },
+  {
+    "rank": 15,
+    "athlete_id": "749ff4c9-7676-43bc-b668-de6d5d66e550",
+    "name": "William Trubridge",
+    "country": "New Zealand",
+    "sex": "M",
+    "points": 757.8,
+    "result_text": "757.8"
+  },
+  {
+    "rank": 16,
+    "athlete_id": "e2285ca9-8e8a-4b76-b8d6-50230b25520d",
+    "name": "Kurt Chambers",
+    "country": "United States",
+    "sex": "M",
+    "points": 745.9,
+    "result_text": "745.9"
+  },
+  {
+    "rank": 17,
+    "athlete_id": "4cf13644-f8d3-4cf3-a101-4e2c97ae8ab5",
+    "name": "Martin Ruman",
+    "country": "Slovakia",
+    "sex": "M",
+    "points": 743.5,
+    "result_text": "743.5"
+  },
+  {
+    "rank": 18,
+    "athlete_id": "60b4839c-e4a9-4305-b88d-5604d74aafb4",
+    "name": "Pablo Marti",
+    "country": "Mexico",
+    "sex": "M",
+    "points": 740.2,
+    "result_text": "740.2"
+  },
+  {
+    "rank": 19,
+    "athlete_id": "00000000-0000-0000-0000-000000000e52",
+    "name": "Eugen Goettling",
+    "country": "Austria",
+    "sex": "M",
+    "points": 737.7,
+    "result_text": "737.7"
+  },
+  {
+    "rank": 20,
+    "athlete_id": "7c963adc-96e3-4d8e-a2d0-6181af50ae28",
+    "name": "Alejandro Lemus",
+    "country": "Mexico",
+    "sex": "M",
+    "points": 736.9,
+    "result_text": "736.9"
+  },
+  {
+    "rank": 21,
+    "athlete_id": "2944ed5f-1303-4f6e-9109-40c3d225fbc1",
+    "name": "Yixian Zhang",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 732.4,
+    "result_text": "732.4"
+  },
+  {
+    "rank": 22,
+    "athlete_id": "a763cace-5c89-4a2a-84ef-4441d117571a",
+    "name": "Oleksandr Bubenchykov",
+    "country": "Ukraine",
+    "sex": "M",
+    "points": 725.6,
+    "result_text": "725.6"
+  },
+  {
+    "rank": 23,
+    "athlete_id": "00000000-0000-0000-0000-00000000048e",
+    "name": "William Winram",
+    "country": "Canada",
+    "sex": "M",
+    "points": 723.2,
+    "result_text": "723.2"
+  },
+  {
+    "rank": 24,
+    "athlete_id": "eef27984-7cd6-4880-9181-a10c32e7f22a",
+    "name": "Ziyu Rocky Liu",
+    "country": "China",
+    "sex": "M",
+    "points": 721.2,
+    "result_text": "721.2"
+  },
+  {
+    "rank": 25,
+    "athlete_id": "6d0d9cfd-ff10-4218-92c2-7fd0f47cc410",
+    "name": "Kai Xiao",
+    "country": "China",
+    "sex": "M",
+    "points": 717.9,
+    "result_text": "717.9"
+  },
+  {
+    "rank": 26,
+    "athlete_id": "f7c6258a-798b-4aab-953e-19b472b242e5",
+    "name": "Karlo Grbin",
+    "country": "Sweden",
+    "sex": "M",
+    "points": 714.7,
+    "result_text": "714.7"
+  },
+  {
+    "rank": 27,
+    "athlete_id": "00000000-0000-0000-0000-0000000008b5",
+    "name": "Jakob Hansen",
+    "country": "Denmark",
+    "sex": "M",
+    "points": 714.0,
+    "result_text": "714"
+  },
+  {
+    "rank": 28,
+    "athlete_id": "eac958c0-5d35-4744-b975-b6ec74f3cb8e",
+    "name": "Luxiao Huang",
+    "country": "China",
+    "sex": "M",
+    "points": 711.1,
+    "result_text": "711.1"
+  },
+  {
+    "rank": 29,
+    "athlete_id": "1c83fc44-f7ea-4602-9c6c-da2efb907548",
+    "name": "Gimun Kwak",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 709.6,
+    "result_text": "709.6"
+  },
+  {
+    "rank": 30,
+    "athlete_id": "00000000-0000-0000-0000-0000000001dd",
+    "name": "Guillaume Néry",
+    "country": "France",
+    "sex": "M",
+    "points": 706.9,
+    "result_text": "706.9"
+  },
+  {
+    "rank": 31,
+    "athlete_id": "3a1c957a-5e95-4108-a50b-cd57a1167a87",
+    "name": "Vootipong Limpanitivat",
+    "country": "Thailand",
+    "sex": "M",
+    "points": 703.8,
+    "result_text": "703.8"
+  },
+  {
+    "rank": 32,
+    "athlete_id": "5dbb7434-9fbe-4e7f-9d02-ab842d59a5ee",
+    "name": "Fynn Neb",
+    "country": "Germany",
+    "sex": "M",
+    "points": 703.2,
+    "result_text": "703.2"
+  },
+  {
+    "rank": 33,
+    "athlete_id": "a530387d-b341-4dfb-a787-38af42838c14",
+    "name": "Jihoon Jang",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 701.7,
+    "result_text": "701.7"
+  },
+  {
+    "rank": 34,
+    "athlete_id": "983e195f-1d46-4fb4-a739-a6aaeac70d04",
+    "name": "Daniel Losinski",
+    "country": "Sweden",
+    "sex": "M",
+    "points": 690.8,
+    "result_text": "690.8"
+  },
+  {
+    "rank": 35,
+    "athlete_id": "1ef41bcb-fbfa-4164-8af1-cc61761d87e9",
+    "name": "Woongjin Kim",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 687.4,
+    "result_text": "687.4"
+  },
+  {
+    "rank": 36,
+    "athlete_id": "00000000-0000-0000-0000-000000000be1",
+    "name": "Andrey Matveenko",
+    "country": "International",
+    "sex": "M",
+    "points": 686.7,
+    "result_text": "686.7"
+  },
+  {
+    "rank": 37,
+    "athlete_id": "1ad23f6b-4590-4805-9f3f-4226d0438daa",
+    "name": "Tommi Pasanen",
+    "country": "Finland",
+    "sex": "M",
+    "points": 685.7,
+    "result_text": "685.7"
+  },
+  {
+    "rank": 38,
+    "athlete_id": "cb971455-097f-49af-9eb1-7a68100710e1",
+    "name": "David Mulheron",
+    "country": "Australia",
+    "sex": "M",
+    "points": 685.6,
+    "result_text": "685.6"
+  },
+  {
+    "rank": 39,
+    "athlete_id": "9fbc0544-2f7c-463b-bab3-2e1e218c00af",
+    "name": "Michael Sadowicz",
+    "country": "Germany",
+    "sex": "M",
+    "points": 681.7,
+    "result_text": "681.7"
+  },
+  {
+    "rank": 40,
+    "athlete_id": "77781dd0-e7e8-404d-a3ed-d18db706b88a",
+    "name": "Mohamed Siddiq",
+    "country": "Egypt",
+    "sex": "M",
+    "points": 670.6,
+    "result_text": "670.6"
+  },
+  {
+    "rank": 41,
+    "athlete_id": "98321d2f-1c9f-4f99-9a28-ca0d069420f2",
+    "name": "Marcell Bago",
+    "country": "Hungary",
+    "sex": "M",
+    "points": 669.4,
+    "result_text": "669.4"
+  },
+  {
+    "rank": 42,
+    "athlete_id": "4fc60355-367a-4d5c-904e-3af804fda746",
+    "name": "Matthew Armstrong",
+    "country": "Barbados",
+    "sex": "M",
+    "points": 668.4,
+    "result_text": "668.4"
+  },
+  {
+    "rank": 43,
+    "athlete_id": "00000000-0000-0000-0000-000000001072",
+    "name": "Jens Stoetzner",
+    "country": "Germany",
+    "sex": "M",
+    "points": 664.0,
+    "result_text": "664"
+  },
+  {
+    "rank": 44,
+    "athlete_id": "55d5c843-b1ea-4e4c-a079-27aed6ff0fa3",
+    "name": "Mohamed Aljneibi",
+    "country": "United Arab Emirates",
+    "sex": "M",
+    "points": 663.5,
+    "result_text": "663.5"
+  },
+  {
+    "rank": 45,
+    "athlete_id": "d49662fd-e620-4a10-9b45-8139bc9a8b81",
+    "name": "Christian Langer",
+    "country": "Switzerland",
+    "sex": "M",
+    "points": 663.3,
+    "result_text": "663.3"
+  },
+  {
+    "rank": 46,
+    "athlete_id": "979e1624-da9a-41f3-9a6e-00cb315789a1",
+    "name": "Antony Judge",
+    "country": "Australia",
+    "sex": "M",
+    "points": 662.1,
+    "result_text": "662.1"
+  },
+  {
+    "rank": 47,
+    "athlete_id": "00000000-0000-0000-0000-00000000062d",
+    "name": "Goran Colak",
+    "country": "Croatia",
+    "sex": "M",
+    "points": 654.0,
+    "result_text": "654"
+  },
+  {
+    "rank": 48,
+    "athlete_id": "04cc6f91-21ee-4a47-9e7b-912843d6bcd9",
+    "name": "Aliaksandr Zaikin",
+    "country": "International",
+    "sex": "M",
+    "points": 653.6,
+    "result_text": "653.6"
+  },
+  {
+    "rank": 49,
+    "athlete_id": "00000000-0000-0000-0000-000000001437",
+    "name": "Pepe Salcedo",
+    "country": "Mexico",
+    "sex": "M",
+    "points": 652.7,
+    "result_text": "652.7"
+  },
+  {
+    "rank": 50,
+    "athlete_id": "c06f5841-974e-4394-8151-c55ab08af2fb",
+    "name": "Yifan(Ivan) Zhang",
+    "country": "China",
+    "sex": "M",
+    "points": 651.8,
+    "result_text": "651.8"
+  },
+  {
+    "rank": 51,
+    "athlete_id": "3a8472f1-6c5d-4476-aa20-e7f8c9b66b5f",
+    "name": "Zhiying Yu",
+    "country": "China",
+    "sex": "M",
+    "points": 649.9,
+    "result_text": "649.9"
+  },
+  {
+    "rank": 52,
+    "athlete_id": "724de02d-a0f0-451d-bfad-e199c9c94145",
+    "name": "Sungkyu Park",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 649.2,
+    "result_text": "649.2"
+  },
+  {
+    "rank": 53,
+    "athlete_id": "8974e499-ae8d-41de-82c2-e75c82a99d98",
+    "name": "Alexander Vinogradov",
+    "country": "International",
+    "sex": "M",
+    "points": 648.1,
+    "result_text": "648.1"
+  },
+  {
+    "rank": 54,
+    "athlete_id": "8517685e-d53d-4e50-9365-d252f3e6b633",
+    "name": "Kai-Hsiang Chan",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 647.2,
+    "result_text": "647.2"
+  },
+  {
+    "rank": 55,
+    "athlete_id": "e631aada-c382-4bfa-bf3e-d4f869d27578",
+    "name": "Ken Kiriyama",
+    "country": "Japan",
+    "sex": "M",
+    "points": 646.4,
+    "result_text": "646.4"
+  },
+  {
+    "rank": 56,
+    "athlete_id": "fe913908-449c-46f1-bcf7-ac4780d90763",
+    "name": "Michael Zhi-Da Ko",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 644.4,
+    "result_text": "644.4"
+  },
+  {
+    "rank": 57,
+    "athlete_id": "a1a3589b-b3c8-4162-9b05-37fb66440364",
+    "name": "Peter Sturgeon",
+    "country": "United Kingdom",
+    "sex": "M",
+    "points": 640.6,
+    "result_text": "640.6"
+  },
+  {
+    "rank": 58,
+    "athlete_id": "d1fa8cd6-31ce-4b8c-8e57-737f85b56fec",
+    "name": "Eric Van Riet Paap",
+    "country": "Netherlands",
+    "sex": "M",
+    "points": 640.2,
+    "result_text": "640.2"
+  },
+  {
+    "rank": 59,
+    "athlete_id": "e3988acb-8f7e-4ea1-be32-ca2423f1595a",
+    "name": "Omar Al Ghailani",
+    "country": "Oman",
+    "sex": "M",
+    "points": 638.4,
+    "result_text": "638.4"
+  },
+  {
+    "rank": 60,
+    "athlete_id": "9603ecdc-7fa7-4bff-ac55-f16496a772bd",
+    "name": "Inaki Santos",
+    "country": "Spain",
+    "sex": "M",
+    "points": 636.6,
+    "result_text": "636.6"
+  },
+  {
+    "rank": 61,
+    "athlete_id": "e05446cc-3761-4006-a58c-acec4046ec63",
+    "name": "Stefan Randig",
+    "country": "Germany",
+    "sex": "M",
+    "points": 635.0,
+    "result_text": "635"
+  },
+  {
+    "rank": 62,
+    "athlete_id": "cd5daa09-0832-4971-9abc-7c76fd7801c8",
+    "name": "Mikhail Briantsev",
+    "country": "International",
+    "sex": "M",
+    "points": 633.5,
+    "result_text": "633.5"
+  },
+  {
+    "rank": 63,
+    "athlete_id": "5615b2e1-dc73-48b9-b768-6b171fe9c064",
+    "name": "Colin Christian",
+    "country": "United Kingdom",
+    "sex": "M",
+    "points": 632.4,
+    "result_text": "632.4"
+  },
+  {
+    "rank": 64,
+    "athlete_id": "59cd9c19-54e6-4f80-8641-b1ece9d02ab5",
+    "name": "Noriyuki Yabe",
+    "country": "Japan",
+    "sex": "M",
+    "points": 631.7,
+    "result_text": "631.7"
+  },
+  {
+    "rank": 65,
+    "athlete_id": "a151241f-ac15-45e0-83c7-5b963b98551c",
+    "name": "Eduardo Escalante",
+    "country": "Mexico",
+    "sex": "M",
+    "points": 630.4,
+    "result_text": "630.4"
+  },
+  {
+    "rank": 66,
+    "athlete_id": "efac0284-5539-4dcf-b7e4-82a2432ba62c",
+    "name": "Cornelius Friesendorf",
+    "country": "Germany",
+    "sex": "M",
+    "points": 630.2,
+    "result_text": "630.2"
+  },
+  {
+    "rank": 67,
+    "athlete_id": "00000000-0000-0000-0000-000000001a02",
+    "name": "Alejandro Llinas",
+    "country": "United States",
+    "sex": "M",
+    "points": 630.0,
+    "result_text": "630"
+  },
+  {
+    "rank": 68,
+    "athlete_id": "2a2cc0cc-b435-408d-bfdb-42a032aed5c7",
+    "name": "Brady Bradshaw",
+    "country": "United States",
+    "sex": "M",
+    "points": 627.6,
+    "result_text": "627.6"
+  },
+  {
+    "rank": 69,
+    "athlete_id": "2359c60a-8dd4-4147-80f4-b51c42cdfe0f",
+    "name": "Jacek Polak",
+    "country": "Poland",
+    "sex": "M",
+    "points": 624.4,
+    "result_text": "624.4"
+  },
+  {
+    "rank": 70,
+    "athlete_id": "00000000-0000-0000-0000-000000000ca5",
+    "name": "Andrej Ropret",
+    "country": "Slovenia",
+    "sex": "M",
+    "points": 622.1,
+    "result_text": "622.1"
+  },
+  {
+    "rank": 71,
+    "athlete_id": "2cd587d4-38ec-4cb8-ba89-d9e9a1d8fa98",
+    "name": "Quest Henkart",
+    "country": "Belgium",
+    "sex": "M",
+    "points": 620.7,
+    "result_text": "620.7"
+  },
+  {
+    "rank": 72,
+    "athlete_id": "951fa98f-7e76-44e7-b295-e91d4a13f484",
+    "name": "Martin Zajac",
+    "country": "Slovakia",
+    "sex": "M",
+    "points": 618.0,
+    "result_text": "618"
+  },
+  {
+    "rank": 73,
+    "athlete_id": "a88c8115-841c-41c3-9a77-c0529627a42b",
+    "name": "Ernie Wong",
+    "country": "Singapore",
+    "sex": "M",
+    "points": 617.4,
+    "result_text": "617.4"
+  },
+  {
+    "rank": 74,
+    "athlete_id": "235e9ae2-4ce9-438f-a70c-e279b092b1d8",
+    "name": "Qing Lu",
+    "country": "China",
+    "sex": "M",
+    "points": 617.2,
+    "result_text": "617.2"
+  },
+  {
+    "rank": 75,
+    "athlete_id": "32b07500-d9ed-48f8-9ac7-be9aeadbf6ea",
+    "name": "Aris Ioannidis",
+    "country": "Greece",
+    "sex": "M",
+    "points": 615.4,
+    "result_text": "615.4"
+  },
+  {
+    "rank": 76,
+    "athlete_id": "4fafae3d-e113-460a-9e9c-906c3286434a",
+    "name": "Evgeny Sychev",
+    "country": "International",
+    "sex": "M",
+    "points": 614.2,
+    "result_text": "614.2"
+  },
+  {
+    "rank": 77,
+    "athlete_id": "ddc57539-6c6e-4712-a36b-dcc84b26de0f",
+    "name": "Po-Feng Wu",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 611.8,
+    "result_text": "611.8"
+  },
+  {
+    "rank": 78,
+    "athlete_id": "00000000-0000-0000-0000-0000000015c4",
+    "name": "Aleksandr Bogdashkin",
+    "country": "International",
+    "sex": "M",
+    "points": 608.4,
+    "result_text": "608.4"
+  },
+  {
+    "rank": 79,
+    "athlete_id": "e6642a1a-d9a0-430f-a401-d052c3783dcf",
+    "name": "David Mullins",
+    "country": "New Zealand",
+    "sex": "M",
+    "points": 606.7,
+    "result_text": "606.7"
+  },
+  {
+    "rank": 80,
+    "athlete_id": "d810c1b7-9d8f-4492-a8cd-47e2a1900158",
+    "name": "Fahad Algosaibi",
+    "country": "Saudi Arabia",
+    "sex": "M",
+    "points": 603.4,
+    "result_text": "603.4"
+  },
+  {
+    "rank": 81,
+    "athlete_id": "4851b28c-cc45-478c-96b8-96b0b7d49d3a",
+    "name": "Gonzalo Cortes Tavara",
+    "country": "Peru",
+    "sex": "M",
+    "points": 603.3,
+    "result_text": "603.3"
+  },
+  {
+    "rank": 82,
+    "athlete_id": "b9ad3193-e0e3-4493-b5b8-d48f5d2688c7",
+    "name": "Giannis Giagkinis",
+    "country": "Greece",
+    "sex": "M",
+    "points": 602.6,
+    "result_text": "602.6"
+  },
+  {
+    "rank": 83,
+    "athlete_id": "8fe21cab-afda-4112-9bae-fa8204fa4648",
+    "name": "Michael Board",
+    "country": "United Kingdom",
+    "sex": "M",
+    "points": 602.0,
+    "result_text": "602"
+  },
+  {
+    "rank": 84,
+    "athlete_id": "dac2b162-d38d-4c68-aebe-4088fa3a0390",
+    "name": "Amin Jadidi",
+    "country": "Iran",
+    "sex": "M",
+    "points": 600.9,
+    "result_text": "600.9"
+  },
+  {
+    "rank": 85,
+    "athlete_id": "015fa693-b682-45e5-851f-bcb77cd81aee",
+    "name": "Pedro Tapia",
+    "country": "Mexico",
+    "sex": "M",
+    "points": 600.0,
+    "result_text": "600"
+  },
+  {
+    "rank": 86,
+    "athlete_id": "6b42afb5-0c87-4271-8128-d786c9d2553f",
+    "name": "Christos Karelos",
+    "country": "Greece",
+    "sex": "M",
+    "points": 599.2,
+    "result_text": "599.2"
+  },
+  {
+    "rank": 87,
+    "athlete_id": "7acd4435-ade0-4cc1-8a25-5849da84444e",
+    "name": "Hwan Yong Yeo",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 597.1,
+    "result_text": "597.1"
+  },
+  {
+    "rank": 88,
+    "athlete_id": "76a0eccd-0e51-4760-bc6c-519ee4be00f9",
+    "name": "Brad James",
+    "country": "New Zealand",
+    "sex": "M",
+    "points": 596.7,
+    "result_text": "596.7"
+  },
+  {
+    "rank": 89,
+    "athlete_id": "75cdfbe2-e056-4590-bae5-73945b58a0b8",
+    "name": "Arnd Steckenborn",
+    "country": "Germany",
+    "sex": "M",
+    "points": 596.4,
+    "result_text": "596.4"
+  },
+  {
+    "rank": 90,
+    "athlete_id": "7b396ef9-9ffc-47c3-9310-11fc07c56314",
+    "name": "Tamas Vass",
+    "country": "Hungary",
+    "sex": "M",
+    "points": 596.3,
+    "result_text": "596.3"
+  },
+  {
+    "rank": 91,
+    "athlete_id": "00000000-0000-0000-0000-000000000006",
+    "name": "Herbert Nitsch",
+    "country": "Austria",
+    "sex": "M",
+    "points": 596.3,
+    "result_text": "596.3"
+  },
+  {
+    "rank": 92,
+    "athlete_id": "b7dacbd1-358f-4524-adef-8f400edc4b39",
+    "name": "David Mellor",
+    "country": "United Kingdom",
+    "sex": "M",
+    "points": 596.2,
+    "result_text": "596.2"
+  },
+  {
+    "rank": 93,
+    "athlete_id": "072727e1-5fea-4a94-947e-fda8ff2a8af0",
+    "name": "Jérôme Hulin",
+    "country": "France",
+    "sex": "M",
+    "points": 596.2,
+    "result_text": "596.2"
+  },
+  {
+    "rank": 94,
+    "athlete_id": "00000000-0000-0000-0000-0000000009a4",
+    "name": "Alejandro Guedez",
+    "country": "Venezuela",
+    "sex": "M",
+    "points": 595.9,
+    "result_text": "595.9"
+  },
+  {
+    "rank": 95,
+    "athlete_id": "7868491b-ca00-4935-956a-b80ab2614751",
+    "name": "Sebastian Kaess",
+    "country": "Germany",
+    "sex": "M",
+    "points": 595.7,
+    "result_text": "595.7"
+  },
+  {
+    "rank": 96,
+    "athlete_id": "00000000-0000-0000-0000-000000000972",
+    "name": "Samo Jeranko",
+    "country": "Slovenia",
+    "sex": "M",
+    "points": 595.1,
+    "result_text": "595.1"
+  },
+  {
+    "rank": 97,
+    "athlete_id": "39c652f3-4ced-458c-bfdc-ca411a21e646",
+    "name": "Xingqiang Fu",
+    "country": "Singapore",
+    "sex": "M",
+    "points": 593.7,
+    "result_text": "593.7"
+  },
+  {
+    "rank": 98,
+    "athlete_id": "5a4932ec-988e-484a-a827-c3dbc2fc4576",
+    "name": "Oskar Särnholm",
+    "country": "Sweden",
+    "sex": "M",
+    "points": 590.9,
+    "result_text": "590.9"
+  },
+  {
+    "rank": 99,
+    "athlete_id": "bb558964-d4cf-4c92-8335-ad6437eb3d9f",
+    "name": "Morgan Bourc'his",
+    "country": "France",
+    "sex": "M",
+    "points": 590.7,
+    "result_text": "590.7"
+  },
+  {
+    "rank": 100,
+    "athlete_id": "89f8b712-ec34-43a4-b3f7-d6cb209cdadf",
+    "name": "Vincent Mathieu",
+    "country": "France",
+    "sex": "M",
+    "points": 590.6,
+    "result_text": "590.6"
+  },
+  {
+    "rank": 101,
+    "athlete_id": "59f3f37d-d600-4c07-9b29-cc7305a972ff",
+    "name": "Wen Hsiang Huang",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 588.9,
+    "result_text": "588.9"
+  },
+  {
+    "rank": 102,
+    "athlete_id": "c4baa831-9654-499d-8aa2-6dab71cee15b",
+    "name": "Shaun Parrott",
+    "country": "United States",
+    "sex": "M",
+    "points": 584.9,
+    "result_text": "584.9"
+  },
+  {
+    "rank": 103,
+    "athlete_id": "cd8d825e-73c0-42b2-a777-8669dce1c6b4",
+    "name": "Dean Earvin Sevilleno",
+    "country": "Philippines",
+    "sex": "M",
+    "points": 584.0,
+    "result_text": "584"
+  },
+  {
+    "rank": 104,
+    "athlete_id": "270b83d9-9c41-4f45-8378-0af519f76b3c",
+    "name": "Yang Cao",
+    "country": "China",
+    "sex": "M",
+    "points": 583.6,
+    "result_text": "583.6"
+  },
+  {
+    "rank": 105,
+    "athlete_id": "9942859b-fa77-411f-b6bc-d8d9854be3d0",
+    "name": "Kwangmin Lee",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 583.1,
+    "result_text": "583.1"
+  },
+  {
+    "rank": 106,
+    "athlete_id": "448bcc02-ca4c-49ca-968e-b58731229868",
+    "name": "Yunam Cha",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 582.5,
+    "result_text": "582.5"
+  },
+  {
+    "rank": 107,
+    "athlete_id": "b343c159-c6cc-4d86-883b-fe3d5fc0e584",
+    "name": "Yen Wei Lin",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 581.7,
+    "result_text": "581.7"
+  },
+  {
+    "rank": 108,
+    "athlete_id": "2c481736-3d39-4c65-bac1-6fbdd4aa1646",
+    "name": "Jarrod Briffa",
+    "country": "Australia",
+    "sex": "M",
+    "points": 580.4,
+    "result_text": "580.4"
+  },
+  {
+    "rank": 109,
+    "athlete_id": "699adad5-6419-4dba-8e86-0f3dbadd3289",
+    "name": "Dominik Krzywiecki",
+    "country": "Poland",
+    "sex": "M",
+    "points": 580.3,
+    "result_text": "580.3"
+  },
+  {
+    "rank": 110,
+    "athlete_id": "9e806e8e-1972-4e26-ab89-47febc2a14f5",
+    "name": "Marcin Baranowski",
+    "country": "Poland",
+    "sex": "M",
+    "points": 578.4,
+    "result_text": "578.4"
+  },
+  {
+    "rank": 111,
+    "athlete_id": "00000000-0000-0000-0000-000000001336",
+    "name": "Kristian Mäki-Jussila",
+    "country": "Finland",
+    "sex": "M",
+    "points": 578.2,
+    "result_text": "578.2"
+  },
+  {
+    "rank": 112,
+    "athlete_id": "8b8a1bcb-b4e5-4545-80bb-1663b69ba667",
+    "name": "Nathaniel Leazer",
+    "country": "United States",
+    "sex": "M",
+    "points": 578.0,
+    "result_text": "578"
+  },
+  {
+    "rank": 113,
+    "athlete_id": "92172783-3401-41b7-a43d-e7a3c4a4f5eb",
+    "name": "Viktor Reshetniak",
+    "country": "Ukraine",
+    "sex": "M",
+    "points": 577.4,
+    "result_text": "577.4"
+  },
+  {
+    "rank": 114,
+    "athlete_id": "a6082e48-f357-4fc1-9b88-b9e313abe09f",
+    "name": "Aleksandrs Maskalenko",
+    "country": "Latvia",
+    "sex": "M",
+    "points": 577.0,
+    "result_text": "577"
+  },
+  {
+    "rank": 115,
+    "athlete_id": "e6b209e2-0125-4fe2-b388-ddb594c38c07",
+    "name": "Alexander K. Pavlov",
+    "country": "Russian Federation",
+    "sex": "M",
+    "points": 577.0,
+    "result_text": "577"
+  },
+  {
+    "rank": 116,
+    "athlete_id": "2379ed18-9ff8-4b99-a185-20eb8c1e9d5a",
+    "name": "Yanhua Chen",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 575.8,
+    "result_text": "575.8"
+  },
+  {
+    "rank": 117,
+    "athlete_id": "e04c0de0-6e98-48b3-a760-19a39ab74c0a",
+    "name": "Budimir Buda Šobat",
+    "country": "Croatia",
+    "sex": "M",
+    "points": 571.3,
+    "result_text": "571.3"
+  },
+  {
+    "rank": 118,
+    "athlete_id": "a752ff3a-7736-4f1a-80e2-fa8562020efd",
+    "name": "Dimas Andika",
+    "country": "Indonesia",
+    "sex": "M",
+    "points": 570.7,
+    "result_text": "570.7"
+  },
+  {
+    "rank": 119,
+    "athlete_id": "116e2e29-8583-4224-a63e-b1af9c51f7f5",
+    "name": "Ivan Cagata",
+    "country": "Philippines",
+    "sex": "M",
+    "points": 570.3,
+    "result_text": "570.3"
+  },
+  {
+    "rank": 120,
+    "athlete_id": "012046a0-9731-45a9-85d8-6983fd666c3d",
+    "name": "Jesper Stechmann",
+    "country": "Denmark",
+    "sex": "M",
+    "points": 569.1,
+    "result_text": "569.1"
+  },
+  {
+    "rank": 121,
+    "athlete_id": "b10fa63f-e8c6-48f7-81d7-500146ec051b",
+    "name": "Michal Risian",
+    "country": "Czech Republic",
+    "sex": "M",
+    "points": 568.5,
+    "result_text": "568.5"
+  },
+  {
+    "rank": 122,
+    "athlete_id": "00000000-0000-0000-0000-000000001257",
+    "name": "Jurgen Reinderink",
+    "country": "Netherlands",
+    "sex": "M",
+    "points": 568.1,
+    "result_text": "568.1"
+  },
+  {
+    "rank": 123,
+    "athlete_id": "d424c806-6f4d-4857-b25a-3169a64fac08",
+    "name": "Gary McGrath",
+    "country": "United Kingdom",
+    "sex": "M",
+    "points": 568.1,
+    "result_text": "568.1"
+  },
+  {
+    "rank": 124,
+    "athlete_id": "324bd308-5a3c-4fb3-b314-d820c6b01308",
+    "name": "Hoi Kai Yiu",
+    "country": "Hong Kong, China",
+    "sex": "M",
+    "points": 568.0,
+    "result_text": "568"
+  },
+  {
+    "rank": 125,
+    "athlete_id": "1f81e5e1-9234-4957-a208-7eb36a4c8d42",
+    "name": "Li Bo",
+    "country": "China",
+    "sex": "M",
+    "points": 565.5,
+    "result_text": "565.5"
+  },
+  {
+    "rank": 126,
+    "athlete_id": "4da60370-753a-4261-afbb-81ebc3d61e9f",
+    "name": "Lin Zhu",
+    "country": "China",
+    "sex": "M",
+    "points": 564.6,
+    "result_text": "564.6"
+  },
+  {
+    "rank": 127,
+    "athlete_id": "4db00886-48fa-479c-b6ab-4ca584426883",
+    "name": "Jesper Lauridsen",
+    "country": "Denmark",
+    "sex": "M",
+    "points": 564.1,
+    "result_text": "564.1"
+  },
+  {
+    "rank": 128,
+    "athlete_id": "f036f09c-2d84-4c79-a13b-4e7fd45b4ec4",
+    "name": "Peter Munk Truelsen",
+    "country": "Denmark",
+    "sex": "M",
+    "points": 563.0,
+    "result_text": "563"
+  },
+  {
+    "rank": 129,
+    "athlete_id": "54e3a18c-c10c-42e9-b21a-3a9060e066f8",
+    "name": "Ka Wai Lee",
+    "country": "Hong Kong, China",
+    "sex": "M",
+    "points": 561.8,
+    "result_text": "561.8"
+  },
+  {
+    "rank": 130,
+    "athlete_id": "f46798d8-aa12-4581-94fa-259d01990dff",
+    "name": "Boris Milosic",
+    "country": "Croatia",
+    "sex": "M",
+    "points": 561.1,
+    "result_text": "561.1"
+  },
+  {
+    "rank": 131,
+    "athlete_id": "5cfa1b9a-9798-4fd7-9861-9b9f094e2d9d",
+    "name": "Donat Faraguna Gnjatovic",
+    "country": "Croatia",
+    "sex": "M",
+    "points": 561.1,
+    "result_text": "561.1"
+  },
+  {
+    "rank": 132,
+    "athlete_id": "1b969808-8f41-4aa0-9402-e5d37e42670b",
+    "name": "Aleksandr Tetervov",
+    "country": "Lithuania",
+    "sex": "M",
+    "points": 560.1,
+    "result_text": "560.1"
+  },
+  {
+    "rank": 133,
+    "athlete_id": "b78b6ece-28dc-4d17-a99d-2014910ea781",
+    "name": "Jingu Kang",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 559.7,
+    "result_text": "559.7"
+  },
+  {
+    "rank": 134,
+    "athlete_id": "9be647fd-06ef-4c83-b2cf-c678c5086233",
+    "name": "Hermanni Heimonen",
+    "country": "Finland",
+    "sex": "M",
+    "points": 557.7,
+    "result_text": "557.7"
+  },
+  {
+    "rank": 135,
+    "athlete_id": "b5b25c0f-52e6-4318-a092-9689c70cae0a",
+    "name": "Christophe Bruel",
+    "country": "France",
+    "sex": "M",
+    "points": 557.7,
+    "result_text": "557.7"
+  },
+  {
+    "rank": 136,
+    "athlete_id": "8f1ccbc7-afad-4f4f-86a7-9c53d41af96b",
+    "name": "Piero Giobbi",
+    "country": "Sweden",
+    "sex": "M",
+    "points": 556.5,
+    "result_text": "556.5"
+  },
+  {
+    "rank": 137,
+    "athlete_id": "a23e6be5-c5cd-4017-aa4d-35da0eb91142",
+    "name": "Pan Ming-Chou",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 555.6,
+    "result_text": "555.6"
+  },
+  {
+    "rank": 138,
+    "athlete_id": "8e6f687c-2b33-4cc1-93c4-e49c49788eb7",
+    "name": "Robert Ian Ebarle Razon",
+    "country": "Philippines",
+    "sex": "M",
+    "points": 555.3,
+    "result_text": "555.3"
+  },
+  {
+    "rank": 139,
+    "athlete_id": "ea3e6326-3ebc-473c-ae2b-82b90d1efc93",
+    "name": "Miro Suonperä",
+    "country": "Finland",
+    "sex": "M",
+    "points": 554.2,
+    "result_text": "554.2"
+  },
+  {
+    "rank": 140,
+    "athlete_id": "632ec69f-b487-48d8-a820-10376e5e21ce",
+    "name": "Stig Pryds",
+    "country": "Denmark",
+    "sex": "M",
+    "points": 550.9,
+    "result_text": "550.9"
+  },
+  {
+    "rank": 141,
+    "athlete_id": "a4fceb1b-f8f4-4af6-9103-a7e6935a73df",
+    "name": "Walid Boudhiaf",
+    "country": "Tunisia",
+    "sex": "M",
+    "points": 550.4,
+    "result_text": "550.4"
+  },
+  {
+    "rank": 142,
+    "athlete_id": "de962f51-3a44-40d3-ac13-11c910da7d2c",
+    "name": "Michael Ye",
+    "country": "China",
+    "sex": "M",
+    "points": 550.0,
+    "result_text": "550"
+  },
+  {
+    "rank": 143,
+    "athlete_id": "314a63fb-83ec-4a76-819f-9c8ebe7f61fc",
+    "name": "Paul Wai-Kei Sack",
+    "country": "Malaysia",
+    "sex": "M",
+    "points": 549.9,
+    "result_text": "549.9"
+  },
+  {
+    "rank": 144,
+    "athlete_id": "87d6e4f9-8c46-49b9-a516-b457d5c9e78e",
+    "name": "Jerry Van Galder",
+    "country": "United States",
+    "sex": "M",
+    "points": 549.7,
+    "result_text": "549.7"
+  },
+  {
+    "rank": 145,
+    "athlete_id": "ab893720-727a-4e18-98c1-14dce58ff4bd",
+    "name": "Phil Clayton",
+    "country": "New Zealand",
+    "sex": "M",
+    "points": 549.5,
+    "result_text": "549.5"
+  },
+  {
+    "rank": 146,
+    "athlete_id": "00000000-0000-0000-0000-00000000049a",
+    "name": "Jure Daic",
+    "country": "Slovenia",
+    "sex": "M",
+    "points": 549.2,
+    "result_text": "549.2"
+  },
+  {
+    "rank": 147,
+    "athlete_id": "1dba4d95-cbe9-43c1-aa7f-4e5b51700865",
+    "name": "Rune Hallum",
+    "country": "Denmark",
+    "sex": "M",
+    "points": 548.0,
+    "result_text": "548"
+  },
+  {
+    "rank": 148,
+    "athlete_id": "b571b6f1-ad64-4728-ae92-2f4659c45846",
+    "name": "Lawrence Garcia",
+    "country": "Philippines",
+    "sex": "M",
+    "points": 546.4,
+    "result_text": "546.4"
+  },
+  {
+    "rank": 149,
+    "athlete_id": "1300f3a7-9a11-470b-a199-3bb9f488c6f9",
+    "name": "Erki Enkvist",
+    "country": "Estonia",
+    "sex": "M",
+    "points": 546.2,
+    "result_text": "546.2"
+  },
+  {
+    "rank": 150,
+    "athlete_id": "00000000-0000-0000-0000-000000000bab",
+    "name": "Christos Papadopoulos",
+    "country": "Greece",
+    "sex": "M",
+    "points": 545.2,
+    "result_text": "545.2"
+  },
+  {
+    "rank": 151,
+    "athlete_id": "81e15f08-85e5-4b4e-a701-19436fe9c524",
+    "name": "Kay Hang Chia",
+    "country": "Malaysia",
+    "sex": "M",
+    "points": 544.9,
+    "result_text": "544.9"
+  },
+  {
+    "rank": 152,
+    "athlete_id": "bec8d5b2-1c99-41ed-8e62-fa23d7e3bb5c",
+    "name": "Chien-Hao Huang",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 544.7,
+    "result_text": "544.7"
+  },
+  {
+    "rank": 153,
+    "athlete_id": "90347b87-3bca-4093-8010-3924f9a4f97a",
+    "name": "Henrik Johansson",
+    "country": "Sweden",
+    "sex": "M",
+    "points": 540.1,
+    "result_text": "540.1"
+  },
+  {
+    "rank": 154,
+    "athlete_id": "100b8a7c-d9b6-4e22-b7ac-684796b51e54",
+    "name": "Minkyu Choi",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 538.2,
+    "result_text": "538.2"
+  },
+  {
+    "rank": 155,
+    "athlete_id": "ab51e2f4-9808-4bb7-8542-b2159e44f618",
+    "name": "Denys Polyvianyi",
+    "country": "Ukraine",
+    "sex": "M",
+    "points": 537.4,
+    "result_text": "537.4"
+  },
+  {
+    "rank": 156,
+    "athlete_id": "9f48c69f-827c-414c-ac3f-50b27d07d219",
+    "name": "Walter Steyn",
+    "country": "Australia",
+    "sex": "M",
+    "points": 537.3,
+    "result_text": "537.3"
+  },
+  {
+    "rank": 157,
+    "athlete_id": "dfb2363a-2895-4f06-bf76-7d67a9cc7aaa",
+    "name": "Tomas Jonsson",
+    "country": "Sweden",
+    "sex": "M",
+    "points": 536.5,
+    "result_text": "536.5"
+  },
+  {
+    "rank": 158,
+    "athlete_id": "00000000-0000-0000-0000-000000000d46",
+    "name": "Aleksandr Bykov",
+    "country": "International",
+    "sex": "M",
+    "points": 534.2,
+    "result_text": "534.2"
+  },
+  {
+    "rank": 159,
+    "athlete_id": "00000000-0000-0000-0000-000000000147",
+    "name": "Kars Van Kouwen",
+    "country": "Netherlands",
+    "sex": "M",
+    "points": 534.1,
+    "result_text": "534.1"
+  },
+  {
+    "rank": 160,
+    "athlete_id": "c3681125-55d4-488d-9a35-be436734475f",
+    "name": "Ivan Drobyshevskyi",
+    "country": "Ukraine",
+    "sex": "M",
+    "points": 532.8,
+    "result_text": "532.8"
+  },
+  {
+    "rank": 161,
+    "athlete_id": "724b1afd-e2a4-45d6-b7c6-12eda4d34527",
+    "name": "Minja Marinkovic",
+    "country": "Germany",
+    "sex": "M",
+    "points": 532.2,
+    "result_text": "532.2"
+  },
+  {
+    "rank": 162,
+    "athlete_id": "3faffd87-3772-4fcb-9077-00aab8be939c",
+    "name": "Jeffry Nathaniel Salim",
+    "country": "Indonesia",
+    "sex": "M",
+    "points": 531.6,
+    "result_text": "531.6"
+  },
+  {
+    "rank": 163,
+    "athlete_id": "356ce15b-98bd-4db3-bfac-7e2eea43c791",
+    "name": "Sebastian Tjeerde",
+    "country": "Netherlands",
+    "sex": "M",
+    "points": 530.8,
+    "result_text": "530.8"
+  },
+  {
+    "rank": 164,
+    "athlete_id": "9caf65ef-c007-4707-afb1-b9995d7d12ca",
+    "name": "Shinya Oi",
+    "country": "Japan",
+    "sex": "M",
+    "points": 530.5,
+    "result_text": "530.5"
+  },
+  {
+    "rank": 165,
+    "athlete_id": "5a929cbc-9b7c-40f1-8f10-d64e44243711",
+    "name": "Christian Maldamé",
+    "country": "France",
+    "sex": "M",
+    "points": 529.6,
+    "result_text": "529.6"
+  },
+  {
+    "rank": 166,
+    "athlete_id": "35880da1-ff80-4532-a04d-95ce222c707a",
+    "name": "Antonio Del Duca",
+    "country": "Venezuela",
+    "sex": "M",
+    "points": 529.2,
+    "result_text": "529.2"
+  },
+  {
+    "rank": 167,
+    "athlete_id": "48f67f28-ff44-4564-9b6c-df11a2fdb3e3",
+    "name": "Matej Majling",
+    "country": "Slovakia",
+    "sex": "M",
+    "points": 528.9,
+    "result_text": "528.9"
+  },
+  {
+    "rank": 168,
+    "athlete_id": "a1336744-e6fa-4c2c-88cc-9c16c6f6c5c2",
+    "name": "Hyeong Geun Shin",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 528.4,
+    "result_text": "528.4"
+  },
+  {
+    "rank": 169,
+    "athlete_id": "25c8203f-ac1d-43de-ba63-18d27f08c1ea",
+    "name": "Seumas Christie-Johnston",
+    "country": "Australia",
+    "sex": "M",
+    "points": 527.9,
+    "result_text": "527.9"
+  },
+  {
+    "rank": 170,
+    "athlete_id": "00000000-0000-0000-0000-000000000c41",
+    "name": "Max Lindqvist",
+    "country": "Sweden",
+    "sex": "M",
+    "points": 527.4,
+    "result_text": "527.4"
+  },
+  {
+    "rank": 171,
+    "athlete_id": "a012d10c-6eca-4b2b-9a99-80abc2d15856",
+    "name": "David MacHado Jaramillo",
+    "country": "Colombia",
+    "sex": "M",
+    "points": 527.3,
+    "result_text": "527.3"
+  },
+  {
+    "rank": 172,
+    "athlete_id": "5f5e29be-94db-4469-99b6-492a803323ec",
+    "name": "Aakash Raj",
+    "country": "United Kingdom",
+    "sex": "M",
+    "points": 527.3,
+    "result_text": "527.3"
+  },
+  {
+    "rank": 173,
+    "athlete_id": "3ee3d5b8-f165-4d2d-b35c-5609d011da75",
+    "name": "Toma Celar",
+    "country": "Croatia",
+    "sex": "M",
+    "points": 526.5,
+    "result_text": "526.5"
+  },
+  {
+    "rank": 174,
+    "athlete_id": "11d684e4-024e-4db0-a656-9f3ba7546159",
+    "name": "Igor Korkhov",
+    "country": "Russian Federation",
+    "sex": "M",
+    "points": 524.9,
+    "result_text": "524.9"
+  },
+  {
+    "rank": 175,
+    "athlete_id": "cfc8d34b-d004-431d-b89a-6fdd5aad8cdb",
+    "name": "Julien Dupont",
+    "country": "Switzerland",
+    "sex": "M",
+    "points": 524.5,
+    "result_text": "524.5"
+  },
+  {
+    "rank": 176,
+    "athlete_id": "b35926e6-eb13-4e3f-958d-b154e7db8b40",
+    "name": "Dong Ill Lee",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 524.2,
+    "result_text": "524.2"
+  },
+  {
+    "rank": 177,
+    "athlete_id": "28d114b9-01c5-4345-a64e-a3936db6b634",
+    "name": "Ramon Paolo Robles",
+    "country": "Philippines",
+    "sex": "M",
+    "points": 523.4,
+    "result_text": "523.4"
+  },
+  {
+    "rank": 178,
+    "athlete_id": "2c6ad7ba-8045-4cc5-bd5b-0b5e063c02ad",
+    "name": "Juan Guerrero",
+    "country": "Colombia",
+    "sex": "M",
+    "points": 522.8,
+    "result_text": "522.8"
+  },
+  {
+    "rank": 179,
+    "athlete_id": "a912280a-4075-482c-aa36-0bb042ab805b",
+    "name": "Hugo Piguet",
+    "country": "Switzerland",
+    "sex": "M",
+    "points": 522.7,
+    "result_text": "522.7"
+  },
+  {
+    "rank": 180,
+    "athlete_id": "be5997e1-d264-449c-8f17-e8bffb8f9ad8",
+    "name": "Giorgio Mariotti",
+    "country": "Italy",
+    "sex": "M",
+    "points": 521.7,
+    "result_text": "521.7"
+  },
+  {
+    "rank": 181,
+    "athlete_id": "00000000-0000-0000-0000-0000000000ae",
+    "name": "Ryuzo Shinomiya",
+    "country": "Japan",
+    "sex": "M",
+    "points": 521.0,
+    "result_text": "521"
+  },
+  {
+    "rank": 182,
+    "athlete_id": "00000000-0000-0000-0000-000000001932",
+    "name": "Galih Jatnika",
+    "country": "Indonesia",
+    "sex": "M",
+    "points": 520.9,
+    "result_text": "520.9"
+  },
+  {
+    "rank": 183,
+    "athlete_id": "976cce17-c605-41af-bd25-c7d897ae9ae5",
+    "name": "Marc Laszlo",
+    "country": "United States",
+    "sex": "M",
+    "points": 520.9,
+    "result_text": "520.9"
+  },
+  {
+    "rank": 184,
+    "athlete_id": "2e93eca7-df98-4404-ac7f-40013686d287",
+    "name": "Lewis Jones",
+    "country": "New Zealand",
+    "sex": "M",
+    "points": 520.2,
+    "result_text": "520.2"
+  },
+  {
+    "rank": 185,
+    "athlete_id": "1e11821c-8bcc-49e0-b5e0-846749ce0c77",
+    "name": "Giorgos Panagiotakis",
+    "country": "Greece",
+    "sex": "M",
+    "points": 520.2,
+    "result_text": "520.2"
+  },
+  {
+    "rank": 186,
+    "athlete_id": "ec899fbd-bfa4-42b5-b2a0-a0c5dce3e5b6",
+    "name": "Homar Leuci",
+    "country": "Italy",
+    "sex": "M",
+    "points": 517.5,
+    "result_text": "517.5"
+  },
+  {
+    "rank": 187,
+    "athlete_id": "962face2-0ac1-41ae-bfb7-37179da0d6c5",
+    "name": "Zherui（Jerry） Xu",
+    "country": "China",
+    "sex": "M",
+    "points": 517.2,
+    "result_text": "517.2"
+  },
+  {
+    "rank": 188,
+    "athlete_id": "00000000-0000-0000-0000-000000001ad1",
+    "name": "Deyan Doychev",
+    "country": "Bulgaria",
+    "sex": "M",
+    "points": 515.7,
+    "result_text": "515.7"
+  },
+  {
+    "rank": 189,
+    "athlete_id": "34f851f9-ab97-44c6-9cba-d4111708b15f",
+    "name": "Anthony Wagner",
+    "country": "Germany",
+    "sex": "M",
+    "points": 515.6,
+    "result_text": "515.6"
+  },
+  {
+    "rank": 190,
+    "athlete_id": "cfbe9c49-1355-48b9-8088-6cc94002a4aa",
+    "name": "Mikko Pöntinen",
+    "country": "Finland",
+    "sex": "M",
+    "points": 514.3,
+    "result_text": "514.3"
+  },
+  {
+    "rank": 191,
+    "athlete_id": "ecf96ed5-cc8d-4e62-9bfa-a94dbc045d30",
+    "name": "Tony Helm",
+    "country": "Greece",
+    "sex": "M",
+    "points": 513.9,
+    "result_text": "513.9"
+  },
+  {
+    "rank": 192,
+    "athlete_id": "00000000-0000-0000-0000-0000000016f6",
+    "name": "Ícaro Do Valle",
+    "country": "Brazil",
+    "sex": "M",
+    "points": 513.1,
+    "result_text": "513.1"
+  },
+  {
+    "rank": 193,
+    "athlete_id": "41120ddd-22f5-4f05-a442-13c8ea6fc779",
+    "name": "Petr Vala",
+    "country": "Czech Republic",
+    "sex": "M",
+    "points": 511.5,
+    "result_text": "511.5"
+  },
+  {
+    "rank": 194,
+    "athlete_id": "0566194f-0711-4fcf-8336-3ab42592f49d",
+    "name": "Lap Hing ( Chris ) Cheung",
+    "country": "Hong Kong, China",
+    "sex": "M",
+    "points": 510.2,
+    "result_text": "510.2"
+  },
+  {
+    "rank": 195,
+    "athlete_id": "070c277c-e873-40ad-9701-bf1c22f357c3",
+    "name": "Peter Balck",
+    "country": "Sweden",
+    "sex": "M",
+    "points": 510.1,
+    "result_text": "510.1"
+  },
+  {
+    "rank": 196,
+    "athlete_id": "efca6024-7f98-44c5-b49f-40c5ad67c25f",
+    "name": "Nico Guzman",
+    "country": "Philippines",
+    "sex": "M",
+    "points": 509.7,
+    "result_text": "509.7"
+  },
+  {
+    "rank": 197,
+    "athlete_id": "d2b2a335-eb97-490b-8da3-7cb48941ab41",
+    "name": "Matthew Turnbull",
+    "country": "United Kingdom",
+    "sex": "M",
+    "points": 508.8,
+    "result_text": "508.8"
+  },
+  {
+    "rank": 198,
+    "athlete_id": "6059ceff-1ec4-46a8-96f6-bcc9c5a01a01",
+    "name": "Alon Rivkind",
+    "country": "Israel",
+    "sex": "M",
+    "points": 507.7,
+    "result_text": "507.7"
+  },
+  {
+    "rank": 199,
+    "athlete_id": "46c54ca8-2ed6-446f-af77-77dfb6335c58",
+    "name": "Luca Malaguti",
+    "country": "Canada",
+    "sex": "M",
+    "points": 507.5,
+    "result_text": "507.5"
+  },
+  {
+    "rank": 200,
+    "athlete_id": "6802071c-e049-4fb9-b354-93dd18aaa053",
+    "name": "Aleksandr Maksimov",
+    "country": "International",
+    "sex": "M",
+    "points": 507.4,
+    "result_text": "507.4"
+  },
+  {
+    "rank": 201,
+    "athlete_id": "f03ce616-5dc5-4c1b-97fa-36dd5885de6a",
+    "name": "Julien Moreau",
+    "country": "France",
+    "sex": "M",
+    "points": 507.0,
+    "result_text": "507"
+  },
+  {
+    "rank": 202,
+    "athlete_id": "a71b24b3-ec89-4989-acec-9da31fb3e604",
+    "name": "Rasmus Werling",
+    "country": "Finland",
+    "sex": "M",
+    "points": 504.9,
+    "result_text": "504.9"
+  },
+  {
+    "rank": 203,
+    "athlete_id": "cc6aca27-a634-4864-96f1-85e631bc24d1",
+    "name": "Nathanial Fairweather",
+    "country": "New Zealand",
+    "sex": "M",
+    "points": 503.9,
+    "result_text": "503.9"
+  },
+  {
+    "rank": 204,
+    "athlete_id": "503f8460-d313-4fbe-81b2-90b236484fb4",
+    "name": "Dongha Kim",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 503.7,
+    "result_text": "503.7"
+  },
+  {
+    "rank": 205,
+    "athlete_id": "30a060c0-03ca-4b06-8b8f-383ea55369b4",
+    "name": "Antero Joki",
+    "country": "Finland",
+    "sex": "M",
+    "points": 503.6,
+    "result_text": "503.6"
+  },
+  {
+    "rank": 206,
+    "athlete_id": "879b7f11-1a68-40c6-9ab4-27a58ef5a363",
+    "name": "Jack Webb",
+    "country": "Australia",
+    "sex": "M",
+    "points": 503.0,
+    "result_text": "503"
+  },
+  {
+    "rank": 207,
+    "athlete_id": "069eddc1-9a75-4f6f-88ca-1171c3671d08",
+    "name": "Donovan De Wet",
+    "country": "Australia",
+    "sex": "M",
+    "points": 502.3,
+    "result_text": "502.3"
+  },
+  {
+    "rank": 208,
+    "athlete_id": "00000000-0000-0000-0000-0000000006b7",
+    "name": "Veljano Zanki",
+    "country": "Croatia",
+    "sex": "M",
+    "points": 501.9,
+    "result_text": "501.9"
+  },
+  {
+    "rank": 209,
+    "athlete_id": "2dead37c-48da-4524-b60b-625b204c419f",
+    "name": "Ricardo Bahia",
+    "country": "Brazil",
+    "sex": "M",
+    "points": 500.8,
+    "result_text": "500.8"
+  },
+  {
+    "rank": 210,
+    "athlete_id": "00000000-0000-0000-0000-000000000e85",
+    "name": "Guillaume Bussiere",
+    "country": "France",
+    "sex": "M",
+    "points": 500.7,
+    "result_text": "500.7"
+  },
+  {
+    "rank": 211,
+    "athlete_id": "589d7197-e298-4eab-ae0b-debab76c9469",
+    "name": "Davide Carrera",
+    "country": "Italy",
+    "sex": "M",
+    "points": 500.6,
+    "result_text": "500.6"
+  },
+  {
+    "rank": 212,
+    "athlete_id": "f13ed43b-1420-47a0-b903-39a31ec58d13",
+    "name": "Jimantoro Loekito",
+    "country": "Indonesia",
+    "sex": "M",
+    "points": 499.4,
+    "result_text": "499.4"
+  },
+  {
+    "rank": 213,
+    "athlete_id": "1a561022-6165-4305-8146-b4b2ba685ee6",
+    "name": "Ilya Nabatov",
+    "country": "International",
+    "sex": "M",
+    "points": 498.5,
+    "result_text": "498.5"
+  },
+  {
+    "rank": 214,
+    "athlete_id": "1a2d2ff0-864d-4cf6-aa76-88e8b2c8b34f",
+    "name": "Kohei Takahashi",
+    "country": "Japan",
+    "sex": "M",
+    "points": 497.5,
+    "result_text": "497.5"
+  },
+  {
+    "rank": 215,
+    "athlete_id": "10e9f401-55e5-4bef-88f8-1ab4830fe326",
+    "name": "Gennady Roshchin",
+    "country": "International",
+    "sex": "M",
+    "points": 495.9,
+    "result_text": "495.9"
+  },
+  {
+    "rank": 216,
+    "athlete_id": "427f3bde-035f-4d1b-aee0-d3f46f1169c1",
+    "name": "Jonathan Chong",
+    "country": "Singapore",
+    "sex": "M",
+    "points": 495.1,
+    "result_text": "495.1"
+  },
+  {
+    "rank": 217,
+    "athlete_id": "6ff2d8b1-abf6-495d-805b-75b84d873dcc",
+    "name": "Hyunmook Choi",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 495.0,
+    "result_text": "495"
+  },
+  {
+    "rank": 218,
+    "athlete_id": "1a2fb436-135c-41c3-a68a-9329abde40bb",
+    "name": "Stefano Spicca",
+    "country": "Italy",
+    "sex": "M",
+    "points": 495.0,
+    "result_text": "495"
+  },
+  {
+    "rank": 219,
+    "athlete_id": "00000000-0000-0000-0000-00000000074c",
+    "name": "Yury Shmatko",
+    "country": "Russian Federation",
+    "sex": "M",
+    "points": 494.7,
+    "result_text": "494.7"
+  },
+  {
+    "rank": 220,
+    "athlete_id": "f95925a8-4adb-43a0-b273-829e681a6386",
+    "name": "Hyung Kwan Jung",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 493.9,
+    "result_text": "493.9"
+  },
+  {
+    "rank": 221,
+    "athlete_id": "4d58b5dd-2b88-4da8-ac92-7a903923398d",
+    "name": "Kim Daehyun",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 493.7,
+    "result_text": "493.7"
+  },
+  {
+    "rank": 222,
+    "athlete_id": "59265f1f-a600-4f2b-b568-75555bd2730f",
+    "name": "Po Han Pai",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 492.9,
+    "result_text": "492.9"
+  },
+  {
+    "rank": 223,
+    "athlete_id": "ba8d258a-7fe6-4c50-8352-a3de5462a2c1",
+    "name": "Dave McGowan (MacGoo)",
+    "country": "Ireland",
+    "sex": "M",
+    "points": 492.3,
+    "result_text": "492.3"
+  },
+  {
+    "rank": 224,
+    "athlete_id": "ed16f2eb-9b14-45a8-b69f-270827413de5",
+    "name": "John Muñoz",
+    "country": "Colombia",
+    "sex": "M",
+    "points": 491.8,
+    "result_text": "491.8"
+  },
+  {
+    "rank": 225,
+    "athlete_id": "978f76eb-82b0-4969-9c41-788829cbd2ff",
+    "name": "Piotr Kubiak",
+    "country": "Poland",
+    "sex": "M",
+    "points": 491.2,
+    "result_text": "491.2"
+  },
+  {
+    "rank": 226,
+    "athlete_id": "9edf1569-c4d8-4669-be5d-566b39fdbb43",
+    "name": "Guillaume Bourdila",
+    "country": "France",
+    "sex": "M",
+    "points": 491.0,
+    "result_text": "491"
+  },
+  {
+    "rank": 227,
+    "athlete_id": "6dbc1f19-7c52-4318-961b-cdf7dfa6eba9",
+    "name": "Sylvain Desaulniers",
+    "country": "Canada",
+    "sex": "M",
+    "points": 490.8,
+    "result_text": "490.8"
+  },
+  {
+    "rank": 228,
+    "athlete_id": "a6cbeeba-8a82-497d-b0a4-a551a7a9e443",
+    "name": "Chen Taisheng",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 490.7,
+    "result_text": "490.7"
+  },
+  {
+    "rank": 229,
+    "athlete_id": "00000000-0000-0000-0000-000000000044",
+    "name": "Stig Åvall Severinsen",
+    "country": "Denmark",
+    "sex": "M",
+    "points": 490.5,
+    "result_text": "490.5"
+  },
+  {
+    "rank": 230,
+    "athlete_id": "098a7a5a-46df-4942-8059-5f6d2fa7ec49",
+    "name": "Aleix Segura Vendrell",
+    "country": "Spain",
+    "sex": "M",
+    "points": 490.4,
+    "result_text": "490.4"
+  },
+  {
+    "rank": 231,
+    "athlete_id": "e2d362ba-732b-4c82-b4b5-bf45154e89dc",
+    "name": "Mingchun Huang",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 490.0,
+    "result_text": "490"
+  },
+  {
+    "rank": 232,
+    "athlete_id": "4d3d4884-ddd3-4c3b-a652-c903bdfae259",
+    "name": "Viktor Korsun",
+    "country": "Australia",
+    "sex": "M",
+    "points": 488.6,
+    "result_text": "488.6"
+  },
+  {
+    "rank": 233,
+    "athlete_id": "c6873b0f-37d8-451b-90e2-254ae961267c",
+    "name": "Chihwan Hwang",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 488.0,
+    "result_text": "488"
+  },
+  {
+    "rank": 234,
+    "athlete_id": "af62b4e2-a048-4012-afcd-8e9c6026f27d",
+    "name": "Martin Zapanta",
+    "country": "Philippines",
+    "sex": "M",
+    "points": 487.6,
+    "result_text": "487.6"
+  },
+  {
+    "rank": 235,
+    "athlete_id": "00000000-0000-0000-0000-0000000005d1",
+    "name": "Dimitris Chatziaslan",
+    "country": "Greece",
+    "sex": "M",
+    "points": 486.1,
+    "result_text": "486.1"
+  },
+  {
+    "rank": 236,
+    "athlete_id": "b69920a0-532c-4d10-9461-f61b0c77c11e",
+    "name": "Richard Vanderbyl",
+    "country": "Canada",
+    "sex": "M",
+    "points": 485.8,
+    "result_text": "485.8"
+  },
+  {
+    "rank": 237,
+    "athlete_id": "00000000-0000-0000-0000-000000000609",
+    "name": "Alfredo Roen Martin",
+    "country": "Spain",
+    "sex": "M",
+    "points": 485.7,
+    "result_text": "485.7"
+  },
+  {
+    "rank": 238,
+    "athlete_id": "3a89def1-3dab-417f-8ebf-764e28a1b55f",
+    "name": "David Spreitz Elings",
+    "country": "Sweden",
+    "sex": "M",
+    "points": 484.4,
+    "result_text": "484.4"
+  },
+  {
+    "rank": 239,
+    "athlete_id": "c5a2f48e-51a6-48df-817e-c30c4d73f3db",
+    "name": "Dimitris Koumoulos",
+    "country": "Greece",
+    "sex": "M",
+    "points": 484.2,
+    "result_text": "484.2"
+  },
+  {
+    "rank": 240,
+    "athlete_id": "663cf3cb-0982-45e9-838c-590d03136d23",
+    "name": "Donghyeong Kim",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 484.2,
+    "result_text": "484.2"
+  },
+  {
+    "rank": 241,
+    "athlete_id": "aef276b4-5b48-4375-85b7-cd3550311290",
+    "name": "Flynn Thomas",
+    "country": "United Kingdom",
+    "sex": "M",
+    "points": 483.5,
+    "result_text": "483.5"
+  },
+  {
+    "rank": 242,
+    "athlete_id": "00000000-0000-0000-0000-000000000248",
+    "name": "Johan Thelaus",
+    "country": "Sweden",
+    "sex": "M",
+    "points": 482.3,
+    "result_text": "482.3"
+  },
+  {
+    "rank": 243,
+    "athlete_id": "30e64c41-80f2-4f54-847c-ffad943e19ad",
+    "name": "Chan Kim",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 481.7,
+    "result_text": "481.7"
+  },
+  {
+    "rank": 244,
+    "athlete_id": "22e9ca19-5d46-48ff-8906-ea925d1ca8a4",
+    "name": "Wolfram Neugebauer",
+    "country": "Germany",
+    "sex": "M",
+    "points": 481.1,
+    "result_text": "481.1"
+  },
+  {
+    "rank": 245,
+    "athlete_id": "6b30f6e9-e749-4efd-a175-7beec39d297e",
+    "name": "Yu-Wei Chen",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 481.0,
+    "result_text": "481"
+  },
+  {
+    "rank": 246,
+    "athlete_id": "9a67c48f-190c-4f51-b385-c4a5d3a38987",
+    "name": "Olavi Paananen",
+    "country": "Finland",
+    "sex": "M",
+    "points": 480.3,
+    "result_text": "480.3"
+  },
+  {
+    "rank": 247,
+    "athlete_id": "5620f431-20b2-4875-b879-921f18e68c4f",
+    "name": "Daniel Koval",
+    "country": "United States",
+    "sex": "M",
+    "points": 480.3,
+    "result_text": "480.3"
+  },
+  {
+    "rank": 248,
+    "athlete_id": "7dc39323-95c0-4054-9e3c-2da35148d878",
+    "name": "Timothy Oehmigen",
+    "country": "Germany",
+    "sex": "M",
+    "points": 480.3,
+    "result_text": "480.3"
+  },
+  {
+    "rank": 249,
+    "athlete_id": "21539de8-9429-4ee4-8336-9e37d5450622",
+    "name": "Sung Dae Kim",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 479.9,
+    "result_text": "479.9"
+  },
+  {
+    "rank": 250,
+    "athlete_id": "f582b96e-934a-4a28-96b9-3bf0711be2b5",
+    "name": "Antoine Logean",
+    "country": "Switzerland",
+    "sex": "M",
+    "points": 479.6,
+    "result_text": "479.6"
+  },
+  {
+    "rank": 251,
+    "athlete_id": "854fc65d-50c6-4620-ad0d-1ec9d6dc964b",
+    "name": "Carlos Coste",
+    "country": "Venezuela",
+    "sex": "M",
+    "points": 479.5,
+    "result_text": "479.5"
+  },
+  {
+    "rank": 252,
+    "athlete_id": "a5b0a378-cc56-43a7-aba8-8ec464fc3b30",
+    "name": "Taein Kim",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 479.4,
+    "result_text": "479.4"
+  },
+  {
+    "rank": 253,
+    "athlete_id": "dee9f9a0-4d32-4787-9b3c-f4539db8f576",
+    "name": "Daniel Hurst",
+    "country": "Australia",
+    "sex": "M",
+    "points": 479.3,
+    "result_text": "479.3"
+  },
+  {
+    "rank": 254,
+    "athlete_id": "8bf5e3b3-2b49-4bb7-9176-cc1735f80a98",
+    "name": "Mohd Azam Abdul Hamid",
+    "country": "Malaysia",
+    "sex": "M",
+    "points": 479.2,
+    "result_text": "479.2"
+  },
+  {
+    "rank": 255,
+    "athlete_id": "8d61ebf2-7c39-45cb-84b6-bfbca284bb2f",
+    "name": "Wojciech Musidłowski",
+    "country": "Poland",
+    "sex": "M",
+    "points": 478.9,
+    "result_text": "478.9"
+  },
+  {
+    "rank": 256,
+    "athlete_id": "00000000-0000-0000-0000-000000000b1b",
+    "name": "Pete Botman",
+    "country": "Netherlands",
+    "sex": "M",
+    "points": 478.6,
+    "result_text": "478.6"
+  },
+  {
+    "rank": 257,
+    "athlete_id": "00000000-0000-0000-0000-0000000001f0",
+    "name": "Robert Cetler",
+    "country": "Poland",
+    "sex": "M",
+    "points": 477.9,
+    "result_text": "477.9"
+  },
+  {
+    "rank": 258,
+    "athlete_id": "0e1f62c4-d11a-4ab7-9418-22b2f18eff2c",
+    "name": "Nazar Levytskyi",
+    "country": "Ukraine",
+    "sex": "M",
+    "points": 477.7,
+    "result_text": "477.7"
+  },
+  {
+    "rank": 259,
+    "athlete_id": "887ae42d-96c5-4d48-8c88-6c9ef29f473d",
+    "name": "Heechan Kim",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 476.8,
+    "result_text": "476.8"
+  },
+  {
+    "rank": 260,
+    "athlete_id": "744a836c-a9e0-4841-811d-ccd520e09458",
+    "name": "Daniel Kwok",
+    "country": "Singapore",
+    "sex": "M",
+    "points": 476.4,
+    "result_text": "476.4"
+  },
+  {
+    "rank": 261,
+    "athlete_id": "20dc0ba8-05d1-4ea9-b6a3-31de1323f3fd",
+    "name": "Mikhael Dominico",
+    "country": "Indonesia",
+    "sex": "M",
+    "points": 476.0,
+    "result_text": "476"
+  },
+  {
+    "rank": 262,
+    "athlete_id": "1543f519-0649-4efc-a3c6-f7051992fe86",
+    "name": "Privilean Vitalie",
+    "country": "Moldova, Republic of",
+    "sex": "M",
+    "points": 475.5,
+    "result_text": "475.5"
+  },
+  {
+    "rank": 263,
+    "athlete_id": "68629fb4-0f44-4eb7-a24c-14ece791fae4",
+    "name": "Mikhail Sychev",
+    "country": "Russian Federation",
+    "sex": "M",
+    "points": 475.3,
+    "result_text": "475.3"
+  },
+  {
+    "rank": 264,
+    "athlete_id": "bb6749f1-b197-4fa9-9fe4-0824ec4f1db3",
+    "name": "Manuel Ramirez",
+    "country": "Mexico",
+    "sex": "M",
+    "points": 474.6,
+    "result_text": "474.6"
+  },
+  {
+    "rank": 265,
+    "athlete_id": "a7cd50bf-0a62-4319-946b-c8c41556a704",
+    "name": "Jack Hamilton",
+    "country": "New Zealand",
+    "sex": "M",
+    "points": 474.0,
+    "result_text": "474"
+  },
+  {
+    "rank": 266,
+    "athlete_id": "b36ec3db-2eaf-42f3-a7a9-d2aba3d51a3d",
+    "name": "Matt Anderson",
+    "country": "Australia",
+    "sex": "M",
+    "points": 473.6,
+    "result_text": "473.6"
+  },
+  {
+    "rank": 267,
+    "athlete_id": "00000000-0000-0000-0000-000000000092",
+    "name": "Martin Stepanek",
+    "country": "Czech Republic",
+    "sex": "M",
+    "points": 473.1,
+    "result_text": "473.1"
+  },
+  {
+    "rank": 268,
+    "athlete_id": "710a30fc-9211-46d5-8b79-c9ff54ec0ba7",
+    "name": "Tristan Pennet",
+    "country": "Canada",
+    "sex": "M",
+    "points": 469.8,
+    "result_text": "469.8"
+  },
+  {
+    "rank": 269,
+    "athlete_id": "00000000-0000-0000-0000-0000000013f8",
+    "name": "Ioannis Kothonidis",
+    "country": "Greece",
+    "sex": "M",
+    "points": 469.7,
+    "result_text": "469.7"
+  },
+  {
+    "rank": 270,
+    "athlete_id": "6d3db96b-0541-4d57-8ab8-d3b0ae1d6549",
+    "name": "Volodymyr Isataiev",
+    "country": "Ukraine",
+    "sex": "M",
+    "points": 465.7,
+    "result_text": "465.7"
+  },
+  {
+    "rank": 271,
+    "athlete_id": "fde19022-26e2-4ac8-8820-12e3555a98ad",
+    "name": "Daniel Wright",
+    "country": "Canada",
+    "sex": "M",
+    "points": 464.8,
+    "result_text": "464.8"
+  },
+  {
+    "rank": 272,
+    "athlete_id": "e5b81614-077e-4c70-b48d-077124d2843d",
+    "name": "Michel Filinis2",
+    "country": "Brazil",
+    "sex": "M",
+    "points": 464.7,
+    "result_text": "464.7"
+  },
+  {
+    "rank": 273,
+    "athlete_id": "f2c8b544-c60d-4843-9d3b-307804261630",
+    "name": "Thomas Bouchard",
+    "country": "France",
+    "sex": "M",
+    "points": 464.6,
+    "result_text": "464.6"
+  },
+  {
+    "rank": 274,
+    "athlete_id": "00000000-0000-0000-0000-000000000f5d",
+    "name": "Nick Mevoli",
+    "country": "United States",
+    "sex": "M",
+    "points": 463.8,
+    "result_text": "463.8"
+  },
+  {
+    "rank": 275,
+    "athlete_id": "00000000-0000-0000-0000-000000000dd1",
+    "name": "Stéphane Tourreau",
+    "country": "France",
+    "sex": "M",
+    "points": 463.0,
+    "result_text": "463"
+  },
+  {
+    "rank": 276,
+    "athlete_id": "f3b0d150-8865-40a1-88d9-e5d2030c029d",
+    "name": "Shuichi Goto",
+    "country": "Japan",
+    "sex": "M",
+    "points": 461.9,
+    "result_text": "461.9"
+  },
+  {
+    "rank": 277,
+    "athlete_id": "00000000-0000-0000-0000-0000000005c9",
+    "name": "Kerian Hibbs",
+    "country": "New Zealand",
+    "sex": "M",
+    "points": 461.7,
+    "result_text": "461.7"
+  },
+  {
+    "rank": 278,
+    "athlete_id": "00000000-0000-0000-0000-00000000097a",
+    "name": "Antonijo Koderman",
+    "country": "Slovenia",
+    "sex": "M",
+    "points": 461.6,
+    "result_text": "461.6"
+  },
+  {
+    "rank": 279,
+    "athlete_id": "6a37d143-7e3e-4466-b70f-511073de46d8",
+    "name": "Günter Stolz",
+    "country": "Austria",
+    "sex": "M",
+    "points": 461.5,
+    "result_text": "461.5"
+  },
+  {
+    "rank": 280,
+    "athlete_id": "07a89e07-0624-4bd4-a324-9cba643f8fad",
+    "name": "Mingxin Zhang",
+    "country": "China",
+    "sex": "M",
+    "points": 460.9,
+    "result_text": "460.9"
+  },
+  {
+    "rank": 281,
+    "athlete_id": "dfe090f6-5048-48d7-9cae-8a0913a2c482",
+    "name": "Loizos Pafitis",
+    "country": "Cyprus",
+    "sex": "M",
+    "points": 460.5,
+    "result_text": "460.5"
+  },
+  {
+    "rank": 282,
+    "athlete_id": "00000000-0000-0000-0000-000000000d21",
+    "name": "Chris Crawshaw",
+    "country": "United Kingdom",
+    "sex": "M",
+    "points": 460.0,
+    "result_text": "460"
+  },
+  {
+    "rank": 283,
+    "athlete_id": "329404b7-bd30-448d-a5a0-11a4cd23eba3",
+    "name": "Hyunseok Na",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 459.1,
+    "result_text": "459.1"
+  },
+  {
+    "rank": 284,
+    "athlete_id": "aba65a8c-8556-49f2-8a77-aa15826c95bc",
+    "name": "Dmitri Melnikov",
+    "country": "Estonia",
+    "sex": "M",
+    "points": 459.1,
+    "result_text": "459.1"
+  },
+  {
+    "rank": 285,
+    "athlete_id": "c0151e17-bb5a-4b9d-807b-62331b6759cf",
+    "name": "Adam Drzazga",
+    "country": "United Kingdom",
+    "sex": "M",
+    "points": 458.9,
+    "result_text": "458.9"
+  },
+  {
+    "rank": 286,
+    "athlete_id": "4fe57dd5-4c42-45dc-b3ee-8497f090263f",
+    "name": "Mathew Grech",
+    "country": "Australia",
+    "sex": "M",
+    "points": 458.8,
+    "result_text": "458.8"
+  },
+  {
+    "rank": 287,
+    "athlete_id": "f9775887-4c15-4a61-a33e-dfc37c4f6525",
+    "name": "Rolando Salgado",
+    "country": "Cuba",
+    "sex": "M",
+    "points": 457.7,
+    "result_text": "457.7"
+  },
+  {
+    "rank": 288,
+    "athlete_id": "d210a7a9-8782-4383-833e-aa9a2728dc55",
+    "name": "Giorgos Sakkas",
+    "country": "Greece",
+    "sex": "M",
+    "points": 454.9,
+    "result_text": "454.9"
+  },
+  {
+    "rank": 289,
+    "athlete_id": "97042ce9-d231-42d4-9157-e6935f79195f",
+    "name": "Mahmoud Nahas",
+    "country": "Egypt",
+    "sex": "M",
+    "points": 454.3,
+    "result_text": "454.3"
+  },
+  {
+    "rank": 290,
+    "athlete_id": "80b7e7e4-23de-44bf-8fca-4bd628c4513c",
+    "name": "Laurence Paik",
+    "country": "United States",
+    "sex": "M",
+    "points": 453.7,
+    "result_text": "453.7"
+  },
+  {
+    "rank": 291,
+    "athlete_id": "70f4cc50-c428-4d97-ba97-368d8a9e5a17",
+    "name": "Yuil Song",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 453.7,
+    "result_text": "453.7"
+  },
+  {
+    "rank": 292,
+    "athlete_id": "f84cc9fd-cb4a-4e3e-9426-0b6c8b71c30b",
+    "name": "Ken Gerodias",
+    "country": "Philippines",
+    "sex": "M",
+    "points": 452.4,
+    "result_text": "452.4"
+  },
+  {
+    "rank": 293,
+    "athlete_id": "803ad98c-f413-4884-8914-7cdc3ced5b13",
+    "name": "Bohwan Cha",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 451.6,
+    "result_text": "451.6"
+  },
+  {
+    "rank": 294,
+    "athlete_id": "7de84c3a-2957-488a-bfa1-d1bd764ee7e2",
+    "name": "Hans Hernández M",
+    "country": "Costa Rica",
+    "sex": "M",
+    "points": 451.4,
+    "result_text": "451.4"
+  },
+  {
+    "rank": 295,
+    "athlete_id": "00000000-0000-0000-0000-0000000000d7",
+    "name": "Henning Larsen",
+    "country": "Denmark",
+    "sex": "M",
+    "points": 451.3,
+    "result_text": "451.3"
+  },
+  {
+    "rank": 296,
+    "athlete_id": "4c4ca63c-2612-454e-a686-3b141e3247ef",
+    "name": "Ariston Ignatius Inot",
+    "country": "Philippines",
+    "sex": "M",
+    "points": 451.1,
+    "result_text": "451.1"
+  },
+  {
+    "rank": 297,
+    "athlete_id": "b5f94dbe-aa76-40b5-8eb5-a47d659581ae",
+    "name": "Po-Yen Lee",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 450.6,
+    "result_text": "450.6"
+  },
+  {
+    "rank": 298,
+    "athlete_id": "5cefa3f1-626a-401c-a621-89e38ec7e9c0",
+    "name": "Chris Marshall",
+    "country": "New Zealand",
+    "sex": "M",
+    "points": 450.5,
+    "result_text": "450.5"
+  },
+  {
+    "rank": 299,
+    "athlete_id": "470d8077-3cb4-40ea-a279-cda43eb0006e",
+    "name": "Ramar Acuna",
+    "country": "Philippines",
+    "sex": "M",
+    "points": 450.4,
+    "result_text": "450.4"
+  },
+  {
+    "rank": 300,
+    "athlete_id": "a1f957b8-6bb9-428c-b7bc-c014314acd1c",
+    "name": "Valdemar Karlsson",
+    "country": "Sweden",
+    "sex": "M",
+    "points": 450.1,
+    "result_text": "450.1"
+  },
+  {
+    "rank": 301,
+    "athlete_id": "72c75bc0-f779-442f-b9ec-12f40ac47377",
+    "name": "Maximilian Della Libera",
+    "country": "Luxembourg",
+    "sex": "M",
+    "points": 449.8,
+    "result_text": "449.8"
+  },
+  {
+    "rank": 302,
+    "athlete_id": "cd9e605c-d32f-41d8-bfbb-03b416a0ba57",
+    "name": "Nathan Watts",
+    "country": "Australia",
+    "sex": "M",
+    "points": 449.7,
+    "result_text": "449.7"
+  },
+  {
+    "rank": 303,
+    "athlete_id": "f3424ba0-a692-4c75-afad-c70076395e91",
+    "name": "Alasdair Boyd",
+    "country": "United States",
+    "sex": "M",
+    "points": 449.7,
+    "result_text": "449.7"
+  },
+  {
+    "rank": 304,
+    "athlete_id": "de1e5143-0776-4d83-aa5e-334470e665b3",
+    "name": "Andras Sopronyi",
+    "country": "Hungary",
+    "sex": "M",
+    "points": 449.7,
+    "result_text": "449.7"
+  },
+  {
+    "rank": 305,
+    "athlete_id": "8c201d50-9828-49e6-b22c-1345260aa273",
+    "name": "Ibrahim Al Sulaitni",
+    "country": "Oman",
+    "sex": "M",
+    "points": 449.4,
+    "result_text": "449.4"
+  },
+  {
+    "rank": 306,
+    "athlete_id": "00000000-0000-0000-0000-000000000c77",
+    "name": "Johan Hägg",
+    "country": "Sweden",
+    "sex": "M",
+    "points": 449.1,
+    "result_text": "449.1"
+  },
+  {
+    "rank": 307,
+    "athlete_id": "a27429d3-8649-42fc-9add-31ea07933e6a",
+    "name": "Kurt Randolph",
+    "country": "United States",
+    "sex": "M",
+    "points": 448.2,
+    "result_text": "448.2"
+  },
+  {
+    "rank": 308,
+    "athlete_id": "da450997-4896-471b-9911-657d48c1a6a5",
+    "name": "Stanley Sradaputta",
+    "country": "Indonesia",
+    "sex": "M",
+    "points": 447.8,
+    "result_text": "447.8"
+  },
+  {
+    "rank": 309,
+    "athlete_id": "5e78b0d5-d471-44ed-84e3-caa689c3e413",
+    "name": "Michael Nix",
+    "country": "Austria",
+    "sex": "M",
+    "points": 447.2,
+    "result_text": "447.2"
+  },
+  {
+    "rank": 310,
+    "athlete_id": "f2e70a37-34d1-4417-967a-197d5a8301f8",
+    "name": "Karol Karcz",
+    "country": "Poland",
+    "sex": "M",
+    "points": 446.9,
+    "result_text": "446.9"
+  },
+  {
+    "rank": 311,
+    "athlete_id": "ca7a2d6a-8d19-4665-85cd-f990e1ad08f5",
+    "name": "Stavros Kastrinakis",
+    "country": "Greece",
+    "sex": "M",
+    "points": 446.6,
+    "result_text": "446.6"
+  },
+  {
+    "rank": 312,
+    "athlete_id": "00000000-0000-0000-0000-0000000010d0",
+    "name": "Jack Hatfield",
+    "country": "Australia",
+    "sex": "M",
+    "points": 446.6,
+    "result_text": "446.6"
+  },
+  {
+    "rank": 313,
+    "athlete_id": "00000000-0000-0000-0000-000000000372",
+    "name": "Jonas Krahn",
+    "country": "Germany",
+    "sex": "M",
+    "points": 445.5,
+    "result_text": "445.5"
+  },
+  {
+    "rank": 314,
+    "athlete_id": "15253c49-e7ff-4bea-9144-bb8734802584",
+    "name": "Wang Peng Hao",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 445.5,
+    "result_text": "445.5"
+  },
+  {
+    "rank": 315,
+    "athlete_id": "5a744e4e-d196-4c72-9f79-a1174e9f55df",
+    "name": "Lauri Aalto",
+    "country": "Finland",
+    "sex": "M",
+    "points": 445.2,
+    "result_text": "445.2"
+  },
+  {
+    "rank": 316,
+    "athlete_id": "3f3f6cbf-bdfe-47fb-922e-74f169c7e514",
+    "name": "Thibault Emile",
+    "country": "France",
+    "sex": "M",
+    "points": 444.7,
+    "result_text": "444.7"
+  },
+  {
+    "rank": 317,
+    "athlete_id": "00000000-0000-0000-0000-000000000a53",
+    "name": "Pavel Soukup",
+    "country": "Czech Republic",
+    "sex": "M",
+    "points": 444.4,
+    "result_text": "444.4"
+  },
+  {
+    "rank": 318,
+    "athlete_id": "6517b9f1-8c92-4329-8a0d-f232758ea5d0",
+    "name": "Yeonbin Jeong",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 444.2,
+    "result_text": "444.2"
+  },
+  {
+    "rank": 319,
+    "athlete_id": "df796818-c154-46ec-af3b-e25cafc16d94",
+    "name": "Florian Burghardt",
+    "country": "Switzerland",
+    "sex": "M",
+    "points": 443.9,
+    "result_text": "443.9"
+  },
+  {
+    "rank": 320,
+    "athlete_id": "2bddde6f-713c-4238-a185-a8d55cfa20df",
+    "name": "Keith Ashley Ocampo",
+    "country": "Philippines",
+    "sex": "M",
+    "points": 443.5,
+    "result_text": "443.5"
+  },
+  {
+    "rank": 321,
+    "athlete_id": "86d56f01-913e-4312-be9e-119ff82f7738",
+    "name": "Christian Ernest",
+    "country": "Sweden",
+    "sex": "M",
+    "points": 443.4,
+    "result_text": "443.4"
+  },
+  {
+    "rank": 322,
+    "athlete_id": "8c012c26-b1a8-47de-a992-51933e0d68d1",
+    "name": "Yongjoo Kim",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 443.1,
+    "result_text": "443.1"
+  },
+  {
+    "rank": 323,
+    "athlete_id": "441d61d8-1d9d-4cbe-af58-87821cb2c94f",
+    "name": "Jonathan Sunnex",
+    "country": "New Zealand",
+    "sex": "M",
+    "points": 442.9,
+    "result_text": "442.9"
+  },
+  {
+    "rank": 324,
+    "athlete_id": "00000000-0000-0000-0000-000000000a6d",
+    "name": "Frederic Sessa",
+    "country": "France",
+    "sex": "M",
+    "points": 442.4,
+    "result_text": "442.4"
+  },
+  {
+    "rank": 325,
+    "athlete_id": "002dcfd4-469b-47dc-baf7-7e897de67ae5",
+    "name": "Daniel Arias Cordova",
+    "country": "Chile",
+    "sex": "M",
+    "points": 441.5,
+    "result_text": "441.5"
+  },
+  {
+    "rank": 326,
+    "athlete_id": "00000000-0000-0000-0000-0000000008ec",
+    "name": "Božidar Petani",
+    "country": "Croatia",
+    "sex": "M",
+    "points": 440.8,
+    "result_text": "440.8"
+  },
+  {
+    "rank": 327,
+    "athlete_id": "4eb7e61c-42ba-4e0a-9211-3e0b6b3d9aca",
+    "name": "Jean-Pol Francois",
+    "country": "Belgium",
+    "sex": "M",
+    "points": 439.7,
+    "result_text": "439.7"
+  },
+  {
+    "rank": 328,
+    "athlete_id": "b2745daf-4720-4cf3-8b2b-7f5f53bc49f7",
+    "name": "Mathieu Maraio",
+    "country": "France",
+    "sex": "M",
+    "points": 439.4,
+    "result_text": "439.4"
+  },
+  {
+    "rank": 329,
+    "athlete_id": "00000000-0000-0000-0000-000000000a74",
+    "name": "Pascal Huron",
+    "country": "France",
+    "sex": "M",
+    "points": 439.3,
+    "result_text": "439.3"
+  },
+  {
+    "rank": 330,
+    "athlete_id": "47ea9e4d-5263-4a1e-803f-fdd93709d9ab",
+    "name": "Christian Brauchli",
+    "country": "Switzerland",
+    "sex": "M",
+    "points": 439.0,
+    "result_text": "439"
+  },
+  {
+    "rank": 331,
+    "athlete_id": "53eceb68-76cc-46b5-b6f9-691f5ea750b6",
+    "name": "Jay Ku",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 439.0,
+    "result_text": "439"
+  },
+  {
+    "rank": 332,
+    "athlete_id": "16763b2f-19a7-4388-8999-3c4409db3ee5",
+    "name": "Berger Pascal",
+    "country": "Switzerland",
+    "sex": "M",
+    "points": 437.6,
+    "result_text": "437.6"
+  },
+  {
+    "rank": 333,
+    "athlete_id": "00000000-0000-0000-0000-000000000389",
+    "name": "Jan Honysch",
+    "country": "Czech Republic",
+    "sex": "M",
+    "points": 437.2,
+    "result_text": "437.2"
+  },
+  {
+    "rank": 334,
+    "athlete_id": "5fc032b9-31cb-40a7-b78d-8eacb9d55b84",
+    "name": "Jonérik Ekström",
+    "country": "Finland",
+    "sex": "M",
+    "points": 435.9,
+    "result_text": "435.9"
+  },
+  {
+    "rank": 335,
+    "athlete_id": "775f8871-ab48-4faa-9476-02482a87491b",
+    "name": "Jose Jose",
+    "country": "Philippines",
+    "sex": "M",
+    "points": 435.7,
+    "result_text": "435.7"
+  },
+  {
+    "rank": 336,
+    "athlete_id": "77d45def-9ff4-4412-97e8-501c8e9d6a64",
+    "name": "Adrian Gjurasic",
+    "country": "United States",
+    "sex": "M",
+    "points": 435.7,
+    "result_text": "435.7"
+  },
+  {
+    "rank": 337,
+    "athlete_id": "00000000-0000-0000-0000-0000000005bb",
+    "name": "Per Westin",
+    "country": "Sweden",
+    "sex": "M",
+    "points": 433.6,
+    "result_text": "433.6"
+  },
+  {
+    "rank": 338,
+    "athlete_id": "8d9c88ab-c5f9-4e76-a6aa-074c9d194623",
+    "name": "Gert Leroy",
+    "country": "Belgium",
+    "sex": "M",
+    "points": 433.2,
+    "result_text": "433.2"
+  },
+  {
+    "rank": 339,
+    "athlete_id": "906de454-0bf5-4b23-b09a-4e25efe574b5",
+    "name": "Atsushi Nakano",
+    "country": "Japan",
+    "sex": "M",
+    "points": 432.7,
+    "result_text": "432.7"
+  },
+  {
+    "rank": 340,
+    "athlete_id": "c415f443-0e46-43f3-bcb1-b42c28fd725a",
+    "name": "Shaojun Chen",
+    "country": "China",
+    "sex": "M",
+    "points": 431.7,
+    "result_text": "431.7"
+  },
+  {
+    "rank": 341,
+    "athlete_id": "f7c48612-c3fe-444a-ae38-42f9f6e071e2",
+    "name": "Jean Turquois",
+    "country": "France",
+    "sex": "M",
+    "points": 431.2,
+    "result_text": "431.2"
+  },
+  {
+    "rank": 342,
+    "athlete_id": "bda58ffc-2e59-4231-aa1b-fcf7f81cef86",
+    "name": "Abdelatif Alouach",
+    "country": "France",
+    "sex": "M",
+    "points": 431.0,
+    "result_text": "431"
+  },
+  {
+    "rank": 343,
+    "athlete_id": "15c787e1-32f8-47a3-a369-dd6a23a99899",
+    "name": "Roman Khromov",
+    "country": "Israel",
+    "sex": "M",
+    "points": 430.9,
+    "result_text": "430.9"
+  },
+  {
+    "rank": 345,
+    "athlete_id": "7f494d70-b0a3-4f5d-b628-f0bb6c2b81ef",
+    "name": "Seong-Yeol Nam",
+    "country": "Republic of Korea",
+    "sex": "M",
+    "points": 430.5,
+    "result_text": "430.5"
+  },
+  {
+    "rank": 346,
+    "athlete_id": "99421b3c-522f-4aa9-8e7c-e219ea218a0d",
+    "name": "Brennan Hatton",
+    "country": "Australia",
+    "sex": "M",
+    "points": 430.1,
+    "result_text": "430.1"
+  },
+  {
+    "rank": 347,
+    "athlete_id": "868c819d-e460-4954-9544-5c67677d81b1",
+    "name": "Chris Burtwell",
+    "country": "United Kingdom",
+    "sex": "M",
+    "points": 429.9,
+    "result_text": "429.9"
+  },
+  {
+    "rank": 348,
+    "athlete_id": "00000000-0000-0000-0000-00000000005e",
+    "name": "Manolis Giankos",
+    "country": "Greece",
+    "sex": "M",
+    "points": 429.5,
+    "result_text": "429.5"
+  },
+  {
+    "rank": 349,
+    "athlete_id": "02bd1772-bc0b-4dcd-9d3a-b092f3817b69",
+    "name": "Brandon Hendrickson",
+    "country": "United States",
+    "sex": "M",
+    "points": 429.0,
+    "result_text": "429"
+  },
+  {
+    "rank": 350,
+    "athlete_id": "4efcee9f-3805-4f64-9d7f-4e60d5af3ced",
+    "name": "Yueh Shiang Hsu",
+    "country": "Chinese Taipei",
+    "sex": "M",
+    "points": 428.7,
+    "result_text": "428.7"
+  }
+]

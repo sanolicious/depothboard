@@ -1,0 +1,56 @@
+{
+  "started_at": "2026-11-26T10:02:13Z",
+  "aida": {
+    "ranking_slices": {
+      "OVERALL-M-alltime": 349,
+      "OVERALL-M-2025": 400,
+      "OVERALL-M-2026": 400,
+      "STA-M-alltime": 309,
+      "DYN-M-alltime": 400,
+      "DYNB-M-alltime": 400,
+      "DNF-M-alltime": 400,
+      "CWT-M-alltime": 139,
+      "CWTB-M-alltime": 400,
+      "CNF-M-alltime": 259,
+      "FIM-M-alltime": 119,
+      "OVERALL-F-alltime": 400,
+      "OVERALL-F-2025": 400,
+      "OVERALL-F-2026": 400,
+      "STA-F-alltime": 400,
+      "DYN-F-alltime": 189,
+      "DYNB-F-alltime": 400,
+      "DNF-F-alltime": 400,
+      "CWT-F-alltime": 400,
+      "CWTB-F-alltime": 400,
+      "CNF-F-alltime": 400,
+      "FIM-F-alltime": 400
+    },
+    "unique_athletes_from_rankings": 2792,
+    "history_athletes": 150,
+    "history_results": 9636,
+    "events_discovered": 3156,
+    "note": "Partial crawl: 40 pages/slice (~10 athletes/page). Full AIDA overall≈1200 pages/gender."
+  },
+  "cmas": {
+    "competitions_total_api": 27,
+    "freediving_competitions": 13,
+    "athletes": 480,
+    "attempts": 1948,
+    "note": "Full CMAS Microplus freediving coverage from API; older PDF-only events not ingested."
+  },
+  "fr": {},
+  "totals": {
+    "persons": 3058,
+    "performances": 11584,
+    "events": 3169,
+    "merge_conflicts": 0,
+    "http": {
+      "gets": 878,
+      "posts": 0,
+      "cache_hits": 271,
+      "errors": 0,
+      "bytes": 63514635
+    }
+  },
+  "finished_at": "2026-11-26T10:27:30Z"
+}

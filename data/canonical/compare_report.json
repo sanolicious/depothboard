@@ -1,0 +1,2509 @@
+{
+  "generated_at": "2026-11-26T10:27:30Z",
+  "our_totals": {
+    "persons": 3058,
+    "performances": 11584,
+    "events": 3169,
+    "merge_conflicts": 0,
+    "http": {
+      "gets": 878,
+      "posts": 0,
+      "cache_hits": 271,
+      "errors": 0,
+      "bytes": 63514635
+    }
+  },
+  "aida_coverage": {
+    "ranking_slices": {
+      "OVERALL-M-alltime": 349,
+      "OVERALL-M-2025": 400,
+      "OVERALL-M-2026": 400,
+      "STA-M-alltime": 309,
+      "DYN-M-alltime": 400,
+      "DYNB-M-alltime": 400,
+      "DNF-M-alltime": 400,
+      "CWT-M-alltime": 139,
+      "CWTB-M-alltime": 400,
+      "CNF-M-alltime": 259,
+      "FIM-M-alltime": 119,
+      "OVERALL-F-alltime": 400,
+      "OVERALL-F-2025": 400,
+      "OVERALL-F-2026": 400,
+      "STA-F-alltime": 400,
+      "DYN-F-alltime": 189,
+      "DYNB-F-alltime": 400,
+      "DNF-F-alltime": 400,
+      "CWT-F-alltime": 400,
+      "CWTB-F-alltime": 400,
+      "CNF-F-alltime": 400,
+      "FIM-F-alltime": 400
+    },
+    "unique_athletes_from_rankings": 2792,
+    "history_athletes": 150,
+    "history_results": 9636,
+    "events_discovered": 3156,
+    "note": "Partial crawl: 40 pages/slice (~10 athletes/page). Full AIDA overall≈1200 pages/gender."
+  },
+  "cmas_coverage": {
+    "competitions_total_api": 27,
+    "freediving_competitions": 13,
+    "athletes": 480,
+    "attempts": 1948,
+    "note": "Full CMAS Microplus freediving coverage from API; older PDF-only events not ingested."
+  },
+  "fr_site_totals": {
+    "men": 14387,
+    "women": 7562,
+    "total": 21949
+  },
+  "coverage_vs_fr_athletes_pct": 13.93,
+  "note_coverage": "Partial AIDA (≤40 pages/slice + history top 150) + 100% CMAS Microplus freediving API. Full AIDA overall ≈1200 pages/gender.",
+  "comparison": {
+    "aida_overall_vs_fr_men": {
+      "label": "AIDA-overall-M vs FR-M",
+      "matched": 41,
+      "missing_in_ours": [
+        {
+          "name": "Guillaume Bourdila",
+          "fr_rank": 6,
+          "fr_points": 835.0
+        },
+        {
+          "name": "Piotr Kubiak",
+          "fr_rank": 19,
+          "fr_points": 763.15
+        },
+        {
+          "name": "Vivien Richard",
+          "fr_rank": 20,
+          "fr_points": 762.06
+        },
+        {
+          "name": "Ioannis Kothonidis",
+          "fr_rank": 21,
+          "fr_points": 761.7
+        },
+        {
+          "name": "Boris Milosic",
+          "fr_rank": 25,
+          "fr_points": 750.6
+        },
+        {
+          "name": "Sebastian Lira",
+          "fr_rank": 33,
+          "fr_points": 727.6
+        },
+        {
+          "name": "Walid Boudhiaf",
+          "fr_rank": 37,
+          "fr_points": 720.65
+        },
+        {
+          "name": "Abdelatif Alouach",
+          "fr_rank": 41,
+          "fr_points": 712.96
+        },
+        {
+          "name": "Emmanouil Giankos",
+          "fr_rank": 44,
+          "fr_points": 711.0
+        }
+      ],
+      "missing_in_fr": [
+        {
+          "name": "Woongjin Kim",
+          "our_rank": 35,
+          "our_points": 687.4
+        },
+        {
+          "name": "Andrey Matveenko",
+          "our_rank": 36,
+          "our_points": 686.7
+        },
+        {
+          "name": "Tommi Pasanen",
+          "our_rank": 37,
+          "our_points": 685.7
+        },
+        {
+          "name": "David Mulheron",
+          "our_rank": 38,
+          "our_points": 685.6
+        },
+        {
+          "name": "Mohamed Siddiq",
+          "our_rank": 40,
+          "our_points": 670.6
+        },
+        {
+          "name": "Marcell Bago",
+          "our_rank": 41,
+          "our_points": 669.4
+        },
+        {
+          "name": "Matthew Armstrong",
+          "our_rank": 42,
+          "our_points": 668.4
+        },
+        {
+          "name": "Jens Stoetzner",
+          "our_rank": 43,
+          "our_points": 664.0
+        },
+        {
+          "name": "Mohamed Aljneibi",
+          "our_rank": 44,
+          "our_points": 663.5
+        },
+        {
+          "name": "Antony Judge",
+          "our_rank": 46,
+          "our_points": 662.1
+        },
+        {
+          "name": "Aliaksandr Zaikin",
+          "our_rank": 48,
+          "our_points": 653.6
+        },
+        {
+          "name": "Pepe Salcedo",
+          "our_rank": 49,
+          "our_points": 652.7
+        },
+        {
+          "name": "Yifan(Ivan) Zhang",
+          "our_rank": 50,
+          "our_points": 651.8
+        }
+      ],
+      "point_mismatches": [
+        {
+          "name": "Samo Jeranko",
+          "our_rank": 96,
+          "fr_rank": 8,
+          "our_points": 595.1,
+          "fr_points": 830.4,
+          "delta": -235.3
+        },
+        {
+          "name": "Christos Karelos",
+          "our_rank": 86,
+          "fr_rank": 16,
+          "our_points": 599.2,
+          "fr_points": 779.45,
+          "delta": -180.25
+        },
+        {
+          "name": "Goran Colak",
+          "our_rank": 47,
+          "fr_rank": 9,
+          "our_points": 654.0,
+          "fr_points": 825.0,
+          "delta": -171.0
+        },
+        {
+          "name": "Alexey Molchanov",
+          "our_rank": 6,
+          "fr_rank": 2,
+          "our_points": 827.1,
+          "fr_points": 980.35,
+          "delta": -153.25
+        },
+        {
+          "name": "Vincent Mathieu",
+          "our_rank": 100,
+          "fr_rank": 28,
+          "our_points": 590.6,
+          "fr_points": 740.6,
+          "delta": -150.0
+        },
+        {
+          "name": "Mateusz Malina",
+          "our_rank": 3,
+          "fr_rank": 1,
+          "our_points": 901.0,
+          "fr_points": 1022.25,
+          "delta": -121.25
+        },
+        {
+          "name": "Martin Zajac",
+          "our_rank": 72,
+          "fr_rank": 38,
+          "our_points": 618.0,
+          "fr_points": 718.0,
+          "delta": -100.0
+        },
+        {
+          "name": "Kai Xiao",
+          "our_rank": 25,
+          "fr_rank": 10,
+          "our_points": 717.9,
+          "fr_points": 813.9,
+          "delta": -96.0
+        },
+        {
+          "name": "Christian Langer",
+          "our_rank": 45,
+          "fr_rank": 39,
+          "our_points": 663.3,
+          "fr_points": 717.3,
+          "delta": -54.0
+        },
+        {
+          "name": "Eugen Goettling",
+          "our_rank": 19,
+          "fr_rank": 15,
+          "our_points": 737.7,
+          "fr_points": 790.7,
+          "delta": -53.0
+        },
+        {
+          "name": "Michael Sadowicz",
+          "our_rank": 39,
+          "fr_rank": 45,
+          "our_points": 681.7,
+          "fr_points": 708.95,
+          "delta": -27.25
+        },
+        {
+          "name": "Jakob Hansen",
+          "our_rank": 27,
+          "fr_rank": 31,
+          "our_points": 714.0,
+          "fr_points": 739.25,
+          "delta": -25.25
+        },
+        {
+          "name": "Daniel Losinski",
+          "our_rank": 34,
+          "fr_rank": 42,
+          "our_points": 690.8,
+          "fr_points": 712.4,
+          "delta": -21.6
+        },
+        {
+          "name": "Francisco Quesada",
+          "our_rank": 4,
+          "fr_rank": 5,
+          "our_points": 839.1,
+          "fr_points": 856.1,
+          "delta": -17.0
+        },
+        {
+          "name": "Luxiao Huang",
+          "our_rank": 28,
+          "fr_rank": 50,
+          "our_points": 711.1,
+          "fr_points": 701.1,
+          "delta": 10.0
+        },
+        {
+          "name": "Dean Chaouche",
+          "our_rank": 10,
+          "fr_rank": 13,
+          "our_points": 782.1,
+          "fr_points": 792.0,
+          "delta": -9.9
+        },
+        {
+          "name": "Hua Yang Huang",
+          "our_rank": 7,
+          "fr_rank": 11,
+          "our_points": 820.7,
+          "fr_points": 811.7,
+          "delta": 9.0
+        },
+        {
+          "name": "Martin Ruman",
+          "our_rank": 17,
+          "fr_rank": 26,
+          "our_points": 743.5,
+          "fr_points": 748.5,
+          "delta": -5.0
+        },
+        {
+          "name": "Vootipong Limpanitivat",
+          "our_rank": 31,
+          "fr_rank": 46,
+          "our_points": 703.8,
+          "fr_points": 708.8,
+          "delta": -5.0
+        },
+        {
+          "name": "Ming (William Joy) Jin",
+          "our_rank": 8,
+          "fr_rank": 12,
+          "our_points": 800.6,
+          "fr_points": 796.6,
+          "delta": 4.0
+        },
+        {
+          "name": "Jan Knutzen",
+          "our_rank": 12,
+          "fr_rank": 18,
+          "our_points": 763.1,
+          "fr_points": 766.6,
+          "delta": -3.5
+        },
+        {
+          "name": "Alejandro Lemus",
+          "our_rank": 20,
+          "fr_rank": 30,
+          "our_points": 736.9,
+          "fr_points": 739.9,
+          "delta": -3.0
+        },
+        {
+          "name": "Gimun Kwak",
+          "our_rank": 29,
+          "fr_rank": 43,
+          "our_points": 709.6,
+          "fr_points": 711.35,
+          "delta": -1.75
+        }
+      ],
+      "position_mismatches": [
+        {
+          "name": "Alexey Molchanov",
+          "our_rank": 6,
+          "fr_rank": 2,
+          "our_points": 827.1,
+          "fr_points": 980.35,
+          "delta": -153.25
+        },
+        {
+          "name": "Samo Jeranko",
+          "our_rank": 96,
+          "fr_rank": 8,
+          "our_points": 595.1,
+          "fr_points": 830.4,
+          "delta": -235.3
+        },
+        {
+          "name": "Goran Colak",
+          "our_rank": 47,
+          "fr_rank": 9,
+          "our_points": 654.0,
+          "fr_points": 825.0,
+          "delta": -171.0
+        },
+        {
+          "name": "Kai Xiao",
+          "our_rank": 25,
+          "fr_rank": 10,
+          "our_points": 717.9,
+          "fr_points": 813.9,
+          "delta": -96.0
+        },
+        {
+          "name": "Hua Yang Huang",
+          "our_rank": 7,
+          "fr_rank": 11,
+          "our_points": 820.7,
+          "fr_points": 811.7,
+          "delta": 9.0
+        },
+        {
+          "name": "Ming (William Joy) Jin",
+          "our_rank": 8,
+          "fr_rank": 12,
+          "our_points": 800.6,
+          "fr_points": 796.6,
+          "delta": 4.0
+        },
+        {
+          "name": "Dean Chaouche",
+          "our_rank": 10,
+          "fr_rank": 13,
+          "our_points": 782.1,
+          "fr_points": 792.0,
+          "delta": -9.9
+        },
+        {
+          "name": "Philipp Heinzelmann",
+          "our_rank": 9,
+          "fr_rank": 14
+        },
+        {
+          "name": "Eugen Goettling",
+          "our_rank": 19,
+          "fr_rank": 15,
+          "our_points": 737.7,
+          "fr_points": 790.7,
+          "delta": -53.0
+        },
+        {
+          "name": "Christos Karelos",
+          "our_rank": 86,
+          "fr_rank": 16,
+          "our_points": 599.2,
+          "fr_points": 779.45,
+          "delta": -180.25
+        },
+        {
+          "name": "Mitch Ayres",
+          "our_rank": 11,
+          "fr_rank": 17
+        },
+        {
+          "name": "Jan Knutzen",
+          "our_rank": 12,
+          "fr_rank": 18,
+          "our_points": 763.1,
+          "fr_points": 766.6,
+          "delta": -3.5
+        },
+        {
+          "name": "Yi(Zy) Zhang",
+          "our_rank": 13,
+          "fr_rank": 22
+        },
+        {
+          "name": "Roberto Guzman",
+          "our_rank": 14,
+          "fr_rank": 23
+        },
+        {
+          "name": "William Trubridge",
+          "our_rank": 15,
+          "fr_rank": 24
+        },
+        {
+          "name": "Martin Ruman",
+          "our_rank": 17,
+          "fr_rank": 26,
+          "our_points": 743.5,
+          "fr_points": 748.5,
+          "delta": -5.0
+        },
+        {
+          "name": "Kurt Chambers",
+          "our_rank": 16,
+          "fr_rank": 27
+        },
+        {
+          "name": "Vincent Mathieu",
+          "our_rank": 100,
+          "fr_rank": 28,
+          "our_points": 590.6,
+          "fr_points": 740.6,
+          "delta": -150.0
+        },
+        {
+          "name": "Pablo Marti",
+          "our_rank": 18,
+          "fr_rank": 29
+        },
+        {
+          "name": "Alejandro Lemus",
+          "our_rank": 20,
+          "fr_rank": 30,
+          "our_points": 736.9,
+          "fr_points": 739.9,
+          "delta": -3.0
+        },
+        {
+          "name": "Jakob Hansen",
+          "our_rank": 27,
+          "fr_rank": 31,
+          "our_points": 714.0,
+          "fr_points": 739.25,
+          "delta": -25.25
+        },
+        {
+          "name": "Yixian Zhang",
+          "our_rank": 21,
+          "fr_rank": 32
+        },
+        {
+          "name": "Oleksandr Bubenchykov",
+          "our_rank": 22,
+          "fr_rank": 34
+        },
+        {
+          "name": "William Winram",
+          "our_rank": 23,
+          "fr_rank": 35
+        },
+        {
+          "name": "Ziyu Rocky Liu",
+          "our_rank": 24,
+          "fr_rank": 36
+        }
+      ],
+      "matched_sample": [
+        {
+          "name": "Mateusz Malina",
+          "our_rank": 3,
+          "fr_rank": 1,
+          "our_points": 901.0,
+          "fr_points": 1022.25
+        },
+        {
+          "name": "Alexey Molchanov",
+          "our_rank": 6,
+          "fr_rank": 2,
+          "our_points": 827.1,
+          "fr_points": 980.35
+        },
+        {
+          "name": "Vitomir Maričić",
+          "our_rank": 1,
+          "fr_rank": 3,
+          "our_points": 980.0,
+          "fr_points": 980.0
+        },
+        {
+          "name": "Petar Klovar",
+          "our_rank": 2,
+          "fr_rank": 4,
+          "our_points": 944.8,
+          "fr_points": 944.8
+        },
+        {
+          "name": "Francisco Quesada",
+          "our_rank": 4,
+          "fr_rank": 5,
+          "our_points": 839.1,
+          "fr_points": 856.1
+        },
+        {
+          "name": "Hakyong Kim",
+          "our_rank": 5,
+          "fr_rank": 7,
+          "our_points": 833.9,
+          "fr_points": 833.9
+        },
+        {
+          "name": "Samo Jeranko",
+          "our_rank": 96,
+          "fr_rank": 8,
+          "our_points": 595.1,
+          "fr_points": 830.4
+        },
+        {
+          "name": "Goran Colak",
+          "our_rank": 47,
+          "fr_rank": 9,
+          "our_points": 654.0,
+          "fr_points": 825.0
+        },
+        {
+          "name": "Kai Xiao",
+          "our_rank": 25,
+          "fr_rank": 10,
+          "our_points": 717.9,
+          "fr_points": 813.9
+        },
+        {
+          "name": "Hua Yang Huang",
+          "our_rank": 7,
+          "fr_rank": 11,
+          "our_points": 820.7,
+          "fr_points": 811.7
+        },
+        {
+          "name": "Ming (William Joy) Jin",
+          "our_rank": 8,
+          "fr_rank": 12,
+          "our_points": 800.6,
+          "fr_points": 796.6
+        },
+        {
+          "name": "Dean Chaouche",
+          "our_rank": 10,
+          "fr_rank": 13,
+          "our_points": 782.1,
+          "fr_points": 792.0
+        },
+        {
+          "name": "Philipp Heinzelmann",
+          "our_rank": 9,
+          "fr_rank": 14,
+          "our_points": 791.9,
+          "fr_points": 791.9
+        },
+        {
+          "name": "Eugen Goettling",
+          "our_rank": 19,
+          "fr_rank": 15,
+          "our_points": 737.7,
+          "fr_points": 790.7
+        },
+        {
+          "name": "Christos Karelos",
+          "our_rank": 86,
+          "fr_rank": 16,
+          "our_points": 599.2,
+          "fr_points": 779.45
+        }
+      ]
+    },
+    "aida_overall_vs_fr_women": {
+      "label": "AIDA-overall-F vs FR-F",
+      "matched": 44,
+      "missing_in_ours": [
+        {
+          "name": "Isabel Sanchez Aran",
+          "fr_rank": 8,
+          "fr_points": 734.28
+        },
+        {
+          "name": "Mirela Kardašević",
+          "fr_rank": 11,
+          "fr_points": 705.5
+        },
+        {
+          "name": "Carol Carrasco Navas",
+          "fr_rank": 25,
+          "fr_points": 630.9
+        },
+        {
+          "name": "Linda Paganelli",
+          "fr_rank": 31,
+          "fr_points": 619.67
+        },
+        {
+          "name": "Sofía Gómez Uribe",
+          "fr_rank": 35,
+          "fr_points": 614.5
+        },
+        {
+          "name": "Jarmila Slovenčíková",
+          "fr_rank": 41,
+          "fr_points": 605.05
+        }
+      ],
+      "missing_in_fr": [
+        {
+          "name": "Sofia Gomez",
+          "our_rank": 32,
+          "our_points": 599.5
+        },
+        {
+          "name": "Natalia Molchanova",
+          "our_rank": 40,
+          "our_points": 580.9
+        },
+        {
+          "name": "Tracy Roxanne",
+          "our_rank": 41,
+          "our_points": 580.9
+        },
+        {
+          "name": "Shoko Kobayashi",
+          "our_rank": 42,
+          "our_points": 580.2
+        },
+        {
+          "name": "Sayuri Kinoshita",
+          "our_rank": 43,
+          "our_points": 575.6
+        },
+        {
+          "name": "Alenka Artnik Burghardt",
+          "our_rank": 44,
+          "our_points": 574.0
+        },
+        {
+          "name": "Anastasia Devana Tajik",
+          "our_rank": 47,
+          "our_points": 570.7
+        },
+        {
+          "name": "Janita Kulkula",
+          "our_rank": 48,
+          "our_points": 568.0
+        },
+        {
+          "name": "Alena Konecna",
+          "our_rank": 49,
+          "our_points": 567.9
+        },
+        {
+          "name": "Olga Markina",
+          "our_rank": 50,
+          "our_points": 565.0
+        }
+      ],
+      "point_mismatches": [
+        {
+          "name": "Alessia Zecchini",
+          "our_rank": 33,
+          "fr_rank": 2,
+          "our_points": 594.3,
+          "fr_points": 831.88,
+          "delta": -237.58
+        },
+        {
+          "name": "Agata Załęcka",
+          "our_rank": 70,
+          "fr_rank": 28,
+          "our_points": 512.2,
+          "fr_points": 628.2,
+          "delta": -116.0
+        },
+        {
+          "name": "Yagmur Ergun",
+          "our_rank": 78,
+          "fr_rank": 34,
+          "our_points": 509.0,
+          "fr_points": 615.35,
+          "delta": -106.35
+        },
+        {
+          "name": "Natalie Bruce",
+          "our_rank": 20,
+          "fr_rank": 7,
+          "our_points": 630.7,
+          "fr_points": 734.7,
+          "delta": -104.0
+        },
+        {
+          "name": "Claire Beatrix Paris",
+          "our_rank": 68,
+          "fr_rank": 49,
+          "our_points": 518.8,
+          "fr_points": 586.8,
+          "delta": -68.0
+        },
+        {
+          "name": "Jennifer Wendland",
+          "our_rank": 58,
+          "fr_rank": 40,
+          "our_points": 540.9,
+          "fr_points": 605.15,
+          "delta": -64.25
+        },
+        {
+          "name": "Lauren Matevish",
+          "our_rank": 38,
+          "fr_rank": 22,
+          "our_points": 589.5,
+          "fr_points": 644.1,
+          "delta": -54.6
+        },
+        {
+          "name": "Natalia Wilk",
+          "our_rank": 45,
+          "fr_rank": 42,
+          "our_points": 572.1,
+          "fr_points": 603.85,
+          "delta": -31.75
+        },
+        {
+          "name": "Kateryna Sadurska",
+          "our_rank": 2,
+          "fr_rank": 3,
+          "our_points": 785.4,
+          "fr_points": 816.9,
+          "delta": -31.5
+        },
+        {
+          "name": "Hanako Hirose",
+          "our_rank": 5,
+          "fr_rank": 6,
+          "our_points": 728.6,
+          "fr_points": 745.35,
+          "delta": -16.75
+        },
+        {
+          "name": "Marianna Krupnitskaia",
+          "our_rank": 7,
+          "fr_rank": 9,
+          "our_points": 707.6,
+          "fr_points": 721.88,
+          "delta": -14.28
+        },
+        {
+          "name": "Jung A Kim",
+          "our_rank": 9,
+          "fr_rank": 16,
+          "our_points": 684.7,
+          "fr_points": 670.7,
+          "delta": 14.0
+        },
+        {
+          "name": "Misuzu Okamoto",
+          "our_rank": 46,
+          "fr_rank": 50,
+          "our_points": 572.0,
+          "fr_points": 586.0,
+          "delta": -14.0
+        },
+        {
+          "name": "Zsófia Törőcsik",
+          "our_rank": 1,
+          "fr_rank": 1,
+          "our_points": 839.6,
+          "fr_points": 852.35,
+          "delta": -12.75
+        },
+        {
+          "name": "Talya Davidoff",
+          "our_rank": 31,
+          "fr_rank": 38,
+          "our_points": 599.5,
+          "fr_points": 609.5,
+          "delta": -10.0
+        },
+        {
+          "name": "Enchante Gallardo",
+          "our_rank": 4,
+          "fr_rank": 4,
+          "our_points": 746.2,
+          "fr_points": 751.2,
+          "delta": -5.0
+        },
+        {
+          "name": "Camila Jaber",
+          "our_rank": 36,
+          "fr_rank": 44,
+          "our_points": 591.7,
+          "fr_points": 595.7,
+          "delta": -4.0
+        },
+        {
+          "name": "Natalia Zharkova",
+          "our_rank": 19,
+          "fr_rank": 24,
+          "our_points": 634.4,
+          "fr_points": 637.4,
+          "delta": -3.0
+        },
+        {
+          "name": "Jessea Wenjie Lu",
+          "our_rank": 10,
+          "fr_rank": 13,
+          "our_points": 682.2,
+          "fr_points": 684.2,
+          "delta": -2.0
+        },
+        {
+          "name": "Hyemi (Mimi) Kim",
+          "our_rank": 16,
+          "fr_rank": 20,
+          "our_points": 649.6,
+          "fr_points": 651.6,
+          "delta": -2.0
+        },
+        {
+          "name": "Jingyu Ning",
+          "our_rank": 14,
+          "fr_rank": 18,
+          "our_points": 654.8,
+          "fr_points": 653.3,
+          "delta": 1.5
+        },
+        {
+          "name": "Jingzhe Li",
+          "our_rank": 39,
+          "fr_rank": 48,
+          "our_points": 588.9,
+          "fr_points": 590.15,
+          "delta": -1.25
+        },
+        {
+          "name": "Patricia Paige Ong",
+          "our_rank": 15,
+          "fr_rank": 19,
+          "our_points": 652.7,
+          "fr_points": 651.7,
+          "delta": 1.0
+        }
+      ],
+      "position_mismatches": [
+        {
+          "name": "Alessia Zecchini",
+          "our_rank": 33,
+          "fr_rank": 2,
+          "our_points": 594.3,
+          "fr_points": 831.88,
+          "delta": -237.58
+        },
+        {
+          "name": "Natalie Bruce",
+          "our_rank": 20,
+          "fr_rank": 7,
+          "our_points": 630.7,
+          "fr_points": 734.7,
+          "delta": -104.0
+        },
+        {
+          "name": "Jiyeon Kim",
+          "our_rank": 6,
+          "fr_rank": 10
+        },
+        {
+          "name": "Tongtong Xu",
+          "our_rank": 8,
+          "fr_rank": 12
+        },
+        {
+          "name": "Jessea Wenjie Lu",
+          "our_rank": 10,
+          "fr_rank": 13,
+          "our_points": 682.2,
+          "fr_points": 684.2,
+          "delta": -2.0
+        },
+        {
+          "name": "Yongju Lee",
+          "our_rank": 11,
+          "fr_rank": 14
+        },
+        {
+          "name": "Sanda Delija",
+          "our_rank": 12,
+          "fr_rank": 15
+        },
+        {
+          "name": "Jung A Kim",
+          "our_rank": 9,
+          "fr_rank": 16,
+          "our_points": 684.7,
+          "fr_points": 670.7,
+          "delta": 14.0
+        },
+        {
+          "name": "Yasuko Ozeki",
+          "our_rank": 13,
+          "fr_rank": 17
+        },
+        {
+          "name": "Jingyu Ning",
+          "our_rank": 14,
+          "fr_rank": 18,
+          "our_points": 654.8,
+          "fr_points": 653.3,
+          "delta": 1.5
+        },
+        {
+          "name": "Patricia Paige Ong",
+          "our_rank": 15,
+          "fr_rank": 19,
+          "our_points": 652.7,
+          "fr_points": 651.7,
+          "delta": 1.0
+        },
+        {
+          "name": "Hyemi (Mimi) Kim",
+          "our_rank": 16,
+          "fr_rank": 20,
+          "our_points": 649.6,
+          "fr_points": 651.6,
+          "delta": -2.0
+        },
+        {
+          "name": "Amber Bourke",
+          "our_rank": 17,
+          "fr_rank": 21
+        },
+        {
+          "name": "Lauren Matevish",
+          "our_rank": 38,
+          "fr_rank": 22,
+          "our_points": 589.5,
+          "fr_points": 644.1,
+          "delta": -54.6
+        },
+        {
+          "name": "Montserrat Peart Reyes",
+          "our_rank": 18,
+          "fr_rank": 23
+        },
+        {
+          "name": "Natalia Zharkova",
+          "our_rank": 19,
+          "fr_rank": 24,
+          "our_points": 634.4,
+          "fr_points": 637.4,
+          "delta": -3.0
+        },
+        {
+          "name": "Nicole Edensbo",
+          "our_rank": 21,
+          "fr_rank": 26
+        },
+        {
+          "name": "Olga Davydova",
+          "our_rank": 22,
+          "fr_rank": 27
+        },
+        {
+          "name": "Agata Załęcka",
+          "our_rank": 70,
+          "fr_rank": 28,
+          "our_points": 512.2,
+          "fr_points": 628.2,
+          "delta": -116.0
+        },
+        {
+          "name": "Sheena McNally",
+          "our_rank": 23,
+          "fr_rank": 29
+        },
+        {
+          "name": "Namin Kim",
+          "our_rank": 24,
+          "fr_rank": 30
+        },
+        {
+          "name": "Jie Dong",
+          "our_rank": 25,
+          "fr_rank": 32
+        },
+        {
+          "name": "Yuanyuan Wang",
+          "our_rank": 26,
+          "fr_rank": 33
+        },
+        {
+          "name": "Yagmur Ergun",
+          "our_rank": 78,
+          "fr_rank": 34,
+          "our_points": 509.0,
+          "fr_points": 615.35,
+          "delta": -106.35
+        },
+        {
+          "name": "Jinseul Yuk",
+          "our_rank": 27,
+          "fr_rank": 36
+        }
+      ],
+      "matched_sample": [
+        {
+          "name": "Zsófia Törőcsik",
+          "our_rank": 1,
+          "fr_rank": 1,
+          "our_points": 839.6,
+          "fr_points": 852.35
+        },
+        {
+          "name": "Alessia Zecchini",
+          "our_rank": 33,
+          "fr_rank": 2,
+          "our_points": 594.3,
+          "fr_points": 831.88
+        },
+        {
+          "name": "Kateryna Sadurska",
+          "our_rank": 2,
+          "fr_rank": 3,
+          "our_points": 785.4,
+          "fr_points": 816.9
+        },
+        {
+          "name": "Enchante Gallardo",
+          "our_rank": 4,
+          "fr_rank": 4,
+          "our_points": 746.2,
+          "fr_points": 751.2
+        },
+        {
+          "name": "Mariko Kaji",
+          "our_rank": 3,
+          "fr_rank": 5,
+          "our_points": 746.9,
+          "fr_points": 746.9
+        },
+        {
+          "name": "Hanako Hirose",
+          "our_rank": 5,
+          "fr_rank": 6,
+          "our_points": 728.6,
+          "fr_points": 745.35
+        },
+        {
+          "name": "Natalie Bruce",
+          "our_rank": 20,
+          "fr_rank": 7,
+          "our_points": 630.7,
+          "fr_points": 734.7
+        },
+        {
+          "name": "Marianna Krupnitskaia",
+          "our_rank": 7,
+          "fr_rank": 9,
+          "our_points": 707.6,
+          "fr_points": 721.88
+        },
+        {
+          "name": "Jiyeon Kim",
+          "our_rank": 6,
+          "fr_rank": 10,
+          "our_points": 718.2,
+          "fr_points": 718.2
+        },
+        {
+          "name": "Tongtong Xu",
+          "our_rank": 8,
+          "fr_rank": 12,
+          "our_points": 693.8,
+          "fr_points": 693.8
+        },
+        {
+          "name": "Jessea Wenjie Lu",
+          "our_rank": 10,
+          "fr_rank": 13,
+          "our_points": 682.2,
+          "fr_points": 684.2
+        },
+        {
+          "name": "Yongju Lee",
+          "our_rank": 11,
+          "fr_rank": 14,
+          "our_points": 677.0,
+          "fr_points": 677.0
+        },
+        {
+          "name": "Sanda Delija",
+          "our_rank": 12,
+          "fr_rank": 15,
+          "our_points": 676.4,
+          "fr_points": 676.4
+        },
+        {
+          "name": "Jung A Kim",
+          "our_rank": 9,
+          "fr_rank": 16,
+          "our_points": 684.7,
+          "fr_points": 670.7
+        },
+        {
+          "name": "Yasuko Ozeki",
+          "our_rank": 13,
+          "fr_rank": 17,
+          "our_points": 665.1,
+          "fr_points": 665.1
+        }
+      ]
+    },
+    "portal_vs_fr_men": {
+      "label": "Portal-M vs FR-M",
+      "matched": 42,
+      "missing_in_ours": [
+        {
+          "name": "Piotr Kubiak",
+          "fr_rank": 19,
+          "fr_points": 763.15
+        },
+        {
+          "name": "Vivien Richard",
+          "fr_rank": 20,
+          "fr_points": 762.06
+        },
+        {
+          "name": "Ioannis Kothonidis",
+          "fr_rank": 21,
+          "fr_points": 761.7
+        },
+        {
+          "name": "Boris Milosic",
+          "fr_rank": 25,
+          "fr_points": 750.6
+        },
+        {
+          "name": "Vincent Mathieu",
+          "fr_rank": 28,
+          "fr_points": 740.6
+        },
+        {
+          "name": "Sebastian Lira",
+          "fr_rank": 33,
+          "fr_points": 727.6
+        },
+        {
+          "name": "Abdelatif Alouach",
+          "fr_rank": 41,
+          "fr_points": 712.96
+        },
+        {
+          "name": "Emmanouil Giankos",
+          "fr_rank": 44,
+          "fr_points": 711.0
+        }
+      ],
+      "missing_in_fr": [
+        {
+          "name": "Woongjin Kim",
+          "our_rank": 40,
+          "our_points": 687.4
+        },
+        {
+          "name": "Andrey Matveenko",
+          "our_rank": 41,
+          "our_points": 686.7
+        },
+        {
+          "name": "Tommi Pasanen",
+          "our_rank": 42,
+          "our_points": 685.7
+        },
+        {
+          "name": "David Mulheron",
+          "our_rank": 43,
+          "our_points": 685.6
+        },
+        {
+          "name": "Jesper Stechmann",
+          "our_rank": 45,
+          "our_points": 673.1
+        },
+        {
+          "name": "Mohamed Siddiq",
+          "our_rank": 46,
+          "our_points": 670.6
+        },
+        {
+          "name": "Marcell Bago",
+          "our_rank": 47,
+          "our_points": 669.4
+        },
+        {
+          "name": "Matthew Armstrong",
+          "our_rank": 48,
+          "our_points": 668.4
+        },
+        {
+          "name": "Jens Stoetzner",
+          "our_rank": 49,
+          "our_points": 664.0
+        },
+        {
+          "name": "Mohamed Aljneibi",
+          "our_rank": 50,
+          "our_points": 663.5
+        }
+      ],
+      "point_mismatches": [
+        {
+          "name": "Guillaume Bourdila",
+          "our_rank": 75,
+          "fr_rank": 6,
+          "our_points": 623.75,
+          "fr_points": 835.0,
+          "delta": -211.25
+        },
+        {
+          "name": "Samo Jeranko",
+          "our_rank": 38,
+          "fr_rank": 8,
+          "our_points": 699.1,
+          "fr_points": 830.4,
+          "delta": -131.3
+        },
+        {
+          "name": "Alexey Molchanov",
+          "our_rank": 4,
+          "fr_rank": 2,
+          "our_points": 850.85,
+          "fr_points": 980.35,
+          "delta": -129.5
+        },
+        {
+          "name": "Martin Zajac",
+          "our_rank": 78,
+          "fr_rank": 38,
+          "our_points": 618.0,
+          "fr_points": 718.0,
+          "delta": -100.0
+        },
+        {
+          "name": "Kai Xiao",
+          "our_rank": 24,
+          "fr_rank": 10,
+          "our_points": 730.9,
+          "fr_points": 813.9,
+          "delta": -83.0
+        },
+        {
+          "name": "Christos Karelos",
+          "our_rank": 37,
+          "fr_rank": 16,
+          "our_points": 700.45,
+          "fr_points": 779.45,
+          "delta": -79.0
+        },
+        {
+          "name": "Michael Sadowicz",
+          "our_rank": 44,
+          "fr_rank": 45,
+          "our_points": 681.7,
+          "fr_points": 708.95,
+          "delta": -27.25
+        },
+        {
+          "name": "Daniel Losinski",
+          "our_rank": 39,
+          "fr_rank": 42,
+          "our_points": 690.8,
+          "fr_points": 712.4,
+          "delta": -21.6
+        },
+        {
+          "name": "Goran Colak",
+          "our_rank": 8,
+          "fr_rank": 9,
+          "our_points": 804.25,
+          "fr_points": 825.0,
+          "delta": -20.75
+        },
+        {
+          "name": "Francisco Quesada",
+          "our_rank": 5,
+          "fr_rank": 5,
+          "our_points": 846.1,
+          "fr_points": 856.1,
+          "delta": -10.0
+        },
+        {
+          "name": "Walid Boudhiaf",
+          "our_rank": 31,
+          "fr_rank": 37,
+          "our_points": 710.65,
+          "fr_points": 720.65,
+          "delta": -10.0
+        },
+        {
+          "name": "Luxiao Huang",
+          "our_rank": 30,
+          "fr_rank": 50,
+          "our_points": 711.1,
+          "fr_points": 701.1,
+          "delta": 10.0
+        },
+        {
+          "name": "Dean Chaouche",
+          "our_rank": 12,
+          "fr_rank": 13,
+          "our_points": 782.1,
+          "fr_points": 792.0,
+          "delta": -9.9
+        },
+        {
+          "name": "Hua Yang Huang",
+          "our_rank": 7,
+          "fr_rank": 11,
+          "our_points": 820.7,
+          "fr_points": 811.7,
+          "delta": 9.0
+        },
+        {
+          "name": "Mateusz Malina",
+          "our_rank": 1,
+          "fr_rank": 1,
+          "our_points": 1017.0,
+          "fr_points": 1022.25,
+          "delta": -5.25
+        },
+        {
+          "name": "Vootipong Limpanitivat",
+          "our_rank": 34,
+          "fr_rank": 46,
+          "our_points": 703.8,
+          "fr_points": 708.8,
+          "delta": -5.0
+        },
+        {
+          "name": "Ming (William Joy) Jin",
+          "our_rank": 9,
+          "fr_rank": 12,
+          "our_points": 800.6,
+          "fr_points": 796.6,
+          "delta": 4.0
+        },
+        {
+          "name": "Jan Knutzen",
+          "our_rank": 14,
+          "fr_rank": 18,
+          "our_points": 763.1,
+          "fr_points": 766.6,
+          "delta": -3.5
+        },
+        {
+          "name": "Jakob Hansen",
+          "our_rank": 22,
+          "fr_rank": 31,
+          "our_points": 736.0,
+          "fr_points": 739.25,
+          "delta": -3.25
+        },
+        {
+          "name": "Alejandro Lemus",
+          "our_rank": 21,
+          "fr_rank": 30,
+          "our_points": 736.9,
+          "fr_points": 739.9,
+          "delta": -3.0
+        },
+        {
+          "name": "Gimun Kwak",
+          "our_rank": 32,
+          "fr_rank": 43,
+          "our_points": 709.6,
+          "fr_points": 711.35,
+          "delta": -1.75
+        }
+      ],
+      "position_mismatches": [
+        {
+          "name": "Guillaume Bourdila",
+          "our_rank": 75,
+          "fr_rank": 6,
+          "our_points": 623.75,
+          "fr_points": 835.0,
+          "delta": -211.25
+        },
+        {
+          "name": "Samo Jeranko",
+          "our_rank": 38,
+          "fr_rank": 8,
+          "our_points": 699.1,
+          "fr_points": 830.4,
+          "delta": -131.3
+        },
+        {
+          "name": "Kai Xiao",
+          "our_rank": 24,
+          "fr_rank": 10,
+          "our_points": 730.9,
+          "fr_points": 813.9,
+          "delta": -83.0
+        },
+        {
+          "name": "Hua Yang Huang",
+          "our_rank": 7,
+          "fr_rank": 11,
+          "our_points": 820.7,
+          "fr_points": 811.7,
+          "delta": 9.0
+        },
+        {
+          "name": "Ming (William Joy) Jin",
+          "our_rank": 9,
+          "fr_rank": 12,
+          "our_points": 800.6,
+          "fr_points": 796.6,
+          "delta": 4.0
+        },
+        {
+          "name": "Philipp Heinzelmann",
+          "our_rank": 10,
+          "fr_rank": 14
+        },
+        {
+          "name": "Eugen Goettling",
+          "our_rank": 11,
+          "fr_rank": 15
+        },
+        {
+          "name": "Christos Karelos",
+          "our_rank": 37,
+          "fr_rank": 16,
+          "our_points": 700.45,
+          "fr_points": 779.45,
+          "delta": -79.0
+        },
+        {
+          "name": "Mitch Ayres",
+          "our_rank": 13,
+          "fr_rank": 17
+        },
+        {
+          "name": "Jan Knutzen",
+          "our_rank": 14,
+          "fr_rank": 18,
+          "our_points": 763.1,
+          "fr_points": 766.6,
+          "delta": -3.5
+        },
+        {
+          "name": "Yi(Zy) Zhang",
+          "our_rank": 15,
+          "fr_rank": 22
+        },
+        {
+          "name": "Roberto Guzman",
+          "our_rank": 16,
+          "fr_rank": 23
+        },
+        {
+          "name": "William Trubridge",
+          "our_rank": 17,
+          "fr_rank": 24
+        },
+        {
+          "name": "Martin Ruman",
+          "our_rank": 18,
+          "fr_rank": 26
+        },
+        {
+          "name": "Kurt Chambers",
+          "our_rank": 19,
+          "fr_rank": 27
+        },
+        {
+          "name": "Pablo Marti",
+          "our_rank": 20,
+          "fr_rank": 29
+        },
+        {
+          "name": "Alejandro Lemus",
+          "our_rank": 21,
+          "fr_rank": 30,
+          "our_points": 736.9,
+          "fr_points": 739.9,
+          "delta": -3.0
+        },
+        {
+          "name": "Jakob Hansen",
+          "our_rank": 22,
+          "fr_rank": 31,
+          "our_points": 736.0,
+          "fr_points": 739.25,
+          "delta": -3.25
+        },
+        {
+          "name": "Yixian Zhang",
+          "our_rank": 23,
+          "fr_rank": 32
+        },
+        {
+          "name": "Oleksandr Bubenchykov",
+          "our_rank": 25,
+          "fr_rank": 34
+        },
+        {
+          "name": "William Winram",
+          "our_rank": 26,
+          "fr_rank": 35
+        },
+        {
+          "name": "Ziyu Rocky Liu",
+          "our_rank": 27,
+          "fr_rank": 36
+        },
+        {
+          "name": "Walid Boudhiaf",
+          "our_rank": 31,
+          "fr_rank": 37,
+          "our_points": 710.65,
+          "fr_points": 720.65,
+          "delta": -10.0
+        },
+        {
+          "name": "Martin Zajac",
+          "our_rank": 78,
+          "fr_rank": 38,
+          "our_points": 618.0,
+          "fr_points": 718.0,
+          "delta": -100.0
+        },
+        {
+          "name": "Christian Langer",
+          "our_rank": 28,
+          "fr_rank": 39
+        }
+      ],
+      "matched_sample": [
+        {
+          "name": "Mateusz Malina",
+          "our_rank": 1,
+          "fr_rank": 1,
+          "our_points": 1017.0,
+          "fr_points": 1022.25
+        },
+        {
+          "name": "Alexey Molchanov",
+          "our_rank": 4,
+          "fr_rank": 2,
+          "our_points": 850.85,
+          "fr_points": 980.35
+        },
+        {
+          "name": "Vitomir Maričić",
+          "our_rank": 2,
+          "fr_rank": 3,
+          "our_points": 980.0,
+          "fr_points": 980.0
+        },
+        {
+          "name": "Petar Klovar",
+          "our_rank": 3,
+          "fr_rank": 4,
+          "our_points": 944.8,
+          "fr_points": 944.8
+        },
+        {
+          "name": "Francisco Quesada",
+          "our_rank": 5,
+          "fr_rank": 5,
+          "our_points": 846.1,
+          "fr_points": 856.1
+        },
+        {
+          "name": "Guillaume Bourdila",
+          "our_rank": 75,
+          "fr_rank": 6,
+          "our_points": 623.75,
+          "fr_points": 835.0
+        },
+        {
+          "name": "Hakyong Kim",
+          "our_rank": 6,
+          "fr_rank": 7,
+          "our_points": 833.9,
+          "fr_points": 833.9
+        },
+        {
+          "name": "Samo Jeranko",
+          "our_rank": 38,
+          "fr_rank": 8,
+          "our_points": 699.1,
+          "fr_points": 830.4
+        },
+        {
+          "name": "Goran Colak",
+          "our_rank": 8,
+          "fr_rank": 9,
+          "our_points": 804.25,
+          "fr_points": 825.0
+        },
+        {
+          "name": "Kai Xiao",
+          "our_rank": 24,
+          "fr_rank": 10,
+          "our_points": 730.9,
+          "fr_points": 813.9
+        },
+        {
+          "name": "Hua Yang Huang",
+          "our_rank": 7,
+          "fr_rank": 11,
+          "our_points": 820.7,
+          "fr_points": 811.7
+        },
+        {
+          "name": "Ming (William Joy) Jin",
+          "our_rank": 9,
+          "fr_rank": 12,
+          "our_points": 800.6,
+          "fr_points": 796.6
+        },
+        {
+          "name": "Dean Chaouche",
+          "our_rank": 12,
+          "fr_rank": 13,
+          "our_points": 782.1,
+          "fr_points": 792.0
+        },
+        {
+          "name": "Philipp Heinzelmann",
+          "our_rank": 10,
+          "fr_rank": 14,
+          "our_points": 791.9,
+          "fr_points": 791.9
+        },
+        {
+          "name": "Eugen Goettling",
+          "our_rank": 11,
+          "fr_rank": 15,
+          "our_points": 790.7,
+          "fr_points": 790.7
+        }
+      ]
+    },
+    "portal_vs_fr_women": {
+      "label": "Portal-F vs FR-F",
+      "matched": 9,
+      "missing_in_ours": [
+        {
+          "name": "Enchante Gallardo",
+          "fr_rank": 4,
+          "fr_points": 751.2
+        },
+        {
+          "name": "Mariko Kaji",
+          "fr_rank": 5,
+          "fr_points": 746.9
+        },
+        {
+          "name": "Hanako Hirose",
+          "fr_rank": 6,
+          "fr_points": 745.35
+        },
+        {
+          "name": "Natalie Bruce",
+          "fr_rank": 7,
+          "fr_points": 734.7
+        },
+        {
+          "name": "Isabel Sanchez Aran",
+          "fr_rank": 8,
+          "fr_points": 734.28
+        },
+        {
+          "name": "Marianna Krupnitskaia",
+          "fr_rank": 9,
+          "fr_points": 721.88
+        },
+        {
+          "name": "Jiyeon Kim",
+          "fr_rank": 10,
+          "fr_points": 718.2
+        },
+        {
+          "name": "Tongtong Xu",
+          "fr_rank": 12,
+          "fr_points": 693.8
+        },
+        {
+          "name": "Jessea Wenjie Lu",
+          "fr_rank": 13,
+          "fr_points": 684.2
+        },
+        {
+          "name": "Yongju Lee",
+          "fr_rank": 14,
+          "fr_points": 677.0
+        },
+        {
+          "name": "Sanda Delija",
+          "fr_rank": 15,
+          "fr_points": 676.4
+        },
+        {
+          "name": "Jung A Kim",
+          "fr_rank": 16,
+          "fr_points": 670.7
+        },
+        {
+          "name": "Jingyu Ning",
+          "fr_rank": 18,
+          "fr_points": 653.3
+        },
+        {
+          "name": "Patricia Paige Ong",
+          "fr_rank": 19,
+          "fr_points": 651.7
+        },
+        {
+          "name": "Hyemi (Mimi) Kim",
+          "fr_rank": 20,
+          "fr_points": 651.6
+        },
+        {
+          "name": "Amber Bourke",
+          "fr_rank": 21,
+          "fr_points": 644.6
+        },
+        {
+          "name": "Lauren Matevish",
+          "fr_rank": 22,
+          "fr_points": 644.1
+        },
+        {
+          "name": "Montserrat Peart Reyes",
+          "fr_rank": 23,
+          "fr_points": 642.5
+        },
+        {
+          "name": "Natalia Zharkova",
+          "fr_rank": 24,
+          "fr_points": 637.4
+        },
+        {
+          "name": "Carol Carrasco Navas",
+          "fr_rank": 25,
+          "fr_points": 630.9
+        },
+        {
+          "name": "Nicole Edensbo",
+          "fr_rank": 26,
+          "fr_points": 629.9
+        },
+        {
+          "name": "Olga Davydova",
+          "fr_rank": 27,
+          "fr_points": 629.2
+        },
+        {
+          "name": "Agata Załęcka",
+          "fr_rank": 28,
+          "fr_points": 628.2
+        },
+        {
+          "name": "Sheena McNally",
+          "fr_rank": 29,
+          "fr_points": 622.0
+        },
+        {
+          "name": "Namin Kim",
+          "fr_rank": 30,
+          "fr_points": 621.7
+        },
+        {
+          "name": "Jie Dong",
+          "fr_rank": 32,
+          "fr_points": 618.5
+        },
+        {
+          "name": "Yuanyuan Wang",
+          "fr_rank": 33,
+          "fr_points": 615.6
+        },
+        {
+          "name": "Sofía Gómez Uribe",
+          "fr_rank": 35,
+          "fr_points": 614.5
+        },
+        {
+          "name": "Jinseul Yuk",
+          "fr_rank": 36,
+          "fr_points": 612.8
+        },
+        {
+          "name": "Veronika Kravtsova",
+          "fr_rank": 37,
+          "fr_points": 611.6
+        },
+        {
+          "name": "Talya Davidoff",
+          "fr_rank": 38,
+          "fr_points": 609.5
+        },
+        {
+          "name": "Agnieszka Kalska",
+          "fr_rank": 39,
+          "fr_points": 606.8
+        },
+        {
+          "name": "Jennifer Wendland",
+          "fr_rank": 40,
+          "fr_points": 605.15
+        },
+        {
+          "name": "Hou I Ming",
+          "fr_rank": 43,
+          "fr_points": 601.3
+        },
+        {
+          "name": "Camila Jaber",
+          "fr_rank": 44,
+          "fr_points": 595.7
+        },
+        {
+          "name": "Siew Ling, Elys Lai",
+          "fr_rank": 45,
+          "fr_points": 592.8
+        },
+        {
+          "name": "Alice Hickson",
+          "fr_rank": 46,
+          "fr_points": 592.1
+        },
+        {
+          "name": "Vicky Jiaoyi Li",
+          "fr_rank": 47,
+          "fr_points": 590.7
+        },
+        {
+          "name": "Jingzhe Li",
+          "fr_rank": 48,
+          "fr_points": 590.15
+        },
+        {
+          "name": "Claire Beatrix Paris",
+          "fr_rank": 49,
+          "fr_points": 586.8
+        },
+        {
+          "name": "Misuzu Okamoto",
+          "fr_rank": 50,
+          "fr_points": 586.0
+        }
+      ],
+      "missing_in_fr": [
+        {
+          "name": "Natsuko Saito",
+          "our_rank": 2,
+          "our_points": 450.2
+        },
+        {
+          "name": "Jessica Deady",
+          "our_rank": 3,
+          "our_points": 421.35
+        },
+        {
+          "name": "Maria Cordova",
+          "our_rank": 4,
+          "our_points": 407.3
+        },
+        {
+          "name": "Yujia Yang",
+          "our_rank": 7,
+          "our_points": 385.45
+        },
+        {
+          "name": "Magdalena Solich-Talanda",
+          "our_rank": 9,
+          "our_points": 380.0
+        },
+        {
+          "name": "Isabel Sanchez",
+          "our_rank": 10,
+          "our_points": 350.0
+        },
+        {
+          "name": "Maria Bobela",
+          "our_rank": 11,
+          "our_points": 344.0
+        },
+        {
+          "name": "Livia Bregonzio",
+          "our_rank": 12,
+          "our_points": 335.25
+        },
+        {
+          "name": "Nataliia Zharkova",
+          "our_rank": 13,
+          "our_points": 330.0
+        },
+        {
+          "name": "Ke Tang",
+          "our_rank": 14,
+          "our_points": 320.0
+        },
+        {
+          "name": "Eleni Diamanti",
+          "our_rank": 15,
+          "our_points": 315.1
+        },
+        {
+          "name": "Ivonne Rodriguez",
+          "our_rank": 16,
+          "our_points": 314.15
+        },
+        {
+          "name": "Yeonju Im",
+          "our_rank": 17,
+          "our_points": 313.3
+        },
+        {
+          "name": "Viktoria Urbanek",
+          "our_rank": 18,
+          "our_points": 310.1
+        },
+        {
+          "name": "Yu Han Liu",
+          "our_rank": 19,
+          "our_points": 308.5
+        },
+        {
+          "name": "Yadira Sistos",
+          "our_rank": 20,
+          "our_points": 307.0
+        },
+        {
+          "name": "Tina Acone",
+          "our_rank": 21,
+          "our_points": 306.65
+        },
+        {
+          "name": "Irena Vanova",
+          "our_rank": 22,
+          "our_points": 306.0
+        },
+        {
+          "name": "Christina Molina",
+          "our_rank": 24,
+          "our_points": 303.0
+        },
+        {
+          "name": "Josefine Fischer",
+          "our_rank": 25,
+          "our_points": 300.85
+        },
+        {
+          "name": "Anastasiia Poletova",
+          "our_rank": 26,
+          "our_points": 300.5
+        },
+        {
+          "name": "Oksana Kononova",
+          "our_rank": 27,
+          "our_points": 295.25
+        },
+        {
+          "name": "Marine Simonis",
+          "our_rank": 28,
+          "our_points": 294.0
+        },
+        {
+          "name": "Rebekah Nutter",
+          "our_rank": 29,
+          "our_points": 289.75
+        },
+        {
+          "name": "Diana Hermida",
+          "our_rank": 31,
+          "our_points": 288.1
+        }
+      ],
+      "point_mismatches": [
+        {
+          "name": "Zsófia Törőcsik",
+          "our_rank": 46,
+          "fr_rank": 1,
+          "our_points": 256.25,
+          "fr_points": 852.35,
+          "delta": -596.1
+        },
+        {
+          "name": "Yasuko Ozeki",
+          "our_rank": 81,
+          "fr_rank": 17,
+          "our_points": 202.5,
+          "fr_points": 665.1,
+          "delta": -462.6
+        },
+        {
+          "name": "Alessia Zecchini",
+          "our_rank": 8,
+          "fr_rank": 2,
+          "our_points": 384.0,
+          "fr_points": 831.88,
+          "delta": -447.88
+        },
+        {
+          "name": "Linda Paganelli",
+          "our_rank": 60,
+          "fr_rank": 31,
+          "our_points": 243.0,
+          "fr_points": 619.67,
+          "delta": -376.67
+        },
+        {
+          "name": "Kateryna Sadurska",
+          "our_rank": 1,
+          "fr_rank": 3,
+          "our_points": 494.5,
+          "fr_points": 816.9,
+          "delta": -322.4
+        },
+        {
+          "name": "Mirela Kardašević",
+          "our_rank": 6,
+          "fr_rank": 11,
+          "our_points": 388.5,
+          "fr_points": 705.5,
+          "delta": -317.0
+        },
+        {
+          "name": "Natalia Wilk",
+          "our_rank": 30,
+          "fr_rank": 42,
+          "our_points": 289.25,
+          "fr_points": 603.85,
+          "delta": -314.6
+        },
+        {
+          "name": "Jarmila Slovenčíková",
+          "our_rank": 23,
+          "fr_rank": 41,
+          "our_points": 306.0,
+          "fr_points": 605.05,
+          "delta": -299.05
+        },
+        {
+          "name": "Yagmur Ergun",
+          "our_rank": 5,
+          "fr_rank": 34,
+          "our_points": 401.75,
+          "fr_points": 615.35,
+          "delta": -213.6
+        }
+      ],
+      "position_mismatches": [
+        {
+          "name": "Zsófia Törőcsik",
+          "our_rank": 46,
+          "fr_rank": 1,
+          "our_points": 256.25,
+          "fr_points": 852.35,
+          "delta": -596.1
+        },
+        {
+          "name": "Alessia Zecchini",
+          "our_rank": 8,
+          "fr_rank": 2,
+          "our_points": 384.0,
+          "fr_points": 831.88,
+          "delta": -447.88
+        },
+        {
+          "name": "Mirela Kardašević",
+          "our_rank": 6,
+          "fr_rank": 11,
+          "our_points": 388.5,
+          "fr_points": 705.5,
+          "delta": -317.0
+        },
+        {
+          "name": "Yasuko Ozeki",
+          "our_rank": 81,
+          "fr_rank": 17,
+          "our_points": 202.5,
+          "fr_points": 665.1,
+          "delta": -462.6
+        },
+        {
+          "name": "Linda Paganelli",
+          "our_rank": 60,
+          "fr_rank": 31,
+          "our_points": 243.0,
+          "fr_points": 619.67,
+          "delta": -376.67
+        },
+        {
+          "name": "Yagmur Ergun",
+          "our_rank": 5,
+          "fr_rank": 34,
+          "our_points": 401.75,
+          "fr_points": 615.35,
+          "delta": -213.6
+        },
+        {
+          "name": "Jarmila Slovenčíková",
+          "our_rank": 23,
+          "fr_rank": 41,
+          "our_points": 306.0,
+          "fr_points": 605.05,
+          "delta": -299.05
+        },
+        {
+          "name": "Natalia Wilk",
+          "our_rank": 30,
+          "fr_rank": 42,
+          "our_points": 289.25,
+          "fr_points": 603.85,
+          "delta": -314.6
+        }
+      ],
+      "matched_sample": [
+        {
+          "name": "Zsófia Törőcsik",
+          "our_rank": 46,
+          "fr_rank": 1,
+          "our_points": 256.25,
+          "fr_points": 852.35
+        },
+        {
+          "name": "Alessia Zecchini",
+          "our_rank": 8,
+          "fr_rank": 2,
+          "our_points": 384.0,
+          "fr_points": 831.88
+        },
+        {
+          "name": "Kateryna Sadurska",
+          "our_rank": 1,
+          "fr_rank": 3,
+          "our_points": 494.5,
+          "fr_points": 816.9
+        },
+        {
+          "name": "Mirela Kardašević",
+          "our_rank": 6,
+          "fr_rank": 11,
+          "our_points": 388.5,
+          "fr_points": 705.5
+        },
+        {
+          "name": "Yasuko Ozeki",
+          "our_rank": 81,
+          "fr_rank": 17,
+          "our_points": 202.5,
+          "fr_points": 665.1
+        },
+        {
+          "name": "Linda Paganelli",
+          "our_rank": 60,
+          "fr_rank": 31,
+          "our_points": 243.0,
+          "fr_points": 619.67
+        },
+        {
+          "name": "Yagmur Ergun",
+          "our_rank": 5,
+          "fr_rank": 34,
+          "our_points": 401.75,
+          "fr_points": 615.35
+        },
+        {
+          "name": "Jarmila Slovenčíková",
+          "our_rank": 23,
+          "fr_rank": 41,
+          "our_points": 306.0,
+          "fr_points": 605.05
+        },
+        {
+          "name": "Natalia Wilk",
+          "our_rank": 30,
+          "fr_rank": 42,
+          "our_points": 289.25,
+          "fr_points": 603.85
+        }
+      ]
+    }
+  },
+  "pb_diff_counts": {
+    "total": 132,
+    "missing_in_ours": 60,
+    "pb_mismatch": 72
+  },
+  "pb_diffs_top": [
+    {
+      "name": "Boris Milosic",
+      "discipline": "CWTB",
+      "issue": "pb_mismatch",
+      "fr_pb": "83 m",
+      "fr_pts": 83.0,
+      "our_pts": 25.0,
+      "delta": -58.0
+    },
+    {
+      "name": "Piotr Kubiak",
+      "discipline": "DYNB",
+      "issue": "pb_mismatch",
+      "fr_pb": "236 m",
+      "fr_pts": 118.0,
+      "our_pts": 78.0,
+      "delta": -40.0
+    },
+    {
+      "name": "Natalie Bruce",
+      "discipline": "CWT",
+      "issue": "pb_mismatch",
+      "fr_pb": "82 m",
+      "fr_pts": 82.0,
+      "our_pts": 52.0,
+      "delta": -30.0
+    },
+    {
+      "name": "Michael Sadowicz",
+      "discipline": "DYN",
+      "issue": "pb_mismatch",
+      "fr_pb": "257.5 m",
+      "fr_pts": 128.75,
+      "our_pts": 107.0,
+      "delta": -21.75
+    },
+    {
+      "name": "Kateryna Sadurska",
+      "discipline": "DYN",
+      "issue": "pb_mismatch",
+      "fr_pb": "251 m",
+      "fr_pts": 125.5,
+      "our_pts": 104.5,
+      "delta": -21.0
+    },
+    {
+      "name": "Yagmur Ergun",
+      "discipline": "CWT",
+      "issue": "pb_mismatch",
+      "fr_pb": "60 m",
+      "fr_pts": 60.0,
+      "our_pts": 40.0,
+      "delta": -20.0
+    },
+    {
+      "name": "Boris Milosic",
+      "discipline": "DNF",
+      "issue": "pb_mismatch",
+      "fr_pb": "204.30 m",
+      "fr_pts": 102.15,
+      "our_pts": 83.0,
+      "delta": -19.15
+    },
+    {
+      "name": "Boris Milosic",
+      "discipline": "FIM",
+      "issue": "pb_mismatch",
+      "fr_pb": "71 m",
+      "fr_pts": 71.0,
+      "our_pts": 55.0,
+      "delta": -16.0
+    },
+    {
+      "name": "Boris Milosic",
+      "discipline": "DYN",
+      "issue": "pb_mismatch",
+      "fr_pb": "271.5 m",
+      "fr_pts": 135.75,
+      "our_pts": 120.25,
+      "delta": -15.5
+    },
+    {
+      "name": "Walid Boudhiaf",
+      "discipline": "DYN",
+      "issue": "pb_mismatch",
+      "fr_pb": "162 m",
+      "fr_pts": 81.0,
+      "our_pts": 66.0,
+      "delta": -15.0
+    },
+    {
+      "name": "Yagmur Ergun",
+      "discipline": "DYNB",
+      "issue": "pb_mismatch",
+      "fr_pb": "237 m",
+      "fr_pts": 118.5,
+      "our_pts": 104.25,
+      "delta": -14.25
+    },
+    {
+      "name": "Ming (William Joy) Jin",
+      "discipline": "FIM",
+      "issue": "pb_mismatch",
+      "fr_pb": "67 m",
+      "fr_pts": 67.0,
+      "our_pts": 53.0,
+      "delta": -14.0
+    },
+    {
+      "name": "Alessia Zecchini",
+      "discipline": "CWT",
+      "issue": "pb_mismatch",
+      "fr_pb": "123 m",
+      "fr_pts": 123.0,
+      "our_pts": 109.0,
+      "delta": -14.0
+    },
+    {
+      "name": "Samo Jeranko",
+      "discipline": "DYN",
+      "issue": "pb_mismatch",
+      "fr_pb": "256.6 m",
+      "fr_pts": 128.3,
+      "our_pts": 114.5,
+      "delta": -13.8
+    },
+    {
+      "name": "Daniel Losinski",
+      "discipline": "DYN",
+      "issue": "pb_mismatch",
+      "fr_pb": "235.5 m",
+      "fr_pts": 117.75,
+      "our_pts": 104.5,
+      "delta": -13.25
+    },
+    {
+      "name": "Kateryna Sadurska",
+      "discipline": "CNF",
+      "issue": "pb_mismatch",
+      "fr_pb": "90 m",
+      "fr_pts": 90.0,
+      "our_pts": 77.0,
+      "delta": -13.0
+    },
+    {
+      "name": "Boris Milosic",
+      "discipline": "STA",
+      "issue": "pb_mismatch",
+      "fr_pb": "8:03.48",
+      "fr_pts": 96.696,
+      "our_pts": 84.6,
+      "delta": -12.1
+    },
+    {
+      "name": "Goran Colak",
+      "discipline": "CNF",
+      "issue": "pb_mismatch",
+      "fr_pb": "83 m",
+      "fr_pts": 83.0,
+      "our_pts": 71.0,
+      "delta": -12.0
+    },
+    {
+      "name": "Guillaume Bourdila",
+      "discipline": "DNF",
+      "issue": "pb_mismatch",
+      "fr_pb": "236 m",
+      "fr_pts": 118.0,
+      "our_pts": 106.75,
+      "delta": -11.25
+    },
+    {
+      "name": "Luxiao Huang",
+      "discipline": "DNF",
+      "issue": "pb_mismatch",
+      "fr_pb": "165 m",
+      "fr_pts": 82.5,
+      "our_pts": 92.5,
+      "delta": 10.0
+    },
+    {
+      "name": "Dean Chaouche",
+      "discipline": "DYNB",
+      "issue": "pb_mismatch",
+      "fr_pb": "213,80 m",
+      "fr_pts": 106.9,
+      "our_pts": 97.0,
+      "delta": -9.9
+    },
+    {
+      "name": "Goran Colak",
+      "discipline": "DYN",
+      "issue": "pb_mismatch",
+      "fr_pb": "299.5 m",
+      "fr_pts": 149.75,
+      "our_pts": 140.5,
+      "delta": -9.25
+    },
+    {
+      "name": "Francisco Quesada",
+      "discipline": "FIM",
+      "issue": "pb_mismatch",
+      "fr_pb": "107 m",
+      "fr_pts": 107.0,
+      "our_pts": 98.0,
+      "delta": -9.0
+    },
+    {
+      "name": "Hua Yang Huang",
+      "discipline": "STA",
+      "issue": "pb_mismatch",
+      "fr_pb": "06:31",
+      "fr_pts": 78.2,
+      "our_pts": 87.2,
+      "delta": 9.0
+    },
+    {
+      "name": "Christos Karelos",
+      "discipline": "CWT",
+      "issue": "pb_mismatch",
+      "fr_pb": "117 m",
+      "fr_pts": 117.0,
+      "our_pts": 126.0,
+      "delta": 9.0
+    }
+  ],
+  "entity_resolution": {
+    "persons": 3058,
+    "cross_federation_linked": 213,
+    "conflicts_queued": 0
+  },
+  "profile_sample_n": 100,
+  "name_quirks_on_fr": [
+    "Siew Ling, Elys Lai",
+    "Yi(Zy) Zhang",
+    "Hyemi (Mimi) Kim",
+    "Guillaume Néry",
+    "Ming (William Joy) Jin"
+  ],
+  "ui_has_real_data": false,
+  "ui_note": "Ingest seed exported in repo data/seed.json; store site still uses fictional MVP seed — not swapped due to partial AIDA coverage."
+}
