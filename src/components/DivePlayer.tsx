@@ -30,6 +30,8 @@ type Props = {
   card: string;
   ot: string;
   durationSec: number;
+  /** Deep-link seek from `/dives/[id]?t=` (seconds). */
+  initialSeekSec?: number | null;
 };
 
 function fmtClock(sec: number): string {
@@ -55,6 +57,7 @@ export function DivePlayer({
   card,
   ot,
   durationSec,
+  initialSeekSec = null,
 }: Props) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [playing, setPlaying] = useState(false);
@@ -62,8 +65,86 @@ export function DivePlayer({
   const [currentSec, setCurrentSec] = useState(0);
   const [activeCam, setActiveCam] = useState(0);
   const [activeMarker, setActiveMarker] = useState<string | null>(null);
+  const deepLinkApplied = useRef(false);
+  // Prop from RSC, or client `?t=` (SSG pages may omit searchParams).
+  const [seekTarget, setSeekTarget] = useState<number | null>(
+    initialSeekSec != null && Number.isFinite(initialSeekSec)
+      ? initialSeekSec
+      : null,
+  );
 
   const duration = durationSec || 1;
+
+  const nearestMarkerId = useCallback(
+    (atSec: number): string | undefined => {
+      const nearest = markers.reduce<{ id: string; dist: number } | null>(
+        (best, m) => {
+          const dist = Math.abs(m.atSec - atSec);
+          if (!best || dist < best.dist) return { id: m.id, dist };
+          return best;
+        },
+        null,
+      );
+      return nearest && nearest.dist <= 2.5 ? nearest.id : undefined;
+    },
+    [markers],
+  );
+
+  const seekTo = useCallback(
+    (atSec: number, markerId?: string) => {
+      const v = videoRef.current;
+      const capped = Math.min(Math.max(atSec, 0), v?.duration || duration);
+      if (v) {
+        try {
+          v.currentTime = capped;
+        } catch {
+          // ignore NotSupportedError before metadata
+        }
+        void v.play().catch(() => undefined);
+      }
+      setCurrentSec(capped);
+      setProgress(duration > 0 ? capped / duration : 0);
+      setActiveMarker(markerId ?? nearestMarkerId(atSec) ?? null);
+    },
+    [duration, nearestMarkerId],
+  );
+
+  const applyDeepLink = useCallback(() => {
+    if (
+      deepLinkApplied.current ||
+      seekTarget == null ||
+      !Number.isFinite(seekTarget) ||
+      seekTarget < 0
+    ) {
+      return;
+    }
+    deepLinkApplied.current = true;
+    seekTo(seekTarget, nearestMarkerId(seekTarget));
+  }, [seekTarget, nearestMarkerId, seekTo]);
+
+  useEffect(() => {
+    deepLinkApplied.current = false;
+  }, [previewUrl, seekTarget]);
+
+  useEffect(() => {
+    if (initialSeekSec != null && Number.isFinite(initialSeekSec)) {
+      setSeekTarget(initialSeekSec);
+      return;
+    }
+    if (typeof window === "undefined") return;
+    const raw = new URLSearchParams(window.location.search).get("t");
+    if (raw == null || raw === "") return;
+    const n = Number(raw);
+    if (Number.isFinite(n) && n >= 0) setSeekTarget(n);
+  }, [initialSeekSec]);
+
+  // Keep clock / active marker in sync immediately (before media metadata).
+  useEffect(() => {
+    if (seekTarget == null || !hasVideo) return;
+    setCurrentSec(seekTarget);
+    setProgress(duration > 0 ? seekTarget / duration : 0);
+    setActiveMarker(nearestMarkerId(seekTarget) ?? null);
+  }, [hasVideo, seekTarget, duration, nearestMarkerId]);
 
   useEffect(() => {
     const v = videoRef.current;
@@ -76,26 +157,19 @@ export function DivePlayer({
     };
     const onPlay = () => setPlaying(true);
     const onPause = () => setPlaying(false);
+    const onMeta = () => applyDeepLink();
     v.addEventListener("timeupdate", onTime);
     v.addEventListener("play", onPlay);
     v.addEventListener("pause", onPause);
+    v.addEventListener("loadedmetadata", onMeta);
+    if (v.readyState >= 1) applyDeepLink();
     return () => {
       v.removeEventListener("timeupdate", onTime);
       v.removeEventListener("play", onPlay);
       v.removeEventListener("pause", onPause);
+      v.removeEventListener("loadedmetadata", onMeta);
     };
-  }, [duration, previewUrl]);
-
-  const seekTo = useCallback(
-    (atSec: number, markerId?: string) => {
-      const v = videoRef.current;
-      if (!v) return;
-      v.currentTime = Math.min(Math.max(atSec, 0), v.duration || duration);
-      setActiveMarker(markerId ?? null);
-      void v.play().catch(() => undefined);
-    },
-    [duration],
-  );
+  }, [duration, previewUrl, applyDeepLink]);
 
   const togglePlay = useCallback(() => {
     const v = videoRef.current;
@@ -116,9 +190,10 @@ export function DivePlayer({
               ref={videoRef}
               className="player-video"
               poster={posterUrl || "/video/poster.jpg"}
-              preload="metadata"
+              preload="auto"
               playsInline
               controls={false}
+              onLoadedMetadata={applyDeepLink}
             >
               <source src={previewUrl} type="video/mp4" />
             </video>

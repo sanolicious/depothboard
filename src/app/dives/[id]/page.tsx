@@ -24,6 +24,7 @@ import {
 } from "@/lib/rights";
 
 type Params = Promise<{ id: string }>;
+type SP = Promise<Record<string, string | string[] | undefined>>;
 
 export const dynamicParams = true;
 
@@ -53,8 +54,26 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   };
 }
 
-export default async function DivePage({ params }: { params: Params }) {
+function parseSeekSec(
+  raw: string | string[] | undefined,
+): number | null {
+  const v = Array.isArray(raw) ? raw[0] : raw;
+  if (v == null || v === "") return null;
+  const n = Number(v);
+  if (!Number.isFinite(n) || n < 0) return null;
+  return n;
+}
+
+export default async function DivePage({
+  params,
+  searchParams,
+}: {
+  params: Params;
+  searchParams: SP;
+}) {
   const { id } = await params;
+  const sp = await searchParams;
+  const initialSeekSec = parseSeekSec(sp.t);
   const repo = getRepository();
   const dive = resolveDive(repo, id);
   if (!dive) notFound();
@@ -145,6 +164,7 @@ export default async function DivePage({ params }: { params: Params }) {
               card={dive.card}
               ot={dive.ot}
               durationSec={dive.durationSec}
+              initialSeekSec={initialSeekSec}
             />
             {(rights?.rightsModel === "diveye_owned" || rights?.embedOnly) && (
               <div className="row row--wrap" style={{ gap: 8, marginTop: 10 }}>

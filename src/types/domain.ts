@@ -673,6 +673,54 @@ export interface CoachAthleteLink {
   notes?: string;
 }
 
+/* ------------------------------------------------------------------ */
+/* Archive AI index — searchable VOD moments (PWF-22, Diveye S2.2/S2.3) */
+/* ------------------------------------------------------------------ */
+
+export type ArchiveIndexEngine = "heuristics" | "llm" | "template";
+
+/**
+ * One searchable moment: FootageAsset marker + dive/performance metadata.
+ * Deep-link via seekUrl (`/dives/{id}?t={atSec}`).
+ */
+export interface ArchiveMoment {
+  id: string;
+  diveId: string;
+  footageAssetId: string;
+  athleteSlug: string;
+  athleteName: string;
+  eventId: string;
+  eventName: string;
+  discipline: string;
+  federation: "AIDA" | "CMAS";
+  markerId: string;
+  markerKind: FootageMarkerKind | string;
+  markerLabel: string;
+  /** Absolute seconds from clip start — used for `?t=` seek. */
+  atSec: number;
+  /** Normalized 0–1 timeline position. */
+  at: number;
+  title: string;
+  summary: string;
+  tags: string[];
+  card?: Card;
+  rp?: number;
+  ap?: number;
+  date?: string;
+  /** `/dives/{diveId}?t={atSec}` */
+  seekUrl: string;
+  engine: ArchiveIndexEngine;
+}
+
+/** Persisted searchable archive built by script / API. */
+export interface ArchiveIndexFile {
+  asOf: string;
+  engine: ArchiveIndexEngine;
+  notes?: string;
+  momentCount: number;
+  moments: ArchiveMoment[];
+}
+
 export type RankingBoard = "PORTAL" | "AIDA" | "CMAS";
 export type RankingScope = "active" | "season" | "all";
 export type RankingMetric = "points" | "pct";

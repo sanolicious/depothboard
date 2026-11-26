@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "archive:index": "npx --yes tsx scripts/build-archive-index.ts"
   },
   "dependencies": {
     "next": "15.5.29",
