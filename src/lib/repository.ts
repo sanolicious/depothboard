@@ -4,7 +4,10 @@ import type {
   Athlete,
   ClaimRequest,
   ConsentRecord,
+  Device,
+  DiveAssignment,
   Event,
+  FieldSession,
   FootageAsset,
   Performance,
   Product,
@@ -13,6 +16,7 @@ import type {
   RecordingRights,
   SeedDb,
   ShowcaseDive,
+  TelemetrySample,
 } from "@/types/domain";
 import {
   listAssetsForDive,
@@ -20,6 +24,15 @@ import {
   productsFromFootage,
   showcaseFromFootage,
 } from "@/lib/footage";
+import {
+  getDevice,
+  getFieldSession,
+  listDevices,
+  listDiveAssignments,
+  listFieldSessions,
+  listTelemetrySamples,
+  loadEcosystemCatalog,
+} from "@/lib/ecosystem";
 import { computeRanking } from "@/lib/ranking";
 
 export interface Repository {
@@ -45,6 +58,21 @@ export interface Repository {
   listFootageAssets(): FootageAsset[];
   getFootageForDive(diveId: string): FootageAsset[];
   getPrimaryFootage(diveId: string): FootageAsset | undefined;
+  listDevices(): Device[];
+  getDevice(id: string): Device | undefined;
+  listFieldSessions(): FieldSession[];
+  getFieldSession(id: string): FieldSession | undefined;
+  listDiveAssignments(opts?: {
+    fieldSessionId?: string;
+    athleteSlug?: string;
+    diveId?: string;
+    deviceId?: string;
+  }): DiveAssignment[];
+  listTelemetrySamples(opts?: {
+    fieldSessionId?: string;
+    diveId?: string;
+    deviceId?: string;
+  }): TelemetrySample[];
   search(q: string): {
     athletes: Athlete[];
     events: Event[];
@@ -159,7 +187,7 @@ function applyRightsOverlay(base: SeedDb): SeedDb {
     claimsInbox: overlay.claimsInbox ?? "claims@depthboard.com",
   };
 
-  return applyFootageCatalog(withRights);
+  return applyEcosystemCatalog(applyFootageCatalog(withRights));
 }
 
 /** Merge Diveye OT/HQ catalog: attach showcase dives + sample/social/HQ SKUs. */
@@ -187,6 +215,32 @@ function applyFootageCatalog(db: SeedDb): SeedDb {
     showcaseDives: [...byId.values()],
     products,
     footageAssets: assets,
+  };
+}
+
+/** Merge device / field-session / telemetry hooks; stamp consents with session ids. */
+function applyEcosystemCatalog(db: SeedDb): SeedDb {
+  const eco = loadEcosystemCatalog();
+  const sessionByConsent = new Map<string, string>();
+  for (const session of eco.fieldSessions) {
+    for (const cid of session.consentIds ?? []) {
+      sessionByConsent.set(cid, session.id);
+    }
+  }
+
+  const consents = (db.consents ?? []).map((c) => {
+    if (c.fieldSessionId) return c;
+    const linked = sessionByConsent.get(c.id);
+    return linked ? { ...c, fieldSessionId: linked } : c;
+  });
+
+  return {
+    ...db,
+    consents,
+    devices: eco.devices,
+    fieldSessions: eco.fieldSessions,
+    diveAssignments: eco.diveAssignments,
+    telemetrySamples: eco.telemetrySamples,
   };
 }
 
@@ -321,6 +375,68 @@ class JsonRepository implements Repository {
       list.find((a) => a.quality === "hq") ??
       list[0]
     );
+  }
+
+  listDevices(): Device[] {
+    return this.getDb().devices ?? listDevices();
+  }
+
+  getDevice(id: string): Device | undefined {
+    return this.listDevices().find((d) => d.id === id) ?? getDevice(id);
+  }
+
+  listFieldSessions(): FieldSession[] {
+    return this.getDb().fieldSessions ?? listFieldSessions();
+  }
+
+  getFieldSession(id: string): FieldSession | undefined {
+    return (
+      this.listFieldSessions().find((s) => s.id === id) ?? getFieldSession(id)
+    );
+  }
+
+  listDiveAssignments(opts?: {
+    fieldSessionId?: string;
+    athleteSlug?: string;
+    diveId?: string;
+    deviceId?: string;
+  }): DiveAssignment[] {
+    const fromDb = this.getDb().diveAssignments;
+    if (!fromDb?.length) return listDiveAssignments(opts);
+    let list = fromDb;
+    if (opts?.fieldSessionId) {
+      list = list.filter((a) => a.fieldSessionId === opts.fieldSessionId);
+    }
+    if (opts?.athleteSlug) {
+      list = list.filter((a) => a.athleteSlug === opts.athleteSlug);
+    }
+    if (opts?.diveId) {
+      list = list.filter((a) => a.diveId === opts.diveId);
+    }
+    if (opts?.deviceId) {
+      list = list.filter((a) => a.deviceId === opts.deviceId);
+    }
+    return list;
+  }
+
+  listTelemetrySamples(opts?: {
+    fieldSessionId?: string;
+    diveId?: string;
+    deviceId?: string;
+  }): TelemetrySample[] {
+    const fromDb = this.getDb().telemetrySamples;
+    if (!fromDb?.length) return listTelemetrySamples(opts);
+    let list = fromDb;
+    if (opts?.fieldSessionId) {
+      list = list.filter((t) => t.fieldSessionId === opts.fieldSessionId);
+    }
+    if (opts?.diveId) {
+      list = list.filter((t) => t.diveId === opts.diveId);
+    }
+    if (opts?.deviceId) {
+      list = list.filter((t) => t.deviceId === opts.deviceId);
+    }
+    return list;
   }
 
   search(q: string) {

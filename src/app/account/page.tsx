@@ -67,6 +67,13 @@ export default async function AccountPage({
     athlete?.slug,
   );
   const consents = athlete ? repo.listConsents(athlete.slug) : [];
+  const myAssignments = athleteSlug
+    ? repo.listDiveAssignments({ athleteSlug })
+    : [];
+  const mySessionIds = [...new Set(myAssignments.map((a) => a.fieldSessionId))];
+  const mySessions = mySessionIds
+    .map((sid) => repo.getFieldSession(sid))
+    .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
   const performances = athleteSlug
     ? db.performances
@@ -208,6 +215,27 @@ export default async function AccountPage({
             </div>
           )}
         </div>
+
+        {athlete && mySessions.length > 0 && (
+          <div className="card" style={{ padding: 20, gridColumn: "1 / -1" }}>
+            <h2 style={{ fontSize: "1.2rem" }}>Field sessions</h2>
+            <p className="muted small" style={{ marginTop: 8 }}>
+              Read-only assignments from ecosystem hooks (device ↔ dive). Admin
+              fleet view: <Link href="/devices">/devices</Link>.
+            </p>
+            <ul style={{ marginTop: 12, paddingLeft: 18 }}>
+              {mySessions.map((s) => (
+                <li key={s.id} className="small" style={{ marginBottom: 8 }}>
+                  <Link href={`/sessions/${s.id}`}>{s.label}</Link>
+                  <span className="muted">
+                    {" "}
+                    · {s.kind} · {s.status}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {athlete && (
           <div style={{ gridColumn: "1 / -1" }}>

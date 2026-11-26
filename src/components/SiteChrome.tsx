@@ -476,6 +476,9 @@ export function SiteFooter() {
               <li>
                 <Link href="/archive">Archive / VOD</Link>
               </li>
+              <li>
+                <Link href="/devices">Devices (admin)</Link>
+              </li>
             </ul>
           </div>
           <div>

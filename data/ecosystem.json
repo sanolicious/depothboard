@@ -1,0 +1,193 @@
+{
+  "asOf": "2026-11-26",
+  "notes": "Ecosystem hooks seed (PWF-16). Devices / field sessions / dive assignments / telemetry samples for later field app and drone plug-in. No Compact/Connected/Pro hardware UI.",
+  "devices": [
+    {
+      "id": "dev-compact-01",
+      "serial": "DYE-CMP-24001",
+      "tier": "Compact",
+      "ownerOrg": "diveye-hq",
+      "firmware": "1.2.0",
+      "lastSeen": "2026-10-29T09:42:00Z",
+      "battery": 78,
+      "label": "Pool cam A",
+      "status": "offline",
+      "notes": "Compact capture unit — competition pool rail."
+    },
+    {
+      "id": "dev-connected-01",
+      "serial": "DYE-CON-25014",
+      "tier": "Connected",
+      "ownerOrg": "diveye-hq",
+      "firmware": "2.0.1",
+      "lastSeen": "2026-11-20T14:05:12Z",
+      "battery": 54,
+      "label": "Depth line B",
+      "status": "online",
+      "notes": "Connected line camera — last heartbeat from training site."
+    },
+    {
+      "id": "dev-pro-01",
+      "serial": "DYE-PRO-23007",
+      "tier": "Pro",
+      "ownerOrg": "diveye-broadcast",
+      "firmware": "3.1.4",
+      "lastSeen": "2026-10-29T11:18:44Z",
+      "label": "OT master Pro",
+      "status": "maintenance",
+      "notes": "Pro fleet unit used for OT/HQ production days."
+    },
+    {
+      "id": "dev-connected-02",
+      "serial": "DYE-CON-25022",
+      "tier": "Connected",
+      "ownerOrg": "center-submania",
+      "firmware": "2.0.1",
+      "lastSeen": "2026-11-18T08:30:00Z",
+      "battery": 91,
+      "label": "Training drone stub",
+      "status": "offline",
+      "notes": "Placeholder Connected node for future drone upload path."
+    }
+  ],
+  "fieldSessions": [
+    {
+      "id": "fs-comp-vit-2026-10",
+      "kind": "competition",
+      "status": "completed",
+      "ownerOrg": "diveye-hq",
+      "eventId": "aida-ev-3717442",
+      "label": "OT day — Maričić DYN block",
+      "venue": "Competition pool",
+      "startedAt": "2026-10-29T08:00:00Z",
+      "endedAt": "2026-10-29T12:30:00Z",
+      "deviceIds": ["dev-compact-01", "dev-pro-01"],
+      "consentIds": ["c-vit-rec", "c-vit-pub"],
+      "notes": "Linked to existing recording/publication consents for vitomir-maricic."
+    },
+    {
+      "id": "fs-train-connected-nov",
+      "kind": "training",
+      "status": "completed",
+      "ownerOrg": "center-submania",
+      "label": "Connected training — depth line",
+      "venue": "Submania training site",
+      "startedAt": "2026-11-18T07:45:00Z",
+      "endedAt": "2026-11-18T10:00:00Z",
+      "deviceIds": ["dev-connected-01", "dev-connected-02"],
+      "consentIds": [],
+      "notes": "Training capture session stub — no competition event."
+    },
+    {
+      "id": "fs-demo-active",
+      "kind": "demo",
+      "status": "active",
+      "ownerOrg": "diveye-hq",
+      "label": "Admin demo session (active)",
+      "venue": "Lab / dry run",
+      "startedAt": "2026-11-26T10:00:00Z",
+      "deviceIds": ["dev-connected-01"],
+      "consentIds": ["c-mol-rec"],
+      "notes": "Open demo session so /devices and session detail have a live status row."
+    }
+  ],
+  "diveAssignments": [
+    {
+      "id": "da-vit-dive-0",
+      "fieldSessionId": "fs-comp-vit-2026-10",
+      "athleteSlug": "vitomir-maricic",
+      "diveId": "dive-0",
+      "deviceId": "dev-pro-01",
+      "assignedAt": "2026-10-29T08:15:00Z",
+      "role": "primary"
+    },
+    {
+      "id": "da-vit-dive-1",
+      "fieldSessionId": "fs-comp-vit-2026-10",
+      "athleteSlug": "vitomir-maricic",
+      "diveId": "dive-1",
+      "deviceId": "dev-compact-01",
+      "assignedAt": "2026-10-29T09:00:00Z",
+      "role": "backup"
+    },
+    {
+      "id": "da-petar-dive-104",
+      "fieldSessionId": "fs-train-connected-nov",
+      "athleteSlug": "petar-klovar",
+      "diveId": "dive-104",
+      "deviceId": "dev-connected-01",
+      "assignedAt": "2026-11-18T08:00:00Z",
+      "role": "primary"
+    },
+    {
+      "id": "da-malina-dive-204",
+      "fieldSessionId": "fs-demo-active",
+      "athleteSlug": "mateusz-malina",
+      "diveId": "dive-204",
+      "deviceId": "dev-connected-01",
+      "assignedAt": "2026-11-26T10:10:00Z",
+      "role": "primary",
+      "notes": "Demo assignment for active session stub."
+    }
+  ],
+  "telemetrySamples": [
+    {
+      "id": "tel-dive0-d1",
+      "deviceId": "dev-pro-01",
+      "atSec": 12,
+      "channel": "depth_m",
+      "value": -8.4,
+      "unit": "m",
+      "fieldSessionId": "fs-comp-vit-2026-10",
+      "diveId": "dive-0",
+      "diveAssignmentId": "da-vit-dive-0",
+      "recordedAt": "2026-10-29T09:42:12Z"
+    },
+    {
+      "id": "tel-dive0-d2",
+      "deviceId": "dev-pro-01",
+      "atSec": 45,
+      "channel": "depth_m",
+      "value": -22.1,
+      "unit": "m",
+      "fieldSessionId": "fs-comp-vit-2026-10",
+      "diveId": "dive-0",
+      "diveAssignmentId": "da-vit-dive-0",
+      "recordedAt": "2026-10-29T09:42:45Z"
+    },
+    {
+      "id": "tel-dive0-spd",
+      "deviceId": "dev-pro-01",
+      "atSec": 45,
+      "channel": "speed_ms",
+      "value": 1.1,
+      "unit": "m/s",
+      "fieldSessionId": "fs-comp-vit-2026-10",
+      "diveId": "dive-0",
+      "diveAssignmentId": "da-vit-dive-0",
+      "recordedAt": "2026-10-29T09:42:45Z"
+    },
+    {
+      "id": "tel-con-bat",
+      "deviceId": "dev-connected-01",
+      "atSec": 0,
+      "channel": "battery_pct",
+      "value": 54,
+      "unit": "%",
+      "fieldSessionId": "fs-demo-active",
+      "recordedAt": "2026-11-26T10:00:05Z"
+    },
+    {
+      "id": "tel-petar-d1",
+      "deviceId": "dev-connected-01",
+      "atSec": 30,
+      "channel": "depth_m",
+      "value": -41.2,
+      "unit": "m",
+      "fieldSessionId": "fs-train-connected-nov",
+      "diveId": "dive-104",
+      "diveAssignmentId": "da-petar-dive-104",
+      "recordedAt": "2026-11-18T08:12:30Z"
+    }
+  ]
+}
