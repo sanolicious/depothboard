@@ -53,3 +53,6 @@ __pycache__/
 node_modules/
 .next/
 tsconfig.tsbuildinfo
+
+# CMAS PDF binaries (rebuild from edocman; keep parsed attempts separately)
+data/ingest/cmas_pdf/raw/

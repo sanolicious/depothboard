@@ -80,6 +80,10 @@ def main() -> int:
     aida_results = json.loads((canonical / "aida_results.json").read_text())
     cmas_people = json.loads((canonical / "cmas_athletes.json").read_text())
     cmas_attempts = json.loads((canonical / "cmas_attempts.json").read_text())
+    cmas_pdf_path = canonical / "cmas_pdf_attempts.json"
+    cmas_pdf_attempts = (
+        json.loads(cmas_pdf_path.read_text()) if cmas_pdf_path.exists() else []
+    )
     events_existing = {
         e["id"]: e for e in json.loads((canonical / "events.json").read_text())
     }
@@ -226,6 +230,82 @@ def main() -> int:
                 "record_flags": [r["record"]] if r.get("record") else [],
             }
         )
+
+    # CMAS PDF attempts — match by normalized name (+ sex when present)
+    person_by_tok: dict[str, str] = {}
+    person_meta = {p.id: p for p in resolver.persons}
+    for p in resolver.persons:
+        person_by_tok[name_tokens_sorted(p.name)] = p.id
+        for al in p.aliases + p.source_names:
+            person_by_tok[name_tokens_sorted(al)] = p.id
+
+    def resolve_pdf_name(name: str, sex: str | None) -> str | None:
+        tok = name_tokens_sorted(name)
+        pid = person_by_tok.get(tok)
+        if pid:
+            # Exact name match wins; PDF page sex headers are often wrong.
+            return pid
+        # token containment for multi-part surnames / reversed order
+        nt = set(normalize_name(name).split())
+        if len(nt) < 2:
+            return None
+        best = None
+        best_n = 0
+        for p in resolver.persons:
+            if sex and p.sex and p.sex != sex:
+                continue
+            pt = set(normalize_name(p.name).split())
+            for al in p.aliases:
+                pt |= set(normalize_name(al).split())
+            inter = len(nt & pt)
+            if inter >= 2 and inter > best_n and (
+                nt <= pt or pt <= nt or inter >= min(3, len(nt))
+            ):
+                best = p.id
+                best_n = inter
+        return best
+
+    # Normalize PDF cards to export_seed vocabulary
+    def norm_card(c: str | None) -> str:
+        c = (c or "WHITE").upper()
+        if c in {"W", "WHITE"}:
+            return "WHITE"
+        if c in {"Y", "YELLOW"}:
+            return "YELLOW"
+        if c in {"R", "RED"}:
+            return "RED"
+        return c
+
+    pdf_linked = pdf_miss = 0
+    for r in cmas_pdf_attempts:
+        if r.get("discipline") not in DISCIPLINE_FACTOR:
+            continue
+        pid = resolve_pdf_name(r.get("athlete_name") or "", r.get("sex"))
+        if not pid:
+            pdf_miss += 1
+            continue
+        pdf_linked += 1
+        eid = r.get("event_id") or f"cmas-pdf-ev-{abs(hash(r.get('event_name') or '')) % 10_000_000}"
+        if eid not in events:
+            events[eid] = {
+                "id": eid,
+                "name": r.get("event_name") or "CMAS PDF event",
+                "federation": "CMAS",
+                "date": r.get("date"),
+                "country": r.get("country"),
+                "type": "pool",
+                "status": "past",
+            }
+        performances.append(
+            {
+                **r,
+                "athlete_id": pid,
+                "federation": "CMAS",
+                "event_id": eid,
+                "card": norm_card(r.get("card")),
+            }
+        )
+    print(f"cmas pdf linked={pdf_linked} unmatched_rows={pdf_miss}")
 
     enriched = 0
     for label, rows in slices.items():

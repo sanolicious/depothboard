@@ -1,0 +1,173 @@
+{
+  "pdfs_parsed": 52,
+  "raw_attempts": 3806,
+  "deduped": 3764,
+  "per_file": {
+    "14th-cmas-world-indoor-championship-2024-belgrade-junior-results.pdf": 78,
+    "14th-cmas-world-indoor-championship-2024-belgrade-master-results.pdf": 194,
+    "14th-cmas-world-indoor-championship-2024-belgrade.pdf": 435,
+    "2015--cmas-world-championship-freediving-indoor.pdf": 0,
+    "2016--cmas-world-championship-freediving-indoor.pdf": 159,
+    "2017--cmas-5th-european-championship-apnea-indoor.pdf": 151,
+    "2018--cmas-world-championship-freediving-indoor.pdf": 236,
+    "2018--cmas-world-championship-freediving-outdoor.pdf": 154,
+    "2019--cmas-6th-european-championship-freediving-indoor.pdf": 224,
+    "2019--cmas-7th-panamerican-championship-indoor.pdf": 101,
+    "2019--cmas-world-championship-freediving-outdoor.pdf": 52,
+    "2021--cmas-world-championship-freediving-outdoor.pdf": 22,
+    "2021--vertical-blue-freediving-world-cup-series.pdf": 0,
+    "2021-cmas-world-championship-freediving-indoor.pdf": 0,
+    "2022--cmas-world-championship-freediving-indoor.pdf": 0,
+    "2022--panamerican-indoor-apnea-championship.pdf": 131,
+    "2022-cmas-world-championship-freediving-outdoor.pdf": 0,
+    "2023-cmas-world-championship-freediving-depth-roatan.pdf": 22,
+    "2024--noxy-international-cup.pdf": 64,
+    "2024-cmas-2nd-world-championship-para-freediving-indoor.pdf": 61,
+    "2024-cmas-freediving-world-cup-outdoor-final-ranking.pdf": 0,
+    "2024-cmas-freediving-world-cup-pool-series-colombia.pdf": 74,
+    "2024-cmas-world-cup-depth-series-authentic-big-blue.pdf": 121,
+    "2024-indoor-final-ranking-real.pdf": 0,
+    "2024-silesia-barbroka.pdf": 43,
+    "2025--cmas-world-championship-freediving-indoor-masters.pdf": 0,
+    "2025-cmas-world-championship-freediving-indoor.pdf": 20,
+    "2025-kaohsiung-indoor-real.pdf": 55,
+    "2026--cmas-open-international-freediving-indoor.pdf": 0,
+    "2026--cmas-world-championship-freediving-indoor-masters.pdf": 165,
+    "2026--cmas-world-championship-freediving-indoor.pdf": 451,
+    "2026--cmas-world-cup-freediving-indoor.pdf": 57,
+    "2026-cmas-indoor-international-freediving-competition.pdf": 0,
+    "6th-cmas-freediving-outdoor-world-cup-2023.pdf": 3,
+    "apnea-games-2024-pool.pdf": 81,
+    "Results - CNF Men 9th Oct 2024.pdf": 29,
+    "Results - CNF Women 10th Oct 2024.pdf": 12,
+    "Results - CWT Men 4th Oct 2024.pdf": 37,
+    "Results - CWT Women 6th Oct 2024.pdf": 29,
+    "Results - CWTB Men 11th Oct 2024.pdf": 30,
+    "Results - CWTB Women 12th Oct 2024.pdf": 21,
+    "Results - FIM Men 7th Oct 2024.pdf": 32,
+    "Results - FIM Women 8th Oct 2024.pdf": 19,
+    "Kuwait Day_1_2X50_Jun_Sen.pdf": 0,
+    "Kuwait Day_1_DNF_SENIORS_JUNIORS.pdf": 79,
+    "Kuwait Day_2_4x50_Jun_Sen.pdf": 0,
+    "Kuwait Day_2_DYNBF_SENIORS_JUNIORS.pdf": 103,
+    "Kuwait Day_3_8X50_Jun_Sen.pdf": 0,
+    "Kuwait Day_3_Static_Jun_Sen.pdf": 69,
+    "Kuwait Day_4_Dyn_Seniors_Juniors.pdf": 106,
+    "noxy-dyn-ranking-f-m-2023.pdf": 0,
+    "xiii-silesia-freediving-pool-cup-rybnik--poland.pdf": 86
+  },
+  "by_disc": {
+    "DNF": 902,
+    "DYNB": 790,
+    "STA": 606,
+    "DYN": 905,
+    "CNF": 110,
+    "CWTB": 132,
+    "CWT": 157,
+    "FIM": 162
+  },
+  "sample_targets": {
+    "Alessia Zecchini": {
+      "n": 27,
+      "best_pts": {
+        "DNF": 89.66,
+        "DYNB": 114.075,
+        "DYN": 126.5,
+        "CNF": 70.0,
+        "CWT": 109.0,
+        "FIM": 94.0,
+        "CWTB": 100.0
+      },
+      "total": 703.24
+    },
+    "Alexey Molchanov": {
+      "n": 17,
+      "best_pts": {
+        "DNF": 77.335,
+        "DYN": 125.0,
+        "CWTB": 124.0,
+        "CWT": 135.0,
+        "FIM": 116.0,
+        "CNF": 90.0
+      },
+      "total": 667.34
+    },
+    "Samo Jeranko": {
+      "n": 8,
+      "best_pts": {
+        "DYN": 111.89
+      },
+      "total": 111.89
+    },
+    "Guillaume Bourdila": {
+      "n": 25,
+      "best_pts": {
+        "DNF": 118.0,
+        "DYNB": 145.75,
+        "DYN": 153.3,
+        "CWTB": 70.0
+      },
+      "total": 487.05
+    },
+    "Mirela Kardasevic": {
+      "n": 21,
+      "best_pts": {
+        "DNF": 105.25,
+        "DYNB": 139.25,
+        "DYN": 144.0,
+        "CWTB": 24.0,
+        "CWT": 25.0
+      },
+      "total": 437.5
+    },
+    "Boris Milosic": {
+      "n": 33,
+      "best_pts": {
+        "DNF": 102.15,
+        "DYNB": 122.0,
+        "DYN": 135.75,
+        "CWTB": 83.0,
+        "CWT": 68.0,
+        "FIM": 71.0,
+        "STA": 90.534
+      },
+      "total": 672.43
+    },
+    "Isabel Sanchez": {
+      "n": 19,
+      "best_pts": {
+        "DNF": 49.5,
+        "DYNB": 115.25,
+        "STA": 88.434,
+        "DYN": 111.89,
+        "CNF": 57.0,
+        "CWT": 80.0,
+        "FIM": 86.0
+      },
+      "total": 588.07
+    },
+    "Carol Carrasco": {
+      "n": 23,
+      "best_pts": {
+        "DNF": 54.5,
+        "DYNB": 101.0,
+        "DYN": 111.89,
+        "STA": 66.45
+      },
+      "total": 333.84
+    },
+    "Mateusz Malina": {
+      "n": 28,
+      "best_pts": {
+        "DNF": 122.0,
+        "DYNB": 142.75,
+        "DYN": 161.25,
+        "CNF": 78.0,
+        "FIM": 66.0,
+        "STA": 115.0,
+        "CWT": 105.0
+      },
+      "total": 790.0
+    }
+  }
+}
