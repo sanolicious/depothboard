@@ -56,5 +56,6 @@ Training aid only — not medical advice and not a substitute for in-water safet
 ## Out of scope
 
 - Live video CV / pose estimation
-- Coaching bookings / payments (S5.3)
 - Medical or safety clearance tooling
+
+Coaching bookings / payments (S5.3) are covered by **PWF-23** — see `docs/coaching-marketplace.md`.

@@ -4,8 +4,16 @@ import { ClearCartOnCheckoutSuccess } from "@/components/ClearCartOnCheckoutSucc
 import { ConsentPanel } from "@/components/ConsentPanel";
 import { Icon } from "@/components/Icon";
 import { LogoutButton } from "@/components/LogoutButton";
-import { getSession, ownsAthlete } from "@/lib/auth";
+import { getSession, isCoachRole, ownsAthlete } from "@/lib/auth";
 import { claimsForUser, resolveAthleteSlug } from "@/lib/claims";
+import {
+  DIVYE_COACHING_COMMISSION_PERCENT,
+  fmtSlotRange,
+  getCoachProfileBySlug,
+  listBookingsForAthlete,
+  listBookingsForCoach,
+  upcomingBookings,
+} from "@/lib/coaching-marketplace";
 import { fmtDate, resultDisplay } from "@/lib/format";
 import {
   deliveryKindLabel,
@@ -16,12 +24,13 @@ import { getRepository } from "@/lib/repository";
 
 export const metadata: Metadata = {
   title: "Account",
-  description: "Athlete account — appearances, consents, orders and claim status.",
+  description:
+    "Athlete account — appearances, consents, orders, coaching bookings and claim status.",
   robots: { index: false, follow: false },
   alternates: { canonical: "/account" },
 };
 
-type Search = Promise<{ order?: string; checkout?: string }>;
+type Search = Promise<{ order?: string; checkout?: string; booking?: string }>;
 
 function statusLabel(status: string) {
   switch (status) {
@@ -58,10 +67,15 @@ export default async function AccountPage({
   const params = (await searchParams) ?? {};
   const highlightOrderId = params.order;
   const checkoutState = params.checkout;
+  const highlightBookingId = params.booking;
   const repo = getRepository();
   const db = repo.getDb();
   const claims = claimsForUser(session);
   const athleteSlug = resolveAthleteSlug(session, claims);
+  const myBookings = upcomingBookings(listBookingsForAthlete(session.id));
+  const coachIncoming = isCoachRole(session)
+    ? upcomingBookings(listBookingsForCoach(session.id))
+    : [];
   const athlete = athleteSlug
     ? repo.getAthleteBySlug(athleteSlug)
     : undefined;
@@ -258,6 +272,127 @@ export default async function AccountPage({
               seedConsents={consents}
               editable={canEditConsents}
             />
+          </div>
+        )}
+
+        <div className="card" style={{ padding: 20, gridColumn: "1 / -1" }}>
+          <h2 style={{ fontSize: "1.2rem" }}>Upcoming coaching bookings</h2>
+          {highlightBookingId && (
+            <p className="caption" style={{ marginTop: 8 }}>
+              Highlighting booking <code>{highlightBookingId}</code> from
+              checkout.
+            </p>
+          )}
+          {myBookings.length === 0 ? (
+            <p className="muted small" style={{ marginTop: 8 }}>
+              No upcoming sessions. Browse{" "}
+              <Link href="/coaching">/coaching</Link> and book a package
+              (login + simulated pay). Diveye fee{" "}
+              {DIVYE_COACHING_COMMISSION_PERCENT}%.
+            </p>
+          ) : (
+            <div className="table-scroll" style={{ marginTop: 12 }}>
+              <table>
+                <thead>
+                  <tr>
+                    <th>When (UTC)</th>
+                    <th>Coach</th>
+                    <th>Package</th>
+                    <th>Paid</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {myBookings.map((b) => {
+                    const coach = getCoachProfileBySlug(b.coachSlug);
+                    return (
+                      <tr
+                        key={b.id}
+                        style={
+                          b.id === highlightBookingId
+                            ? { background: "rgba(80, 160, 180, 0.12)" }
+                            : undefined
+                        }
+                      >
+                        <td className="small">
+                          {fmtSlotRange(b.startsAt, b.endsAt)}
+                          <div className="caption">{b.id}</div>
+                        </td>
+                        <td className="small">
+                          <Link href={`/coaching/${b.coachSlug}`}>
+                            {coach?.name ?? b.coachSlug}
+                          </Link>
+                        </td>
+                        <td className="small">{b.packageTitle}</td>
+                        <td className="small">€{b.priceEur.toFixed(2)}</td>
+                        <td className="small">
+                          <code>{b.status}</code>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          )}
+          <Link className="btn btn--sm" href="/coaching" style={{ marginTop: 10 }}>
+            Browse coaches
+          </Link>
+        </div>
+
+        {isCoachRole(session) && (
+          <div className="card" style={{ padding: 20, gridColumn: "1 / -1" }}>
+            <h2 style={{ fontSize: "1.2rem" }}>Incoming coaching bookings</h2>
+            <p className="muted small" style={{ marginTop: 6 }}>
+              Athlete bookings for your marketplace profile · Diveye{" "}
+              {DIVYE_COACHING_COMMISSION_PERCENT}% already split on each row.
+              Also listed on <Link href="/account/coach">AI coach</Link>.
+            </p>
+            {coachIncoming.length === 0 ? (
+              <p className="muted small" style={{ marginTop: 8 }}>
+                No incoming sessions yet.
+              </p>
+            ) : (
+              <div className="table-scroll" style={{ marginTop: 12 }}>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>When (UTC)</th>
+                      <th>Athlete</th>
+                      <th>Package</th>
+                      <th>Gross / your payout</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {coachIncoming.map((b) => (
+                      <tr key={b.id}>
+                        <td className="small">
+                          {fmtSlotRange(b.startsAt, b.endsAt)}
+                          <div className="caption">{b.id}</div>
+                        </td>
+                        <td className="small">
+                          {b.athleteName}
+                          <div className="caption">{b.athleteEmail}</div>
+                        </td>
+                        <td className="small">{b.packageTitle}</td>
+                        <td className="small">
+                          €{b.priceEur.toFixed(2)} / €
+                          {b.coachPayoutEur.toFixed(2)}
+                          <div className="caption">
+                            Diveye €{b.diveyeFeeEur.toFixed(2)} (
+                            {b.commissionPercent}%)
+                          </div>
+                        </td>
+                        <td className="small">
+                          <code>{b.status}</code>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
           </div>
         )}
 

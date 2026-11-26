@@ -7,6 +7,13 @@ import {
   listCoachLinks,
   listCoachReportsVisibleTo,
 } from "@/lib/coach";
+import {
+  DIVYE_COACHING_COMMISSION_PERCENT,
+  fmtSlotRange,
+  getCoachProfileByUserId,
+  listBookingsForCoach,
+  upcomingBookings,
+} from "@/lib/coaching-marketplace";
 import { fmtDate } from "@/lib/format";
 import { getRepository } from "@/lib/repository";
 import { getUserById } from "@/lib/users";
@@ -38,6 +45,10 @@ export default async function AccountCoachPage() {
   const links = coachMode
     ? listCoachLinks({ coachUserId: session.id, activeOnly: true })
     : [];
+  const marketplaceProfile = getCoachProfileByUserId(session.id);
+  const incoming = coachMode
+    ? upcomingBookings(listBookingsForCoach(session.id))
+    : [];
 
   return (
     <div className="container section coach-page">
@@ -57,14 +68,75 @@ export default async function AccountCoachPage() {
             {coachMode ? " · coach view of assigned athletes" : " · your dives"}
           </p>
         </div>
-        <Link className="btn btn--sm" href="/account">
-          Back to account
-        </Link>
+        <div className="row row--wrap" style={{ gap: 8 }}>
+          {marketplaceProfile && (
+            <Link
+              className="btn btn--sm btn--primary"
+              href={`/coaching/${marketplaceProfile.slug}`}
+            >
+              Marketplace profile
+            </Link>
+          )}
+          <Link className="btn btn--sm" href="/account">
+            Back to account
+          </Link>
+        </div>
       </div>
 
       <p className="coach-disclaimer" role="note">
         <Icon name="info" /> {COACH_DISCLAIMER}
       </p>
+
+      {coachMode && (
+        <div className="card" style={{ padding: 20, marginTop: 16 }}>
+          <h2 style={{ fontSize: "1.15rem" }}>Incoming bookings</h2>
+          <p className="muted small" style={{ marginTop: 6 }}>
+            Marketplace sessions · Diveye commission{" "}
+            {DIVYE_COACHING_COMMISSION_PERCENT}% (
+            <code>DIVYE_COACHING_COMMISSION_PERCENT</code>).
+          </p>
+          {incoming.length === 0 ? (
+            <p className="muted small" style={{ marginTop: 8 }}>
+              No upcoming bookings. Athletes book via{" "}
+              <Link href="/coaching">/coaching</Link>
+              {marketplaceProfile
+                ? ` or your profile /coaching/${marketplaceProfile.slug}`
+                : ""}
+              .
+            </p>
+          ) : (
+            <div className="table-scroll" style={{ marginTop: 12 }}>
+              <table>
+                <thead>
+                  <tr>
+                    <th>When</th>
+                    <th>Athlete</th>
+                    <th>Package</th>
+                    <th>Payout</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {incoming.map((b) => (
+                    <tr key={b.id}>
+                      <td className="small">
+                        {fmtSlotRange(b.startsAt, b.endsAt)}
+                      </td>
+                      <td className="small">{b.athleteName}</td>
+                      <td className="small">{b.packageTitle}</td>
+                      <td className="small">
+                        €{b.coachPayoutEur.toFixed(2)}
+                        <div className="caption">
+                          of €{b.priceEur} · Diveye €{b.diveyeFeeEur}
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      )}
 
       {coachMode && (
         <div className="card" style={{ padding: 20, marginTop: 16 }}>

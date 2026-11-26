@@ -57,4 +57,4 @@ Env: `OPENAI_API_KEY` (optional), `OPENAI_ARCHIVE_MODEL` (default `gpt-4o-mini`)
 
 - Live CV / pose estimation
 - Interactive watching paths / edu interstitial (S2.4 / S2.5)
-- Coaching bookings / marketplace (S5.3)
+- Coaching bookings / marketplace (S5.3) — see `docs/coaching-marketplace.md` (PWF-23)
