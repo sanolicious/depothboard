@@ -120,6 +120,7 @@ export type UserRole =
   | "steward"
   | "operator"
   | "judge"
+  | "coach"
   | "admin";
 
 /** Seed demo account (credentials auth MVP). */
@@ -614,6 +615,62 @@ export interface FederationJudgesCatalog {
   }>;
   evidencePacks: JudgeEvidencePack[];
   trainingCases: JudgeTrainingCase[];
+}
+
+/* ------------------------------------------------------------------ */
+/* AI coach — private technique feedback (PWF-21, Diveye module 5)     */
+/* ------------------------------------------------------------------ */
+
+export type CoachFindingKind = "strength" | "issue" | "drill";
+
+export type CoachReportEngine = "heuristics" | "llm" | "template";
+
+/** Single coaching finding: what improved, what went wrong, or a drill. */
+export interface CoachFinding {
+  id: string;
+  kind: CoachFindingKind;
+  title: string;
+  detail: string;
+  /** Optional FootageMarker / DiveMarker id. */
+  markerId?: string;
+  atSec?: number;
+}
+
+/**
+ * Private coaching report for one dive / performance.
+ * Visible only to the athlete owner and linked coaches (S5.2).
+ */
+export interface CoachReport {
+  id: string;
+  diveId: string;
+  performanceId?: string;
+  footageAssetId?: string;
+  athleteSlug: string;
+  createdAt: string;
+  createdByUserId: string;
+  engine: CoachReportEngine;
+  summary: string;
+  findings: CoachFinding[];
+  /** Mock / marker-derived depth·time snapshot (not medical telemetry). */
+  telemetrySnapshot?: {
+    maxDepthM?: number;
+    diveTimeSec?: number;
+    turnAtSec?: number;
+    surfaceAtSec?: number;
+    protocolAtSec?: number;
+  };
+  disclaimer: string;
+  visibility: "private";
+}
+
+/** Coach ↔ athlete assignment (Diveye S5.2 stub). */
+export interface CoachAthleteLink {
+  id: string;
+  coachUserId: string;
+  athleteSlug: string;
+  status: "active" | "revoked";
+  createdAt: string;
+  notes?: string;
 }
 
 export type RankingBoard = "PORTAL" | "AIDA" | "CMAS";

@@ -137,3 +137,11 @@ export function canAccessFederation(
   if (!session) return false;
   return session.role === "judge" || session.role === "admin";
 }
+
+/** AI coach account area — coach role (or admin browsing). */
+export function isCoachRole(
+  session: SessionUser | null | undefined,
+): boolean {
+  if (!session) return false;
+  return session.role === "coach" || session.role === "admin";
+}

@@ -125,23 +125,30 @@ export default async function AccountPage({
                 {athlete.name} · {athlete.claimed ? "claimed" : "link pending"} ·{" "}
                 {athlete.countryName}
               </p>
-              <Link
-                className="btn btn--sm"
-                href={`/athletes/${athlete.slug}`}
-                style={{ marginTop: 14 }}
-              >
-                View public profile
-              </Link>
+              <div className="row row--wrap" style={{ gap: 8, marginTop: 14 }}>
+                <Link className="btn btn--sm" href={`/athletes/${athlete.slug}`}>
+                  View public profile
+                </Link>
+                <Link className="btn btn--sm btn--primary" href="/account/coach">
+                  AI coach reports
+                </Link>
+              </div>
             </>
           ) : (
             <>
               <p className="muted small" style={{ marginTop: 8 }}>
                 No athlete linked. Complete the claim wizard; after steward
-                approval your profile appears here.
+                approval your profile appears here. Coaches use{" "}
+                <Link href="/account/coach">/account/coach</Link>.
               </p>
-              <Link className="btn btn--sm btn--primary" href="/claim" style={{ marginTop: 14 }}>
-                Claim a profile
-              </Link>
+              <div className="row row--wrap" style={{ gap: 8, marginTop: 14 }}>
+                <Link className="btn btn--sm btn--primary" href="/claim">
+                  Claim a profile
+                </Link>
+                <Link className="btn btn--sm" href="/account/coach">
+                  AI coach
+                </Link>
+              </div>
             </>
           )}
         </div>

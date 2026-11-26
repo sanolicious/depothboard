@@ -1,0 +1,10 @@
+[
+  {
+    "id": "cal-coach-vit",
+    "coachUserId": "user-coach",
+    "athleteSlug": "vitomir-maricic",
+    "status": "active",
+    "createdAt": "2026-11-01T10:00:00.000Z",
+    "notes": "Demo coach assignment — Vitomir (Diveye S5.2 stub)."
+  }
+]

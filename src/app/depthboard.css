@@ -1080,3 +1080,39 @@ body.palette-open .palette-back { display: flex; }
   .fed-quiz__cards { grid-template-columns: 1fr; }
   .fed-score-row { grid-template-columns: 1fr 1fr; }
 }
+
+/* AI coach (PWF-21) */
+.coach-page { max-width: 820px; }
+.coach-panel { display: grid; gap: 8px; }
+.coach-disclaimer {
+  display: flex; gap: 8px; align-items: flex-start;
+  margin: 10px 0 0; padding: 10px 12px;
+  border-radius: var(--r-md); border: 1px solid rgba(245, 197, 24, 0.45);
+  background: rgba(245, 197, 24, 0.08);
+  font-size: 0.8125rem; color: var(--text-muted); line-height: 1.45;
+}
+.coach-disclaimer svg { flex: 0 0 auto; margin-top: 2px; }
+.coach-tel {
+  display: grid; grid-template-columns: auto 1fr; gap: 4px 14px;
+  margin: 10px 0 0; font-size: 0.8125rem;
+}
+.coach-tel dt { color: var(--text-muted); }
+.coach-tel dd { margin: 0; }
+.coach-findings { margin-top: 12px; display: grid; gap: 8px; }
+.coach-findings h4 { margin: 0; font-size: 0.9rem; }
+.coach-findings ul {
+  list-style: none; margin: 0; padding: 0; display: grid; gap: 10px;
+}
+.coach-findings li { display: grid; gap: 2px; }
+.coach-findings--ok {
+  padding: 12px 14px; border-radius: var(--r-md);
+  border: 1px solid rgba(74, 222, 128, 0.35); background: rgba(74, 222, 128, 0.05);
+}
+.coach-findings--warn {
+  padding: 12px 14px; border-radius: var(--r-md);
+  border: 1px solid rgba(245, 197, 24, 0.45); background: rgba(245, 197, 24, 0.06);
+}
+.coach-findings--drill {
+  padding: 12px 14px; border-radius: var(--r-md);
+  border: 1px solid rgba(80, 160, 180, 0.4); background: rgba(80, 160, 180, 0.06);
+}
