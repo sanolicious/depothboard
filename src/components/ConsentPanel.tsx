@@ -36,12 +36,15 @@ export function ConsentPanel({
   minor,
   guardianConsentGranted,
   seedConsents,
+  editable = false,
 }: {
   athleteSlug: string;
   athleteName: string;
   minor: boolean;
   guardianConsentGranted?: boolean;
   seedConsents: ConsentRecord[];
+  /** Only the signed-in profile owner (or guardian) may toggle. */
+  editable?: boolean;
 }) {
   const [local, setLocal] = useState<LocalMap>({});
   const [hydrated, setHydrated] = useState(false);
@@ -81,6 +84,7 @@ export function ConsentPanel({
   }
 
   function toggle(purpose: ConsentPurpose) {
+    if (!editable) return;
     const current = mergeStatus(seedConsents, local, purpose);
     const nextStatus: ConsentStatus =
       current === "granted" ? "withdrawn" : "granted";
@@ -101,10 +105,13 @@ export function ConsentPanel({
         <div>
           <h2 style={{ fontSize: "1.2rem" }}>Recording consents</h2>
           <p className="muted small" style={{ marginTop: 6 }}>
-            {athleteName} · mock panel · saved in this browser (overrides seed)
+            {athleteName}
+            {editable
+              ? " · editable · saved in this browser (overrides seed)"
+              : " · read-only (sign in as profile owner to edit)"}
           </p>
         </div>
-        <span className="badge">MVP · no auth</span>
+        <span className="badge">{editable ? "Owner" : "Read-only"}</span>
       </div>
 
       {minor && (
@@ -122,7 +129,11 @@ export function ConsentPanel({
           <input
             type="checkbox"
             checked={guardianOk}
-            onChange={(e) => persist(local, e.target.checked)}
+            disabled={!editable}
+            onChange={(e) => {
+              if (!editable) return;
+              persist(local, e.target.checked);
+            }}
           />
           <span className="small">
             Guardian consent on file (required for juniors before any
@@ -165,6 +176,7 @@ export function ConsentPanel({
               <button
                 className={granted ? "btn btn--sm btn--ghost" : "btn btn--sm btn--primary"}
                 type="button"
+                disabled={!editable}
                 onClick={() => toggle(purpose)}
               >
                 <Icon name={granted ? "lock" : "check"} />
@@ -175,8 +187,9 @@ export function ConsentPanel({
         })}
       </ul>
       <p className="caption" style={{ marginTop: 14 }}>
-        Shop and dive pages read seed consents server-side. Browser toggles here
-        demonstrate the athlete UX; wire to an API after auth.
+        {editable
+          ? "Shop and dive pages still read seed consents server-side; browser toggles demonstrate athlete UX until a consent API lands."
+          : "Consent editing is gated to the signed-in owner of this athlete profile."}
       </p>
     </div>
   );

@@ -338,7 +338,8 @@ export function SiteHeader({
           ["/archive", "film", "Archive / VOD"],
           ["/shop", "cart", "Shop"],
           ["/claim", "shield", "Claim your profile"],
-          ["/account", "users", "Athlete panel"],
+          ["/login", "user", "Sign in"],
+          ["/account", "users", "Account"],
         ].map(([href, icon, label]) => (
           <Link key={href} href={href} onClick={() => setMenuOpen(false)}>
             <Icon name={icon} /> {label}
@@ -494,6 +495,9 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link href="/claim">Claim your profile</Link>
+              </li>
+              <li>
+                <Link href="/login">Sign in</Link>
               </li>
             </ul>
           </div>

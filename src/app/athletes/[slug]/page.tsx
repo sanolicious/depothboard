@@ -173,7 +173,7 @@ export default async function AthletePage({ params }: { params: Params }) {
       </div>
 
       <div className="row row--wrap" style={{ gap: 10, marginTop: 18 }}>
-        <Link className="btn btn--primary" href="/claim">
+        <Link className="btn btn--primary" href={`/claim?slug=${athlete.slug}`}>
           <Icon name="shield" /> Claim this profile
         </Link>
         <Link className="btn btn--ghost" href="/shop">

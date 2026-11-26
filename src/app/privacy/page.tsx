@@ -74,9 +74,10 @@ export default function Page() {
 
       <h2>Profile claims</h2>
       <p>
-        Claim requests are emailed to{" "}
+        Signed-in users submit a four-step claim wizard. Requests are emailed to{" "}
         <a href="mailto:claims@depthboard.com">claims@depthboard.com</a> and
-        logged for steward review. No production OAuth in this MVP.
+        logged for steward review (pending / approved / rejected). Demo auth uses
+        a cookie session with seed credentials — not production OAuth.
       </p>
 
       <h2>Contact</h2>
