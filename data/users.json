@@ -69,6 +69,33 @@
     "name": "Demo Coach",
     "role": "coach",
     "athleteSlug": null,
-    "notes": "AI coach demo — assigned to vitomir-maricic via coach-links.json (PWF-21)."
+    "notes": "AI coach + marketplace profile demo-coach — Vitomir via coach-links (PWF-21/23)."
+  },
+  {
+    "id": "user-coach-ana",
+    "email": "ana.coach@example.com",
+    "password": "demo",
+    "name": "Ana Depth",
+    "role": "coach",
+    "athleteSlug": null,
+    "notes": "Marketplace coach — depth / CWT specialist (PWF-23)."
+  },
+  {
+    "id": "user-coach-marek",
+    "email": "marek.coach@example.com",
+    "password": "demo",
+    "name": "Marek Pool",
+    "role": "coach",
+    "athleteSlug": null,
+    "notes": "Marketplace coach — pool DYN/STA (PWF-23)."
+  },
+  {
+    "id": "user-coach-sofia",
+    "email": "sofia.coach@example.com",
+    "password": "demo",
+    "name": "Sofia Protocol",
+    "role": "coach",
+    "athleteSlug": null,
+    "notes": "Marketplace coach — surface protocol & safety habits (PWF-23)."
   }
 ]

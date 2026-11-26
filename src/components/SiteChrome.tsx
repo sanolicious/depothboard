@@ -23,6 +23,7 @@ const NAV = [
   { href: "/calendar", label: "Events", key: "events" },
   { href: "/athletes", label: "Athletes", key: "athletes" },
   { href: "/records", label: "Records", key: "records" },
+  { href: "/coaching", label: "Coaching", key: "coaching" },
   { href: "/shop", label: "Shop", key: "shop" },
 ];
 
@@ -350,6 +351,7 @@ export function SiteHeader({
           ["/athletes", "user", "Athletes"],
           ["/records", "trophy", "Records"],
           ["/archive", "film", "Archive / VOD"],
+          ["/coaching", "users", "Coaching"],
           ["/shop", "cart", "Shop"],
           ["/claim", "shield", "Claim your profile"],
           ["/login", "user", "Sign in"],
@@ -485,13 +487,16 @@ export function SiteFooter() {
             </ul>
           </div>
           <div>
-            <h4>Footage</h4>
+            <h4>Footage & coaching</h4>
             <ul>
               <li>
                 <Link href="/shop">Shop</Link>
               </li>
               <li>
                 <Link href="/shop#media-pack">Media packs</Link>
+              </li>
+              <li>
+                <Link href="/coaching">Coaching marketplace</Link>
               </li>
               <li>
                 <Link href="/account">My library</Link>

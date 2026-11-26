@@ -1,0 +1,216 @@
+{
+  "profiles": [
+    {
+      "id": "cp-demo",
+      "slug": "demo-coach",
+      "userId": "user-coach",
+      "name": "Demo Coach",
+      "headline": "Technique review from Diveye OT markers",
+      "bio": "Seed marketplace coach linked to coach.demo@example.com. Works with competition footage and remote debriefs — training aid only, not medical advice.",
+      "specialties": ["CWT", "CNF", "video review"],
+      "languages": ["en", "hr"],
+      "location": "Remote · Adriatic",
+      "photoHue": 195,
+      "active": true
+    },
+    {
+      "id": "cp-ana",
+      "slug": "ana-depth",
+      "userId": "user-coach-ana",
+      "name": "Ana Depth",
+      "headline": "Depth pacing & turn timing",
+      "bio": "Former national team depth athlete. Focus on equalisation comfort, descent/ascent split, and calm line turns from filmed dives.",
+      "specialties": ["CWTB", "FIM", "equalisation"],
+      "languages": ["en", "es"],
+      "location": "Remote · Canaries",
+      "photoHue": 168,
+      "active": true
+    },
+    {
+      "id": "cp-marek",
+      "slug": "marek-pool",
+      "userId": "user-coach-marek",
+      "name": "Marek Pool",
+      "headline": "Pool DYN & STA efficiency",
+      "bio": "Pool specialist for streamline, kick economy, and STA mental routines. Packages include filmed set reviews and live remote sessions.",
+      "specialties": ["DYN", "DYNB", "STA"],
+      "languages": ["en", "pl"],
+      "location": "Remote · Warsaw",
+      "photoHue": 210,
+      "active": true
+    },
+    {
+      "id": "cp-sofia",
+      "slug": "sofia-protocol",
+      "userId": "user-coach-sofia",
+      "name": "Sofia Protocol",
+      "headline": "Surface protocol & competition habits",
+      "bio": "Competition habits coach: surface OK sequence, announcement discipline, and calm recovery under the OT clock. Observational only — not a safety clearance.",
+      "specialties": ["protocol", "competition", "CNF"],
+      "languages": ["en", "it"],
+      "location": "Remote · Mediterranean",
+      "photoHue": 145,
+      "active": true
+    }
+  ],
+  "packages": [
+    {
+      "id": "pkg-demo-review",
+      "coachSlug": "demo-coach",
+      "title": "OT video review (45 min)",
+      "description": "Async marker walkthrough of one Diveye clip + written notes.",
+      "kind": "video_review",
+      "durationMin": 45,
+      "priceEur": 49
+    },
+    {
+      "id": "pkg-demo-live",
+      "coachSlug": "demo-coach",
+      "title": "Live remote debrief (60 min)",
+      "description": "Video call over your latest competition or training dive.",
+      "kind": "live_remote",
+      "durationMin": 60,
+      "priceEur": 79
+    },
+    {
+      "id": "pkg-ana-depth",
+      "coachSlug": "ana-depth",
+      "title": "Depth line session (60 min)",
+      "description": "Pacing plan + turn window review for CWT / FIM.",
+      "kind": "live_remote",
+      "durationMin": 60,
+      "priceEur": 89
+    },
+    {
+      "id": "pkg-ana-block",
+      "coachSlug": "ana-depth",
+      "title": "Two-week depth block",
+      "description": "Four check-ins + homework sets. Not a medical programme.",
+      "kind": "block",
+      "durationMin": 120,
+      "priceEur": 249
+    },
+    {
+      "id": "pkg-marek-dyn",
+      "coachSlug": "marek-pool",
+      "title": "DYN kick economy (45 min)",
+      "description": "Film review focused on kick rate and streamline.",
+      "kind": "video_review",
+      "durationMin": 45,
+      "priceEur": 55
+    },
+    {
+      "id": "pkg-marek-live",
+      "coachSlug": "marek-pool",
+      "title": "Pool live remote (60 min)",
+      "description": "Live call for DYN/STA week planning.",
+      "kind": "live_remote",
+      "durationMin": 60,
+      "priceEur": 75
+    },
+    {
+      "id": "pkg-sofia-proto",
+      "coachSlug": "sofia-protocol",
+      "title": "Surface protocol drill (45 min)",
+      "description": "OK sequence rehearsal notes from OT surface markers.",
+      "kind": "video_review",
+      "durationMin": 45,
+      "priceEur": 59
+    },
+    {
+      "id": "pkg-sofia-comp",
+      "coachSlug": "sofia-protocol",
+      "title": "Competition week call (60 min)",
+      "description": "Announcement + recovery habits before a start.",
+      "kind": "live_remote",
+      "durationMin": 60,
+      "priceEur": 85
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot-demo-1",
+      "coachSlug": "demo-coach",
+      "startsAt": "2026-12-03T15:00:00.000Z",
+      "endsAt": "2026-12-03T16:00:00.000Z",
+      "status": "open"
+    },
+    {
+      "id": "slot-demo-2",
+      "coachSlug": "demo-coach",
+      "startsAt": "2026-12-05T09:00:00.000Z",
+      "endsAt": "2026-12-05T09:45:00.000Z",
+      "status": "open"
+    },
+    {
+      "id": "slot-demo-3",
+      "coachSlug": "demo-coach",
+      "startsAt": "2026-12-10T18:00:00.000Z",
+      "endsAt": "2026-12-10T19:00:00.000Z",
+      "status": "open"
+    },
+    {
+      "id": "slot-ana-1",
+      "coachSlug": "ana-depth",
+      "startsAt": "2026-12-04T11:00:00.000Z",
+      "endsAt": "2026-12-04T12:00:00.000Z",
+      "status": "open"
+    },
+    {
+      "id": "slot-ana-2",
+      "coachSlug": "ana-depth",
+      "startsAt": "2026-12-08T16:30:00.000Z",
+      "endsAt": "2026-12-08T17:30:00.000Z",
+      "status": "open"
+    },
+    {
+      "id": "slot-ana-3",
+      "coachSlug": "ana-depth",
+      "startsAt": "2026-12-12T10:00:00.000Z",
+      "endsAt": "2026-12-12T12:00:00.000Z",
+      "status": "open"
+    },
+    {
+      "id": "slot-marek-1",
+      "coachSlug": "marek-pool",
+      "startsAt": "2026-12-02T17:00:00.000Z",
+      "endsAt": "2026-12-02T17:45:00.000Z",
+      "status": "open"
+    },
+    {
+      "id": "slot-marek-2",
+      "coachSlug": "marek-pool",
+      "startsAt": "2026-12-06T08:00:00.000Z",
+      "endsAt": "2026-12-06T09:00:00.000Z",
+      "status": "open"
+    },
+    {
+      "id": "slot-marek-3",
+      "coachSlug": "marek-pool",
+      "startsAt": "2026-12-09T19:00:00.000Z",
+      "endsAt": "2026-12-09T20:00:00.000Z",
+      "status": "open"
+    },
+    {
+      "id": "slot-sofia-1",
+      "coachSlug": "sofia-protocol",
+      "startsAt": "2026-12-03T13:00:00.000Z",
+      "endsAt": "2026-12-03T13:45:00.000Z",
+      "status": "open"
+    },
+    {
+      "id": "slot-sofia-2",
+      "coachSlug": "sofia-protocol",
+      "startsAt": "2026-12-07T15:00:00.000Z",
+      "endsAt": "2026-12-07T16:00:00.000Z",
+      "status": "open"
+    },
+    {
+      "id": "slot-sofia-3",
+      "coachSlug": "sofia-protocol",
+      "startsAt": "2026-12-11T09:30:00.000Z",
+      "endsAt": "2026-12-11T10:30:00.000Z",
+      "status": "open"
+    }
+  ]
+}

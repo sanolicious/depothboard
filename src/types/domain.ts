@@ -674,6 +674,90 @@ export interface CoachAthleteLink {
 }
 
 /* ------------------------------------------------------------------ */
+/* Coaching marketplace bookings (PWF-23, Diveye S5.3)                 */
+/* ------------------------------------------------------------------ */
+
+export type CoachPackageKind = "video_review" | "live_remote" | "block";
+
+export type CoachSlotStatus = "open" | "held" | "booked";
+
+export type CoachingBookingStatus =
+  | "paid_simulated"
+  | "confirmed"
+  | "cancelled";
+
+/** Public marketplace profile linked to a demo coach user. */
+export interface CoachProfile {
+  id: string;
+  slug: string;
+  userId: string;
+  name: string;
+  headline: string;
+  bio: string;
+  specialties: string[];
+  languages: string[];
+  location: string;
+  /** CSS scene hue for catalog cards (no photo assets in MVP). */
+  photoHue: number;
+  active: boolean;
+}
+
+/** Priced coaching package in EUR. */
+export interface CoachPackage {
+  id: string;
+  coachSlug: string;
+  title: string;
+  description: string;
+  kind: CoachPackageKind;
+  durationMin: number;
+  priceEur: number;
+}
+
+/** Bookable availability window for a coach. */
+export interface CoachAvailabilitySlot {
+  id: string;
+  coachSlug: string;
+  startsAt: string;
+  endsAt: string;
+  status: CoachSlotStatus;
+  /** When booked, points at CoachingBooking.id. */
+  bookingId?: string;
+}
+
+/** Paid coaching session booking (JSON file store). */
+export interface CoachingBooking {
+  id: string;
+  coachSlug: string;
+  coachUserId: string;
+  athleteUserId: string;
+  athleteEmail: string;
+  athleteName: string;
+  packageId: string;
+  packageTitle: string;
+  slotId: string;
+  startsAt: string;
+  endsAt: string;
+  priceEur: number;
+  /** Diveye platform take rate applied at booking time (config constant). */
+  commissionPercent: number;
+  diveyeFeeEur: number;
+  coachPayoutEur: number;
+  status: CoachingBookingStatus;
+  payment: {
+    provider: "simulated";
+    simulated: true;
+  };
+  createdAt: string;
+  notes?: string;
+}
+
+export interface CoachingMarketplaceSeed {
+  profiles: CoachProfile[];
+  packages: CoachPackage[];
+  slots: CoachAvailabilitySlot[];
+}
+
+/* ------------------------------------------------------------------ */
 /* Archive AI index — searchable VOD moments (PWF-22, Diveye S2.2/S2.3) */
 /* ------------------------------------------------------------------ */
 
