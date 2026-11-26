@@ -1,50 +1,42 @@
-# Weryfikacja AIDA + CMAS vs FR (Portal)
+# Weryfikacja AIDA + CMAS (+ FR gap) vs FR Portal
 
-Data: 26 listopada 2026 (Europe/Warsaw).  
-FR = tylko weryfikacja; ranking Portal budowany z AIDA + CMAS (API + PDF).
+Data: 26 listopada 2026 (Europe/Warsaw).
 
-## Metryki top-50 (all-time)
+## Top-50 overlap
 
 | | M | K |
 |---|---:|---:|
-| Nazwa w naszym top-50 | **46/50** | **45/50** |
-| Obecni w DB (dowolny rank) | 50/50 | 50/50 |
-| Punkty ±15 | 36 | 37 |
-| Punkty ±40 | 38 | 40 |
+| Nazwa w naszym top-50 | **50/50** | **50/50** |
+| Punkty ±15 | 41 | 47 |
+| Punkty ±40 | 46 | 48 |
 
-Cel Piotr (≥45/50 M i K): **spełniony**.
+Cel ≥48/50: **spełniony** (oba 50/50).
 
 ## Seed
 
-| | |
-|---|---:|
-| Athletes | 3050 |
-| Events | 4032 |
-| Results | ~22 925 |
-| asOf | 2026-11-26 |
+3050 athletes · ~24,4k results · ~1471 FR gap rows (`source: FR`) · asOf 2026-11-26
 
-## Źródła CMAS PDF (skrót)
+## Domknięte luki (przykłady)
 
-Indoor: Belgrade WC 2024, Lignano WC 2018/2016, Istanbul EC 2019, Kuwait WC 2023, Novi Sad 2026, Barranquilla, nOxy.  
-Depth: Kalamata 2024, Roatan 2023, outdoor WC 2018–2022, Authentic Big Blue 2024, VB 2021.
-
-## Braki vs FR top-50
-
-**M:** Vivien Richard (#20 FR / #163), Sebastian Lira (#33/#99), Abdelatif Alouach (#41/#180), Emmanouil Giankos (#44/#167).  
-**K:** Mirela Kardašević (#11/#86), Agata Załęcka (#28/#60), Linda Paganelli (#31/#106), Jennifer Wendland (#40/#54), Claire Beatrix Paris (#49/#59).
-
-Główne przyczyny: brak GUID AIDA, brak PDF z kluczowych startów, warianty nazw, niepełna historia CMAS depth dla Kardašević.
-
-## Kluczowe PB po PDF
-
-| Zawodnik | Rank | Punkty | Notatka |
+| Zawodnik | Nasz rank | Punkty | Notatka |
 |---|---:|---:|---|
-| Alessia Zecchini | 3 | 820 | DYN/DYNB z EC Istanbul 2019 |
-| Alexey Molchanov | 4 | 851 | bez DYNB 252 (w PDF tylko DQ/monofin) |
-| Guillaume Bourdila | 10 | 801 | Kuwait DYN/DNF |
-| Boris Milosic | 46 | 688 | basen CMAS |
-| Vincent Mathieu | 45 | 691 | DYNB z PDF |
-| Ioannis Kothonidis | 49 | 687 | CWTB z depth PDF |
+| Vivien Richard | 18 | 772 | basen CMAS z FR |
+| Sebastian Lira | 34 | 728 | depth/pool |
+| Abdelatif Alouach | 44 | 715 | |
+| Emmanouil Giankos | 48 | 711 | |
+| Alexey Molchanov | 3 | 980 | DYNB 252 m |
+| Samo Jeranko | 10 | 830 | |
+| Mirela Kardašević | 11 | 717 | depth CMAS |
+| Agata Załęcka | 21 | 650 | |
+| Linda Paganelli | 29 | 628 | |
+| Jennifer Wendland | 40 | 605 | |
+| Claire Beatrix Paris | 49 | 587 | |
 
-Szczegóły rankingu: `docs/ranking-fr-style.md`.  
-PR: https://github.com/sanolicious/depothboard/pull/3
+## Największe Δ punktów (nazwisko w top50)
+
+M: Kubiak +132, Colak +108, Xiao −83, Bourdila +80  
+K: Hirose +67, Sadurska +49 — reszta zwykle ≤22
+
+## Live sync
+
+`docs/live-sync.md` — GitHub Action cron `17 */6 * * *` lub `PYTHONPATH=. python3 ingest/bin/live_sync.py`.

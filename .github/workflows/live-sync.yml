@@ -1,0 +1,94 @@
+name: Live sync (AIDA + CMAS)
+
+on:
+  schedule:
+    # Every 6 hours — adjust as needed
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "incremental or full"
+        required: false
+        default: incremental
+      skip_fr_gaps:
+        description: "Skip FR gap-fill (true/false)"
+        required: false
+        default: "false"
+
+concurrency:
+  group: live-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          # pdfplumber optional for PDF re-parse; not required for incremental API sync
+          pip install pdfplumber || true
+
+      - name: Restore ingest cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/ingest/raw
+            data/ingest/canonical
+            data/ingest/cmas_scrubbed
+            data/ingest/fr
+            data/ingest/cmas_pdf
+          key: ingest-${{ runner.os }}-${{ github.ref_name }}
+          restore-keys: |
+            ingest-${{ runner.os }}-
+
+      - name: Live sync
+        env:
+          PYTHONPATH: .
+          PYTHONUNBUFFERED: "1"
+        run: |
+          MODE="${{ github.event.inputs.mode || 'incremental' }}"
+          EXTRA=""
+          if [ "${{ github.event.inputs.skip_fr_gaps || 'false' }}" = "true" ]; then
+            EXTRA="--skip-fr-gaps"
+          fi
+          python ingest/bin/live_sync.py --mode "$MODE" --min-interval 1.0 $EXTRA
+
+      - name: Upload coverage + seed artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-sync-${{ github.run_id }}
+          path: |
+            data/ingest/canonical/live_sync_coverage.json
+            data/ingest/fr/portal_compare.json
+            data/ingest/canonical/fr_gap_coverage.json
+            data/seed.json
+          if-no-files-found: warn
+
+      - name: Commit refreshed seed (optional)
+        if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/cursor/')
+        run: |
+          git config user.name "depthboard-live-sync"
+          git config user.email "ingest@depthboard.local"
+          git add data/seed.json data/ingest/fr/portal_compare.json \
+            data/ingest/canonical/live_sync_coverage.json \
+            data/ingest/canonical/fr_gap_attempts.json \
+            data/ingest/canonical/fr_gap_coverage.json \
+            data/ingest/canonical/cmas_pdf_summary.json \
+            2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No seed changes to commit"
+          else
+            git commit -m "chore(ingest): live sync refresh $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi

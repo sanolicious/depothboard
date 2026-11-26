@@ -70,6 +70,9 @@ export interface Performance {
   diveId: string;
   day: number;
   ot: string;
+  /** Secondary ingest tag — FR gap-fill rows carry source "FR". */
+  source?: "AIDA" | "CMAS" | "FR" | string;
+  provenance?: string;
 }
 
 export interface DiveMarker {

@@ -29,6 +29,7 @@ from ingest.common.normalize import (  # noqa: E402
     normalize_name,
 )
 from ingest.common.resolve import EntityResolver  # noqa: E402
+from ingest.fr.client import plausible_pb  # noqa: E402
 
 DISPLAY_FIXES = {
     "763fc9ba-a337-43aa-961e-edaa22c6da9f": {
@@ -307,6 +308,107 @@ def main() -> int:
         )
     print(f"cmas pdf linked={pdf_linked} unmatched_rows={pdf_miss}")
 
+    # FR gap-fill attempts (secondary source). Prefer AIDA/CMAS when the same
+    # dive already exists; FR only supplements missing / higher PBs.
+    fr_gap_path = canonical / "fr_gap_attempts.json"
+    fr_gap_attempts = (
+        json.loads(fr_gap_path.read_text()) if fr_gap_path.exists() else []
+    )
+
+    def primary_dive_keys() -> set[str]:
+        keys: set[str] = set()
+        for perf in performances:
+            if (perf.get("source") or "").upper() == "FR":
+                continue
+            name = perf.get("athlete_name") or name_by_tmp.get(perf.get("athlete_id"), "")
+            disc = perf.get("discipline")
+            date = (perf.get("date") or "")[:10]
+            rp = perf.get("rp")
+            if name and disc and date and rp is not None:
+                keys.add(
+                    f"{name_tokens_sorted(name)}|{disc}|{date}|{round(float(rp), 2)}"
+                )
+        return keys
+
+    name_by_tmp = {p.id: p.name for p in resolver.persons}
+    primary_keys = primary_dive_keys()
+
+    # Best points from primary sources per person×discipline
+    primary_best_pts: dict[tuple[str, str], float] = {}
+    for perf in performances:
+        if (perf.get("source") or "").upper() == "FR":
+            continue
+        if perf.get("card") == "RED":
+            continue
+        aid, disc, pts = perf.get("athlete_id"), perf.get("discipline"), perf.get("points")
+        if not aid or disc not in DISCIPLINE_FACTOR or pts is None:
+            continue
+        key = (aid, disc)
+        if pts > primary_best_pts.get(key, -1):
+            primary_best_pts[key] = float(pts)
+
+    fr_linked = fr_skip_dive = fr_skip_covered = fr_miss = fr_implausible = 0
+    for r in fr_gap_attempts:
+        if r.get("discipline") not in DISCIPLINE_FACTOR:
+            continue
+        if (r.get("card") or "").upper() in {"RED", "R"}:
+            continue
+        if not plausible_pb(r["discipline"], float(r.get("rp") or 0)):
+            fr_implausible += 1
+            continue
+        pid = resolve_pdf_name(r.get("athlete_name") or "", r.get("sex"))
+        if not pid:
+            fr_miss += 1
+            continue
+        dive_key = (
+            f"{name_tokens_sorted(r.get('athlete_name') or '')}|"
+            f"{r.get('discipline')}|{(r.get('date') or '')[:10]}|"
+            f"{round(float(r.get('rp') or 0), 2)}"
+        )
+        if dive_key in primary_keys:
+            fr_skip_dive += 1
+            continue
+        # For synthetic FR PB rows: skip if primary already covers the points
+        is_pb = str(r.get("event_id") or "").startswith("fr-pb-") or (
+            r.get("remarks") or ""
+        ).startswith("gap-fill")
+        pts = float(r.get("points") or 0)
+        if is_pb and pts <= primary_best_pts.get((pid, r["discipline"]), -1) + 1e-6:
+            fr_skip_covered += 1
+            continue
+        fr_linked += 1
+        eid = r.get("event_id") or f"fr-ev-{abs(hash(r.get('event_name') or '')) % 10_000_000}"
+        if eid not in events:
+            events[eid] = {
+                "id": eid,
+                "name": r.get("event_name") or "FR gap-fill",
+                "federation": r.get("federation") or "CMAS",
+                "date": r.get("date"),
+                "country": r.get("country"),
+                "type": "pool"
+                if r.get("discipline") in {"STA", "DYN", "DYNB", "DNF"}
+                else "depth",
+                "status": "past",
+            }
+        performances.append(
+            {
+                **r,
+                "athlete_id": pid,
+                "federation": r.get("federation")
+                if r.get("federation") in {"AIDA", "CMAS"}
+                else "CMAS",
+                "event_id": eid,
+                "card": norm_card(r.get("card")),
+                "source": "FR",
+                "provenance": r.get("provenance")
+                or f"https://freediveranking.com/athlete/{r.get('athlete_slug') or ''}",
+            }
+        )
+    print(
+        f"fr gap linked={fr_linked} skip_same_dive={fr_skip_dive} "
+        f"skip_covered={fr_skip_covered} implausible={fr_implausible} unmatched={fr_miss}"
+    )
+
     enriched = 0
     for label, rows in slices.items():
         if not label.endswith("-alltime") or label.startswith("OVERALL"):
@@ -461,15 +563,20 @@ def main() -> int:
         "methodology": {
             "portal": (
                 "sum of best points over 8 disciplines from AIDA+CMAS "
-                "(+ AIDA ranking-slice PBs when history is thin)"
+                "(+ AIDA ranking-slice PBs + FR gap-fill when primary history is thin)"
             ),
             "factors": DISCIPLINE_FACTOR,
             "cards": "RED excluded; YELLOW uses source points after penalties",
             "active_window": "UI Active = rolling 24 months from asOf; FR compare = all-time",
             "ties": "Olympic place for equal points; tie-break %WR → disc count → earlier PB date",
+            "fr_gap_fill": (
+                "FR rows tagged source=FR + provenance URL; "
+                "same-dive conflicts prefer AIDA/CMAS; FR excluded from AIDA/CMAS-only boards"
+            ),
         },
         "seed_stats": seed["stats"],
         "slice_enrichment_rows": enriched,
+        "fr_gap_linked": fr_linked,
     }
     (out / "fr/portal_compare.json").write_text(
         json.dumps(report, indent=2, ensure_ascii=False)

@@ -1,0 +1,947 @@
+[
+  {
+    "rank": 1,
+    "name": "Zsófia Törőcsik",
+    "points": 852.35,
+    "country": "HU",
+    "slug": "Zsofia-Torocsik",
+    "pbs": {
+      "DYN": "300 m",
+      "CNF": "78 m",
+      "DNF": "212.5 m",
+      "STA": "05:48",
+      "DYNB": "265 m",
+      "FIM": "108 m",
+      "CWTB": "108 m",
+      "CWT": "112 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 2,
+    "name": "Alessia Zecchini",
+    "points": 831.88,
+    "country": "IT",
+    "slug": "Alessia-Zecchini",
+    "pbs": {
+      "CWTB": "113 m",
+      "FIM": "105 m",
+      "CNF": "74 m",
+      "CWT": "123 m",
+      "STA": "06:39",
+      "DYN": "253 m",
+      "DYNB": "228.15 m",
+      "DNF": "193 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 3,
+    "name": "Kateryna Sadurska",
+    "points": 816.9,
+    "country": "UA",
+    "slug": "Kateryna-Sadurska",
+    "pbs": {
+      "CWT": "108 m",
+      "CNF": "90 m",
+      "FIM": "102 m",
+      "DNF": "183.5 m",
+      "DYN": "251 m",
+      "CWTB": "103 m",
+      "DYNB": "224.5 m",
+      "STA": "07:02"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 4,
+    "name": "Enchante Gallardo",
+    "points": 751.2,
+    "country": "US",
+    "slug": "Enchante-Gallardo",
+    "pbs": {
+      "CWTB": "100 m",
+      "CWT": "110 m",
+      "FIM": "106 m",
+      "DNF": "154 m",
+      "DYN": "210 m",
+      "CNF": "68 m",
+      "DYNB": "218 m",
+      "STA": "06:21"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 5,
+    "name": "Mariko Kaji",
+    "points": 746.9,
+    "country": "JP",
+    "slug": "Mariko-Kaji",
+    "pbs": {
+      "CWT": "100 m",
+      "STA": "06:02",
+      "CNF": "73 m",
+      "CWTB": "93 m",
+      "FIM": "90 m",
+      "DNF": "185 m",
+      "DYNB": "232 m",
+      "DYN": "220 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 6,
+    "name": "Hanako Hirose",
+    "points": 745.35,
+    "country": "JP",
+    "slug": "Hanako-Hirose",
+    "pbs": {
+      "CWTB": "93 m",
+      "DYNB": "228 m",
+      "CWT": "113 m",
+      "DYN": "270 m",
+      "CNF": "53 m",
+      "STA": "07:03",
+      "FIM": "86 m",
+      "DNF": "133.5 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 7,
+    "name": "Natalie Bruce",
+    "points": 734.7,
+    "country": "US",
+    "slug": "Natalie-Bruce",
+    "pbs": {
+      "CNF": "57 m",
+      "CWTB": "85 m",
+      "CWT": "82 m",
+      "FIM": "98 m",
+      "DYNB": "249 m",
+      "DYN": "257 m",
+      "DNF": "171 m",
+      "STA": "06:11"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 8,
+    "name": "Isabel Sanchez Aran",
+    "points": 734.28,
+    "country": "ES",
+    "slug": "Isabel-Sanchez-Aran",
+    "pbs": {
+      "FIM": "96 m",
+      "CNF": "63 m",
+      "DYNB": "230.5 m",
+      "STA": "07:24",
+      "DNF": "151.1 m",
+      "CWT": "95 m",
+      "DYN": "209.36 m",
+      "CWTB": "96 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 9,
+    "name": "Marianna Krupnitskaia",
+    "points": 721.88,
+    "country": "FR",
+    "slug": "Marianna-Krupnitskaia",
+    "pbs": {
+      "CWTB": "103 m",
+      "CNF": "62 m",
+      "FIM": "82 m",
+      "DYNB": "228.6 m",
+      "CWT": "105 m",
+      "DYN": "206.7 m",
+      "DNF": "157.25 m",
+      "STA": "06:08"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 10,
+    "name": "Jiyeon Kim",
+    "points": 718.2,
+    "country": "KR",
+    "slug": "Jiyeon-Kim",
+    "pbs": {
+      "DNF": "154 m",
+      "DYN": "222 m",
+      "DYNB": "232 m",
+      "CWT": "108 m",
+      "CNF": "50 m",
+      "CWTB": "103 m",
+      "STA": "07:21",
+      "FIM": "65 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 11,
+    "name": "Mirela Kardašević",
+    "points": 705.5,
+    "country": "HR",
+    "slug": "Mirela-Kardasevic",
+    "pbs": {
+      "DYN": "288 m",
+      "DNF": "210.5 m",
+      "DYNB": "278.5 m",
+      "CWT": "91 m",
+      "STA": "06:30",
+      "CNF": "75 m",
+      "CWTB": "84 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 12,
+    "name": "Tongtong Xu",
+    "points": 693.8,
+    "country": "CN",
+    "slug": "Tongtong-Xu",
+    "pbs": {
+      "CWT": "102 m",
+      "FIM": "90 m",
+      "DNF": "161 m",
+      "CWTB": "100 m",
+      "CNF": "70 m",
+      "STA": "05:04",
+      "DYN": "181 m",
+      "DYNB": "200 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 13,
+    "name": "Jessea Wenjie Lu",
+    "points": 684.2,
+    "country": "CN",
+    "slug": "Jessea-Wenjie-Lu",
+    "pbs": {
+      "CWT": "89 m",
+      "DYNB": "182 m",
+      "CNF": "62 m",
+      "FIM": "88 m",
+      "STA": "08:01",
+      "DYN": "200 m",
+      "CWTB": "83 m",
+      "DNF": "150 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 14,
+    "name": "Yongju Lee",
+    "points": 677.0,
+    "country": "KR",
+    "slug": "Yongju-Lee",
+    "pbs": {
+      "STA": "05:50",
+      "CWTB": "100 m",
+      "CNF": "52 m",
+      "DYN": "210 m",
+      "FIM": "80 m",
+      "CWT": "104 m",
+      "DNF": "132 m",
+      "DYNB": "200 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 15,
+    "name": "Sanda Delija",
+    "points": 676.4,
+    "country": "HR",
+    "slug": "Sanda-Delija",
+    "pbs": {
+      "CWTB": "100 m",
+      "CWT": "96 m",
+      "FIM": "103 m",
+      "CNF": "75 m",
+      "DYNB": "207 m",
+      "DNF": "123 m",
+      "STA": "04:38",
+      "DYN": "178 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 16,
+    "name": "Jung A Kim",
+    "points": 670.7,
+    "country": "KR",
+    "slug": "Jung-A-Kim",
+    "pbs": {
+      "CWTB": "94 m",
+      "FIM": "86 m",
+      "CNF": "52 m",
+      "CWT": "107 m",
+      "DNF": "130 m",
+      "STA": "07:31",
+      "DYN": "150 m",
+      "DYNB": "203 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 17,
+    "name": "Yasuko Ozeki",
+    "points": 665.1,
+    "country": "JP",
+    "slug": "Yasuko-Ozeki",
+    "pbs": {
+      "CWTB": "70 m",
+      "DNF": "178 m",
+      "STA": "05:13",
+      "CNF": "64 m",
+      "DYN": "240 m",
+      "CWT": "80 m",
+      "FIM": "70 m",
+      "DYNB": "219 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 18,
+    "name": "Jingyu Ning",
+    "points": 653.3,
+    "country": "CN",
+    "slug": "Jingyu-Ning",
+    "pbs": {
+      "CWTB": "106 m",
+      "STA": "06:09",
+      "DYNB": "211 m",
+      "CNF": "35 m",
+      "FIM": "50 m",
+      "CWT": "114 m",
+      "DYN": "236 m",
+      "DNF": "102 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 19,
+    "name": "Patricia Paige Ong",
+    "points": 651.7,
+    "country": "SG",
+    "slug": "Patricia-Paige-Ong",
+    "pbs": {
+      "STA": "07:06",
+      "DYN": "206 m",
+      "DYNB": "202 m",
+      "DNF": "153 m",
+      "CNF": "52 m",
+      "CWT": "85 m",
+      "FIM": "73 m",
+      "CWTB": "76 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 20,
+    "name": "Hyemi (Mimi) Kim",
+    "points": 651.6,
+    "country": "KR",
+    "slug": "Hyemi-(Mimi)-Kim",
+    "pbs": {
+      "CNF": "57 m",
+      "DNF": "180 m",
+      "DYN": "214 m",
+      "STA": "06:38",
+      "FIM": "78 m",
+      "DYNB": "178 m",
+      "CWT": "90 m",
+      "CWTB": "61 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 21,
+    "name": "Amber Bourke",
+    "points": 644.6,
+    "country": "AU",
+    "slug": "Amber-Bourke",
+    "pbs": {
+      "FIM": "78 m",
+      "STA": "05:43",
+      "DNF": "166 m",
+      "CNF": "68 m",
+      "CWT": "85 m",
+      "DYN": "203 m",
+      "CWTB": "76 m",
+      "DYNB": "169 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 22,
+    "name": "Lauren Matevish",
+    "points": 644.1,
+    "country": "US",
+    "slug": "Lauren-Matevish",
+    "pbs": {
+      "CWTB": "101 m",
+      "DNF": "129 m",
+      "DYNB": "157 m",
+      "DYN": "163 m",
+      "FIM": "95 m",
+      "CNF": "79 m",
+      "CWT": "90 m",
+      "STA": "4:33 min"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 23,
+    "name": "Montserrat Peart Reyes",
+    "points": 642.5,
+    "country": "MX",
+    "slug": "Montserrat-Peart-Reyes",
+    "pbs": {
+      "CWTB": "102 m",
+      "DYN": "177 m",
+      "STA": "06:25",
+      "CNF": "51 m",
+      "FIM": "85 m",
+      "DYNB": "175 m",
+      "DNF": "113 m",
+      "CWT": "95 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 24,
+    "name": "Natalia Zharkova",
+    "points": 637.4,
+    "country": "UA",
+    "slug": "Natalia-Zharkova",
+    "pbs": {
+      "FIM": "107 m",
+      "CWTB": "112 m",
+      "CNF": "70 m",
+      "CWT": "124 m",
+      "STA": "06:02",
+      "DYN": "172 m",
+      "DNF": "132 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 25,
+    "name": "Carol Carrasco Navas",
+    "points": 630.9,
+    "country": "CL",
+    "slug": "Carol-Carrasco-Navas",
+    "pbs": {
+      "CWT": "85 m",
+      "FIM": "65 m",
+      "STA": "5:32",
+      "DYNB": "202 m",
+      "DYN": "218 m",
+      "DNF": "109 m",
+      "CWTB": "97 m",
+      "CNF": "53 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 26,
+    "name": "Nicole Edensbo",
+    "points": 629.9,
+    "country": "SE",
+    "slug": "Nicole-Edensbo",
+    "pbs": {
+      "STA": "06:27",
+      "CWTB": "80 m",
+      "FIM": "77 m",
+      "CNF": "52 m",
+      "CWT": "88 m",
+      "DNF": "135 m",
+      "DYNB": "166 m",
+      "DYN": "210 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 27,
+    "name": "Olga Davydova",
+    "points": 629.2,
+    "country": "AIN",
+    "slug": "Olga-Davydova",
+    "pbs": {
+      "CWTB": "86 m",
+      "CWT": "90 m",
+      "DYNB": "176 m",
+      "FIM": "85 m",
+      "CNF": "60 m",
+      "STA": "06:21",
+      "DYN": "186 m",
+      "DNF": "106 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 28,
+    "name": "Agata Załęcka",
+    "points": 628.2,
+    "country": "PL",
+    "slug": "Agata-Zalecka",
+    "pbs": {
+      "CNF": "57 m",
+      "DYNB": "206 m",
+      "DYN": "205.5 m",
+      "CWTB": "93 m",
+      "STA": "03:01",
+      "CWT": "88 m",
+      "FIM": "76 m",
+      "DNF": "144.5 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 29,
+    "name": "Sheena McNally",
+    "points": 622.0,
+    "country": "CA",
+    "slug": "Sheena-McNally",
+    "pbs": {
+      "DNF": "141 m",
+      "CNF": "61 m",
+      "DYNB": "201 m",
+      "FIM": "100 m",
+      "CWTB": "96 m",
+      "CWT": "94 m",
+      "DYN": "200 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 30,
+    "name": "Namin Kim",
+    "points": 621.7,
+    "country": "KR",
+    "slug": "Namin-Kim",
+    "pbs": {
+      "DYNB": "184 m",
+      "CWTB": "86 m",
+      "DYN": "171 m",
+      "STA": "06:01",
+      "DNF": "126 m",
+      "FIM": "72 m",
+      "CWT": "95 m",
+      "CNF": "56 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 31,
+    "name": "Linda Paganelli",
+    "points": 619.67,
+    "country": "IT",
+    "slug": "Linda-Paganelli",
+    "pbs": {
+      "FIM": "96 m",
+      "CNF": "60 m",
+      "CWT": "93 m",
+      "STA": "6:40",
+      "CWTB": "92 m",
+      "DYNB": "204.29 m",
+      "DYN": "201.05 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 32,
+    "name": "Jie Dong",
+    "points": 618.5,
+    "country": "CN",
+    "slug": "Jie-Dong",
+    "pbs": {
+      "FIM": "88 m",
+      "CWT": "95 m",
+      "CNF": "50 m",
+      "CWTB": "84 m",
+      "STA": "06:40",
+      "DYNB": "175 m",
+      "DNF": "112 m",
+      "DYN": "156 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 33,
+    "name": "Yuanyuan Wang",
+    "points": 615.6,
+    "country": "CN",
+    "slug": "Yuanyuan-Wang",
+    "pbs": {
+      "CNF": "50 m",
+      "CWTB": "101 m",
+      "FIM": "78 m",
+      "CWT": "101 m",
+      "DNF": "105 m",
+      "STA": "05:03",
+      "DYN": "165 m",
+      "DYNB": "190 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 34,
+    "name": "Yagmur Ergun",
+    "points": 615.35,
+    "country": "TR",
+    "slug": "Yagmur-Ergun",
+    "pbs": {
+      "CNF": "59 m",
+      "CWT": "60 m",
+      "DYNB": "237 m",
+      "DNF": "162.5 m",
+      "STA": "5:08",
+      "DYN": "226 m",
+      "FIM": "57 m",
+      "CWTB": "65 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 35,
+    "name": "Sofía Gómez Uribe",
+    "points": 614.5,
+    "country": "CO",
+    "slug": "Sofia-Gomez",
+    "pbs": {
+      "CWT": "110 m",
+      "CWTB": "91 m",
+      "CNF": "60 m",
+      "FIM": "86 m",
+      "DYNB": "184 m",
+      "DYN": "203 m",
+      "DNF": "151 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 36,
+    "name": "Jinseul Yuk",
+    "points": 612.8,
+    "country": "KR",
+    "slug": "Jinseul-Yuk",
+    "pbs": {
+      "CWT": "91 m",
+      "DNF": "126 m",
+      "CNF": "55 m",
+      "CWTB": "85 m",
+      "FIM": "80 m",
+      "DYN": "181 m",
+      "DYNB": "175 m",
+      "STA": "05:04"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 37,
+    "name": "Veronika Kravtsova",
+    "points": 611.6,
+    "country": "",
+    "slug": "Veronika-Kravtsova",
+    "pbs": {
+      "DYN": "217 m",
+      "DNF": "148 m",
+      "DYNB": "193 m",
+      "STA": "05:18",
+      "CWTB": "72 m",
+      "CWT": "80 m",
+      "CNF": "56 m",
+      "FIM": "65 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 38,
+    "name": "Talya Davidoff",
+    "points": 609.5,
+    "country": "ZA",
+    "slug": "Talya-Davidoff",
+    "pbs": {
+      "FIM": "92 m",
+      "CWT": "95 m",
+      "STA": "05:30",
+      "CWTB": "85 m",
+      "CNF": "63 m",
+      "DYNB": "137 m",
+      "DYN": "160 m",
+      "DNF": "120 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 39,
+    "name": "Agnieszka Kalska",
+    "points": 606.8,
+    "country": "PL",
+    "slug": "Agnieszka-Kalska",
+    "pbs": {
+      "STA": "07:14",
+      "DNF": "180 m",
+      "DYN": "253 m",
+      "DYNB": "185 m",
+      "CWTB": "55 m",
+      "CNF": "48 m",
+      "FIM": "52 m",
+      "CWT": "60 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 40,
+    "name": "Jennifer Wendland",
+    "points": 605.15,
+    "country": "DE",
+    "slug": "Jennifer-Wendland",
+    "pbs": {
+      "CNF": "60 m",
+      "CWT": "102 m",
+      "FIM": "88 m",
+      "CWTB": "93 m",
+      "DNF": "104 m",
+      "DYN": "159 m",
+      "DYNB": "128.5 m",
+      "STA": "05:32"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 41,
+    "name": "Jarmila Slovenčíková",
+    "points": 605.05,
+    "country": "CZ",
+    "slug": "Jarmila-Slovencikova",
+    "pbs": {
+      "FIM": "74 m",
+      "DYN": "173.5 m",
+      "STA": "04:49",
+      "DNF": "135 m",
+      "CWT": "94 m",
+      "CNF": "52 m",
+      "DYNB": "170 m",
+      "CWTB": "88 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 42,
+    "name": "Natalia Wilk",
+    "points": 603.85,
+    "country": "PL",
+    "slug": "Natalia-Wilk",
+    "pbs": {
+      "CWTB": "60 m",
+      "DYN": "214 m",
+      "CWT": "63 m",
+      "STA": "05:33",
+      "DYNB": "224 m",
+      "FIM": "65 m",
+      "CNF": "53 m",
+      "DNF": "154.5 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 43,
+    "name": "Hou I Ming",
+    "points": 601.3,
+    "country": "TW",
+    "slug": "Hou-I-Ming",
+    "pbs": {
+      "CWTB": "91 m",
+      "DNF": "111 m",
+      "CWT": "96 m",
+      "STA": "05:34",
+      "FIM": "75 m",
+      "DYNB": "167 m",
+      "DYN": "175 m",
+      "CNF": "46 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 44,
+    "name": "Camila Jaber",
+    "points": 595.7,
+    "country": "MX",
+    "slug": "Camila-Jaber",
+    "pbs": {
+      "CWTB": "82 m",
+      "CNF": "58 m",
+      "FIM": "77 m",
+      "CWT": "91 m",
+      "DYN": "156 m",
+      "DYNB": "165 m",
+      "STA": "05:06",
+      "DNF": "132 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 45,
+    "name": "Siew Ling, Elys Lai",
+    "points": 592.8,
+    "country": "SG",
+    "slug": "Siew-Ling-Elys-Lai",
+    "pbs": {
+      "DYNB": "200 m",
+      "DNF": "134 m",
+      "STA": "06:04",
+      "DYN": "200 m",
+      "CWT": "80 m",
+      "FIM": "67 m",
+      "CNF": "42 m",
+      "CWTB": "71 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 46,
+    "name": "Alice Hickson",
+    "points": 592.1,
+    "country": "GB",
+    "slug": "Alice-Hickson",
+    "pbs": {
+      "DYNB": "207 m",
+      "DNF": "180 m",
+      "STA": "06:58",
+      "DYN": "200 m",
+      "CNF": "62 m",
+      "FIM": "61 m",
+      "CWTB": "46 m",
+      "CWT": "48 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 47,
+    "name": "Vicky Jiaoyi Li",
+    "points": 590.7,
+    "country": "HK",
+    "slug": "Vicky-Jiaoyi-Li",
+    "pbs": {
+      "CNF": "41 m",
+      "FIM": "58 m",
+      "CWT": "72 m",
+      "DYNB": "205 m",
+      "DNF": "120 m",
+      "STA": "06:16",
+      "DYN": "200 m",
+      "CWTB": "84 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 48,
+    "name": "Jingzhe Li",
+    "points": 590.15,
+    "country": "CN",
+    "slug": "Jingzhe-Li",
+    "pbs": {
+      "CWT": "72 m",
+      "STA": "06:22",
+      "CWTB": "66 m",
+      "DNF": "139 m",
+      "FIM": "70 m",
+      "DYN": "206.5 m",
+      "DYNB": "204 m",
+      "CNF": "33 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 49,
+    "name": "Claire Beatrix Paris",
+    "points": 586.8,
+    "country": "US",
+    "slug": "Claire-Beatrix-Paris",
+    "pbs": {
+      "FIM": "75 m",
+      "DYNB": "182 m",
+      "DNF": "147 m",
+      "STA": "06:04",
+      "DYN": "187 m",
+      "CNF": "57 m",
+      "CWT": "64 m",
+      "CWTB": "60 m"
+    },
+    "sex": "F",
+    "id": ""
+  },
+  {
+    "rank": 50,
+    "name": "Misuzu Okamoto",
+    "points": 586.0,
+    "country": "JP",
+    "slug": "Misuzu-Okamoto",
+    "pbs": {
+      "CWT": "100 m",
+      "STA": "06:35",
+      "DYN": "208 m",
+      "CWTB": "76 m",
+      "FIM": "72 m",
+      "DNF": "114 m",
+      "DYNB": "126 m",
+      "CNF": "35 m"
+    },
+    "sex": "F",
+    "id": ""
+  }
+]
