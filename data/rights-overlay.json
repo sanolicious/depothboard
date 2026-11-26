@@ -1,0 +1,472 @@
+{
+  "mockAccountAthleteSlug": "vitomir-maricic",
+  "claimsInbox": "claims@depthboard.com",
+  "provenanceSources": [
+    {
+      "id": "src-aida-html",
+      "code": "AIDA_HTML",
+      "federation": "AIDA",
+      "label": "AIDA public results",
+      "contractStatus": "LICENSED",
+      "notes": "Diveye holds full recording rights for AIDA competition footage it produces."
+    },
+    {
+      "id": "src-cmas-api",
+      "code": "CMAS_API",
+      "federation": "CMAS",
+      "label": "CMAS Microplus API",
+      "contractStatus": "PENDING",
+      "notes": "Results licensed for ranking; footage remains CMAS-owned — portal may embed / link streams only."
+    },
+    {
+      "id": "src-cmas-pdf",
+      "code": "CMAS_PDF",
+      "federation": "CMAS",
+      "label": "CMAS historical PDFs",
+      "contractStatus": "PENDING",
+      "notes": "Historical results ingest; no Diveye sale of CMAS archive video."
+    },
+    {
+      "id": "src-fr-gap",
+      "code": "FR_GAP",
+      "federation": "PORTAL",
+      "label": "FR gap-fill (verification)",
+      "contractStatus": "NONE",
+      "notes": "Points provenance only — never a media rights grant."
+    }
+  ],
+  "licenseTiers": [
+    {
+      "id": "sample",
+      "label": "Sample preview",
+      "priceEur": 0,
+      "description": "Watermarked ~20 s preview. Free when Diveye-owned and athlete consents to publication."
+    },
+    {
+      "id": "social",
+      "label": "Social licence",
+      "priceEur": 29,
+      "description": "Personal / social-media edit (vertical + horizontal) with result overlay."
+    },
+    {
+      "id": "master",
+      "label": "Master file",
+      "priceEur": 79,
+      "description": "Higher-quality master for the athlete or coach (non-broadcast)."
+    },
+    {
+      "id": "commercial",
+      "label": "Commercial licence",
+      "priceEur": 129,
+      "description": "Paid ads, sponsors and broadcast — requires commercial consent + Diveye-owned rights."
+    }
+  ],
+  "athleteOverrides": [
+    {
+      "slug": "vitomir-maricic",
+      "claimed": true,
+      "guardianConsentGranted": false
+    },
+    {
+      "slug": "demo-junior-diver",
+      "create": {
+        "id": "demo-p-minor",
+        "slug": "demo-junior-diver",
+        "name": "Demo Junior",
+        "country": "POL",
+        "countryName": "Poland",
+        "sex": "F",
+        "status": "minor",
+        "minor": true,
+        "neutral": false,
+        "rankDelta": 0,
+        "form": [],
+        "bio": "Synthetic junior profile for guardian-consent / restricted-profile demos.",
+        "claimed": true,
+        "club": null,
+        "guardianConsentGranted": true
+      }
+    }
+  ],
+  "eventOverrides": [
+    {
+      "id": "cmas-30",
+      "liveUrl": "https://tv.cmas.org/",
+      "rightsModel": "cmas_link"
+    }
+  ],
+  "consents": [
+    {
+      "id": "c-vit-rec",
+      "athleteId": "p00001",
+      "athleteSlug": "vitomir-maricic",
+      "purpose": "recording",
+      "status": "granted",
+      "grantedBy": "self",
+      "method": "seed",
+      "at": "2026-01-15T10:00:00Z",
+      "version": "consent-rec-v1"
+    },
+    {
+      "id": "c-vit-pub",
+      "athleteId": "p00001",
+      "athleteSlug": "vitomir-maricic",
+      "purpose": "publication",
+      "status": "granted",
+      "grantedBy": "self",
+      "method": "seed",
+      "at": "2026-01-15T10:00:00Z",
+      "version": "consent-pub-v1"
+    },
+    {
+      "id": "c-vit-com",
+      "athleteId": "p00001",
+      "athleteSlug": "vitomir-maricic",
+      "purpose": "commercial",
+      "status": "granted",
+      "grantedBy": "self",
+      "method": "seed",
+      "at": "2026-01-15T10:05:00Z",
+      "version": "consent-com-v1"
+    },
+    {
+      "id": "c-mol-rec",
+      "athleteId": "p00006",
+      "athleteSlug": "alexey-molchanov",
+      "purpose": "recording",
+      "status": "granted",
+      "grantedBy": "self",
+      "method": "seed",
+      "at": "2026-02-01T12:00:00Z",
+      "version": "consent-rec-v1"
+    },
+    {
+      "id": "c-mol-pub",
+      "athleteId": "p00006",
+      "athleteSlug": "alexey-molchanov",
+      "purpose": "publication",
+      "status": "granted",
+      "grantedBy": "self",
+      "method": "seed",
+      "at": "2026-02-01T12:00:00Z",
+      "version": "consent-pub-v1"
+    },
+    {
+      "id": "c-mol-com",
+      "athleteId": "p00006",
+      "athleteSlug": "alexey-molchanov",
+      "purpose": "commercial",
+      "status": "withdrawn",
+      "grantedBy": "self",
+      "method": "seed",
+      "at": "2026-02-01T12:00:00Z",
+      "withdrawnAt": "2026-06-01T09:00:00Z",
+      "version": "consent-com-v1"
+    },
+    {
+      "id": "c-zec-rec",
+      "athleteId": "p01439",
+      "athleteSlug": "alessia-zecchini",
+      "purpose": "recording",
+      "status": "granted",
+      "grantedBy": "self",
+      "method": "seed",
+      "at": "2026-03-01T08:00:00Z",
+      "version": "consent-rec-v1"
+    },
+    {
+      "id": "c-zec-pub",
+      "athleteId": "p01439",
+      "athleteSlug": "alessia-zecchini",
+      "purpose": "publication",
+      "status": "withdrawn",
+      "grantedBy": "self",
+      "method": "seed",
+      "at": "2026-03-01T08:00:00Z",
+      "withdrawnAt": "2026-04-10T11:00:00Z",
+      "version": "consent-pub-v1"
+    },
+    {
+      "id": "c-jun-rec",
+      "athleteId": "demo-p-minor",
+      "athleteSlug": "demo-junior-diver",
+      "purpose": "recording",
+      "status": "granted",
+      "grantedBy": "guardian",
+      "method": "seed",
+      "at": "2026-05-01T10:00:00Z",
+      "version": "consent-rec-v1",
+      "guardianConsent": true
+    },
+    {
+      "id": "c-jun-pub",
+      "athleteId": "demo-p-minor",
+      "athleteSlug": "demo-junior-diver",
+      "purpose": "publication",
+      "status": "granted",
+      "grantedBy": "guardian",
+      "method": "seed",
+      "at": "2026-05-01T10:00:00Z",
+      "version": "consent-pub-v1",
+      "guardianConsent": true
+    }
+  ],
+  "recordingRights": [
+    {
+      "id": "rr-dive-0",
+      "diveId": "dive-0",
+      "eventId": "aida-ev-3717442",
+      "athleteSlug": "vitomir-maricic",
+      "federation": "AIDA",
+      "rightsModel": "diveye_owned",
+      "provenanceSourceId": "src-aida-html",
+      "downloadable": true,
+      "embedOnly": false,
+      "saleEnabled": true,
+      "maxLicenseTier": "commercial",
+      "watermarkRequired": true
+    },
+    {
+      "id": "rr-dive-505",
+      "diveId": "dive-505",
+      "eventId": "aida-ev-8728385",
+      "athleteSlug": "alexey-molchanov",
+      "federation": "AIDA",
+      "rightsModel": "diveye_owned",
+      "provenanceSourceId": "src-aida-html",
+      "downloadable": true,
+      "embedOnly": false,
+      "saleEnabled": true,
+      "maxLicenseTier": "master",
+      "watermarkRequired": true
+    },
+    {
+      "id": "rr-dive-9792",
+      "diveId": "dive-9792",
+      "eventId": "aida-ev-1572443",
+      "athleteSlug": "alessia-zecchini",
+      "federation": "AIDA",
+      "rightsModel": "diveye_owned",
+      "provenanceSourceId": "src-aida-html",
+      "downloadable": false,
+      "embedOnly": false,
+      "saleEnabled": false,
+      "maxLicenseTier": "sample",
+      "watermarkRequired": true,
+      "blockReason": "Athlete withdrew publication consent"
+    },
+    {
+      "id": "rr-cmas-mol",
+      "diveId": "cmas-res-31686",
+      "eventId": "cmas-30",
+      "athleteSlug": "alexey-molchanov",
+      "federation": "CMAS",
+      "rightsModel": "cmas_link",
+      "provenanceSourceId": "src-cmas-api",
+      "downloadable": false,
+      "embedOnly": true,
+      "saleEnabled": false,
+      "maxLicenseTier": "sample",
+      "watermarkRequired": false,
+      "blockReason": "CMAS footage is embed / link only — Diveye cannot sell downloads",
+      "embedUrl": "https://tv.cmas.org/"
+    }
+  ],
+  "showcaseDives": [
+    {
+      "id": "dive-0",
+      "athleteSlug": "vitomir-maricic",
+      "eventId": "aida-ev-3717442",
+      "discipline": "DYN",
+      "ap": 250,
+      "rp": 261,
+      "card": "W",
+      "date": "2026-10-29",
+      "day": 1,
+      "ot": "00:00",
+      "status": "official",
+      "title": "Vitomir Maričić · DYN 261 m",
+      "durationSec": 186,
+      "cameras": ["Bottom", "Surface", "Follow"],
+      "markers": [
+        { "id": "m1", "label": "Start", "at": 0.05, "kind": "start" },
+        { "id": "m2", "label": "Turn", "at": 0.48, "kind": "turn" },
+        { "id": "m3", "label": "Surface", "at": 0.82, "kind": "surface" },
+        { "id": "m4", "label": "White", "at": 0.9, "kind": "card" }
+      ],
+      "annotation": {
+        "type": "none",
+        "text": "Clean dive. Diveye-owned AIDA footage — sale enabled with athlete consents."
+      },
+      "price": 29,
+      "scene": { "h": 210, "x": "48%", "d": 0.5 },
+      "licenseTier": "social"
+    },
+    {
+      "id": "dive-505",
+      "athleteSlug": "alexey-molchanov",
+      "eventId": "aida-ev-8728385",
+      "discipline": "CWT",
+      "ap": 137,
+      "rp": 137,
+      "card": "W",
+      "date": "2026-10-08",
+      "day": 1,
+      "ot": "00:00",
+      "status": "official",
+      "wr": true,
+      "title": "Alexey Molchanov · CWT 137 m WR",
+      "durationSec": 214,
+      "cameras": ["Bottom", "Surface"],
+      "markers": [
+        { "id": "m1", "label": "Start", "at": 0.04, "kind": "start" },
+        { "id": "m2", "label": "Bottom", "at": 0.42, "kind": "turn" },
+        { "id": "m3", "label": "Surface", "at": 0.78, "kind": "surface" }
+      ],
+      "annotation": {
+        "type": "none",
+        "text": "WR attempt. Commercial licence blocked — commercial consent withdrawn; social/master still allowed."
+      },
+      "price": 29,
+      "scene": { "h": 240, "x": "52%", "d": 0.55 },
+      "licenseTier": "social"
+    },
+    {
+      "id": "dive-9792",
+      "athleteSlug": "alessia-zecchini",
+      "eventId": "aida-ev-1572443",
+      "discipline": "FIM",
+      "ap": 91,
+      "rp": 91,
+      "card": "W",
+      "date": "2026-10-11",
+      "day": 1,
+      "ot": "00:00",
+      "status": "official",
+      "title": "Alessia Zecchini · FIM 91 m",
+      "durationSec": 168,
+      "cameras": ["Bottom", "Surface"],
+      "markers": [
+        { "id": "m1", "label": "Start", "at": 0.06, "kind": "start" },
+        { "id": "m2", "label": "Surface", "at": 0.8, "kind": "surface" }
+      ],
+      "annotation": {
+        "type": "none",
+        "text": "Footage held — publication consent withdrawn; not listed for sale."
+      },
+      "price": 29,
+      "scene": { "h": 200, "x": "50%", "d": 0.45 },
+      "licenseTier": "sample"
+    },
+    {
+      "id": "cmas-res-31686",
+      "athleteSlug": "alexey-molchanov",
+      "eventId": "cmas-30",
+      "discipline": "CNF",
+      "ap": 95,
+      "rp": 95,
+      "card": "W",
+      "date": "2026-08-23",
+      "day": 1,
+      "ot": "00:00",
+      "status": "official",
+      "title": "Alexey Molchanov · CNF 95 m (CMAS)",
+      "durationSec": 0,
+      "cameras": [],
+      "markers": [],
+      "annotation": {
+        "type": "none",
+        "text": "CMAS rights: embed / link transmission only. No Diveye downloadable product."
+      },
+      "price": 0,
+      "scene": { "h": 190, "x": "50%", "d": 0.42 },
+      "licenseTier": "sample"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-vit-social",
+      "slug": "vitomir-dyn-261-social",
+      "name": "Vitomir · DYN 261 m · social",
+      "kind": "clip",
+      "price": 29,
+      "description": "Social licence for Diveye AIDA clip (athlete consents granted).",
+      "delivery": "72 h after purchase · personal licence",
+      "licenseTier": "social",
+      "diveId": "dive-0",
+      "saleEnabled": true
+    },
+    {
+      "id": "prod-vit-commercial",
+      "slug": "vitomir-dyn-261-commercial",
+      "name": "Vitomir · DYN 261 m · commercial",
+      "kind": "clip",
+      "price": 129,
+      "description": "Commercial licence — requires recording + publication + commercial consent.",
+      "delivery": "B2B invoice · Diveye-owned only",
+      "licenseTier": "commercial",
+      "diveId": "dive-0",
+      "saleEnabled": true
+    },
+    {
+      "id": "prod-mol-master",
+      "slug": "molchanov-cwt-137-master",
+      "name": "Molchanov · CWT 137 m · master",
+      "kind": "clip",
+      "price": 79,
+      "description": "Master file. Commercial tier unavailable (consent withdrawn).",
+      "delivery": "Athlete / coach use",
+      "licenseTier": "master",
+      "diveId": "dive-505",
+      "saleEnabled": true
+    },
+    {
+      "id": "prod-zec-blocked",
+      "slug": "zecchini-fim-91-social",
+      "name": "Zecchini · FIM 91 m · social",
+      "kind": "clip",
+      "price": 29,
+      "description": "Blocked: publication consent withdrawn.",
+      "delivery": "Unavailable",
+      "licenseTier": "social",
+      "diveId": "dive-9792",
+      "saleEnabled": false
+    },
+    {
+      "id": "prod-cmas-blocked",
+      "slug": "molchanov-cnf-95-cmas",
+      "name": "Molchanov · CNF 95 m · CMAS",
+      "kind": "clip",
+      "price": 29,
+      "description": "Blocked: CMAS embed-only rights model.",
+      "delivery": "Embed stream only",
+      "licenseTier": "social",
+      "diveId": "cmas-res-31686",
+      "saleEnabled": false
+    },
+    {
+      "id": "prod-media-pack",
+      "slug": "media-pack",
+      "name": "Media pack (AIDA events)",
+      "kind": "media",
+      "price": 0,
+      "description": "Broadcast assets for Diveye-owned events with athlete commercial consent.",
+      "delivery": "B2B quote",
+      "licenseTier": "commercial",
+      "saleEnabled": true
+    }
+  ],
+  "claimRequests": [
+    {
+      "id": "claim-seed-001",
+      "athleteName": "Vitomir Maričić",
+      "athleteSlug": "vitomir-maricic",
+      "email": "vitomir.demo@example.com",
+      "federationId": "AIDA-demo",
+      "guardian": false,
+      "status": "approved",
+      "createdAt": "2026-01-10T09:00:00Z",
+      "notes": "Seed example — approved mock claim"
+    }
+  ]
+}

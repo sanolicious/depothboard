@@ -5,10 +5,16 @@ import { CardBadge } from "@/components/CardBadge";
 import { CountryChip } from "@/components/CountryChip";
 import { DiverIcon, Icon } from "@/components/Icon";
 import { JsonLd } from "@/components/JsonLd";
-import { AddToCartButton } from "@/components/AddToCartButton";
+import { DiveRightsPanel, RightsBadge } from "@/components/DiveRightsPanel";
 import { resolveDive } from "@/lib/dives";
 import { fmtDate, fmtDuration, fmtValue, siteUrl } from "@/lib/format";
 import { getRepository } from "@/lib/repository";
+import {
+  evaluateShowcaseDive,
+  getRecordingRights,
+  hasConsent,
+  WATERMARK_NOTE,
+} from "@/lib/rights";
 
 type Params = Promise<{ id: string }>;
 
@@ -46,7 +52,16 @@ export default async function DivePage({ params }: { params: Params }) {
   const athlete = repo.getAthleteBySlug(dive.athleteSlug);
   const event = repo.getEventById(dive.eventId);
   if (!athlete || !event) notFound();
-  const wr = repo.getDb().wr[athlete.sex][dive.discipline];
+  const db = repo.getDb();
+  const rights = getRecordingRights(db, dive.id);
+  const sale =
+    dive.hasVideo || rights
+      ? evaluateShowcaseDive(db, {
+          ...dive,
+          licenseTier: dive.hasVideo ? "social" : "sample",
+        })
+      : null;
+  const wr = db.wr[athlete.sex][dive.discipline];
   const pct = dive.card === "R" || !wr ? 0 : (dive.rp / wr) * 100;
   const others = repo
     .listShowcaseDives()
@@ -117,14 +132,28 @@ export default async function DivePage({ params }: { params: Params }) {
                 </span>
                 <span className="wm">DEPTHBOARD</span>
               </div>
-              <div className="chips">
+              <div className="chips" style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                 {dive.hasVideo ? (
                   <span className="badge" style={{ background: "rgba(0,0,0,.55)" }}>
-                    Preview · 20 s
+                    Preview · 20 s · watermarked
+                  </span>
+                ) : rights?.embedOnly ? (
+                  <span className="badge" style={{ background: "rgba(0,0,0,.55)" }}>
+                    CMAS embed-only
                   </span>
                 ) : (
                   <span className="badge" style={{ background: "rgba(0,0,0,.55)" }}>
                     Result only · no footage yet
+                  </span>
+                )}
+                {rights?.rightsModel === "diveye_owned" && rights.downloadable && (
+                  <span className="badge" style={{ background: "rgba(20,90,70,.75)" }}>
+                    AIDA · downloadable
+                  </span>
+                )}
+                {rights?.embedOnly && (
+                  <span className="badge" style={{ background: "rgba(120,70,20,.75)" }}>
+                    CMAS · link only
                   </span>
                 )}
               </div>
@@ -207,9 +236,18 @@ export default async function DivePage({ params }: { params: Params }) {
                   </span>
                 )}
                 <span className="source" style={{ marginLeft: "auto" }}>
-                  {dive.hasVideo ? "Footage by Diveye" : "Result from federation ingest"}
+                  {rights?.embedOnly
+                    ? "CMAS stream embed policy"
+                    : dive.hasVideo
+                      ? "Footage by Diveye"
+                      : "Result from federation ingest"}
                 </span>
               </div>
+              {dive.hasVideo && (
+                <p className="caption" style={{ padding: "0 14px 12px" }}>
+                  {WATERMARK_NOTE}
+                </p>
+              )}
             </div>
           </div>
 
@@ -409,98 +447,59 @@ export default async function DivePage({ params }: { params: Params }) {
                 <Icon name="clock" /> {fmtDate(dive.date)} · Day {dive.day} · OT{" "}
                 {dive.ot}
               </div>
-              <div className="row" style={{ gap: 8 }}>
+              <div className="row row--wrap" style={{ gap: 8 }}>
                 <span className="source">
                   <Icon name="check-circle" /> Source: {event.federation}
                 </span>
+                {sale && (
+                  <RightsBadge
+                    label={
+                      sale.badge === "downloadable"
+                        ? "AIDA downloadable"
+                        : sale.badge === "embed_only"
+                          ? "CMAS embed-only"
+                          : sale.badge === "preview"
+                            ? "Preview"
+                            : "Not for sale"
+                    }
+                    tone={
+                      sale.badge === "downloadable"
+                        ? "ok"
+                        : sale.badge === "embed_only" || sale.badge === "unavailable"
+                          ? "warn"
+                          : "neutral"
+                    }
+                  />
+                )}
+                <RightsBadge
+                  label={`Rights: ${event.rightsModel}`}
+                  tone={event.rightsModel === "diveye_owned" ? "ok" : "warn"}
+                />
               </div>
             </div>
           </div>
 
-          <div className="buybox">
-            {dive.hasVideo ? (
-              <>
-                <div className="row row--between">
-                  <div>
-                    <div className="eyebrow" style={{ color: "#9fd9e3" }}>
-                      Footage
-                    </div>
-                    <div className="price">
-                      €{dive.price}
-                      <small>dive clip</small>
-                    </div>
-                  </div>
-                  <Icon name="film" />
-                </div>
-                <ul className="checklist">
-                  <li>
-                    <Icon name="check" /> Social edit, vertical and horizontal, result
-                    overlay
-                  </li>
-                  <li>
-                    <Icon name="check" /> Delivered within 72 h after the competition
-                    day
-                  </li>
-                  <li>
-                    <Icon name="check" /> Personal licence. Commercial add-on +€100
-                  </li>
-                </ul>
-                <AddToCartButton
-                  title={`Dive clip: ${athlete.name
-                    .split(" ")
-                    .map((p, i, a) => (i === a.length - 1 ? p : p[0] + "."))
-                    .join(" ")}, ${dive.discipline} ${
-                    dive.card === "R" ? "DQ" : dive.rp + " m"
-                  }`}
-                  description="Social edit · personal licence"
-                  price={dive.price}
-                  scene={dive.scene}
-                />
-                <div className="row row--between row--wrap">
-                  <AddToCartButton
-                    title={`Event pack: ${athlete.name}`}
-                    description={`${event.shortName} · all dives`}
-                    price={79}
-                    scene={{ h: 196, x: "50%", d: 0.4 }}
-                    label="Add to event pack · €79"
-                    ghost
-                  />
-                  <Link className="link-arrow small" href="/shop">
-                    Compare options <Icon name="arrow" />
-                  </Link>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="row row--between">
-                  <div>
-                    <div className="eyebrow" style={{ color: "#9fd9e3" }}>
-                      Footage
-                    </div>
-                    <h3 style={{ fontSize: "1.15rem", marginTop: 6 }}>
-                      Not available yet
-                    </h3>
-                  </div>
-                  <Icon name="film" />
-                </div>
-                <p className="small muted" style={{ margin: "12px 0 16px" }}>
-                  Official result is shown above. When Diveye links OT footage,
-                  you will be able to preview a sample and buy a personal or
-                  commercial licence here. Checkout is not open yet.
-                </p>
-                <Link className="btn btn--primary btn--block" href="/shop">
-                  See licence plans
-                </Link>
-                <Link
-                  className="btn btn--ghost btn--block"
-                  href="/claim"
-                  style={{ marginTop: 8 }}
-                >
-                  Claim profile · get notified
-                </Link>
-              </>
-            )}
-          </div>
+          <DiveRightsPanel
+            athleteSlug={athlete.slug}
+            athleteName={athlete.name}
+            diveTitle={dive.title}
+            discipline={dive.discipline}
+            rpLabel={dive.card === "R" ? "DQ" : `${dive.rp} m`}
+            price={dive.price}
+            scene={dive.scene}
+            hasVideo={dive.hasVideo}
+            eventShortName={event.shortName}
+            eventLiveUrl={event.liveUrl}
+            rights={rights}
+            licenseTier="social"
+            seedFlags={{
+              recording: hasConsent(db, athlete.slug, "recording"),
+              publication: hasConsent(db, athlete.slug, "publication"),
+              commercial: hasConsent(db, athlete.slug, "commercial"),
+              guardianOk: !!athlete.guardianConsentGranted,
+              minor: athlete.minor,
+            }}
+          />
         </aside>
       </div>
     </div>

@@ -5,6 +5,90 @@ export type AthleteStatus = "active" | "inactive" | "minor";
 export type EventStatus = "live" | "upcoming" | "past";
 export type ResultStatus = "provisional" | "official" | "unofficial";
 
+/** Licence funnel tiers (sample → social → master → commercial). */
+export type LicenseTier = "sample" | "social" | "master" | "commercial";
+
+export type ConsentPurpose =
+  | "recording"
+  | "publication"
+  | "commercial"
+  | "coach";
+
+export type ConsentStatus = "granted" | "withdrawn" | "missing";
+export type ConsentGrantedBy = "self" | "guardian";
+
+export type ProvenanceSourceCode =
+  | "AIDA_HTML"
+  | "CMAS_API"
+  | "CMAS_PDF"
+  | "FR_GAP"
+  | "ORGANIZER_UPLOAD"
+  | "FEDERATION_FEED"
+  | "MANUAL";
+
+export type ContractStatus = "NONE" | "PENDING" | "LICENSED";
+
+export interface ProvenanceSource {
+  id: string;
+  code: ProvenanceSourceCode;
+  federation: Federation;
+  label: string;
+  contractStatus: ContractStatus;
+  notes: string;
+}
+
+export interface LicenseTierInfo {
+  id: LicenseTier;
+  label: string;
+  priceEur: number;
+  description: string;
+}
+
+export interface ConsentRecord {
+  id: string;
+  athleteId: string;
+  athleteSlug: string;
+  purpose: ConsentPurpose;
+  status: ConsentStatus;
+  grantedBy: ConsentGrantedBy;
+  method: "seed" | "panel" | "claim" | "import";
+  at: string;
+  withdrawnAt?: string;
+  version: string;
+  /** True when a guardian granted (or must grant) this consent for a minor. */
+  guardianConsent?: boolean;
+}
+
+/** Per-dive / per-event recording rights grant (AIDA owned vs CMAS link-only). */
+export interface RecordingRights {
+  id: string;
+  diveId: string;
+  eventId: string;
+  athleteSlug: string;
+  federation: "AIDA" | "CMAS";
+  rightsModel: "diveye_owned" | "cmas_link";
+  provenanceSourceId: string;
+  downloadable: boolean;
+  embedOnly: boolean;
+  saleEnabled: boolean;
+  maxLicenseTier: LicenseTier;
+  watermarkRequired: boolean;
+  blockReason?: string;
+  embedUrl?: string;
+}
+
+export interface ClaimRequest {
+  id: string;
+  athleteName: string;
+  athleteSlug?: string;
+  email: string;
+  federationId?: string;
+  guardian: boolean;
+  status: "pending" | "needs_info" | "approved" | "rejected";
+  createdAt: string;
+  notes?: string;
+}
+
 export interface Discipline {
   code: string;
   name: string;
@@ -28,6 +112,8 @@ export interface Athlete {
   bio: string;
   claimed: boolean;
   club: string | null;
+  /** Guardian has verified consent for a minor athlete (recording/publication). */
+  guardianConsentGranted?: boolean;
 }
 
 export interface Event {
@@ -102,6 +188,7 @@ export interface ShowcaseDive {
   annotation: { type: "none" | "penalty" | "dq"; text: string };
   price: number;
   scene: { h: number; x: string; d: number };
+  licenseTier?: LicenseTier;
 }
 
 export interface Product {
@@ -112,6 +199,9 @@ export interface Product {
   price: number;
   description: string;
   delivery: string;
+  licenseTier?: LicenseTier;
+  diveId?: string;
+  saleEnabled?: boolean;
 }
 
 export interface CartItem {
@@ -149,6 +239,13 @@ export interface SeedDb {
     tagline: string;
     endorsement: string;
   };
+  provenanceSources?: ProvenanceSource[];
+  licenseTiers?: LicenseTierInfo[];
+  consents?: ConsentRecord[];
+  recordingRights?: RecordingRights[];
+  claimRequests?: ClaimRequest[];
+  mockAccountAthleteSlug?: string;
+  claimsInbox?: string;
 }
 
 export type RankingBoard = "PORTAL" | "AIDA" | "CMAS";
