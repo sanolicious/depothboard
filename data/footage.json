@@ -1,0 +1,227 @@
+{
+  "asOf": "2026-11-26",
+  "storageAdapter": "local-mock",
+  "notes": "Mock Diveye OT/HQ catalog. storageKey values resolve via src/lib/footage.ts to public/video placeholders. Replace adapter with disk mount or S3 after purchase — see docs/media-ot-hq.md.",
+  "keyMap": {
+    "local:preview/shared.mp4": "/video/hero.mp4",
+    "local:hq/shared.mp4": "/video/hero.mp4",
+    "local:poster/shared.jpg": "/video/poster.jpg"
+  },
+  "assets": [
+    {
+      "id": "fa-dive-0-preview",
+      "performanceDiveId": "dive-0",
+      "athleteSlug": "vitomir-maricic",
+      "eventId": "aida-ev-3717442",
+      "discipline": "DYN",
+      "officialTop": "00:00",
+      "otToleranceMin": 2,
+      "quality": "preview",
+      "storageKey": "local:preview/shared.mp4",
+      "posterKey": "local:poster/shared.jpg",
+      "durationSec": 186,
+      "cameras": ["Bottom", "Surface", "Follow"],
+      "markers": [
+        { "id": "m-start", "kind": "start", "label": "Start", "atSec": 9, "at": 0.05 },
+        { "id": "m-turn", "kind": "turn", "label": "Turn", "atSec": 89, "at": 0.48 },
+        { "id": "m-surf", "kind": "surface", "label": "Surface", "atSec": 152, "at": 0.82 },
+        { "id": "m-proto", "kind": "protocol", "label": "Protocol", "atSec": 160, "at": 0.86 },
+        { "id": "m-card", "kind": "card", "label": "White", "atSec": 167, "at": 0.9 }
+      ],
+      "federation": "AIDA",
+      "rightsModel": "diveye_owned",
+      "scene": { "h": 210, "x": "48%", "d": 0.5 },
+      "annotation": {
+        "type": "none",
+        "text": "Clean dive. Diveye OT preview linked by officialTop + diveId."
+      },
+      "priceEur": 29,
+      "notes": "Primary AIDA demo clip — sample/social/HQ SKUs enabled with consents."
+    },
+    {
+      "id": "fa-dive-0-hq",
+      "performanceDiveId": "dive-0",
+      "athleteSlug": "vitomir-maricic",
+      "eventId": "aida-ev-3717442",
+      "discipline": "DYN",
+      "officialTop": "00:00",
+      "otToleranceMin": 2,
+      "quality": "hq",
+      "storageKey": "local:hq/shared.mp4",
+      "posterKey": "local:poster/shared.jpg",
+      "durationSec": 186,
+      "cameras": ["Bottom", "Surface", "Follow"],
+      "markers": [
+        { "id": "m-start", "kind": "start", "label": "Start", "atSec": 9, "at": 0.05 },
+        { "id": "m-turn", "kind": "turn", "label": "Turn", "atSec": 89, "at": 0.48 },
+        { "id": "m-surf", "kind": "surface", "label": "Surface", "atSec": 152, "at": 0.82 },
+        { "id": "m-proto", "kind": "protocol", "label": "Protocol", "atSec": 160, "at": 0.86 },
+        { "id": "m-card", "kind": "card", "label": "White", "atSec": 167, "at": 0.9 }
+      ],
+      "federation": "AIDA",
+      "rightsModel": "diveye_owned",
+      "priceEur": 79,
+      "notes": "HQ master file on disk — unlocked after licence purchase (checkout stub)."
+    },
+    {
+      "id": "fa-dive-505-preview",
+      "performanceDiveId": "dive-505",
+      "athleteSlug": "alexey-molchanov",
+      "eventId": "aida-ev-8728385",
+      "discipline": "CWT",
+      "officialTop": "00:00",
+      "otToleranceMin": 2,
+      "quality": "preview",
+      "storageKey": "local:preview/shared.mp4",
+      "posterKey": "local:poster/shared.jpg",
+      "durationSec": 214,
+      "cameras": ["Bottom", "Surface"],
+      "markers": [
+        { "id": "m-start", "kind": "start", "label": "Start", "atSec": 9, "at": 0.04 },
+        { "id": "m-turn", "kind": "turn", "label": "Bottom", "atSec": 90, "at": 0.42 },
+        { "id": "m-surf", "kind": "surface", "label": "Surface", "atSec": 167, "at": 0.78 },
+        { "id": "m-proto", "kind": "protocol", "label": "Protocol", "atSec": 180, "at": 0.84 }
+      ],
+      "federation": "AIDA",
+      "rightsModel": "diveye_owned",
+      "scene": { "h": 240, "x": "52%", "d": 0.55 },
+      "annotation": {
+        "type": "none",
+        "text": "WR attempt. Commercial licence blocked by consent; social/HQ still allowed."
+      },
+      "priceEur": 29
+    },
+    {
+      "id": "fa-dive-505-hq",
+      "performanceDiveId": "dive-505",
+      "athleteSlug": "alexey-molchanov",
+      "eventId": "aida-ev-8728385",
+      "discipline": "CWT",
+      "officialTop": "00:00",
+      "otToleranceMin": 2,
+      "quality": "hq",
+      "storageKey": "local:hq/shared.mp4",
+      "posterKey": "local:poster/shared.jpg",
+      "durationSec": 214,
+      "cameras": ["Bottom", "Surface"],
+      "markers": [
+        { "id": "m-start", "kind": "start", "label": "Start", "atSec": 9, "at": 0.04 },
+        { "id": "m-turn", "kind": "turn", "label": "Bottom", "atSec": 90, "at": 0.42 },
+        { "id": "m-surf", "kind": "surface", "label": "Surface", "atSec": 167, "at": 0.78 },
+        { "id": "m-proto", "kind": "protocol", "label": "Protocol", "atSec": 180, "at": 0.84 }
+      ],
+      "federation": "AIDA",
+      "rightsModel": "diveye_owned",
+      "priceEur": 79
+    },
+    {
+      "id": "fa-dive-9792-preview",
+      "performanceDiveId": "dive-9792",
+      "athleteSlug": "alessia-zecchini",
+      "eventId": "aida-ev-1572443",
+      "discipline": "FIM",
+      "officialTop": "00:00",
+      "otToleranceMin": 2,
+      "quality": "preview",
+      "storageKey": "local:preview/shared.mp4",
+      "posterKey": "local:poster/shared.jpg",
+      "durationSec": 168,
+      "cameras": ["Bottom", "Surface"],
+      "markers": [
+        { "id": "m-start", "kind": "start", "label": "Start", "atSec": 10, "at": 0.06 },
+        { "id": "m-turn", "kind": "turn", "label": "Bottom", "atSec": 72, "at": 0.43 },
+        { "id": "m-surf", "kind": "surface", "label": "Surface", "atSec": 134, "at": 0.8 }
+      ],
+      "federation": "AIDA",
+      "rightsModel": "diveye_owned",
+      "scene": { "h": 200, "x": "50%", "d": 0.45 },
+      "annotation": {
+        "type": "none",
+        "text": "Footage on disk — publication consent withdrawn; not listed for sale."
+      },
+      "priceEur": 29
+    },
+    {
+      "id": "fa-dive-1-preview",
+      "performanceDiveId": "dive-1",
+      "athleteSlug": "vitomir-maricic",
+      "eventId": "aida-ev-3717442",
+      "discipline": "DYNB",
+      "officialTop": "00:00",
+      "otToleranceMin": 2,
+      "quality": "preview",
+      "storageKey": "local:preview/shared.mp4",
+      "posterKey": "local:poster/shared.jpg",
+      "durationSec": 172,
+      "cameras": ["Bottom", "Surface", "Follow"],
+      "markers": [
+        { "id": "m-start", "kind": "start", "label": "Start", "atSec": 7, "at": 0.04 },
+        { "id": "m-turn", "kind": "turn", "label": "Turn", "atSec": 78, "at": 0.45 },
+        { "id": "m-pen", "kind": "penalty", "label": "Penalty", "atSec": 120, "at": 0.7 },
+        { "id": "m-surf", "kind": "surface", "label": "Surface", "atSec": 145, "at": 0.84 },
+        { "id": "m-proto", "kind": "protocol", "label": "Protocol", "atSec": 155, "at": 0.9 }
+      ],
+      "federation": "AIDA",
+      "rightsModel": "diveye_owned",
+      "scene": { "h": 205, "x": "49%", "d": 0.48 },
+      "annotation": {
+        "type": "none",
+        "text": "DYNB with OT penalty marker — searchable in archive."
+      },
+      "priceEur": 29
+    },
+    {
+      "id": "fa-dive-4-preview",
+      "performanceDiveId": "dive-4",
+      "athleteSlug": "vitomir-maricic",
+      "eventId": "aida-ev-8728385",
+      "discipline": "CNF",
+      "officialTop": "00:00",
+      "otToleranceMin": 2,
+      "quality": "preview",
+      "storageKey": "local:preview/shared.mp4",
+      "posterKey": "local:poster/shared.jpg",
+      "durationSec": 198,
+      "cameras": ["Bottom", "Surface"],
+      "markers": [
+        { "id": "m-start", "kind": "start", "label": "Start", "atSec": 8, "at": 0.04 },
+        { "id": "m-turn", "kind": "turn", "label": "Bottom", "atSec": 85, "at": 0.43 },
+        { "id": "m-surf", "kind": "surface", "label": "Surface", "atSec": 158, "at": 0.8 },
+        { "id": "m-proto", "kind": "protocol", "label": "Protocol", "atSec": 170, "at": 0.86 },
+        { "id": "m-bo", "kind": "blackout", "label": "BO watch", "atSec": 176, "at": 0.89 }
+      ],
+      "federation": "AIDA",
+      "rightsModel": "diveye_owned",
+      "scene": { "h": 220, "x": "51%", "d": 0.52 },
+      "annotation": {
+        "type": "none",
+        "text": "CNF with protocol + blackout-watch markers for archive search demos."
+      },
+      "priceEur": 29
+    },
+    {
+      "id": "fa-cmas-31686",
+      "performanceDiveId": "cmas-res-31686",
+      "athleteSlug": "alexey-molchanov",
+      "eventId": "cmas-30",
+      "discipline": "CNF",
+      "officialTop": "00:00",
+      "otToleranceMin": 2,
+      "quality": "preview",
+      "storageKey": "",
+      "durationSec": 0,
+      "cameras": [],
+      "markers": [],
+      "federation": "CMAS",
+      "rightsModel": "cmas_link",
+      "embedUrl": "https://tv.cmas.org/",
+      "scene": { "h": 190, "x": "50%", "d": 0.42 },
+      "annotation": {
+        "type": "none",
+        "text": "CMAS: embed / link transmission only — no Diveye HQ file on disk."
+      },
+      "priceEur": 0,
+      "notes": "No local storageKey — shop blocked; dive page shows external stream CTA."
+    }
+  ]
+}

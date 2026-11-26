@@ -4,8 +4,10 @@ import { EmptyState } from "@/components/EmptyState";
 import { Icon } from "@/components/Icon";
 import { ShopProductCard } from "@/components/ShopProductCard";
 import { RightsBadge } from "@/components/DiveRightsPanel";
+import { hasPlayableFile } from "@/lib/footage";
 import { getRepository } from "@/lib/repository";
 import {
+  evaluateProduct,
   evaluateShowcaseDive,
   getRecordingRights,
   hasConsent,
@@ -14,15 +16,22 @@ import {
 
 export const metadata: Metadata = {
   title: "Shop",
-  description: "Buy Diveye dive clips, event packs and media packs.",
+  description: "Buy Diveye dive clips — sample, social and HQ — when FootageAsset + consents clear.",
   alternates: { canonical: "/shop" },
 };
 
 export default function ShopPage() {
   const repo = getRepository();
   const db = repo.getDb();
-  const products = repo.listProducts();
   const dives = repo.listShowcaseDives();
+  // Products only when a FootageAsset exists (or media pack without dive).
+  const products = repo.listProducts().filter((p) => {
+    if (!p.diveId) return p.kind === "media";
+    const footage = repo.getPrimaryFootage(p.diveId);
+    if (!footage) return false;
+    if (footage.rightsModel === "cmas_link") return false;
+    return hasPlayableFile(footage);
+  });
 
   return (
     <div className="container section">
@@ -35,9 +44,9 @@ export default function ShopPage() {
         <div>
           <h1>Footage shop</h1>
           <p>
-            Products stay unavailable without athlete consent or when the event
-            is CMAS embed-only. AIDA Diveye-owned clips can be licensed
-            (checkout still stubbed).
+            SKUs (sample / social / HQ) appear only when a Diveye{" "}
+            <code>FootageAsset</code> is linked and athlete consents clear. CMAS
+            assets are blocked (embed / link only). Checkout remains stubbed.
           </p>
         </div>
         <Link className="btn btn--ghost" href="/cart">
@@ -53,7 +62,7 @@ export default function ShopPage() {
         <EmptyState
           icon="film"
           title="No products yet"
-          body="Licence inventory appears when rights-cleared Diveye clips are linked."
+          body="Licence inventory appears when rights-cleared Diveye FootageAssets are linked."
           actionHref="/claim"
           actionLabel="Claim profile"
         />
@@ -69,6 +78,7 @@ export default function ShopPage() {
             const athlete = dive
               ? repo.getAthleteBySlug(dive.athleteSlug)
               : undefined;
+            const decision = evaluateProduct(db, p);
             return (
               <ShopProductCard
                 key={p.id}
@@ -86,9 +96,10 @@ export default function ShopPage() {
                     : true,
                   minor: !!athlete?.minor,
                   guardianOk: !!athlete?.guardianConsentGranted,
-                  embedOnly: !!rights?.embedOnly,
+                  embedOnly:
+                    !!rights?.embedOnly || decision.badge === "embed_only",
                   rightsSaleEnabled: rights ? rights.saleEnabled : true,
-                  blockReason: rights?.blockReason,
+                  blockReason: rights?.blockReason ?? (!decision.allowed ? decision.message : undefined),
                   maxTier: rights?.maxLicenseTier,
                 }}
               />
@@ -98,48 +109,50 @@ export default function ShopPage() {
       )}
 
       <h2 style={{ marginBottom: 14 }}>Featured dive clips</h2>
-      {dives.length === 0 ? (
+      {dives.filter((d) => d.footageAssetId && (d.durationSec > 0 || d.previewUrl)).length === 0 ? (
         <EmptyState
           icon="film"
           title="No clips listed"
-          body="When showcase footage is attached to performances, buyable dive pages will appear here."
+          body="When FootageAssets are attached to performances, buyable dive pages will appear here."
           actionHref="/rankings"
           actionLabel="Find athletes"
         />
       ) : (
         <div className="grid grid-3">
-          {dives.map((d) => {
-            const decision = evaluateShowcaseDive(db, d);
-            return (
-              <Link
-                key={d.id}
-                className="card"
-                href={`/dives/${d.id}`}
-                style={{ padding: 16, opacity: decision.allowed ? 1 : 0.75 }}
-              >
-                <div className="row row--between row--wrap" style={{ gap: 8 }}>
-                  <strong>{d.title}</strong>
-                  {decision.allowed ? (
-                    <span className="badge badge--accent">€{d.price}</span>
-                  ) : (
-                    <RightsBadge
-                      label={
-                        decision.badge === "embed_only"
-                          ? "CMAS embed-only"
-                          : "Unavailable"
-                      }
-                      tone="warn"
-                    />
-                  )}
-                </div>
-                <p className="small muted" style={{ marginTop: 8 }}>
-                  {decision.allowed
-                    ? `${d.markers.length} markers · Diveye-owned`
-                    : decision.message}
-                </p>
-              </Link>
-            );
-          })}
+          {dives
+            .filter((d) => d.footageAssetId)
+            .map((d) => {
+              const decision = evaluateShowcaseDive(db, d);
+              return (
+                <Link
+                  key={d.id}
+                  className="card"
+                  href={`/dives/${d.id}`}
+                  style={{ padding: 16, opacity: decision.allowed ? 1 : 0.75 }}
+                >
+                  <div className="row row--between row--wrap" style={{ gap: 8 }}>
+                    <strong>{d.title}</strong>
+                    {decision.allowed ? (
+                      <span className="badge badge--accent">€{d.price}</span>
+                    ) : (
+                      <RightsBadge
+                        label={
+                          decision.badge === "embed_only"
+                            ? "CMAS embed-only"
+                            : "Unavailable"
+                        }
+                        tone="warn"
+                      />
+                    )}
+                  </div>
+                  <p className="small muted" style={{ marginTop: 8 }}>
+                    {decision.allowed
+                      ? `${d.markers.length} markers · ${d.footageQuality ?? "preview"} · Diveye-owned`
+                      : decision.message}
+                  </p>
+                </Link>
+              );
+            })}
         </div>
       )}
     </div>

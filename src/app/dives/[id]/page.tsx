@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { CardBadge } from "@/components/CardBadge";
 import { CountryChip } from "@/components/CountryChip";
-import { DiverIcon, Icon } from "@/components/Icon";
+import { DivePlayer } from "@/components/DivePlayer";
+import { Icon } from "@/components/Icon";
 import { JsonLd } from "@/components/JsonLd";
 import { DiveRightsPanel, RightsBadge } from "@/components/DiveRightsPanel";
 import { resolveDive } from "@/lib/dives";
@@ -13,7 +14,6 @@ import {
   evaluateShowcaseDive,
   getRecordingRights,
   hasConsent,
-  WATERMARK_NOTE,
 } from "@/lib/rights";
 
 type Params = Promise<{ id: string }>;
@@ -32,9 +32,11 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!dive) return { title: "Dive" };
   return {
     title: dive.title,
-    description: dive.hasVideo
-      ? `Dive page with markers, cards and footage · ${dive.discipline}`
-      : `Official result · ${dive.discipline} · footage pending`,
+      description: dive.hasVideo
+      ? `Dive page with OT markers and Diveye footage · ${dive.discipline}`
+      : dive.cmasEmbedOnly
+        ? `Official result · ${dive.discipline} · CMAS embed/link`
+        : `Official result · ${dive.discipline} · footage pending`,
     alternates: { canonical: `/dives/${dive.id}` },
     openGraph: {
       title: dive.title,
@@ -115,140 +117,42 @@ export default async function DivePage({ params }: { params: Params }) {
       <div className="dive-grid" style={{ marginTop: "var(--s-3)" }}>
         <div className="stack" style={{ gap: "var(--s-5)" }}>
           <div>
-            <div className="player">
-              <div
-                className="scene"
-                style={
-                  {
-                    "--h": dive.scene.h,
-                    "--x": dive.scene.x,
-                    "--d": dive.scene.d,
-                  } as React.CSSProperties
-                }
-              >
-                <span className="rope" />
-                <span className="diver" aria-hidden="true">
-                  <DiverIcon />
-                </span>
-                <span className="wm">DEPTHBOARD</span>
-              </div>
-              <div className="chips" style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                {dive.hasVideo ? (
-                  <span className="badge" style={{ background: "rgba(0,0,0,.55)" }}>
-                    Preview · 20 s · watermarked
-                  </span>
-                ) : rights?.embedOnly ? (
-                  <span className="badge" style={{ background: "rgba(0,0,0,.55)" }}>
-                    CMAS embed-only
-                  </span>
-                ) : (
-                  <span className="badge" style={{ background: "rgba(0,0,0,.55)" }}>
-                    Result only · no footage yet
-                  </span>
-                )}
+            <DivePlayer
+              hasVideo={dive.hasVideo}
+              cmasEmbedOnly={dive.cmasEmbedOnly || !!rights?.embedOnly}
+              footagePending={dive.footagePending}
+              previewUrl={dive.previewUrl}
+              posterUrl={dive.posterUrl}
+              embedUrl={dive.embedUrl || rights?.embedUrl}
+              eventLiveUrl={event.liveUrl}
+              cameras={dive.cameras}
+              markers={dive.markerSeek}
+              scene={dive.scene}
+              discipline={dive.discipline}
+              rp={dive.rp}
+              card={dive.card}
+              ot={dive.ot}
+              durationSec={dive.durationSec}
+            />
+            {(rights?.rightsModel === "diveye_owned" || rights?.embedOnly) && (
+              <div className="row row--wrap" style={{ gap: 8, marginTop: 10 }}>
                 {rights?.rightsModel === "diveye_owned" && rights.downloadable && (
-                  <span className="badge" style={{ background: "rgba(20,90,70,.75)" }}>
+                  <span className="badge" style={{ background: "rgba(20,90,70,.75)", color: "#fff" }}>
                     AIDA · downloadable
                   </span>
                 )}
                 {rights?.embedOnly && (
-                  <span className="badge" style={{ background: "rgba(120,70,20,.75)" }}>
+                  <span className="badge" style={{ background: "rgba(120,70,20,.75)", color: "#fff" }}>
                     CMAS · link only
                   </span>
                 )}
-              </div>
-              <div className="hud">
-                <b className="num">
-                  {dive.card === "R" ? "DQ" : fmtValue(dive.discipline, dive.rp)}
-                </b>
-                OT {dive.ot} · {dive.discipline}
-              </div>
-              <div className="ovl">
-                {dive.hasVideo ? (
-                  <button className="bigplay" type="button" aria-label="Play preview">
-                    <Icon name="play" filled />
-                  </button>
-                ) : (
-                  <div
-                    className="card"
-                    style={{
-                      padding: 18,
-                      maxWidth: 360,
-                      textAlign: "center",
-                      background: "rgba(8,16,22,.88)",
-                    }}
-                  >
-                    <p style={{ marginBottom: 12, color: "#e8f4f7" }}>
-                      Diveye footage is not linked for this performance yet.
-                    </p>
-                    <Link className="btn btn--light btn--sm" href="/archive">
-                      Browse archive status
-                    </Link>
-                  </div>
-                )}
-              </div>
-            </div>
-            <div
-              className="player-bar"
-              style={{
-                border: "1px solid var(--line-soft)",
-                borderTop: 0,
-                borderRadius: "0 0 var(--r-lg) var(--r-lg)",
-              }}
-            >
-              {dive.hasVideo && dive.markers.length > 0 ? (
-                <div className="timeline" aria-label="Dive timeline">
-                  <div className="track" />
-                  <div className="prog" style={{ width: "42%" }} />
-                  <div className="head" style={{ left: "42%" }} />
-                  {dive.markers.map((m) => (
-                    <div
-                      key={m.id}
-                      className={`mk${m.kind === "card" ? " mk--card" : ""}${m.kind === "penalty" || m.kind === "bo" ? " mk--warn" : ""}`}
-                      style={{ left: `${m.at * 100}%` }}
-                    >
-                      <i />
-                      <span>{m.label}</span>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div style={{ padding: "12px 14px" }} className="small muted">
-                  OT markers appear when Diveye archive footage is attached to
-                  this dive.
-                </div>
-              )}
-              <div className="cams" role="group" aria-label="Camera">
-                {dive.cameras.length > 0 ? (
-                  dive.cameras.map((c, i) => (
-                    <button
-                      key={c}
-                      className="chip"
-                      type="button"
-                      aria-pressed={i === 0}
-                    >
-                      {i === 0 && <Icon name="camera" />} {c}
-                    </button>
-                  ))
-                ) : (
-                  <span className="chip" aria-disabled>
-                    Cameras pending
+                {dive.footageAssetId && (
+                  <span className="badge">
+                    FootageAsset · {dive.footageQuality ?? "preview"}
                   </span>
                 )}
-                <span className="source" style={{ marginLeft: "auto" }}>
-                  {rights?.embedOnly
-                    ? "CMAS stream embed policy"
-                    : dive.hasVideo
-                      ? "Footage by Diveye"
-                      : "Result from federation ingest"}
-                </span>
               </div>
-              {dive.hasVideo && (
-                <p className="caption" style={{ padding: "0 14px 12px" }}>
-                  {WATERMARK_NOTE}
-                </p>
-              )}
-            </div>
+            )}
           </div>
 
           <div>

@@ -168,6 +168,60 @@ export interface DiveMarker {
   kind: string;
 }
 
+/** OT / Diveye production marker kinds on the dive timeline. */
+export type FootageMarkerKind =
+  | "start"
+  | "turn"
+  | "surface"
+  | "protocol"
+  | "penalty"
+  | "blackout"
+  | "card";
+
+export type FootageQuality = "preview" | "hq";
+
+export interface FootageMarker {
+  id: string;
+  kind: FootageMarkerKind;
+  label: string;
+  /** Absolute seconds from clip start. */
+  atSec: number;
+  /** Normalized 0–1 position on the timeline. */
+  at: number;
+}
+
+/**
+ * Diveye OT/HQ media asset. Linked to a performance via officialTop / OT
+ * (± otToleranceMin) plus athlete + event (+ optional strong diveId).
+ */
+export interface FootageAsset {
+  id: string;
+  /** Strong link when known (preferred over OT fuzzy match). */
+  performanceDiveId?: string;
+  athleteSlug: string;
+  eventId: string;
+  discipline: string;
+  /** Official top / OT clock from Diveye production (HH:MM or HH:MM:SS). */
+  officialTop: string;
+  /** Match tolerance in minutes against Performance.ot. */
+  otToleranceMin: number;
+  quality: FootageQuality;
+  /** Storage locator — `local:…` mock keys or future `s3://…` / disk paths. */
+  storageKey: string;
+  durationSec: number;
+  cameras: string[];
+  markers: FootageMarker[];
+  federation: "AIDA" | "CMAS";
+  rightsModel: "diveye_owned" | "cmas_link";
+  posterKey?: string;
+  /** CMAS embed / external stream URL (no Diveye file sale). */
+  embedUrl?: string;
+  scene?: { h: number; x: string; d: number };
+  annotation?: { type: "none" | "penalty" | "dq"; text: string };
+  priceEur?: number;
+  notes?: string;
+}
+
 export interface ShowcaseDive {
   id: string;
   athleteSlug: string;
@@ -189,6 +243,13 @@ export interface ShowcaseDive {
   price: number;
   scene: { h: number; x: string; d: number };
   licenseTier?: LicenseTier;
+  /** Linked Diveye FootageAsset id when OT/HQ media is attached. */
+  footageAssetId?: string;
+  footageQuality?: FootageQuality;
+  storageKey?: string;
+  previewUrl?: string;
+  posterUrl?: string;
+  embedUrl?: string;
 }
 
 export interface Product {
@@ -244,6 +305,7 @@ export interface SeedDb {
   consents?: ConsentRecord[];
   recordingRights?: RecordingRights[];
   claimRequests?: ClaimRequest[];
+  footageAssets?: FootageAsset[];
   mockAccountAthleteSlug?: string;
   claimsInbox?: string;
 }

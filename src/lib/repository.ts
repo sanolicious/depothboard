@@ -5,6 +5,7 @@ import type {
   ClaimRequest,
   ConsentRecord,
   Event,
+  FootageAsset,
   Performance,
   Product,
   RankingOpts,
@@ -13,6 +14,12 @@ import type {
   SeedDb,
   ShowcaseDive,
 } from "@/types/domain";
+import {
+  listAssetsForDive,
+  loadFootageCatalog,
+  productsFromFootage,
+  showcaseFromFootage,
+} from "@/lib/footage";
 import { computeRanking } from "@/lib/ranking";
 
 export interface Repository {
@@ -35,6 +42,9 @@ export interface Repository {
   listConsents(athleteSlug?: string): ConsentRecord[];
   getRecordingRights(diveId: string): RecordingRights | undefined;
   listClaimRequests(): ClaimRequest[];
+  listFootageAssets(): FootageAsset[];
+  getFootageForDive(diveId: string): FootageAsset[];
+  getPrimaryFootage(diveId: string): FootageAsset | undefined;
   search(q: string): {
     athletes: Athlete[];
     events: Event[];
@@ -134,7 +144,7 @@ function applyRightsOverlay(base: SeedDb): SeedDb {
     }
   }
 
-  return {
+  const withRights: SeedDb = {
     ...base,
     athletes,
     events,
@@ -147,6 +157,36 @@ function applyRightsOverlay(base: SeedDb): SeedDb {
     claimRequests,
     mockAccountAthleteSlug: overlay.mockAccountAthleteSlug,
     claimsInbox: overlay.claimsInbox ?? "claims@depthboard.com",
+  };
+
+  return applyFootageCatalog(withRights);
+}
+
+/** Merge Diveye OT/HQ catalog: attach showcase dives + sample/social/HQ SKUs. */
+function applyFootageCatalog(db: SeedDb): SeedDb {
+  const catalog = loadFootageCatalog();
+  const assets = catalog.assets.map((a) => ({ ...a }));
+  if (!assets.length) {
+    return { ...db, footageAssets: [] };
+  }
+
+  const nameOf = (slug: string) =>
+    db.athletes.find((a) => a.slug === slug)?.name ?? slug;
+
+  const fromFootage = showcaseFromFootage(db.performances, assets, nameOf);
+  const byId = new Map(db.showcaseDives.map((d) => [d.id, d]));
+  for (const d of fromFootage) {
+    const prev = byId.get(d.id);
+    byId.set(d.id, prev ? { ...prev, ...d } : d);
+  }
+
+  const products = productsFromFootage(assets, db.products);
+
+  return {
+    ...db,
+    showcaseDives: [...byId.values()],
+    products,
+    footageAssets: assets,
   };
 }
 
@@ -264,6 +304,23 @@ class JsonRepository implements Repository {
 
   listClaimRequests(): ClaimRequest[] {
     return this.getDb().claimRequests ?? [];
+  }
+
+  listFootageAssets(): FootageAsset[] {
+    return this.getDb().footageAssets ?? [];
+  }
+
+  getFootageForDive(diveId: string): FootageAsset[] {
+    return listAssetsForDive(this.listFootageAssets(), diveId);
+  }
+
+  getPrimaryFootage(diveId: string): FootageAsset | undefined {
+    const list = this.getFootageForDive(diveId);
+    return (
+      list.find((a) => a.quality === "preview") ??
+      list.find((a) => a.quality === "hq") ??
+      list[0]
+    );
   }
 
   search(q: string) {

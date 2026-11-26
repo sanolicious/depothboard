@@ -5,13 +5,14 @@ import { CountryChip } from "@/components/CountryChip";
 import { EmptyState } from "@/components/EmptyState";
 import { Icon } from "@/components/Icon";
 import { RightsBadge } from "@/components/DiveRightsPanel";
+import { searchFootageByMarker } from "@/lib/footage";
 import { fmtDuration, fmtValue } from "@/lib/format";
 import { getRepository } from "@/lib/repository";
 import { evaluateShowcaseDive, WATERMARK_NOTE } from "@/lib/rights";
 
 export const metadata: Metadata = {
   title: "Archive / VOD",
-  description: "Search Diveye dive archive with markers.",
+  description: "Search Diveye dive archive by OT markers.",
   alternates: { canonical: "/archive" },
 };
 
@@ -19,20 +20,24 @@ type SP = Promise<Record<string, string | string[] | undefined>>;
 
 export default async function ArchivePage({ searchParams }: { searchParams: SP }) {
   const sp = await searchParams;
-  const q = (Array.isArray(sp.q) ? sp.q[0] : sp.q)?.toLowerCase() ?? "";
+  const q = (Array.isArray(sp.q) ? sp.q[0] : sp.q) ?? "";
   const repo = getRepository();
   const db = repo.getDb();
-  let dives = repo.listShowcaseDives();
-  if (q) {
+  const all = repo.listShowcaseDives();
+  let dives = searchFootageByMarker(all, q);
+  if (q.trim()) {
+    const needle = q.toLowerCase();
     dives = dives.filter((d) => {
       const a = repo.getAthleteBySlug(d.athleteSlug);
       const ev = repo.getEventById(d.eventId);
-      const hay = `${d.title} ${a?.name} ${ev?.name} ${d.discipline}`.toLowerCase();
-      return hay.includes(q);
+      const hay = `${d.title} ${a?.name} ${ev?.name} ${d.discipline} ${d.markers
+        .map((m) => `${m.label} ${m.kind}`)
+        .join(" ")}`.toLowerCase();
+      return hay.includes(needle);
     });
   }
   const search = q ? repo.search(q) : { athletes: [], events: [] };
-  const hasFootage = repo.listShowcaseDives().length > 0;
+  const hasFootage = all.some((d) => d.footageAssetId || d.durationSec > 0);
 
   return (
     <div className="container section">
@@ -45,8 +50,8 @@ export default async function ArchivePage({ searchParams }: { searchParams: SP }
         <div>
           <h1>Archive / VOD</h1>
           <p>
-            Search dives with OT markers. Unavailable when consent is missing or
-            the event is CMAS embed-only.
+            Search available Diveye footage by OT markers (start, turn, surface,
+            protocol, penalty, blackout). CMAS stays embed-only.
           </p>
         </div>
       </div>
@@ -63,8 +68,8 @@ export default async function ArchivePage({ searchParams }: { searchParams: SP }
           type="search"
           name="q"
           defaultValue={q}
-          placeholder="Athlete, event, discipline…"
-          aria-label="Search archive"
+          placeholder="Marker, athlete, event… (e.g. penalty, protocol)"
+          aria-label="Search archive by markers"
         />
         <button className="btn btn--primary" type="submit">
           Search
@@ -101,7 +106,7 @@ export default async function ArchivePage({ searchParams }: { searchParams: SP }
         <EmptyState
           icon="search"
           title={q ? `No dives matched “${q}”` : "No dives to show"}
-          body="Try another athlete, event or discipline, or browse rankings."
+          body="Try a marker kind (penalty, protocol, blackout) or an athlete name."
           actionHref="/rankings"
           actionLabel="Open rankings"
         />
@@ -110,13 +115,19 @@ export default async function ArchivePage({ searchParams }: { searchParams: SP }
           {dives.map((d) => {
             const a = repo.getAthleteBySlug(d.athleteSlug)!;
             const decision = evaluateShowcaseDive(db, d);
-            const hasFile = d.durationSec > 0 || d.cameras.length > 0;
+            const hasFile = d.durationSec > 0 || !!d.previewUrl;
+            const markerKinds = [...new Set(d.markers.map((m) => m.kind))].join(
+              ", ",
+            );
             return (
               <Link
                 key={d.id}
                 className="vcard"
                 href={`/dives/${d.id}`}
-                style={{ opacity: decision.allowed || decision.badge === "embed_only" ? 1 : 0.72 }}
+                style={{
+                  opacity:
+                    decision.allowed || decision.badge === "embed_only" ? 1 : 0.72,
+                }}
               >
                 <div className="vthumb">
                   <div
@@ -131,7 +142,11 @@ export default async function ArchivePage({ searchParams }: { searchParams: SP }
                   >
                     <span className="rope" />
                     <span className="wm">
-                      {hasFile ? "DEPTHBOARD" : decision.badge === "embed_only" ? "EMBED" : "HELD"}
+                      {hasFile
+                        ? "DEPTHBOARD"
+                        : decision.badge === "embed_only"
+                          ? "EMBED"
+                          : "HELD"}
                     </span>
                   </div>
                   <div className="tags" style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
@@ -158,8 +173,8 @@ export default async function ArchivePage({ searchParams }: { searchParams: SP }
                   </div>
                   <div className="meta">
                     {d.discipline} ·{" "}
-                    {decision.allowed
-                      ? `${d.markers.length} markers · preview watermarked`
+                    {hasFile
+                      ? `${d.markers.length} markers${markerKinds ? ` · ${markerKinds}` : ""}`
                       : decision.message}
                   </div>
                 </div>
