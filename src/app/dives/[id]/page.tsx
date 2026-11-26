@@ -389,13 +389,25 @@ export default async function DivePage({ params }: { params: Params }) {
             diveTitle={dive.title}
             discipline={dive.discipline}
             rpLabel={dive.card === "R" ? "DQ" : `${dive.rp} m`}
-            price={dive.price}
+            price={
+              repo
+                .listProducts()
+                .find((p) => p.diveId === dive.id && p.licenseTier === "social")
+                ?.price ?? dive.price
+            }
             scene={dive.scene}
             hasVideo={dive.hasVideo}
             eventShortName={event.shortName}
             eventLiveUrl={event.liveUrl}
             rights={rights}
             licenseTier="social"
+            diveId={dive.id}
+            productId={`prod-ft-${dive.id}-social`}
+            productSku={
+              repo
+                .listProducts()
+                .find((p) => p.id === `prod-ft-${dive.id}-social`)?.slug
+            }
             seedFlags={{
               recording: hasConsent(db, athlete.slug, "recording"),
               publication: hasConsent(db, athlete.slug, "publication"),

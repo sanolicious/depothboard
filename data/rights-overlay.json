@@ -38,9 +38,21 @@
   "licenseTiers": [
     {
       "id": "sample",
-      "label": "Sample preview",
+      "label": "Free sample",
       "priceEur": 0,
-      "description": "Watermarked ~20 s preview. Free when Diveye-owned and athlete consents to publication."
+      "description": "Watermarked sample. Free when Diveye-owned and athlete consents to publication."
+    },
+    {
+      "id": "short",
+      "label": "Short access",
+      "priceEur": 9,
+      "description": "48 h watermarked short access to the OT clip."
+    },
+    {
+      "id": "watermark",
+      "label": "Long / watermark",
+      "priceEur": 19,
+      "description": "Full-length watermarked stream for personal viewing."
     },
     {
       "id": "social",
@@ -50,15 +62,15 @@
     },
     {
       "id": "master",
-      "label": "Master file",
+      "label": "HQ / master",
       "priceEur": 79,
-      "description": "Higher-quality master for the athlete or coach (non-broadcast)."
+      "description": "Higher-quality master — montage after purchase; email when ready."
     },
     {
       "id": "commercial",
-      "label": "Commercial licence",
+      "label": "Commercial quote",
       "priceEur": 129,
-      "description": "Paid ads, sponsors and broadcast — requires commercial consent + Diveye-owned rights."
+      "description": "Paid ads, sponsors and broadcast — quote form; requires commercial consent."
     }
   ],
   "athleteOverrides": [
@@ -413,73 +425,13 @@
   ],
   "products": [
     {
-      "id": "prod-vit-social",
-      "slug": "vitomir-dyn-261-social",
-      "name": "Vitomir · DYN 261 m · social",
-      "kind": "clip",
-      "price": 29,
-      "description": "Social licence for Diveye AIDA clip (athlete consents granted).",
-      "delivery": "72 h after purchase · personal licence",
-      "licenseTier": "social",
-      "diveId": "dive-0",
-      "saleEnabled": true
-    },
-    {
-      "id": "prod-vit-commercial",
-      "slug": "vitomir-dyn-261-commercial",
-      "name": "Vitomir · DYN 261 m · commercial",
-      "kind": "clip",
-      "price": 129,
-      "description": "Commercial licence — requires recording + publication + commercial consent.",
-      "delivery": "B2B invoice · Diveye-owned only",
-      "licenseTier": "commercial",
-      "diveId": "dive-0",
-      "saleEnabled": true
-    },
-    {
-      "id": "prod-mol-master",
-      "slug": "molchanov-cwt-137-master",
-      "name": "Molchanov · CWT 137 m · master",
-      "kind": "clip",
-      "price": 79,
-      "description": "Master file. Commercial tier unavailable (consent withdrawn).",
-      "delivery": "Athlete / coach use",
-      "licenseTier": "master",
-      "diveId": "dive-505",
-      "saleEnabled": true
-    },
-    {
-      "id": "prod-zec-blocked",
-      "slug": "zecchini-fim-91-social",
-      "name": "Zecchini · FIM 91 m · social",
-      "kind": "clip",
-      "price": 29,
-      "description": "Blocked: publication consent withdrawn.",
-      "delivery": "Unavailable",
-      "licenseTier": "social",
-      "diveId": "dive-9792",
-      "saleEnabled": false
-    },
-    {
-      "id": "prod-cmas-blocked",
-      "slug": "molchanov-cnf-95-cmas",
-      "name": "Molchanov · CNF 95 m · CMAS",
-      "kind": "clip",
-      "price": 29,
-      "description": "Blocked: CMAS embed-only rights model.",
-      "delivery": "Embed stream only",
-      "licenseTier": "social",
-      "diveId": "cmas-res-31686",
-      "saleEnabled": false
-    },
-    {
       "id": "prod-media-pack",
       "slug": "media-pack",
       "name": "Media pack (AIDA events)",
       "kind": "media",
       "price": 0,
       "description": "Broadcast assets for Diveye-owned events with athlete commercial consent.",
-      "delivery": "B2B quote",
+      "delivery": "B2B quote via form",
       "licenseTier": "commercial",
       "saleEnabled": true
     }
