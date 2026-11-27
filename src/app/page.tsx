@@ -3,6 +3,7 @@ import { Icon, DiverIcon } from "@/components/Icon";
 import { CountryChip } from "@/components/CountryChip";
 import { CardBadge } from "@/components/CardBadge";
 import { EmptyState } from "@/components/EmptyState";
+import { HeroDepthHud } from "@/components/HeroDepthHud";
 import { JsonLd } from "@/components/JsonLd";
 import { getRepository } from "@/lib/repository";
 import { fmtDate, fmtPoints, fmtValue, siteUrl } from "@/lib/format";
@@ -92,17 +93,7 @@ export default function HomePage() {
         >
           <source src="/video/hero.mp4" type="video/mp4" />
         </video>
-        <div className="hero-hud" aria-hidden="true">
-          <div className="rope" />
-          <div className="ticks" />
-          <DiverIcon className="dv" />
-          <div className="hud-tag">
-            <b className="num">113 m</b>
-            CWT · Roatan
-            <br />
-            Footage by Diveye
-          </div>
-        </div>
+        <HeroDepthHud />
         <div className="container">
           <div className="hero-in">
             <p className="eyebrow" style={{ color: "#bfe9f0", marginBottom: 16 }}>
