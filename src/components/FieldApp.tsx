@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { CountryChip } from "@/components/CountryChip";
 import { Icon } from "@/components/Icon";
 import {
   clearSyncedOps,
@@ -518,8 +519,8 @@ export function FieldApp({
                       </span>
                     ) : null}
                   </span>
-                  <span className="field-app__athlete-meta">
-                    {a.country} ·{" "}
+                  <span className="field-app__athlete-meta row" style={{ gap: 8 }}>
+                    <CountryChip code={a.country} />
                     {a.recordingConsent ? (
                       <span className="badge badge--success">Recording OK</span>
                     ) : (

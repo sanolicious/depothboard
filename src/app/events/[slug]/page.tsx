@@ -78,9 +78,16 @@ export default async function EventPage({ params }: { params: Params }) {
             <span className="badge">{ev.type}</span>
           </div>
           <h1>{ev.name}</h1>
-          <p className="muted" style={{ marginTop: 10 }}>
-            <Icon name="pin" /> {ev.venue}, {ev.country} · {fmtDate(ev.startDate)} –{" "}
-            {fmtDate(ev.endDate)}
+          <p className="muted row" style={{ marginTop: 10, gap: 8, flexWrap: "wrap" }}>
+            <Icon name="pin" />
+            <span>
+              {ev.venue}
+              {ev.venue ? "," : ""}
+            </span>
+            <CountryChip code={ev.country} />
+            <span>
+              · {fmtDate(ev.startDate)} – {fmtDate(ev.endDate)}
+            </span>
           </p>
         </div>
         <div className="row" style={{ gap: 8 }}>

@@ -6,6 +6,7 @@ const PATHS: Record<string, string> = {
   cart: '<circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/>',
   chev: '<path d="m6 9 6 6 6-6"/>',
   "chev-r": '<path d="m9 6 6 6-6 6"/>',
+  "chev-l": '<path d="m15 6-6 6 6 6"/>',
   arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
   check: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
   "check-circle": '<circle cx="12" cy="12" r="9"/><path d="m8 12.5 3 3 5-6"/>',
