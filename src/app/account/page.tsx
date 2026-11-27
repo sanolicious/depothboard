@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { ClearCartOnCheckoutSuccess } from "@/components/ClearCartOnCheckoutSuccess";
 import { ConsentPanel } from "@/components/ConsentPanel";
+import { CountryChip } from "@/components/CountryChip";
 import { Icon } from "@/components/Icon";
 import { LogoutButton } from "@/components/LogoutButton";
 import { getSession, isCoachRole, ownsAthlete } from "@/lib/auth";
@@ -135,9 +136,19 @@ export default async function AccountPage({
           <h2 style={{ fontSize: "1.2rem" }}>Profile</h2>
           {athlete ? (
             <>
-              <p className="muted small" style={{ marginTop: 8 }}>
-                {athlete.name} · {athlete.claimed ? "claimed" : "link pending"} ·{" "}
-                {athlete.countryName}
+              <p
+                className="muted small row"
+                style={{ marginTop: 8, gap: 8, flexWrap: "wrap" }}
+              >
+                <span>
+                  {athlete.name} · {athlete.claimed ? "claimed" : "link pending"}
+                </span>
+                <CountryChip
+                  code={athlete.country}
+                  neutral={athlete.neutral}
+                  title={athlete.countryName}
+                />
+                <span>{athlete.countryName}</span>
               </p>
               <div className="row row--wrap" style={{ gap: 8, marginTop: 14 }}>
                 <Link className="btn btn--sm" href={`/athletes/${athlete.slug}`}>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { CountryChip } from "@/components/CountryChip";
 import { Icon } from "@/components/Icon";
 import type { ClaimVerifyMethod, SessionUser } from "@/types/domain";
 
@@ -256,10 +257,16 @@ export function ClaimWizard({
               >
                 <div style={{ minWidth: 0 }}>
                   <strong style={{ fontSize: "0.95rem" }}>{a.name}</strong>
-                  <p className="caption" style={{ marginTop: 4 }}>
-                    {a.country} · {a.hint}
-                    {a.claimed ? " · already claimed" : ""}
-                    {a.minor ? " · minor (guardian)" : ""}
+                  <p
+                    className="caption row"
+                    style={{ marginTop: 4, gap: 8, flexWrap: "wrap" }}
+                  >
+                    <CountryChip code={a.country} />
+                    <span>
+                      {a.hint}
+                      {a.claimed ? " · already claimed" : ""}
+                      {a.minor ? " · minor (guardian)" : ""}
+                    </span>
                   </p>
                 </div>
                 <button
